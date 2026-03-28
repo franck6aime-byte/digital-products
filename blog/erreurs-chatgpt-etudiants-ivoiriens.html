@@ -190,14 +190,14 @@
         .conclusion p { color: rgba(250, 250, 247, 0.75); margin-bottom: 28px; }
         .sidebar { position: sticky; top: 100px; padding: 60px 0; }
         .sidebar-card { background: white; border: 1.5px solid var(--border); border-radius: 16px; padding: 28px 24px; margin-bottom: 20px; }
-        .sidebar-card h4 { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 16px; color: var(--ink); }
+        .sidebar-card h2 { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 16px; color: var(--ink); }
         .toc-list { list-style: none; }
         .toc-list li { padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 0.85rem; }
         .toc-list li:last-child { border-bottom: none; }
         .toc-list a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
         .toc-list a:hover { color: var(--gold); }
         .sidebar-cta { background: var(--ink); border-radius: 16px; padding: 28px 24px; text-align: center; }
-        .sidebar-cta h4 { font-family: 'Fraunces', serif; color: var(--paper); font-size: 1.1rem; margin-bottom: 10px; }
+        .sidebar-cta h2 { font-family: 'Fraunces', serif; color: var(--paper); font-size: 1.1rem; margin-bottom: 10px; }
         .sidebar-cta p { color: rgba(250, 250, 247, 0.65); font-size: 0.82rem; margin-bottom: 20px; }
         .sidebar-cta .btn-gold { width: 100%; display: block; }
         .site-footer { border-top: 1px solid var(--border); padding: 40px 24px; text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 80px; }
@@ -420,7 +420,7 @@
         <!-- SIDEBAR -->
         <aside class="sidebar">
             <div class="sidebar-card">
-                <h4>📑 Sommaire</h4>
+                <h2>📑 Sommaire</h2>
                 <ul class="toc-list">
                     <li><a href="#contexte">ChatGPT en Côte d'Ivoire</a></li>
                     <li><a href="#erreur-1">Erreur 1 — Questions trop vagues</a></li>
@@ -429,7 +429,7 @@
                 </ul>
             </div>
             <div class="sidebar-cta">
-                <h4>100+ Prompts IA</h4>
+                <h2>100+ Prompts IA</h2>
                 <p>La bibliothèque complète pour maîtriser ChatGPT comme un professionnel.</p>
                 <a href="https://ppawzaph.mychariow.shop/prd_cav6sr" class="btn-gold">Obtenir — 2 000 FCFA 🔥</a>
             </div>
@@ -448,7 +448,8 @@
             const scrollTop = window.scrollY;
             const docHeight = document.documentElement.scrollHeight - window.innerHeight;
             const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-            progressBar.style.width = progress + "%";
+            progressBar.style.width = progress + '%';
+            progressBar.setAttribute('aria-valuenow', progress);
         });
     </script>
 </body>

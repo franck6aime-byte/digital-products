@@ -137,7 +137,7 @@
         :root {
             --ink: #0D1117;
             --paper: #FAFAF7;
-            --gold: #C9A84C;
+            --gold: #B8912A;
             --gold-light: #F0E0A8;
             --accent: #1A6B3C;
             --accent-light: #E8F5EE;
@@ -203,9 +203,7 @@
             letter-spacing: -0.5px;
         }
 
-        .site-header .logo span {
-            color: var(--gold);
-        }
+        .site-header .logo span { color: #8B6914; }
 
         .header-cta {
             background: var(--ink);
@@ -796,7 +794,7 @@
             margin-bottom: 20px;
         }
 
-        .sidebar-card h4 {
+        .sidebar-card h2 {
             font-family: 'Fraunces', serif;
             font-size: 1rem;
             font-weight: 700;
@@ -819,14 +817,14 @@
         }
 
         .toc-list a {
-            color: var(--muted);
+            color: #374151;
+            text-decoration: underline;
+            text-decoration-color: transparent;
             text-decoration: none;
             transition: color 0.2s;
         }
 
-        .toc-list a:hover {
-            color: var(--gold);
-        }
+        .toc-list a:hover { color: #8B6914; text-decoration-color: #8B6914; }
 
         .sidebar-cta {
             background: var(--ink);
@@ -835,7 +833,7 @@
             text-align: center;
         }
 
-        .sidebar-cta h4 {
+        .sidebar-cta h2 {
             font-family: 'Fraunces', serif;
             color: var(--paper);
             font-size: 1.1rem;
@@ -859,14 +857,11 @@
             padding: 40px 24px;
             text-align: center;
             font-size: 0.85rem;
-            color: var(--muted);
+            color: #374151;
             margin-top: 80px;
         }
 
-        .site-footer a {
-            color: var(--gold);
-            text-decoration: none;
-        }
+        .site-footer a { color: #8B6914; text-decoration: underline; }
 
         /* ── TAGS SEO ── */
         .seo-tags {
@@ -932,17 +927,11 @@
             opacity: 0.9;
         }
 
-        .share-wa {
-            background: #25D366;
-        }
+        .share-wa { background: #18863F; }
 
-        .share-fb {
-            background: #1877F2;
-        }
+        .share-fb { background: #0B51A8; }
 
-        .share-in {
-            background: #0A66C2;
-        }
+        .share-in { background: #064585; }
 
         .share-tw {
             background: #000000;
@@ -976,7 +965,7 @@
 
 <body>
 
-    <div id="progress-bar"></div>
+    <div id="progress-bar" role="progressbar" aria-label="Progression de lecture" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 
     <!-- ═══════════ HEADER ═══════════ -->
     <header class="site-header">
@@ -1168,8 +1157,8 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>Acteur</th>
-                                <th>Action immédiate</th>
+                                <th scope="col">Acteur</th>
+                                <th scope="col">Action immédiate</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1249,7 +1238,8 @@
             <!-- ═══════════ SIDEBAR ═══════════ -->
             <aside class="sidebar">
                 <div class="sidebar-card">
-                    <h4>📋 Sommaire</h4>
+                <h2>📋 Sommaire</h2>
+                    <nav aria-label="Table des matières">
                     <ul class="toc-list">
                         <li><a href="#contexte">1. Un tournant historique</a></li>
                         <li><a href="#defis">2. Les 3 grands défis</a></li>
@@ -1258,10 +1248,11 @@
                         <li><a href="#programme">5. Programme de la conférence</a></li>
                         <li><a href="#action">6. Votre plan d'action</a></li>
                     </ul>
-                </div>
+                </nav>
+            </div>
 
                 <div class="sidebar-cta">
-                    <h4>Maîtrisez l'IA Maintenant</h4>
+                <h2>Maîtrisez l'IA Maintenant</h2>
                     <p>50 prompts IA testés et optimisés pour entrepreneurs et professionnels africains.</p>
                     <a href="https://digitalboostai.tech/products/prompts.html" class="btn-gold">Obtenir le Guide
                         →</a>
@@ -1277,7 +1268,9 @@
             </aside>
         </div>
 
-        <!-- ═══════════ FOOTER ═══════════ -->
+        </main><!-- /main -->
+
+    <!-- ═══════════ FOOTER ═══════════ -->
         <footer class="site-footer">
             <p>
                 <a href="https://digitalboostai.tech/">⚡ DigitalBoost AI</a> —
@@ -1296,6 +1289,7 @@
                 const docHeight = document.documentElement.scrollHeight - window.innerHeight;
                 const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
                 progressBar.style.width = progress + '%';
+            progressBar.setAttribute('aria-valuenow', progress);
             });
 
             // Fonction pour charger les composants partagés
