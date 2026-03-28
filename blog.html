@@ -260,15 +260,18 @@
 <script>
     const WEBHOOK_SÉCURISÉ = ""; 
 
-    let disposableDomains = new Set();
-    fetch('/data/disposable_domains.txt')
-        .then(response => response.text())
-        .then(text => {
-            const domains = text.split('\n').filter(d => d.trim().length > 0);
-            disposableDomains = new Set(domains);
-            ['mailna.co', 'mailna.me', 'mailna.in', 'mohmal.com', 'mohmal.in', 'cleantempmail.com', 'temp-mail.org', '10minutemail.com', 'guerrillamail.com', 'simplelogin.io', 'emailondeck.com', 'mailinator.com', 'tempmail.plus', 'throwawaymail.com'].forEach(d => disposableDomains.add(d));
-        })
-        .catch(err => console.error("Erreur de chargement de la liste anti-spam", err));
+    let disposableDomains = new Set(['mailna.co', 'mailna.me', 'mailna.in', 'mohmal.com', 'mohmal.in', 'cleantempmail.com', 'temp-mail.org', '10minutemail.com', 'guerrillamail.com', 'simplelogin.io', 'emailondeck.com', 'mailinator.com', 'tempmail.plus', 'throwawaymail.com', 'yopmail.com', 'guerrillamail.info', 'grr.la', 'sharklasers.com', 'dispostable.com']);
+    let _spamListLoaded = false;
+    function _loadSpamList() {
+        if (_spamListLoaded) return;
+        _spamListLoaded = true;
+        fetch('/data/disposable_domains.txt')
+            .then(r => r.text())
+            .then(t => { t.split('\n').forEach(d => { if (d.trim()) disposableDomains.add(d.trim()); }); })
+            .catch(() => {});
+    }
+    var _nlEmail = document.getElementById('nl-email');
+    if (_nlEmail) _nlEmail.addEventListener('focus', _loadSpamList, { once: true });
 
     function handleNewsletterSubmit(event) {
         var emailInput = document.getElementById('nl-email');
