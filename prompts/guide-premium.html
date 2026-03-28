@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -159,7 +159,7 @@
         .header-pill {
             display: inline-block;
             background-color: rgba(201, 168, 76, 0.15);
-            color: var(--gold);
+            color: #7A5C10; /* darkened from var(--gold) for WCAG AA contrast */
             padding: 6px 16px;
             border-radius: 50px;
             font-size: 0.75rem;
@@ -406,6 +406,7 @@
         }
     </style>
     <link rel="preload" href="../fonts/dm-sans-v17-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/fraunces-v38-latin-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../fonts/fraunces-v38-latin-900.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 
@@ -432,7 +433,7 @@
     </div>
 
     <div class="container">
-
+        <main id="main-content">
         <!-- Screen-only header -->
         <header style="padding-top: 40px; background: transparent; padding-bottom: 20px;" class="no-print">
             <div class="header-pill"
@@ -645,6 +646,7 @@
                 session pour transformer l'IA en véritable partenaire.</p>
         </section>
 
+        </main><!-- /#main-content -->
     </div>
 
     <footer class="footer">
