@@ -49,10 +49,66 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
+    <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css">
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap"></noscript>
+
+    <!-- Critical CSS inline (above-the-fold) -->
+    <style>
+        :root{--bg-primary:#FAFAF7;--bg-glass:rgba(250,250,247,0.85);--text-primary:#0D1117;--text-secondary:#2D3139;--text-muted:#555B66;--accent-primary:#C9A84C;--accent-secondary:#1A6B3C;--accent-tertiary:#F0E0A8;--gradient-primary:linear-gradient(135deg,#C9A84C,#e0be5a);--border-color:#E5E2D9;--border-accent:rgba(201,168,76,0.4);--shadow-md:0 4px 24px rgba(13,17,23,0.08);--radius-md:12px;--radius-lg:16px;--radius-xl:24px;--radius-full:9999px;--font-primary:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;--font-display:'Fraunces',serif;--transition-fast:0.15s ease;--transition-base:0.3s ease;--transition-slow:0.5s ease}
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth;scroll-padding-top:80px}
+        body{font-family:var(--font-primary);background-color:var(--bg-primary);color:var(--text-primary);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+        a{color:inherit;text-decoration:none}
+        img{max-width:100%;display:block}
+        .container{max-width:1200px;margin:0 auto;padding:0 24px}
+        .bg-grid,.bg-glow{position:fixed;pointer-events:none;contain:layout style}
+        .bg-grid{top:0;left:0;width:100%;height:100%;background-image:linear-gradient(rgba(13,17,23,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(13,17,23,0.03) 1px,transparent 1px);background-size:60px 60px;z-index:-3}
+        .bg-glow{border-radius:50%;filter:blur(120px);z-index:-2;opacity:0.4;will-change:transform,opacity}
+        .navbar{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:16px 0;transition:all var(--transition-base);backdrop-filter:blur(0px)}
+        .navbar.scrolled{padding:10px 0;background:var(--bg-glass);backdrop-filter:blur(20px);border-bottom:1px solid var(--border-color);box-shadow:var(--shadow-md)}
+        .nav-container{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+        .nav-logo{display:flex;align-items:center;gap:8px;font-family:var(--font-display);font-size:1.3rem;font-weight:700}
+        .logo-icon{font-size:1.5rem}
+        .logo-accent{background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .nav-links{display:flex;gap:32px}
+        .nav-link{font-size:.9rem;font-weight:500;color:var(--text-secondary);transition:color var(--transition-fast)}
+        .nav-actions{display:flex;align-items:center;gap:12px}
+        .mobile-menu-btn{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+        .mobile-menu-btn span{width:24px;height:2px;background:var(--text-primary);border-radius:2px;transition:all var(--transition-base)}
+        .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 24px;border-radius:var(--radius-md);font-family:var(--font-primary);font-size:.95rem;font-weight:600;cursor:pointer;border:none;transition:all var(--transition-base);text-align:center;white-space:nowrap}
+        .btn-primary{background:var(--gradient-primary);color:white;box-shadow:0 4px 15px rgba(201,168,76,0.3)}
+        .btn-outline{background:transparent;color:var(--text-primary);border:1.5px solid var(--border-accent)}
+        .btn-lg{padding:16px 32px;font-size:1.05rem;border-radius:var(--radius-lg)}
+        .btn-nav{padding:10px 20px;font-size:.85rem}
+        .btn-price{font-size:.8rem;opacity:.85;font-weight:400}
+        .gradient-text{background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .hero{padding:160px 0 100px;position:relative}
+        .hero .container{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+        .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.2);border-radius:var(--radius-full);font-size:.85rem;color:var(--text-secondary);margin-bottom:24px}
+        .hero-title{font-family:var(--font-display);font-size:clamp(2.5rem,5vw,3.8rem);font-weight:900;line-height:1.1;margin-bottom:24px;letter-spacing:-.02em}
+        .hero-subtitle{font-size:1.15rem;color:var(--text-secondary);line-height:1.7;margin-bottom:36px;max-width:540px}
+        .hero-cta{display:flex;gap:16px;margin-bottom:48px;flex-wrap:wrap}
+        .hero-cta .btn-primary{flex-direction:column;gap:2px}
+        .hero-stats{display:flex;align-items:center;gap:32px}
+        .stat{text-align:center}.stat-number{font-family:var(--font-display);font-size:1.8rem;font-weight:800;background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .stat-suffix{font-family:var(--font-display);font-size:1.4rem;font-weight:700;background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .stat-label{display:block;font-size:.8rem;color:var(--text-muted);margin-top:4px}
+        .stat-divider{width:1px;height:40px;background:var(--border-color)}
+        .animate-fade-in{animation:fadeIn .8s ease forwards;opacity:0}
+        .animate-fade-in-up{animation:fadeInUp .8s ease forwards;opacity:0}
+        .animate-fade-in-right{animation:fadeInRight 1s ease forwards;opacity:0}
+        .delay-1{animation-delay:.15s}.delay-2{animation-delay:.3s}.delay-3{animation-delay:.45s}
+        @keyframes fadeIn{to{opacity:1}}
+        @keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+        @keyframes fadeInRight{from{opacity:0;transform:translateX(50px)}to{opacity:1;transform:translateX(0)}}
+        @media(max-width:768px){.hero .container{grid-template-columns:1fr}.nav-links{display:none}.mobile-menu-btn{display:flex}}
+    </style>
+    <!-- Full CSS loaded async -->
+    <link rel="preload" href="../styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../styles.css"></noscript>
     <style>
         .product-hero {
             padding: 140px 0 80px;
@@ -698,7 +754,7 @@
         </div>
     </footer>
 
-    <script src="../script.js"></script>
+    <script src="../script.js" defer></script>
 </body>
 
 </html>
