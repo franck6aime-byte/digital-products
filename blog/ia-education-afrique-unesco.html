@@ -937,7 +937,7 @@
             background: #000000;
         }
 
-        /* ── VIDEO EMBED ── */
+        /* ── VIDEO EMBED — FAÇADE (aucun cookie tiers au chargement) ── */
         .video-embed {
             margin: 40px 0;
             border-radius: 16px;
@@ -945,10 +945,51 @@
             border: 2px solid var(--border);
         }
 
-        .video-embed iframe {
-            width: 100%;
+        .video-facade {
+            position: relative;
+            cursor: pointer;
             aspect-ratio: 16/9;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-facade img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             display: block;
+            transition: opacity 0.3s;
+        }
+
+        .video-facade:hover img { opacity: 0.75; }
+
+        .play-btn {
+            position: absolute;
+            width: 72px;
+            height: 72px;
+            background: rgba(255,0,0,0.92);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .video-facade:hover .play-btn {
+            transform: scale(1.1);
+            background: #ff0000;
+        }
+
+        .play-btn svg { width: 28px; height: 28px; fill: white; margin-left: 4px; }
+
+        .video-facade iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
         .video-caption {
@@ -1018,13 +1059,19 @@
                     Une journée intense, pratique, parfois chahutée par les aléas techniques du direct — mais précisément pour cela, profondément humaine. Car parler d’IA dans l’éducation, ce n’est pas parler de robots et d’algorithmes. C’est parler de professeurs qui doutent, d’étudiants qui innovent, et d’institutions qui cherchent leur chemin dans une révolution qui n’attend personne.
                 </p>
 
-                <!-- VIDEO EMBED -->
+                <!-- VIDEO EMBED — façade cliquable, zéro cookie avant interaction -->
                 <div class="video-embed">
-                    <iframe src="https://www.youtube.com/embed/2oY8v3L1mwU"
-                        title="Tribune de l'IA - Chaire UNESCO IAHSO" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    <div class="video-caption">📺 Tribune de l'IA — Chaire UNESCO IAHSO | UVCI TV — 5 mars 2026 (5h de contenu)</div>
+                    <div class="video-facade" id="yt-facade" onclick="activerVideo(this)" role="button" tabindex="0"
+                        aria-label="Lire la vidéo : Tribune de l'IA — Chaire UNESCO IAHSO"
+                        onkeydown="if(event.key==='Enter'||event.key===' ')activerVideo(this)">
+                        <img src="https://i.ytimg.com/vi/2oY8v3L1mwU/maxresdefault.jpg"
+                            alt="Miniature — Tribune de l'IA UNESCO IAHSO UVCI TV, 5 mars 2026"
+                            width="1280" height="720" loading="lazy">
+                        <div class="play-btn" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                    <div class="video-caption">📺 Tribune de l'IA — Chaire UNESCO IAHSO | UVCI TV — 5 mars 2026 (5h de contenu) · <em>Cliquez pour lire la vidéo</em></div>
                 </div>
 
                 <h2 id="defis">2. Le défi de fond : enseigner à des milliers avec les moyens du possible</h2>
@@ -1259,10 +1306,9 @@
                 </div>
 
                 <div class="sidebar-card" style="margin-top: 20px;">
-                    <h4>📺 Source</h4>
-                    <p style="font-size: 0.85rem; color: #6B7280; margin-bottom: 12px;">Conférence originale sur YouTube
-                    </p>
-                    <a href="https://www.youtube.com/live/2oY8v3L1mwU" target="_blank" class="source-badge"
+                    <h2>📺 Source</h2>
+                    <p style="font-size: 0.85rem; color: #6B7280; margin-bottom: 12px;">Conférence originale sur YouTube</p>
+                    <a href="https://www.youtube.com/live/2oY8v3L1mwU" target="_blank" rel="noopener noreferrer" class="source-badge"
                         style="font-size: 0.8rem; margin: 0; display: inline-flex;">▶ Tribune de l'IA — UNESCO IAHSO</a>
                 </div>
             </aside>
@@ -1284,13 +1330,30 @@
         <!-- ═══════════ SCRIPT BARRE DE PROGRESSION & COMPOSANTS ═══════════ -->
         <script>
             const progressBar = document.getElementById('progress-bar');
+            let isTicking = false;
             window.addEventListener('scroll', () => {
-                const scrollTop = window.scrollY;
-                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-                const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-                progressBar.style.width = progress + '%';
-            progressBar.setAttribute('aria-valuenow', progress);
-            });
+                if (!isTicking) {
+                    window.requestAnimationFrame(() => {
+                        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                        const progress = docHeight > 0 ? Math.round((window.scrollY / docHeight) * 100) : 0;
+                        progressBar.style.width = progress + '%';
+                        progressBar.setAttribute('aria-valuenow', progress);
+                        isTicking = false;
+                    });
+                    isTicking = true;
+                }
+            }, { passive: true });
+
+            function activerVideo(facade) {
+                const iframe = document.createElement('iframe');
+                iframe.src = 'https://www.youtube-nocookie.com/embed/2oY8v3L1mwU?autoplay=1';
+                iframe.title = 'Tribune de l\'IA — Chaire UNESCO IAHSO';
+                iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                iframe.allowFullscreen = true;
+                facade.innerHTML = '';
+                facade.appendChild(iframe);
+                facade.style.cursor = 'default';
+            }
 
             // Fonction pour charger les composants partagés
             async function loadComponent(url, selectors) {
