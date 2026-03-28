@@ -48,10 +48,80 @@
     }
     </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    
+    
 
     <style>
+/* ============================================================
+   @font-face AUTO-HÉBERGÉ — remplace Google Fonts externe
+   font-display: swap → le texte s'affiche immédiatement
+   avec la police de fallback, puis swap quand chargée
+============================================================ */
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('../fonts/dm-sans-v17-latin-300.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/dm-sans-v17-latin-400.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../fonts/dm-sans-v17-latin-500.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../fonts/dm-sans-v17-latin-600.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('../fonts/fraunces-v38-latin-300.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/fraunces-v38-latin-700.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('../fonts/fraunces-v38-latin-900.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Fraunces';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/fraunces-v38-latin-italic-400.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
         :root {
             --ink: #0D1117;
             --paper: #FAFAF7;
@@ -174,6 +244,8 @@
         .table-wrap td { padding: 12px 16px; border-bottom: 1px solid var(--border); color: #2D3139; }
         .table-wrap tr:hover td { background: rgba(201, 168, 76, 0.05); }
     </style>
+    <link rel="preload" href="../fonts/dm-sans-v17-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/fraunces-v38-latin-900.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 
 <body>
