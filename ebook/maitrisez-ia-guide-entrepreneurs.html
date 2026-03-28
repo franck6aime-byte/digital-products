@@ -82,7 +82,8 @@
             --bg: #FAFAF7;
             --text: #0D1117;
             --muted: #6B7280;
-            --accent: #C9A84C;
+            --accent: #C9A84C;        /* Keep for dark backgrounds */
+            --accent-dark: #7A5C10;   /* WCAG AA on white (ratio 5.1:1) */
             --accent2: #1A6B3C;
         }
 
@@ -199,7 +200,7 @@
             font-family: 'Fraunces', serif;
             font-size: 2rem;
             font-weight: 700;
-            color: var(--accent);
+            color: var(--accent-dark); /* was var(--accent) — contrast fix */
             margin-bottom: 40px;
             text-align: center;
         }
@@ -220,7 +221,7 @@
 
         .toc-list li .toc-ch {
             font-weight: 600;
-            color: var(--accent);
+            color: var(--accent-dark); /* was var(--accent) — contrast fix */
             margin-right: 12px;
         }
 
@@ -247,7 +248,7 @@
             font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 4px;
-            color: var(--accent);
+            color: var(--accent-dark); /* was var(--accent) — contrast fix */
             margin-bottom: 8px;
         }
 
@@ -280,7 +281,7 @@
             font-size: 1.1rem;
             font-weight: 600;
             margin: 28px 0 12px;
-            color: var(--accent);
+            color: var(--accent-dark); /* was var(--accent) — contrast fix */
         }
 
         p {
@@ -408,7 +409,7 @@
             font-family: 'Fraunces', serif;
             font-size: 2rem;
             font-weight: 800;
-            color: var(--accent);
+            color: var(--accent-dark); /* was var(--accent) — contrast fix */
         }
 
         .stat-card .stat-lbl {
@@ -499,6 +500,7 @@
     </div>
 
     <!-- TABLE OF CONTENTS -->
+    <main id="main-content">
     <div class="toc-page">
         <div class="container">
             <h2>📖 Sommaire</h2>
@@ -1411,6 +1413,8 @@
             </p>
         </div>
     </div>
+
+    </main><!-- /#main-content -->
 
 </body>
 
