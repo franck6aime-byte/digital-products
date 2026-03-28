@@ -344,7 +344,10 @@
             line-height: 1;
         }
 
-        .intro-block p {
+        /* Specificity fix: .article-body p sets color:#2D3139, this overrides it */
+        .intro-block p,
+        .article-body .intro-block p,
+ .article-body .intro-block p {
             color: var(--paper);
             font-size: 1.1rem;
             line-height: 1.75;
@@ -353,8 +356,10 @@
             margin-bottom: 10px;
         }
 
-        .intro-block strong {
-            color: var(--paper);
+        /* Strong inside intro stays light-colored */
+        .intro-block strong,
+        .article-body .intro-block strong {
+            color: var(--gold);
             font-weight: 700;
         }
 

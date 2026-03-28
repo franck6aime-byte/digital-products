@@ -11,29 +11,26 @@ files.forEach(file => {
     let content = fs.readFileSync(filePath, 'utf8');
     const before = content;
 
-    // Fix h4 inside .tool-card divs  → h3
-    // Pattern: <div class="tool-card">...<h4>...</h4>...
+    // Fix 1: Increase specificity of .intro-block p to override .article-body p
+    // Replace simple selector with compound selector
     content = content.replace(
-        /(<div class="tool-card">[^]*?)<h4>([^<]*)<\/h4>/g,
-        '$1<h3>$2</h3>'
+        /(\s*)\.intro-block p \{/g,
+        '$1.intro-block p,\n$1.article-body .intro-block p {'
     );
 
-    // Fix .tool-card h4 CSS rule → h3
-    content = content.replace(/\.tool-card h4\s*\{/g, '.tool-card h3 {');
-
-    // Also fix agenda-content h4 → h3 (same hierarchy issue)
+    // Fix 2: Intro-block strong should be var(--gold) or var(--paper), not #2D3139
+    // Replace any .intro-block strong that sets color to dark ink
     content = content.replace(
-        /(<div class="agenda-content">[^]*?)<h4>([^<]*)<\/h4>/g,
-        '$1<h3>$2</h3>'
+        /\.intro-block strong \{\s*color:\s*var\(--paper\);\s*font-weight:\s*700;\s*\}/g,
+        '.intro-block strong,\n        .article-body .intro-block strong {\n            color: var(--gold);\n            font-weight: 700;\n        }'
     );
-    content = content.replace(/\.agenda-content h4\s*\{/g, '.agenda-content h3 {');
 
     if (content !== before) {
         fs.writeFileSync(filePath, content, 'utf8');
         totalFixes++;
-        console.log(`✅ Fixed h4→h3 in tool/agenda cards: ${file}`);
+        console.log(`✅ Fixed intro-block text visibility in: ${file}`);
     } else {
-        console.log(`⏭️  No changes needed: ${file}`);
+        console.log(`⏭️  No change needed: ${file}`);
     }
 });
 
