@@ -180,7 +180,7 @@
         .section-badge {
             display: inline-block;
             background: rgba(201, 168, 76, 0.15);
-            color: var(--gold);
+            color: #7A5C10; /* darkened from #C9A84C for WCAG AA contrast */
             padding: 6px 16px;
             border-radius: 100px;
             font-size: 0.8rem;
@@ -236,7 +236,7 @@
 
         .temp-tag {
             background: rgba(201, 168, 76, 0.1);
-            color: var(--gold);
+            color: #7A5C10; /* darkened for WCAG AA contrast on white */
             padding: 5px 12px;
             border-radius: 99px;
             font-size: 0.7rem;
@@ -244,7 +244,8 @@
             text-transform: uppercase;
         }
 
-        h3 {
+        /* Scoped to avoid overriding global CSS */
+        .template-card h2 {
             font-family: 'Fraunces', serif;
             margin-top: 15px;
             margin-bottom: 15px;
@@ -444,6 +445,7 @@
         </div>
     </nav>
 
+    <main id="main-content">
     <div class="container">
         <div class="section-header">
             <span class="section-badge">Contenu Inclus</span>
@@ -456,7 +458,7 @@
             <div class="template-card">
                 <div class="temp-icon">📓</div>
                 <span class="temp-tag">NOTION</span>
-                <h3>Dashboard "Second Cerveau" IA</h3>
+                <h2>Dashboard "Second Cerveau" IA</h2>
                 <p>Système complet (prêt à dupliquer) pour organiser vos projets, centraliser vos prompts favoris et
                     suivre vos revenus, directement dans Notion.</p>
                 <div class="template-content-box">
@@ -474,7 +476,7 @@
             <div class="template-card">
                 <div class="temp-icon">🎨</div>
                 <span class="temp-tag">CANVA / DESIGN</span>
-                <h3>Pack Visuel Réseaux Sociaux</h3>
+                <h2>Pack Visuel Réseaux Sociaux</h2>
                 <p>Un ensemble de templates Canva professionnels facilement modifiables : miniatures YouTube, stories
                     Instagram, carrousels LinkedIn.</p>
                 <div class="template-content-box" style="margin-bottom: 30px;">
@@ -490,7 +492,7 @@
             <div class="template-card">
                 <div class="temp-icon">📊</div>
                 <span class="temp-tag">GOOGLE SHEETS</span>
-                <h3>Simulateur Financier 2026</h3>
+                <h2>Simulateur Financier 2026</h2>
                 <div class="template-content-box">
                     <strong>Tableau de bord intelligent :</strong><br>
                     Calculez automatiquement votre seuil de rentabilité, projetez vos ventes de produits digitaux et
@@ -507,6 +509,7 @@
                 site</a>
         </footer>
     </div>
+    </main><!-- /#main-content -->
 </body>
 
 </html>
