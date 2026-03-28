@@ -1,0 +1,816 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Plan de Campagne TikTok â€” Mois 1 | DigitalBoostAI</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: #f7f8fc; color: #1a1a2e; font-size: 13px; }
+
+  /* COVER PAGE */
+  .cover {
+    width: 100%; height: 100vh; min-height: 800px;
+    background: linear-gradient(135deg, #0a1128 0%, #1a2a6c 50%, #b21f1f 100%);
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; color: white; padding: 40px; page-break-after: always;
+  }
+  .cover .badge {
+    background: rgba(212,175,55,0.25); border: 1px solid #D4AF37;
+    color: #D4AF37; padding: 6px 18px; border-radius: 30px; font-size: 11px;
+    font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 28px;
+  }
+  .cover h1 { font-size: 38px; font-weight: 900; line-height: 1.15; margin-bottom: 16px; }
+  .cover h1 span { color: #D4AF37; }
+  .cover .subtitle { font-size: 16px; opacity: 0.8; max-width: 520px; line-height: 1.6; margin-bottom: 36px; }
+  .cover .meta { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; }
+  .cover .meta-item { text-align: center; }
+  .cover .meta-item .num { font-size: 28px; font-weight: 900; color: #D4AF37; }
+  .cover .meta-item .lab { font-size: 11px; opacity: 0.7; text-transform: uppercase; letter-spacing: 1px; }
+  .cover .date { margin-top: 40px; font-size: 12px; opacity: 0.5; }
+
+  /* INTRO BLOCK */
+  .intro-block {
+    background: linear-gradient(135deg, #1a2a6c, #0a1128);
+    color: white; padding: 32px 40px; margin: 32px auto;
+    max-width: 900px; border-radius: 12px;
+  }
+  .intro-block h2 { color: #D4AF37; font-size: 18px; margin-bottom: 12px; }
+  .intro-block p  { opacity: 0.85; line-height: 1.7; }
+
+  /* CONTENT WRAPPER */
+  .wrapper { max-width: 900px; margin: 0 auto; padding: 24px 32px; }
+
+  h1 { font-size: 26px; font-weight: 900; color: #0a1128;
+       border-bottom: 3px solid #D4AF37; padding-bottom: 8px;
+       margin: 32px 0 16px; page-break-before: always; }
+  h2 { font-size: 18px; font-weight: 700; color: #1a2a6c;
+       background: linear-gradient(90deg, #e8ecf8, transparent);
+       padding: 10px 16px; border-left: 4px solid #1a2a6c;
+       border-radius: 0 8px 8px 0; margin: 28px 0 12px; }
+  h3 { font-size: 15px; font-weight: 700; color: #b21f1f;
+       margin: 20px 0 8px; padding-left: 10px;
+       border-left: 3px solid #D4AF37; }
+  p  { line-height: 1.75; margin: 6px 0; color: #333; }
+  ul { padding-left: 20px; margin: 8px 0; }
+  li { line-height: 1.8; color: #333; }
+  code { background: #f0f0ff; color: #b21f1f; padding: 1px 5px;
+         border-radius: 3px; font-size: 12px; font-family: monospace; }
+  hr  { border: none; border-top: 1px solid #dde; margin: 20px 0; }
+
+  /* PROMPT BLOCK */
+  pre.prompt-block {
+    background: #0a1128; color: #e8f4fd;
+    border: 1px solid #D4AF37; border-left: 4px solid #D4AF37;
+    border-radius: 8px; padding: 20px 24px;
+    font-family: 'Courier New', monospace; font-size: 11.5px;
+    line-height: 1.7; white-space: pre-wrap; word-wrap: break-word;
+    margin: 16px 0; page-break-inside: avoid;
+  }
+
+  /* WEEK HEADER */
+  h2:has(+ h3), .week-label {
+    color: white; background: linear-gradient(90deg, #1a2a6c, #b21f1f);
+    padding: 12px 20px; border-radius: 8px; border-left: none;
+  }
+
+  /* FOOTER */
+  .footer {
+    text-align: center; padding: 24px; color: #888; font-size: 11px;
+    border-top: 1px solid #dde; margin-top: 40px;
+  }
+  .footer strong { color: #D4AF37; }
+
+  /* PRINT */
+  @media print {
+    body { background: white; }
+    .cover { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    pre.prompt-block { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    h2 { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<div class="cover">
+  <div class="badge">Plan de Production Officiel</div>
+  <h1>Campagne TikTok<br><span>Phase 1 â€” Mois 1</span></h1>
+  <p class="subtitle">
+    Tous les prompts Google Flow prÃªts Ã  gÃ©nÃ©rer &bull;
+    Structure scÃ¨ne par scÃ¨ne &bull; Voix off en franÃ§ais &bull; Format 9:16
+  </p>
+  <div class="meta">
+    <div class="meta-item"><div class="num">4</div><div class="lab">Semaines</div></div>
+    <div class="meta-item"><div class="num">20</div><div class="lab">VidÃ©os</div></div>
+    <div class="meta-item"><div class="num">20s</div><div class="lab">Par vidÃ©o</div></div>
+    <div class="meta-item"><div class="num">9:16</div><div class="lab">Format</div></div>
+  </div>
+  <div class="date">DigitalBoostAI &nbsp;|&nbsp; 10 Mars â€“ 6 Avril 2026 &nbsp;|&nbsp; GÃ©nÃ©rÃ© le 5 Mars 2026</div>
+</div>
+
+<!-- INTRO -->
+<div class="wrapper">
+<div class="intro-block">
+  <h2>ðŸ“‹ Comment utiliser ce document</h2>
+  <p>
+    Chaque bloc <em>prompt</em> dans ce document est directement prÃªt Ã  Ãªtre copiÃ©-collÃ© dans
+    <strong>Google Flow</strong> (labs.google.com/flow). SÃ©lectionnez "New Video â†’ Generate from Prompt",
+    collez le bloc, rÃ©glez le format sur <strong>9:16 Â· 20 secondes Â· Voix franÃ§aise</strong>, puis gÃ©nÃ©rez.
+    Les prompts sont rÃ©digÃ©s en anglais pour de meilleures performances de gÃ©nÃ©ration, mais la voix off
+    et les textes Ã  l'Ã©cran sont intÃ©gralement en <strong>franÃ§ais</strong>.
+  </p>
+</div>
+
+<h1>🎬 Prompts Google Flow — Phase 1 / MOIS 1 (Semaines 1 à 4)</h1>
+<p><strong>Démarrage : 10 Mars 2026 — Fin : 6 Avril 2026</strong></p>
+<p>> Colle chaque bloc dans Google Flow → New Video → From Prompt → Format 9:16 → 20 sec → Voix FR</p>
+<br>
+<hr>
+<br>
+<h2>📅 SEMAINE 1 — Du 10 au 16 Mars 2026</h2>
+<br>
+<hr>
+<br>
+<h3>LUNDI 10 MARS — Astuce Choc</h3>
+<br>
+<pre class='prompt-block'>
+Generate a 20-second vertical video (9:16). Style: clean, modern productivity aesthetic. Soft white and blue tones. Home office setting, minimal desk, laptop open showing ChatGPT interface.
+
+[Scene 1 — 0:00 to 0:04]
+Visual: Slow-motion close-up of hands opening a laptop. Screen glows as ChatGPT loads.
+On-screen text (bold white, centered): "Ce prompt IA remplace 2h de travail 🤯"
+Voiceover (French, confident, slightly surprised): "Attends... tu ne sais pas encore ça ?"
+
+[Scene 2 — 0:04 to 0:10]
+Visual: Screen recording style — text typed into ChatGPT: "Agis comme un expert en marketing. Donne-moi les 5 actions prioritaires pour aujourd'hui."
+On-screen text: "Voici le prompt exact 👇"
+Voiceover: "Tu tapes ce prompt le matin... et en 30 secondes, tu as ton plan de journée complet."
+
+[Scene 3 — 0:10 to 0:16]
+Visual: ChatGPT response appears on screen — a clean bulleted list. Satisfied nod from user (hands visible, no face needed).
+On-screen text: "2 heures remplacées par 30 secondes ✅"
+Voiceover: "2 heures de réflexion remplacées par 30 secondes. C'est ça, l'IA bien utilisée."
+
+[Scene 4 — 0:16 to 0:20]
+Visual: Phone screen showing TikTok bio link with a bouncing arrow. Warm gold accent overlay.
+On-screen text: "Abonne-toi 👆 J'en poste chaque jour"
+Voiceover: "Suis-moi — je partage ce genre d'astuce tous les jours."
+
+PARAMETERS: Aspect 9:16 | 20 seconds | Font: Bold Montserrat | Colors: White, Navy, Gold | Music: Soft lo-fi beat, low volume | Voiceover: French, male or female, calm and confident | Fast cuts, no slow fades.
+</pre>
+<br>
+<hr>
+<br>
+<h3>MARDI 11 MARS — Hook / Erreur Courante</h3>
+<br>
+<pre class='prompt-block'>
+Generate a 20-second vertical video (9:16). Style: high contrast, attention-grabbing. Dark background transitioning to bright. Urgent energy.
+
+[Scene 1 — 0:00 to 0:04]
+Visual: Black screen. One line of white text appears dramatically. Then cuts to a person (no face visible) typing furiously on a laptop looking frustrated.
+On-screen text (large, red): "95% des gens font ÇA avec ChatGPT ❌"
+Voiceover (French, direct): "95% des gens utilisent ChatGPT complètement mal."
+
+[Scene 2 — 0:04 to 0:08]
+Visual: Screen shows a vague ChatGPT prompt typed: "Donne-moi des idées de business." A red X appears over it.
+On-screen text: "Prompt vague = résultat nul ❌"
+Voiceover: "Ils tapent des questions vagues et sont déçus du résultat."
+
+[Scene 3 — 0:08 to 0:15]
+Visual: Screen wipes to a NEW prompt appearing: "Tu es un expert e-commerce. J'ai 0€ de budget. Donne-moi 3 idées de business digital, cette semaine, sous forme de liste." A green checkmark appears.
+On-screen text: "RÔLE + CONTEXTE + FORMAT = 🔥"
+Voiceover: "La bonne méthode : un rôle, un contexte, un format. La différence est hallucinante."
+
+[Scene 4 — 0:15 to 0:20]
+Visual: Split screen — bad result vs good result from ChatGPT.
+On-screen text: "Commente ton domaine 👇 je te donne le prompt parfait"
+Voiceover: "Commente ton domaine en dessous, je te donne le prompt parfait pour toi."
+
+PARAMETERS: Aspect 9:16 | 20 seconds | Font: Bold Montserrat | Colors: Red for errors, Green for solutions, White text | Music: Tense intro, resolves to upbeat | Voiceover: French, energetic male voice.
+</pre>
+<br>
+<hr>
+<br>
+<h3>MERCREDI 12 MARS — Valeur + Vente Douce</h3>
+<br>
+<pre class='prompt-block'>
+Generate a 20-second vertical video (9:16). Style: warm, inspiring, entrepreneurial. Soft amber and white lighting. Behind-the-scenes creative studio feel.
+
+[Scene 1 — 0:00 to 0:05]
+Visual: Time-lapse style — a document fills up with text on screen, pages scrolling fast. Calendar showing 3 days circled.
+On-screen text: "J'ai créé un eBook complet en 3 jours avec l'IA 📖"
+Voiceover (French, storytelling tone): "J'ai créé un ebook complet en 3 jours grâce à l'IA. Voilà comment exactement."
+
+[Scene 2 — 0:05 to 0:11]
+Visual: 3 quick cuts, each 2 seconds:
+- Cut 1: ChatGPT screen with "Crée un plan en 10 chapitres sur [sujet]"
+- Cut 2: Each chapter prompt being filled
+- Cut 3: Canva open with ebook cover design
+On-screen text (numbered): "Étape 1: Plan IA ✅" → "Étape 2: Contenu IA ✅" → "Étape 3: Design Canva ✅"
+Voiceover: "Étape 1 : le plan avec l'IA. Étape 2 : le contenu chapitre par chapitre. Étape 3 : le design sur Canva."
+
+[Scene 3 — 0:11 to 0:16]
+Visual: Polished ebook cover displayed on iPad/tablet, rotating slowly. Looks premium.
+On-screen text: "Le résultat 👆 Disponible sur mon site"
+Voiceover: "Le résultat est là. Je l'ai mis en vente sur mon site en moins d'une semaine."
+
+[Scene 4 — 0:16 to 0:20]
+Visual: Phone showing bio link, finger tapping it.
+On-screen text: "Lien dans ma bio 🔗 Pour voir mon eBook"
+Voiceover: "Le lien est dans ma bio si tu veux voir le résultat."
+
+PARAMETERS: Aspect 9:16 | 20 seconds | Warm amber tones | Font: Outfit Bold | Music: Motivational lo-fi | Voiceover: French, warm and genuine.
+</pre>
+<br>
+<hr>
+<br>
+<h3>JEUDI 13 MARS — Hook / Tendance (Texte à l'Écran)</h3>
+<br>
+<pre class='prompt-block'>
+Generate a 20-second vertical video (9:16). Style: cinematic, storytelling mood. No voiceover needed. Only on-screen text. B-roll: slow pans of a laptop, phone with notifications, coffee cup, city view at sunrise. Aesthetic, aspirational.
+
+[Scene 1 — 0:00 to 0:03]
+Visual: Slow pan of a closed laptop on a desk in dim light.
+On-screen text (center, white, fade-in): "POV : Tu as décidé de ne plus dépendre de ton patron..."
+
+[Scene 2 — 0:03 to 0:06]
+Visual: Phone screen lighting up with TikTok and notifications.
+On-screen text: "Tu découvres l'IA il y a quelques mois..."
+
+[Scene 3 — 0:06 to 0:10]
+Visual: Laptop opens, ChatGPT visible, then tabs of Canva, Stripe, a website.
+On-screen text: "Tu crées tes premiers produits digitaux..."
+
+[Scene 4 — 0:10 to 0:14]
+Visual: Phone buzzes. Stripe notification: "Paiement reçu ✅". Close-up on the screen.
+On-screen text (gold color, larger): "Ta première vente à 3h du matin 😭💰"
+
+[Scene 5 — 0:14 to 0:17]
+Visual: Sunrise through a window. Peaceful.
+On-screen text: "Tu n'aurais jamais imaginé que c'était possible..."
+
+[Scene 6 — 0:17 to 0:20]
+Visual: TikTok bio screen with bouncing red arrow on link.
+On-screen text (bold, urgent): "C'est mon histoire. Ça peut être la tienne. Lien en bio ⬆️"
+
+PARAMETERS: Aspect 9:16 | 20 seconds | Music: Trending emotional/lo-fi track (use a popular current sound) | NO voiceover | Text animations: gentle fade-ins | Colors: Gold, White, Dark background.
+</pre>
+<br>
+<hr>
+<br>
+<h3>VENDREDI 14 MARS — Vente (Bundle Ultime)</h3>
+<br>
+<pre class='prompt-block'>
+Generate a 20-second vertical video (9:16). Style: premium product reveal. Dark luxury background, gold accents. High energy, confident. Like a luxury brand ad.
+
+[Scene 1 — 0:00 to 0:04]
+Visual: Gold particles swirl, then reveal text dramatically on a dark background.
+On-screen text (gold, large): "Ce que tu obtiens dans le Bundle Ultime 💎"
+Voiceover (French, confident): "Laisse-moi te montrer exactement ce que tu obtiens."
+
+[Scene 2 — 0:04 to 0:09]
+Visual: iPad showing the ebook cover glides in from the left with a soft glow.
+On-screen text: "✅ eBook Stratégique IA — Méthode complète"
+Voiceover: "Un : mon eBook stratégique, toute ma méthode pour lancer un business IA de zéro."
+
+[Scene 3 — 0:09 to 0:13]
+Visual: Grid of 100 prompt cards appears dynamically, filling the screen.
+On-screen text: "✅ 100 Prompts Secrets — Testés et validés"
+Voiceover: "Deux : mes 100 prompts secrets — les mêmes que j'utilise chaque jour."
+
+[Scene 4 — 0:13 to 0:17]
+Visual: Price tag animation — a large number crossed out, replaced by the discounted price with a -66% badge flashing.
+On-screen text (red badge): "-66% AUJOURD'HUI SEULEMENT ⏳"
+Voiceover: "Normalement plus du double, mais aujourd'hui à -66%. Ça ne durera pas."
+
+[Scene 5 — 0:17 to 0:20]
+Visual: Phone with TikTok bio, animated red arrow pointing at link, pulsing urgency effect.
+On-screen text: "Lien dans ma bio ⬆️ Dépêche-toi"
+Voiceover: "Clique sur le lien dans ma bio. Dépêche-toi."
+
+PARAMETERS: Aspect 9:16 | 20 sec | Colors: Deep Navy #0A1128, Gold #D4AF37, White | Font: Bold Montserrat | Music: Epic luxury beat, building tension | Voiceover: French, urgent and confident.
+</pre>
+<br>
+<hr>
+<br>
+<h3>SAMEDI 15 MARS — Storytime / Coulisses</h3>
+<br>
+<pre class='prompt-block'>
+Generate a 20-second vertical video (9:16). Style: raw, authentic, emotional. Handheld camera feel, slightly desaturated at start, warming into color. Cozy home environment.
+
+[Scene 1 — 0:00 to 0:05]
+Visual: Dimly lit room. A person sits at a desk, head slightly down, looking at phone. Mood: introspective.
+On-screen text (soft white, handwritten style): "Ce que personne ne sait sur moi..."
+Voiceover (French, sincere, slow): "Je vais te raconter quelque chose que je n'ai jamais dit publiquement."
+
+[Scene 2 — 0:05 to 0:10]
+Visual: Wider shot — empty wallet on desk, bills, calculator. Symbolic of financial stress.
+On-screen text: "Il y a quelques mois, j'étais complètement à court..."
+Voiceover: "Il y a quelques mois, j'étais complètement à bout. Je cherchais une issue."
+
+[Scene 3 — 0:10 to 0:15]
+Visual: Transition — laptop opens, ChatGPT, Canva, then a product page. Gradual color warmth increases.
+On-screen text: "Puis j'ai découvert la vente de produits digitaux avec l'IA..."
+Voiceover: "J'ai découvert la vente de produits digitaux et l'IA. Au début ? Pas une seule vente."
+
+[Scene 4 — 0:15 to 0:20]
+Visual: Phone buzzing — Stripe payment notification glowing. Person smiles (hands raising phone visible).
+On-screen text (warm gold): "Mais un jour... mon téléphone a vibré. 🔔💰" → "Suis-moi. Je partage tout ici. ❤️"
+Voiceover: "Et un jour, mon téléphone a vibré. Ma première vente. Ce jour-là, tout a changé."
+
+PARAMETERS: Aspect 9:16 | 20 sec | Color grade: desaturated to warm | Font: Handwritten + Bold Mix | Music: Soft emotional piano, slow build | Voiceover: French, intimate and genuine.
+</pre>
+<br>
+<hr>
+<br>
+<h2>📅 SEMAINE 2 — Du 17 au 23 Mars 2026</h2>
+<br>
+<hr>
+<br>
+<h3>LUNDI 17 MARS — Astuce Choc (3 Prompts = 10h économisées)</h3>
+<br>
+<pre class='prompt-block'>
+Generate a 20-second vertical video (9:16). Style: clean tech tutorial. White background, colorful text overlays. Quick, punchy energy.
+
+[Scene 1 — 0:00 to 0:03]
+Visual: Bold counter animation: "10 heures par semaine... économisées."
+On-screen text: "3 prompts IA = 10h de gagnées par semaine ⏱️"
+Voiceover (French, energetic): "Voici les 3 prompts que je n'échangerais pour rien au monde."
+
+[Scene 2 — 0:03 to 0:08]
+Visual: Screen 1 — ChatGPT with prompt: "Rédige un email professionnel pour [situation] en 5 lignes, ton chaleureux." Green badge: "Prompt 1 ✅ Emails pro en 30 secondes."
+Voiceover: "Numéro 1 : la rédaction d'emails professionnels."
+
+[Scene 3 — 0:08 to 0:13]
+Visual: Screen 2 — ChatGPT: "Génère 20 idées de contenu TikTok sur le thème [X] avec un hook pour chacune." Green badge: "Prompt 2 ✅ 20 idées en 1 minute."
+Voiceover: "Numéro 2 : générer 20 idées de contenu en moins d'une minute."
+
+[Scene 4 — 0:13 to 0:18]
+Visual: Screen 3 — ChatGPT: "Résume ce document en 5 points clés actionnables." Green badge: "Prompt 3 ✅ Tout document résumé en 10 sec."
+Voiceover: "Numéro 3 : résumer n'importe quel document en 10 secondes."
+
+[Scene 5 — 0:18 to 0:20]
+Visual: Bookmark/save icon animation pulsing.
+On-screen text: "📌 Sauvegarde cette vidéo maintenant !"
+Voiceover: "Sauvegarde ça — tu en auras besoin !"
+
+PARAMETERS: Aspect 9:16 | 20 sec | Colors: White bg, Green badges, Black text | Font: Outfit Bold | Music: Fast-paced lo-fi | Voiceover: French, quick and clear.
+</pre>
+<br>
+<hr>
+<br>
+<h3>MARDI 18 MARS — Hook / Le Mensonge du Business en Ligne</h3>
+<br>
+<pre class='prompt-block'>
+Generate a 20-second vertical video (9:16). Style: raw truth-telling. Slightly desaturated, documentary feel. Direct to camera (hands/torso visible, no face required).
+
+[Scene 1 — 0:00 to 0:04]
+Visual: Black screen. Text appears one word at a time. Then hands slamming table.
+On-screen text (bold white on black): "On t'a MENTI sur le business en ligne."
+Voiceover (French, firm): "On t'a menti. Le business en ligne, c'est pas magique."
+
+[Scene 2 — 0:04 to 0:09]
+Visual: Montage of fake guru content — screenshots of "Riche en 24h" ads with X marks over them.
+On-screen text: "❌ Riche en 24h ❌ Sans effort ❌ Méthode miracle"
+Voiceover: "Tout ce que tu vois en ligne sur 'devenir riche en 24h' ? C'est du bruit."
+
+[Scene 3 — 0:09 to 0:15]
+Visual: Simple clean animation — 3 checkmarks appearing one by one on a white background.
+On-screen text: "✅ Constance + ✅ Bon outil (IA) + ✅ Bon produit = Revenus réels"
+Voiceover: "La vraie formule c'est : constance, plus le bon outil, plus le bon produit. C'est tout."
+
+[Scene 4 — 0:15 to 0:20]
+Visual: Comment section animation with "VRAI" comments appearing.
+On-screen text: "Commente 'VRAI' si t'en avais marre des fausses promesses 👇"
+Voiceover: "Commente VRAI si tu en avais marre des fausses promesses."
+
+PARAMETERS: Aspect 9:16 | 20 sec | Desaturated start, cleans up | Font: Bold sans-serif | Music: Serious intro, uplifting end | Voiceover: French, honest and direct.
+</pre>
+<br>
+<hr>
+<br>
+<h3>MERCREDI 19 MARS — Valeur + Vente Douce (Idées de Contenu)</h3>
+<br>
+<pre class='prompt-block'>
+Generate a 20-second vertical video (9:16). Style: creator behind-the-scenes. Warm, approachable. Phone and laptop visible. Content creator workspace.
+
+[Scene 1 — 0:00 to 0:04]
+Visual: Hands scrolling through a full content calendar on phone. 30 days of content planned.
+On-screen text: "Je poste 1 vidéo/jour. Je ne sèche JAMAIS sur les idées. Voilà comment 🧠"
+Voiceover (French, casual and friendly): "Je poste une vidéo par jour. Et je ne manque jamais d'idées. Voilà pourquoi."
+
+[Scene 2 — 0:04 to 0:11]
+Visual: Screen recording — ChatGPT prompt typed: "Donne-moi 30 idées de vidéos TikTok sur le thème 'IA et business', avec un hook accrocheur pour chacune." Then 30 numbered ideas appear rapidly.
+On-screen text: "Ce prompt génère 30 idées en 20 secondes 🤯"
+Voiceover: "Je tape ce prompt une fois par mois et j'ai tout mon calendrier rempli."
+
+[Scene 3 — 0:11 to 0:16]
+Visual: Content calendar fills up with 30 days of video titles. Satisfying animation.
+On-screen text: "30 jours de contenu planifié ✅"
+Voiceover: "30 jours planifiés. En 20 secondes. Avec l'IA."
+
+[Scene 4 — 0:16 to 0:20]
+Visual: Phone showing bio with link highlighted.
+On-screen text: "Ce prompt + 99 autres dans mon pack 🔗 Lien en bio"
+Voiceover: "Ce prompt et 99 autres identiques sont dans mon pack. Le lien est dans ma bio."
+
+PARAMETERS: Aspect 9:16 | 20 sec | Warm tones | Font: Outfit | Music: Upbeat lo-fi | Voiceover: French, casual creator tone.
+</pre>
+<br>
+<hr>
+<br>
+<h3>JEUDI 20 MARS — Hook / Tendance (Avant/Après IA)</h3>
+<br>
+<pre class='prompt-block'>
+Generate a 20-second vertical video (9:16). Style: high contrast before/after transformation. Split tones: grey/blue for "before", warm gold for "after". No voiceover — only on-screen text with trending audio.
+
+[Scene 1 — 0:00 to 0:05]
+Visual: Left side grey — stressed worker surrounded by papers, multiple tabs open, looking overwhelmed.
+On-screen text: "AVANT l'IA : 12h de travail par jour 😮‍💨"
+
+[Scene 2 — 0:05 to 0:10]
+Visual: Right side warm gold — same desk but clean, laptop with ChatGPT, coffee, calm.
+On-screen text: "APRÈS l'IA : 3h de travail, mêmes résultats 💪"
+
+[Scene 3 — 0:10 to 0:15]
+Visual: Close-up on phone screen — Stripe payment notifications stacking up.
+On-screen text: "La différence ? Les bons prompts."
+
+[Scene 4 — 0:15 to 0:20]
+Visual: Bio link on TikTok profile with pulsing arrow.
+On-screen text: "Mes 100 prompts sont dans le lien de ma bio ⬆️"
+
+PARAMETERS: Aspect 9:16 | 20 sec | Split color grade | Trending TikTok audio (no voiceover) | Font: Bold Montserrat | Fast paced cuts.
+</pre>
+<br>
+<hr>
+<br>
+<h3>VENDREDI 20 MARS — Vente (Pour Qui ?)</h3>
+<br>
+<pre class='prompt-block'>
+Generate a 20-second vertical video (9:16). Style: conversational, honest product pitch. Clean bright background. Simple and direct.
+
+[Scene 1 — 0:00 to 0:04]
+Visual: Person shaking head (hands visible) with text appearing.
+On-screen text: "Mon Bundle n'est PAS pour tout le monde."
+Voiceover (French, calm and confident): "Mon Bundle n'est pas pour tout le monde. Laisse-moi t'expliquer pour qui il est fait."
+
+[Scene 2 — 0:04 to 0:11]
+Visual: 3 checkmark items appear one by one, clean animation on white/light background.
+On-screen text:
+"✅ Tu veux un revenu en ligne sans CV ni diplôme."
+"✅ Tu veux utiliser l'IA mais tu sais pas par où commencer."
+"✅ Tu es prêt à travailler 30 min/jour au lieu de 12h."
+Voiceover: "C'est pour toi si tu veux un revenu en ligne. Si tu veux l'IA mais tu ne sais pas commencer. Si tu peux travailler 30 minutes par jour."
+
+[Scene 3 — 0:11 to 0:16]
+Visual: Score counter: "Tu coches 2 cases sur 3 ? C'est fait pour toi." Green highlight.
+On-screen text: "2 cases sur 3 cochées ? C'est pour toi. ✅"
+Voiceover: "Si tu coches 2 de ces 3 cases, ce Bundle est fait pour toi."
+
+[Scene 4 — 0:16 to 0:20]
+Visual: Phone bio link, red pulsing arrow.
+On-screen text: "Lien dans ma bio ⬆️"
+Voiceover: "Le lien est dans ma bio."
+
+PARAMETERS: Aspect 9:16 | 20 sec | Clean white/mint tones | Font: Outfit Bold | Music: Calm professional background | Voiceover: French, reassuring.
+</pre>
+<br>
+<hr>
+<br>
+<h2>📅 SEMAINE 3 — Du 24 au 30 Mars 2026</h2>
+<br>
+<hr>
+<br>
+<h3>LUNDI 24 MARS — Astuce Choc (IA pour DM Instagram)</h3>
+<br>
+<pre class='prompt-block'>
+Generate a 20-second vertical video (9:16). Style: smartphone-centric, social media native. Close-ups of phone screens. Bright, modern UI aesthetic.
+
+[Scene 1 — 0:00 to 0:04]
+Visual: Phone screen with Instagram DM open. Notification pings.
+On-screen text: "L'IA peut écrire tes DM Instagram à ta place 😱"
+Voiceover (French, excited): "Tu ne savais pas que tu pouvais déléguer tes messages à l'IA ?"
+
+[Scene 2 — 0:04 to 0:11]
+Visual: ChatGPT prompt appears on screen: "Rédige une réponse chaleureuse à ce message Instagram d'un potentiel client qui demande des infos sur mon produit digital." Then a perfect reply generates.
+On-screen text: "Le prompt exact 👆"
+Voiceover: "Tu colles le message reçu dans ChatGPT, tu demandes une réponse professionnelle, et voilà."
+
+[Scene 3 — 0:11 to 0:16]
+Visual: Copy-paste animation from ChatGPT to Instagram DM. Message sent.
+On-screen text: "Copie → Colle → Envoie ✅"
+Voiceover: "Tu copies, tu colles, tu envoies. Toute ta prospection en 2 minutes."
+
+[Scene 4 — 0:16 to 0:20]
+Visual: Friend tagging animation.
+On-screen text: "📌 Sauvegarde + Tag un ami entrepreneur 👇"
+Voiceover: "Sauvegarde et tague un ami qui a besoin de ça."
+
+PARAMETERS: Aspect 9:16 | 20 sec | Bright mobile UI colors | Font: Outfit | Music: Upbeat digital | Voiceover: French, energetic.
+</pre>
+<br>
+<hr>
+<br>
+<h3>MARDI 25 MARS — Hook (La Vraie Raison)</h3>
+<br>
+<pre class='prompt-block'>
+Generate a 20-second vertical video (9:16). Style: philosophical, thoughtful. Dark-to-light visual journey. Slow reveals.
+
+[Scene 1 — 0:00 to 0:05]
+Visual: Dark background. Text reveals slowly.
+On-screen text: "Pourquoi tu n'as pas encore de business en ligne... (la vraie raison)"
+Voiceover (French, slow and deliberate): "Ce n'est pas le manque d'argent. Ce n'est pas le manque de temps."
+
+[Scene 2 — 0:05 to 0:10]
+Visual: Three question marks animate: "Quoi vendre ? Comment ? À qui ?" All in red.
+On-screen text: "❓ Quoi vendre ❓ Comment ❓ À qui"
+Voiceover: "La vraie raison, c'est que tu ne sais pas quoi vendre, comment le vendre, ni à qui."
+
+[Scene 3 — 0:10 to 0:16]
+Visual: The three red question marks transform into green checkmarks with the IA logo.
+On-screen text: "✅ L'IA résout ces 3 problèmes en moins d'1 heure."
+Voiceover: "L'IA résout ces trois problèmes en moins d'une heure."
+
+[Scene 4 — 0:16 to 0:20]
+Visual: Comment box animation.
+On-screen text: "Dis-moi en commentaire : quel est ton vrai blocage ? 👇"
+Voiceover: "Dis-moi en commentaire quel est ton vrai blocage."
+
+PARAMETERS: Aspect 9:16 | 20 sec | Dark bg → Light | Font: Serif + Bold combo | Music: Thoughtful ambient | Voiceover: French, wise tone.
+</pre>
+<br>
+<hr>
+<br>
+<h3>MERCREDI 26 MARS — Valeur + Vente (Créer un Produit en 48h)</h3>
+<br>
+<pre class='prompt-block'>
+Generate a 20-second vertical video (9:16). Style: step-by-step tutorial, energetic countdown feel. Bold numbered steps.
+
+[Scene 1 — 0:00 to 0:03]
+Visual: Timer animation counting down from 48h.
+On-screen text: "Créer un produit digital en 48h avec l'IA — Le guide étape par étape ⚡"
+Voiceover (French, tutorial tone): "Comment créer un produit digital en 48 heures avec l'IA. Étape par étape."
+
+[Scene 2 — 0:03 to 0:08]
+Visual: Step 1 card slides in. ChatGPT: "Génère une idée de produit digital sur [mon domaine] qui se vend entre 10€ et 50€."
+On-screen text: "Étape 1 ⚡ Idée + Nom avec l'IA"
+Voiceover: "Étape 1 : tu demandes à l'IA de te générer une idée de produit avec son nom."
+
+[Scene 3 — 0:08 to 0:13]
+Visual: Step 2 card. ChatGPT fills pages of content. Canva shows a beautiful PDF page.
+On-screen text: "Étape 2 ⚡ Contenu + Design Canva"
+Voiceover: "Étape 2 : le contenu généré par l'IA, mis en page sur Canva en 2 heures."
+
+[Scene 4 — 0:13 to 0:17]
+Visual: Step 3 — Stripe/Gumroad product page going live. "En vente !" banner appears.
+On-screen text: "Étape 3 ⚡ Mise en vente sur ton site"
+Voiceover: "Étape 3 : en ligne sur ton site. 48 heures. C'est tout."
+
+[Scene 5 — 0:17 to 0:20]
+Visual: eBook cover on phone. Bio link.
+On-screen text: "Mon eBook détaille chaque étape 🔗 Lien en bio"
+Voiceover: "Mon eBook détaille chaque étape. Lien dans ma bio."
+
+PARAMETERS: Aspect 9:16 | 20 sec | Bold step cards | Colors: Black, White, Electric Blue | Font: Montserrat Bold | Music: Fast electronic tutorial beat.
+</pre>
+<br>
+<hr>
+<br>
+<h3>JEUDI 27 MARS — Hook / Tendance (Stitch ou Duet IA)</h3>
+<br>
+<pre class='prompt-block'>
+Generate a 20-second vertical video (9:16). Style: reaction/commentary style. Creator face replaced by hands and text. Split screen aesthetic.
+
+[Scene 1 — 0:00 to 0:05]
+Visual: Left panel shows stats from a big Tech/AI news (text on screen, no real clips needed). Right panel: surprised hands / coffee cup animation.
+On-screen text: "L'IA va remplacer 300 millions d'emplois d'ici 2030. (Source : Goldman Sachs)"
+Voiceover (French, reactive): "Tu as vu cette stat ? 300 millions d'emplois menacés par l'IA."
+
+[Scene 2 — 0:05 to 0:12]
+Visual: Full screen. Two paths animated: Path A (red arrow going down) "Subir l'IA" vs Path B (gold arrow going up) "Utiliser l'IA".
+On-screen text: "Il y a 2 options : Subir ❌ ou Utiliser ✅"
+Voiceover: "Il y a deux options : subir l'IA ou l'utiliser pour toi. J'ai choisi la deuxième."
+
+[Scene 3 — 0:12 to 0:20]
+Visual: Products displayed — ebook, prompts pack. Then bio link.
+On-screen text: "J'ai choisi de l'utiliser. Mon kit complet est en bio. ⬆️"
+Voiceover: "J'ai tout mis dans un pack pour t'aider à choisir la bonne voie. Lien dans ma bio."
+
+PARAMETERS: Aspect 9:16 | 20 sec | Split screen tones | Font: Bold news-style | Music: Dramatic then uplifting | Voiceover: French, assertive.
+</pre>
+<br>
+<hr>
+<br>
+<h3>VENDREDI 28 MARS — Vente (Résultat Concret)</h3>
+<br>
+<pre class='prompt-block'>
+Generate a 20-second vertical video (9:16). Style: proof and results focus. Screen recordings, numbers, credibility. Bright and professional.
+
+[Scene 1 — 0:00 to 0:04]
+Visual: Dashboard or analytics page showing upward graph. Stripe payment history (blurred amounts for privacy, but visible counts).
+On-screen text: "Ce que le Bundle IA a rendu possible 📈"
+Voiceover (French, composed): "Laisse-moi te montrer ce que ce Bundle permet concrètement."
+
+[Scene 2 — 0:04 to 0:10]
+Visual: Screen recording — generating a full week of content in 5 minutes using the prompt pack.
+On-screen text: "1 semaine de contenu créée en 5 minutes ✅"
+Voiceover: "En 5 minutes, j'ai tout mon contenu de la semaine avec les prompts du pack."
+
+[Scene 3 — 0:10 to 0:15]
+Visual: A product page on Gumroad or equivalent with purchases rolling in (animated).
+On-screen text: "Premières ventes générées. Sans pub. Juste du contenu organique."
+Voiceover: "Et les premières ventes commencent à rentrer. Sans publicité. Juste du contenu."
+
+[Scene 4 — 0:15 to 0:20]
+Visual: Bio link pulse animation.
+On-screen text: "Rejoins ceux qui passent à l'action. Lien en bio ⬆️"
+Voiceover: "Rejoins ceux qui passent à l'action. Le lien est dans ma bio."
+
+PARAMETERS: Aspect 9:16 | 20 sec | Clean professional | Font: Outfit | Music: Success-feeling upbeat | Voiceover: French, credible.
+</pre>
+<br>
+<hr>
+<br>
+<h2>📅 SEMAINE 4 — Du 31 Mars au 6 Avril 2026</h2>
+<br>
+<hr>
+<br>
+<h3>LUNDI 31 MARS — Astuce Choc (30 jours de contenu en 10 min)</h3>
+<br>
+<pre class='prompt-block'>
+Generate a 20-second vertical video (9:16). Style: screen demo, speed run aesthetic. Quick and satisfying.
+
+[Scene 1 — 0:00 to 0:04]
+Visual: Phone/laptop, calendar app showing empty. Timer starts.
+On-screen text: "Génère 30 jours de contenu TikTok en 10 minutes ⏱️"
+Voiceover (French, energetic): "Watch this. Je prends un calendrier vide et je le remplis en 10 minutes avec l'IA."
+
+[Scene 2 — 0:04 to 0:12]
+Visual: Screen recording — ChatGPT prompt: "Crée un calendrier de 30 jours de contenu TikTok sur [thème business IA]. Pour chaque jour : le type de vidéo, le hook, la durée, les hashtags." Response fills screen with 30 days of content.
+On-screen text: "Le prompt ⬆️" → "30 jours générés ✅"
+Voiceover: "Je tape ce prompt. Et voilà — 30 jours de vidéos planifiées en 20 secondes."
+
+[Scene 3 — 0:12 to 0:17]
+Visual: The calendar fills up with video titles, color-coded. Satisfying animation.
+On-screen text: "Calendrier plein ✅ Plus jamais en panne d'idées"
+Voiceover: "Plus jamais en panne d'idées. Plus jamais de stress le lundi matin."
+
+[Scene 4 — 0:17 to 0:20]
+Visual: Save / bookmark animation.
+On-screen text: "📌 Sauvegarde + Essaie maintenant"
+Voiceover: "Sauvegarde, essaie maintenant et dis-moi en commentaire."
+
+PARAMETERS: Aspect 9:16 | 20 sec | Speed run aesthetic, timer visible | Font: Monospace + Bold | Music: Speedrun electronic beat | Voiceover: French, punchy.
+</pre>
+<br>
+<hr>
+<br>
+<h3>MARDI 1 AVRIL — Hook (Ce que j'aurais fait différemment)</h3>
+<br>
+<pre class='prompt-block'>
+Generate a 20-second vertical video (9:16). Style: reflective, mentor tone. Warm amber tones. Journaling desk aesthetic.
+
+[Scene 1 — 0:00 to 0:05]
+Visual: Journal open on desk, pen writing. Candle lit. Reflective mood.
+On-screen text: "Si je recommençais à zéro aujourd'hui, voilà ce que je ferais différemment..."
+Voiceover (French, wise): "Si je pouvais repartir de zéro avec ce que je sais maintenant, voilà ce que je ferais."
+
+[Scene 2 — 0:05 to 0:10]
+Visual: Point 1 appears as written text: "Je choisirais UN seul produit digital. Pas 5."
+On-screen text: "Leçon 1 : Commence avec 1 seul produit. Sois le meilleur dessus."
+Voiceover: "Un : je me concentrerais sur un seul produit, pas sur cinq en même temps."
+
+[Scene 3 — 0:10 to 0:15]
+Visual: Point 2: "Je collecterais des emails DÈS le jour 1."
+On-screen text: "Leçon 2 : L'email, c'est ton vrai actif. Pas TikTok."
+Voiceover: "Deux : je collecterais des emails dès le premier jour. Un abonné TikTok ne t'appartient pas. Une adresse email, si."
+
+[Scene 4 — 0:15 to 0:20]
+Visual: Point 3: "Je posais UNE vidéo par jour. Même imparfaite."
+On-screen text: "Leçon 3 : La constance bat le talent. Toujours."
+Voiceover: "Trois : je publierais chaque jour, même imparfaitement. La constance bat tout."
+
+PARAMETERS: Aspect 9:16 | 20 sec | Warm amber | Font: Serif for text, Montserrat for overlays | Music: Reflective piano | Voiceover: French, mentor tone.
+</pre>
+<br>
+<hr>
+<br>
+<h3>MERCREDI 2 AVRIL — Valeur (5 Outils IA Gratuits)</h3>
+<br>
+<pre class='prompt-block'>
+Generate a 20-second vertical video (9:16). Style: listicle format, clean UI mockups, engaging transitions.
+
+[Scene 1 — 0:00 to 0:03]
+Visual: "TOP 5" animation reveals dramatically.
+On-screen text: "Les 5 outils IA GRATUITS que j'utilise chaque jour 🔧"
+Voiceover (French, upbeat): "Voici les 5 outils IA gratuits que j'utilise sans exception chaque jour."
+
+[Scene 2 — 0:03 to 0:07]
+Visual: Tool 1 — ChatGPT logo + use case text: "Contenu, prompts, copywriting."
+On-screen text: "1. ChatGPT — Le cerveau 🧠"
+Voiceover: "Un : ChatGPT pour tout le contenu et la stratégie."
+
+[Scene 3 — 0:07 to 0:11]
+Visual: Tool 2 — Canva AI logo: "Design pro en 5 minutes."
+On-screen text: "2. Canva IA — Le design 🎨"
+Voiceover: "Deux : Canva IA pour des designs professionnels sans être graphiste."
+
+[Scene 4 — 0:11 to 0:14]
+Visual: Tool 3 — Notion AI: "Organisation et rédaction."
+On-screen text: "3. Notion IA — L'organisation 📋"
+Voiceover: "Trois : Notion IA pour organiser et automatiser mes notes."
+
+[Scene 5 — 0:14 to 0:17]
+Visual: Tool 4 — ElevenLabs logo: "Voix off IA réaliste."
+On-screen text: "4. ElevenLabs — La voix 🎙️"
+Voiceover: "Quatre : ElevenLabs pour les voix off de mes vidéos IA."
+
+[Scene 6 — 0:17 to 0:20]
+Visual: Tool 5 — Pexels logo: "Vidéos B-roll gratuites."
+On-screen text: "5. Pexels — Les visuels 🎬 | Sauvegarde 📌"
+Voiceover: "Cinq : Pexels pour tous mes visuels gratuits. Sauvegarde cette vidéo."
+
+PARAMETERS: Aspect 9:16 | 20 sec | Clean white/tech | Logo mockups | Font: Outfit | Music: Upbeat tech | Voiceover: French, clear.
+</pre>
+<br>
+<hr>
+<br>
+<h3>VENDREDI 4 AVRIL — Vente (Urgence Semaine)</h3>
+<br>
+<pre class='prompt-block'>
+Generate a 20-second vertical video (9:16). Style: countdown urgency. Red and gold accents. Ticking clock motif.
+
+[Scene 1 — 0:00 to 0:05]
+Visual: Countdown timer animation (digital clock ticking down). Red glow effect.
+On-screen text: "⚠️ Dernière chance cette semaine — Bundle à -66%"
+Voiceover (French, urgent): "Je te préviens une dernière fois cette semaine."
+
+[Scene 2 — 0:05 to 0:12]
+Visual: Rapid-fire product shots: ebook cover, 100 prompts grid, price badge -66%.
+On-screen text: "eBook ✅ | 100 Prompts ✅ | -66% ✅"
+Voiceover: "Le Bundle Ultime — mon eBook complet et mes 100 prompts — est à moins 66% cette semaine seulement."
+
+[Scene 3 — 0:12 to 0:16]
+Visual: Animated "stock" counter: "Il ne reste que quelques places à ce tarif."
+On-screen text: "⏳ Offre qui se termine bientôt"
+Voiceover: "Cette offre n'est pas permanente. Quand ça s'arrête, ça s'arrête."
+
+[Scene 4 — 0:16 to 0:20]
+Visual: Bio link with large red pulsing arrow. Urgency flash effect.
+On-screen text: "LIEN EN BIO ⬆️ Dépêche-toi maintenant."
+Voiceover: "Lien dans ma bio. Clique maintenant. Dépêche-toi."
+
+PARAMETERS: Aspect 9:16 | 20 sec | Red + Gold urgency palette | Ticking clock SFX | Font: Bold Impact-style | Music: Building tension | Voiceover: French, very urgent.
+</pre>
+<br>
+<hr>
+<br>
+<h3>SAMEDI 5 AVRIL — Bilan Mois 1 (Vidéo Transparence)</h3>
+<br>
+<pre class='prompt-block'>
+Generate a 20-second vertical video (9:16). Style: authentic reporting. Stats dashboard aesthetic mixed with personal warmth. Data meets emotion.
+
+[Scene 1 — 0:00 to 0:05]
+Visual: Calendar showing 30 days crossed off. Checkmarks on each day.
+On-screen text: "30 jours de contenu postés. Voilà ce que j'ai appris. 📊"
+Voiceover (French, genuine): "Un mois de contenu. Je te partage tout ce que j'ai appris, honnêtement."
+
+[Scene 2 — 0:05 to 0:12]
+Visual: Simple stats cards appearing:
+- "Vidéos publiées : 30"
+- "Vues totales : [X]"
+- "Nouveaux abonnés : [X]"
+- "Premières ventes : [X]"
+On-screen text: Stats reveal one by one with satisfying pop animations.
+Voiceover: "Voilà les chiffres bruts. Ce n'est pas parfait, mais c'est réel."
+
+[Scene 3 — 0:12 to 0:17]
+Visual: Lesson cards: "Ce qui a marché" (green) vs "Ce qui a pas marché" (red).
+On-screen text: "✅ Les vidéos valeur &gt; les vidéos vente" | "❌ La régularité est plus dure que prévu"
+Voiceover: "Ce qui a marché : les vidéos qui apportent de la valeur. Ce qui n'a pas marché : perdre la régularité."
+
+[Scene 4 — 0:17 to 0:20]
+Visual: "Mois 2 → On est parti" with upward arrow.
+On-screen text: "Mois 2 = On double 🚀 Abonne-toi pour voir la suite"
+Voiceover: "Mois 2, on double. Abonne-toi pour voir la suite."
+
+PARAMETERS: Aspect 9:16 | 20 sec | Stats dashboard + warm palette | Font: Mono for stats, Bold for emotions | Music: Reflective then uplifting | Voiceover: French, transparent.
+</pre>
+<br>
+<hr>
+<br>
+<p>> ✅ <strong>FIN MOIS 1 — Semaines 1 à 4</strong></p>
+<p>> Consulte le fichier <strong>Mois 2</strong> pour les Semaines 5 à 8 (Du 7 Avril au 4 Mai 2026).</p>
+<br>
+
+
+<div class="footer">
+  Document confidentiel &nbsp;&bull;&nbsp; <strong>DigitalBoostAI</strong> &nbsp;&bull;&nbsp;
+  Plan de Campagne TikTok â€” Phase 1 / Mois 1 &nbsp;&bull;&nbsp; 2026
+</div>
+</div>
+
+</body>
+</html>

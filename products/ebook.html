@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eBook — Maîtrisez l'IA : Le Guide Ultime pour Entrepreneurs 2026 | DigitalBoost AI</title>
+    <meta name="description"
+        content="Téléchargez le guide complet pour maîtriser l'intelligence artificielle en business. 12 chapitres, 50+ cas pratiques, templates inclus. ChatGPT, Claude, Gemini. Prix : 9 900 FCFA.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://digitalboostai.vercel.app/products/ebook.html">
+    <meta name="keywords"
+        content="ebook IA, guide intelligence artificielle, ChatGPT entrepreneurs, formation IA Afrique, automatiser business, prompts IA, DigitalBoost AI">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="product">
+    <meta property="og:site_name" content="DigitalBoost AI">
+    <meta property="og:url" content="https://digitalboostai.vercel.app/products/ebook.html">
+    <meta property="og:title" content="Maîtrisez l'IA : Le Guide Ultime pour Entrepreneurs">
+    <meta property="og:description"
+        content="12 chapitres, 50+ cas pratiques pour intégrer l'IA dans votre business. Le guide qui transforme les entrepreneurs en experts de l'IA.">
+    <meta property="og:image" content="https://digitalboostai.vercel.app/img/ebook-banner-851x315.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="eBook — Maîtrisez l'IA pour Entrepreneurs | DigitalBoost AI">
+    <meta name="twitter:description"
+        content="Guide stratégique complet : ChatGPT, Claude, Gemini. 50+ cas pratiques pour automatiser et scaler votre business.">
+    <meta name="twitter:image" content="https://digitalboostai.vercel.app/img/ebook-banner-851x315.png">
+
+    <!-- Structured Data Product -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Maîtrisez l'IA : Le Guide Ultime pour Entrepreneurs",
+      "description": "Guide stratégique complet de 12 chapitres avec 50+ cas pratiques pour intégrer l'IA dans votre business et multiplier vos revenus.",
+      "brand": {"@type": "Brand", "name": "DigitalBoost AI"},
+      "offers": {
+        "@type": "Offer",
+        "price": "9900",
+        "priceCurrency": "XOF",
+        "availability": "https://schema.org/InStock",
+        "url": "https://digitalboostai.vercel.app/products/ebook.html"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "47"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Product page specific styles */
+        .product-hero {
+            padding: 140px 0 80px;
+        }
+
+        .product-hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .product-hero-visual {
+            display: flex;
+            justify-content: center;
+        }
+
+        .large-ebook-cover {
+            width: 300px;
+            height: 420px;
+            position: relative;
+            transform: rotateY(-12deg);
+            transition: transform 0.6s ease;
+            perspective: 1200px;
+            transform-style: preserve-3d;
+        }
+
+        .large-ebook-cover:hover {
+            transform: rotateY(-3deg) scale(1.02);
+        }
+
+        .large-ebook-spine {
+            position: absolute;
+            left: -30px;
+            width: 30px;
+            height: 100%;
+            background: linear-gradient(180deg, #4c3ca8, #6c5ce7);
+            transform: rotateY(90deg);
+            transform-origin: right;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .large-ebook-front {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #6c5ce7, #a855f7, #ec4899);
+            border-radius: 0 12px 12px 0;
+            padding: 40px 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 12px 12px 40px rgba(0, 0, 0, 0.4), 0 0 80px rgba(108, 92, 231, 0.15);
+        }
+
+        .large-ebook-front .ebook-year {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 24px;
+        }
+
+        .large-ebook-front h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            line-height: 1.15;
+            margin-bottom: 12px;
+        }
+
+        .large-ebook-front .ebook-sub {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.5;
+            margin-bottom: 32px;
+        }
+
+        .large-ebook-front .ebook-author-tag {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.5);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding-top: 16px;
+        }
+
+        .product-hero-info .product-tag {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(245, 158, 11, 0.15);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 9999px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #f59e0b;
+            margin-bottom: 16px;
+        }
+
+        .product-hero-info h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+
+        .product-hero-info .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .product-hero-info .product-description {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+
+        .product-hero-info .product-price-block {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .product-price-big {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .product-price-old {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            text-decoration: line-through;
+        }
+
+        .product-price-badge {
+            padding: 4px 12px;
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 9999px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #10b981;
+        }
+
+        .product-cta-buttons {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .product-guarantee-mini {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        /* Table of Contents */
+        .toc-section {
+            padding: 100px 0;
+            background: var(--bg-secondary);
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .toc-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+        }
+
+        .toc-item:hover {
+            border-color: var(--border-accent);
+            transform: translateX(4px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .toc-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            min-width: 40px;
+        }
+
+        .toc-content h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .toc-content p {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        /* What you'll learn */
+        .learn-section {
+            padding: 100px 0;
+        }
+
+        .learn-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .learn-card {
+            padding: 32px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-xl);
+            transition: all 0.3s ease;
+        }
+
+        .learn-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-accent);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .learn-card .learn-icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .learn-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .learn-card p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 1024px) {
+            .product-hero .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .product-hero-visual {
+                order: -1;
+            }
+
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .learn-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-cta-buttons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Digital<span class="logo-accent">Boost</span> AI</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Accueil</a>
+                <a href="../index.html#products" class="nav-link">Produits</a>
+                <a href="/blog" class="nav-link">Blog</a>
+                <a href="https://ppawzaph.mychariow.shop/prd_u83162" target="_blank" class="nav-link">Tarifs</a>
+            </div>
+            <div class="nav-actions">
+                <a href="https://ppawzaph.mychariow.shop/prd_u83162" target="_blank"
+                    class="btn btn-primary btn-nav">Acheter</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Hero -->
+    <header class="product-hero">
+        <div class="container">
+            <div class="product-hero-visual">
+                <div class="large-ebook-cover">
+                    <div class="large-ebook-spine"></div>
+                    <div class="large-ebook-front">
+                        <div class="ebook-year">ÉDITION 2026</div>
+                        <h2>Maîtrisez l'IA</h2>
+                        <p class="ebook-sub">Le Guide Ultime pour Entrepreneurs — Stratégies, Outils & Cas Pratiques</p>
+                        <div class="ebook-author-tag">par DigitalBoost AI</div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-hero-info">
+                <span class="product-tag">🔥 Best-seller — 2 500+ exemplaires vendus</span>
+                <h1>Maîtrisez l'IA : Le Guide Ultime pour <span class="gradient-text">Entrepreneurs</span></h1>
+                <div class="product-rating">
+                    ⭐⭐⭐⭐⭐ <strong>4.9/5</strong> — basé sur 347 avis
+                </div>
+                <p class="product-description">
+                    Le guide complet pour comprendre, maîtriser et exploiter l'IA dans votre business.
+                    12 chapitres détaillés, 50+ cas pratiques, templates et checklists inclus.
+                    Passez de débutant à expert et multipliez vos revenus.
+                </p>
+                <div class="product-price-block">
+                    <span class="product-price-big">9 900 FCFA</span>
+                </div>
+                <div class="product-cta-buttons">
+                    <a href="https://ppawzaph.mychariow.shop/prd_u83162" target="_blank"
+                        class="btn btn-primary btn-lg">🚀 Acheter maintenant — 9 900
+                        FCFA</a>
+                    <a href="https://ppawzaph.mychariow.shop/prd_u83162" target="_blank"
+                        class="btn btn-outline btn-lg">💎 Voir le Bundle Complet</a>
+                </div>
+                <p class="product-guarantee-mini">🛡️ Garantie 30 jours satisfait ou remboursé · Accès à vie · Mises à
+                    jour gratuites</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Table of Contents -->
+    <section class="toc-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Sommaire</span>
+                <h2 class="section-title">12 chapitres pour <span class="gradient-text">tout maîtriser</span></h2>
+                <p class="section-subtitle">Un parcours structuré du débutant à l'expert, avec des exercices pratiques à
+                    chaque étape.</p>
+            </div>
+            <div class="toc-grid">
+                <div class="toc-item">
+                    <span class="toc-number">01</span>
+                    <div class="toc-content">
+                        <h4>Introduction à l'IA pour Entrepreneurs</h4>
+                        <p>Comprendre l'IA et son impact sur le business</p>
+                    </div>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">02</span>
+                    <div class="toc-content">
+                        <h4>Les Outils IA Essentiels</h4>
+                        <p>ChatGPT, Claude, Gemini, Midjourney et plus</p>
+                    </div>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">03</span>
+                    <div class="toc-content">
+                        <h4>L'Art du Prompt Engineering</h4>
+                        <p>Maîtriser la rédaction de prompts efficaces</p>
+                    </div>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">04</span>
+                    <div class="toc-content">
+                        <h4>Marketing & Copywriting IA</h4>
+                        <p>Créer du contenu marketing qui convertit</p>
+                    </div>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">05</span>
+                    <div class="toc-content">
+                        <h4>Automatisation des Processus</h4>
+                        <p>Workflows, chatbots et systèmes automatisés</p>
+                    </div>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">06</span>
+                    <div class="toc-content">
+                        <h4>Création de Contenu Avancée</h4>
+                        <p>Articles, vidéos, podcasts et réseaux sociaux</p>
+                    </div>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">07</span>
+                    <div class="toc-content">
+                        <h4>E-commerce & IA</h4>
+                        <p>Optimiser vos ventes en ligne avec l'IA</p>
+                    </div>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">08</span>
+                    <div class="toc-content">
+                        <h4>Créer des Produits Digitaux</h4>
+                        <p>eBooks, cours, templates et SaaS</p>
+                    </div>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">09</span>
+                    <div class="toc-content">
+                        <h4>SEO & Référencement IA</h4>
+                        <p>Dominer Google avec l'intelligence artificielle</p>
+                    </div>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">10</span>
+                    <div class="toc-content">
+                        <h4>Email Marketing Automatisé</h4>
+                        <p>Séquences, newsletters et conversion</p>
+                    </div>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">11</span>
+                    <div class="toc-content">
+                        <h4>Analyse de Données & IA</h4>
+                        <p>Prendre des décisions data-driven</p>
+                    </div>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">12</span>
+                    <div class="toc-content">
+                        <h4>Plan d'Action 90 Jours</h4>
+                        <p>Votre roadmap pour des résultats concrets</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Learn -->
+    <section class="learn-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Résultats</span>
+                <h2 class="section-title">Ce que vous allez <span class="gradient-text">accomplir</span></h2>
+            </div>
+            <div class="learn-grid">
+                <div class="learn-card">
+                    <div class="learn-icon">💰</div>
+                    <h3>Gagner du temps & de l'argent</h3>
+                    <p>Automatisez vos tâches répétitives et concentrez-vous sur ce qui génère des revenus.</p>
+                </div>
+                <div class="learn-card">
+                    <div class="learn-icon">📝</div>
+                    <h3>Créer du contenu pro</h3>
+                    <p>Produisez articles, emails et posts réseaux sociaux 10x plus vite avec l'IA.</p>
+                </div>
+                <div class="learn-card">
+                    <div class="learn-icon">🚀</div>
+                    <h3>Lancer votre business</h3>
+                    <p>Suivez le plan étape par étape pour créer et monétiser votre activité en ligne.</p>
+                </div>
+                <div class="learn-card">
+                    <div class="learn-icon">🎯</div>
+                    <h3>Maîtriser les prompts</h3>
+                    <p>Apprenez à parler le langage de l'IA pour obtenir des résultats exceptionnels.</p>
+                </div>
+                <div class="learn-card">
+                    <div class="learn-icon">📈</div>
+                    <h3>Scaler votre activité</h3>
+                    <p>Passez de solopreneur à entrepreneur automatisé grâce aux systèmes IA.</p>
+                </div>
+                <div class="learn-card">
+                    <div class="learn-icon">🌍</div>
+                    <h3>Rester compétitif</h3>
+                    <p>Gardez un avantage décisif face à la concurrence en utilisant les derniers outils IA.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-final">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Prêt à maîtriser l'IA ?</h2>
+                <p>Rejoignez +2 500 entrepreneurs qui ont transformé leur business grâce à ce guide.</p>
+                <div class="cta-buttons">
+                    <a href="https://ppawzaph.mychariow.shop/prd_u83162" target="_blank" class="btn btn-primary btn-lg">
+                        🚀 Obtenir l'eBook — 9 900 FCFA
+                    </a>
+                </div>
+                <p class="cta-guarantee">🛡️ Garantie 30 jours satisfait ou remboursé</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 DigitalBoost AI. Tous droits réservés.</p>
+                <a href="../index.html" class="nav-link">← Retour à l'accueil</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

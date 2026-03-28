@@ -1,0 +1,1867 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pack 100+ Prompts IA Premium — DigitalBoost AI</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,700;9..144,900&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+        :root {
+            --paper: #FAFAF7;
+            --ink: #0D1117;
+            --muted: #6B7280;
+            --gold: #C9A84C;
+            --green: #1A6B3C;
+            --border: #E5E2D9;
+            --card: transparent;
+            --gold-light: #F0E0A8
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--ink);
+            margin: 0;
+            padding: 0;
+            background: var(--paper)
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px 50px;
+        }
+
+        .header-pill {
+            display: inline-block;
+            background-color: rgba(201, 168, 76, 0.15);
+            color: var(--gold);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            vertical-align: middle;
+        }
+
+        header h1 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.5rem, 6vw, 3.5rem);
+            font-weight: 900;
+            color: var(--ink);
+            margin: 0 0 20px 0;
+            line-height: 1.2;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            color: var(--muted);
+            margin: 0 auto;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .header-meta {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: var(--muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .cat-section {
+            margin-bottom: 70px;
+        }
+
+        .cat-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border)
+        }
+
+        .cat-header .icon {
+            font-size: 1.8rem
+        }
+
+        .cat-header h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin: 0;
+            flex: 1;
+            color: var(--ink);
+        }
+
+        .cat-header .count {
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 99px;
+            background: rgba(13, 17, 23, 0.05);
+            color: var(--muted)
+        }
+
+        .p-card {
+            background: transparent;
+            border: none;
+            padding: 0;
+            margin-bottom: 50px;
+        }
+
+        .p-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 0 15px;
+            color: var(--ink)
+        }
+
+        .p-text {
+            background: #fff;
+            border-left: 4px solid var(--gold);
+            padding: 24px 30px;
+            border-radius: 0 12px 12px 0;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #2D3139;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+            white-space: pre-wrap;
+            position: relative;
+        }
+
+        .tags {
+            display: flex;
+            gap: 8px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: .5px
+        }
+
+        .tag-chatgpt {
+            background: rgba(26, 107, 60, 0.1);
+            color: var(--green)
+        }
+
+        .tag-claude {
+            background: rgba(201, 168, 76, 0.15);
+            color: var(--gold)
+        }
+
+        .tag-gemini {
+            background: rgba(59, 130, 246, 0.1);
+            color: #2563eb
+        }
+
+        .tag-all {
+            background: rgba(13, 17, 23, 0.05);
+            color: var(--ink)
+        }
+
+        .copy-btn {
+            margin-top: 15px;
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--gold);
+            transition: all .2s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .copy-btn:hover {
+            color: #0D1117;
+        }
+
+        .mega-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold), #e0be5a);
+            color: #fff;
+            padding: 2px 10px;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            margin-left: 8px;
+            vertical-align: middle
+        }
+
+        /* Cover Page */
+        .cover-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background: #EFECE5;
+            color: #4A453C;
+            text-align: left;
+            padding: 80px 40px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 0;
+        }
+
+        .cover-content {
+            width: 100%;
+            max-width: 900px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cover-catchphrase {
+            font-family: 'DM Sans', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 500;
+            color: #4A453C;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            max-width: 600px;
+            letter-spacing: -0.5px;
+        }
+
+        .cover-title-mega {
+            font-family: 'DM Sans', sans-serif;
+            font-size: clamp(6.5rem, 16vw, 13rem);
+            font-weight: 900;
+            color: #5B564C;
+            line-height: 0.75;
+            letter-spacing: -4px;
+            margin: 0;
+            padding-bottom: 20px;
+            text-transform: uppercase;
+            text-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+            margin-left: -5px;
+        }
+
+        .cover-stamp {
+            position: absolute;
+            right: 0%;
+            top: 60%;
+            transform: translateY(-50%) rotate(15deg);
+            width: 180px;
+            height: 180px;
+            border: 2px dashed rgba(91, 86, 76, 0.4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 4px;
+            color: #5B564C;
+            text-transform: uppercase;
+            padding: 20px;
+        }
+
+        .cover-pill-bottom {
+            margin-top: 60px;
+            display: inline-block;
+            background-color: #DBC8A6;
+            color: #3A352C;
+            padding: 12px 28px;
+            border-radius: 12px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 24px;
+            color: var(--muted);
+            font-size: 0.95rem;
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+        }
+
+        @media print {
+            .copy-btn {
+                display: none;
+            }
+
+            .p-card {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                margin-bottom: 30px;
+            }
+
+            .cat-section {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                page-break-before: always;
+            }
+
+            .cat-header {
+                break-after: avoid;
+                page-break-after: avoid;
+            }
+
+            h2,
+            h3 {
+                break-after: avoid;
+                page-break-after: avoid;
+            }
+
+            p,
+            div {
+                orphans: 3;
+                widows: 3;
+            }
+
+            body {
+                font-size: 11pt;
+            }
+
+            .cover-page {
+                min-height: auto;
+                padding: 120px 40px;
+            }
+
+            header {
+                display: none;
+            }
+
+            /* Hide the old header layout when printing since cover is better */
+        }
+
+        @media(max-width:600px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            .p-text {
+                padding: 20px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- COVER PAGE -->
+    <div class="cover-page">
+        <div class="cover-content">
+            <div class="cover-catchphrase">Bibliothèque de<br>prompts<br>pour entrepreneurs.</div>
+            <h1 class="cover-title-mega">100+<br>PROMPTS</h1>
+
+            <div class="cover-stamp">
+                Édition<br>Ultime<br>2026
+            </div>
+
+            <div class="cover-pill-bottom">digitalboost.ai</div>
+        </div>
+    </div>
+
+    <!-- DOCUMENT START -->
+    <div class="container">
+        <!-- Inside header for screen/internal view just to show introduction -->
+        <header style="padding-top: 40px;">
+            <div class="header-pill">💎 ÉDITION PREMIUM</div>
+            <h1>100+ Prompts <span style="color: var(--gold);">IA</span></h1>
+            <p>Collection complète de prompts optimisés pour ChatGPT, Claude & Gemini — Édition 2025-2026</p>
+            <div class="header-meta">
+                <span>📅 Février 2026</span>
+                <span>·</span>
+                <span>⏱️ 104 Prompts Exclusifs</span>
+                <span>·</span>
+                <span>✍️ DigitalBoost AI</span>
+            </div>
+        </header>
+
+
+
+        <!-- ══════ 1. MARKETING DIGITAL (12 prompts) ══════ -->
+        <section class="cat-section">
+            <div class="cat-header"><span class="icon">📢</span>
+                <h2>Marketing Digital</h2><span class="count">12 prompts</span>
+            </div>
+
+            <div class="p-card">
+                <h3>1. Stratégie de contenu 30 jours</h3>
+                <div class="p-text">Tu es un expert en content marketing avec 15 ans d'expérience. Crée un calendrier
+                    éditorial complet de 30 jours pour une entreprise dans la niche [NICHE]. Pour chaque jour, fournis :
+                    le type de contenu (article, vidéo, carrousel, story, reel), le sujet/titre accrocheur, l'accroche
+                    (première phrase), 5 hashtags pertinents, le meilleur horaire de publication, et l'objectif du post
+                    (engagement, conversion, awareness). Alterne les types de contenu.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>2. Analyse de persona client</h3>
+                <div class="p-text">Tu es un expert en marketing et psychologie du consommateur. Crée 3 personas
+                    détaillés pour mon business [BUSINESS]. Pour chaque persona inclus : nom fictif, âge, profession,
+                    revenus, frustrations quotidiennes, objectifs secrets, habitudes de consommation digitale, réseaux
+                    sociaux préférés, objections d'achat principales, et le message marketing qui résonne le plus avec
+                    eux.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>3. Plan marketing complet</h3>
+                <div class="p-text">Tu es un directeur marketing stratégique. Crée un plan marketing complet pour lancer
+                    [PRODUIT/SERVICE] auprès de [CIBLE]. Inclus : analyse SWOT, positionnement, stratégie de prix,
+                    canaux de distribution, plan de communication (organique + payant), budget prévisionnel, KPIs à
+                    suivre, et planning de mise en œuvre sur 90 jours.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>4. Analyse concurrentielle</h3>
+                <div class="p-text">Tu es un analyste stratégique spécialisé en veille concurrentielle. Réalise une
+                    analyse complète de mes concurrents dans le secteur [SECTEUR]. Identifie : 5 concurrents directs,
+                    leurs forces et faiblesses, leur positionnement prix, leur stratégie de contenu, leurs canaux
+                    d'acquisition, leur ton de communication, et donne-moi 5 opportunités de différenciation que je
+                    pourrais exploiter immédiatement.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>5. Stratégie de lancement viral</h3>
+                <div class="p-text">Tu es un growth hacker expert en lancements. Conçois une stratégie de lancement en 3
+                    phases (pré-lancement, lancement, post-lancement) pour [PRODUIT]. Phase 1 : création d'anticipation
+                    (teasing, liste d'attente, partenariats). Phase 2 : jour J (offre de lancement, scarcity, urgence).
+                    Phase 3 : maintien du momentum (témoignages, upsells, relances). Donne un planning détaillé jour par
+                    jour sur 21 jours.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span><span class="tag tag-claude">Claude</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>6. Script publicité Facebook/Instagram</h3>
+                <div class="p-text">Tu es un expert en publicité Meta Ads. Rédige 3 variantes de scripts publicitaires
+                    pour [PRODUIT/SERVICE] ciblant [AUDIENCE]. Pour chaque variante : hook accrocheur (3 secondes),
+                    problème identifié, solution présentée, preuve sociale, appel à l'action. Optimise pour le format
+                    vidéo courte (30-60 secondes) et donne des indications visuelles pour chaque partie du script.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>7. Tunnel de vente automatisé</h3>
+                <div class="p-text">Tu es un expert en marketing automation. Conçois un tunnel de vente complet pour
+                    [PRODUIT] au prix de [PRIX]. Détaille : la page de capture (titre, sous-titre, lead magnet), la
+                    séquence email (5 emails avec objet, contenu et CTA), la page de vente (structure complète), la page
+                    de remerciement avec upsell, et les relances pour les abandons de panier. Inclus les délais entre
+                    chaque étape.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>8. Stratégie d'influence marketing</h3>
+                <div class="p-text">Tu es un expert en marketing d'influence. Crée une stratégie complète de
+                    collaborations avec des influenceurs pour promouvoir [PRODUIT] avec un budget de [BUDGET]. Détaille
+                    : le profil idéal d'influenceur (taille, niche, taux d'engagement), le script de prise de contact,
+                    les types de collaborations (stories, posts, lives), les KPIs à négocier, et un modèle de contrat
+                    simplifié.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span><span class="tag tag-claude">Claude</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>9. Audit marketing digital rapide</h3>
+                <div class="p-text">Tu es un consultant marketing senior. Réalise un audit rapide de ma présence
+                    digitale actuelle. Mon site web est [URL], mes réseaux sociaux sont [RÉSEAUX]. Analyse : la
+                    cohérence de mon branding, la qualité de mon contenu, mon SEO basique, mon tunnel de conversion, ma
+                    stratégie de pricing. Donne-moi un score sur 100 et les 5 actions prioritaires à corriger cette
+                    semaine.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span><span class="tag tag-gemini">Gemini</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>10. Création d'un lead magnet irrésistible</h3>
+                <div class="p-text">Tu es un expert en génération de leads. Propose 5 idées de lead magnets pour attirer
+                    des prospects dans la niche [NICHE]. Pour chaque idée : titre accrocheur, format (PDF, quiz,
+                    checklist, template, mini-cours), contenu résumé en 3 points, le problème urgent qu'il résout, et la
+                    page de capture idéale (titre + sous-titre + 3 bullet points).</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>11. Stratégie de pricing psychologique</h3>
+                <div class="p-text">Tu es un expert en stratégie de prix et psychologie d'achat. Analyse mon produit
+                    [PRODUIT] actuellement à [PRIX] et propose : 3 structures de pricing (freemium, tiered, bundle), des
+                    techniques d'ancrage de prix, des stratégies de discount (urgence, early bird, loyal customer), et
+                    comment présenter visuellement les prix pour maximiser les conversions. Donne des exemples concrets.
+                </div>
+                <div class="tags"><span class="tag tag-claude">Claude</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>12. Plan de contenu TikTok/Reels</h3>
+                <div class="p-text">Tu es un créateur de contenu viral spécialisé en vidéos courtes. Crée un plan de 15
+                    vidéos TikTok/Reels pour promouvoir [BUSINESS]. Pour chaque vidéo : le hook des 3 premières
+                    secondes, le script complet (30-60s), les transitions suggérées, la musique tendance recommandée,
+                    les hashtags, et le call-to-action de fin. Inclus un mix de formats : éducatif, divertissant,
+                    behind-the-scenes.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+        </section>
+
+        <!-- ══════ 2. COPYWRITING & VENTE (12 prompts) ══════ -->
+        <section class="cat-section">
+            <div class="cat-header"><span class="icon">✍️</span>
+                <h2>Copywriting & Vente</h2><span class="count">12 prompts</span>
+            </div>
+
+            <div class="p-card">
+                <h3>13. Page de vente haute conversion</h3>
+                <div class="p-text">Tu es un copywriter d'élite spécialisé en pages de vente. Rédige une page de vente
+                    complète pour [PRODUIT] au prix de [PRIX], ciblant [AUDIENCE]. Structure : headline puissante,
+                    sous-titre, vidéo/image descriptive, les 5 bénéfices principaux, 3 témoignages (à personnaliser), la
+                    section "ce que vous obtenez", la garantie, le prix avec ancrage, FAQ (5 questions), et 3 CTA
+                    stratégiquement placés. Utilise la formule AIDA.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>14. Email de vente persuasif</h3>
+                <div class="p-text">Tu es un expert en email marketing de vente. Rédige un email de vente pour [PRODUIT]
+                    ciblant [AUDIENCE]. L'email doit : avoir un objet irrésistible (propose 3 variantes), commencer par
+                    une histoire personnelle, identifier le problème du lecteur, présenter la solution, inclure une
+                    preuve sociale, créer de l'urgence, et terminer par un CTA clair. Longueur idéale : 400-600 mots.
+                    Ton : conversationnel et authentique.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span><span class="tag tag-claude">Claude</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>15. Séquence email de bienvenue (5 emails)</h3>
+                <div class="p-text">Tu es un expert en email automation. Crée une séquence de 5 emails de bienvenue pour
+                    les nouveaux abonnés de [BUSINESS]. Email 1 (J+0) : bienvenue + livraison du lead magnet. Email 2
+                    (J+2) : ton histoire + mission. Email 3 (J+4) : contenu de valeur gratuit. Email 4 (J+6) :
+                    témoignage client + soft sell. Email 5 (J+8) : offre spéciale "nouveau membre". Pour chaque email :
+                    objet, preview text, corps complet, et CTA.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>16. Script de webinaire de vente</h3>
+                <div class="p-text">Tu es un expert en webinaires de vente. Écris le script complet d'un webinaire de 45
+                    minutes pour vendre [PRODUIT]. Structure : introduction (5 min) avec hook + promesse, contenu
+                    éducatif (25 min) avec 3 grandes révélations, transition vers l'offre (5 min), présentation de
+                    l'offre (8 min) avec stack de valeur et prix, Q&A et closing (7 min). Inclus les slides suggérées
+                    pour chaque section.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>17. Titres et accroches magnétiques</h3>
+                <div class="p-text">Tu es un copywriter expert en headlines. Génère 30 titres / accroches puissants pour
+                    promouvoir [PRODUIT/SERVICE]. Répartis-les en 6 catégories : curiosité, urgence, bénéfice direct,
+                    preuve sociale, questions rhétoriques, et controversé/provocateur. Chaque titre doit être court (max
+                    12 mots), impactant, et donner envie de cliquer immédiatement.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>18. Description produit e-commerce</h3>
+                <div class="p-text">Tu es un rédacteur e-commerce. Rédige une description de produit optimisée pour la
+                    conversion pour [PRODUIT] vendu à [PRIX]. Inclus : titre SEO, description courte (50 mots),
+                    description longue (200 mots) avec bénéfices et caractéristiques, 5 bullet points clés, objections
+                    anticipées et réponses, et 2 variantes de CTA. Optimise pour le SEO avec les mots-clés [MOTS-CLÉS].
+                </div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span><span class="tag tag-gemini">Gemini</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>19. Script de vente téléphonique</h3>
+                <div class="p-text">Tu es un coach en vente B2B. Rédige un script de vente téléphonique pour [SERVICE]
+                    ciblant [PROSPECT TYPE]. Structure : ouverture (brise-glace), qualification (3 questions clés),
+                    découverte des besoins (5 questions ouvertes), présentation de la solution (reliée aux besoins),
+                    traitement des objections (prix, timing, concurrent), et closing avec 3 techniques différentes.
+                </div>
+                <div class="tags"><span class="tag tag-claude">Claude</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>20. Texte d'offre promotionnelle</h3>
+                <div class="p-text">Tu es un expert en promotions et offres commerciales. Rédige les textes marketing
+                    pour une promotion de [DURÉE] sur [PRODUIT]. Crée : l'annonce de lancement (post réseaux sociaux),
+                    l'email d'ouverture, le rappel à mi-parcours, l'email "dernière chance", et le post de clôture.
+                    Intègre des éléments de scarcity et d'urgence sans être agressif. Ton : enthousiaste mais crédible.
+                </div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>21. Bio et elevator pitch</h3>
+                <div class="p-text">Tu es un expert en personal branding. Crée pour [NOM/BUSINESS] : une bio Instagram
+                    (150 caractères max), une bio LinkedIn (300 mots), une bio site web (100 mots), un elevator pitch de
+                    30 secondes, et un elevator pitch de 60 secondes. Chaque version doit : montrer l'expertise,
+                    identifier la valeur unique, et donner envie d'en savoir plus. Mon domaine : [DOMAINE]. Ma cible :
+                    [CIBLE].</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span><span class="tag tag-claude">Claude</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>22. Storytelling de marque</h3>
+                <div class="p-text">Tu es un expert en brand storytelling. Crée l'histoire de ma marque [MARQUE] en
+                    utilisant le framework du "Hero's Journey". Inclus : le monde ordinaire (avant le business), l'appel
+                    à l'aventure (le déclic), les épreuves (les obstacles), la transformation (la solution trouvée), et
+                    le retour (la mission actuelle). Fais-en 3 versions : courte (50 mots), moyenne (200 mots), et
+                    longue (500 mots) que je pourrai utiliser sur différents supports.</div>
+                <div class="tags"><span class="tag tag-claude">Claude</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>23. Réponses aux objections de vente</h3>
+                <div class="p-text">Tu es un closer expert. Pour mon produit [PRODUIT] à [PRIX], liste les 10 objections
+                    les plus courantes que les prospects pourraient avoir et rédige pour chacune : la reformulation
+                    empathique, la réponse logique, la preuve (témoignage ou stat), et la question de relance.
+                    Objections à couvrir : prix, timing, confiance, besoin, concurrent, capacité, conjoint/associé.
+                </div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>24. Newsletter hebdomadaire</h3>
+                <div class="p-text">Tu es un rédacteur de newsletters à fort taux d'ouverture. Crée un template de
+                    newsletter hebdomadaire pour [NICHE] avec la structure : section "Actualité de la semaine" (1
+                    insight), section "Astuce actionnable" (1 conseil concret), section "Ressource recommandée" (1
+                    outil/article), et section "Question de la semaine" (engagement). Rédige un exemplaire complet pour
+                    cette semaine sur le thème [THÈME].</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+        </section>
+
+        <!-- ══════ 3. SEO & RÉFÉRENCEMENT (10 prompts) ══════ -->
+        <section class="cat-section">
+            <div class="cat-header"><span class="icon">🔍</span>
+                <h2>SEO & Référencement</h2><span class="count">10 prompts</span>
+            </div>
+
+            <div class="p-card">
+                <h3>25. Recherche de mots-clés stratégique</h3>
+                <div class="p-text">Tu es un expert SEO avec 10 ans d'expérience. Effectue une recherche de mots-clés
+                    complète pour [NICHE/BUSINESS]. Fournis : 20 mots-clés principaux (volume élevé), 20 mots-clés
+                    longue traîne (faible concurrence), 10 questions fréquentes que les gens posent, 5 mots-clés de
+                    concurrents à cibler, et un planning de contenu basé sur ces mots-clés. Organise par intention de
+                    recherche : informationnelle, transactionnelle, navigationnelle.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span><span class="tag tag-gemini">Gemini</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>26. Article de blog SEO optimisé</h3>
+                <div class="p-text">Tu es un rédacteur web SEO. Rédige un article de blog complet de 2000+ mots sur
+                    [SUJET] ciblant le mot-clé principal [MOT-CLÉ]. Inclus : titre H1 optimisé, méta-description (155
+                    caractères), introduction avec le mot-clé dans les 100 premiers mots, 5-7 H2 et H3, liens internes
+                    suggérés, FAQ schema markup (5 questions), et conclusion avec CTA. Densité de mot-clé : 1-2%. Ton :
+                    expert mais accessible.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>27. Audit SEO de page web</h3>
+                <div class="p-text">Tu es un consultant SEO technique. Réalise un audit SEO complet de ma page [URL ou
+                    DESCRIPTION]. Vérifie : balises title et meta description, structure des headings (H1-H6),
+                    optimisation des images (alt text), vitesse de chargement (suggestions), maillage interne, balises
+                    schema, responsive design, et Core Web Vitals. Donne un score /100 et les 5 corrections prioritaires
+                    avec le code à modifier.</div>
+                <div class="tags"><span class="tag tag-gemini">Gemini</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>28. Stratégie de backlinks</h3>
+                <div class="p-text">Tu es un expert en link building. Crée une stratégie de backlinks pour
+                    [SITE/BUSINESS] dans la niche [NICHE]. Propose : 10 techniques de link building adaptées, 5 types de
+                    contenu linkable à créer (études, infographies, outils gratuits), un template d'email d'outreach, 5
+                    plateformes où obtenir des backlinks gratuits, et un planning de prospection sur 30 jours. Objectif
+                    : 20 backlinks de qualité par mois.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>29. Optimisation fiche Google Business</h3>
+                <div class="p-text">Tu es un expert en SEO local. Optimise ma fiche Google My Business pour [BUSINESS]
+                    situé à [VILLE]. Rédige : une description optimisée (750 caractères), 20 mots-clés locaux à cibler,
+                    les catégories à sélectionner, un calendrier de posts Google (4 par mois), des suggestions de
+                    questions/réponses à publier, et une stratégie pour obtenir 50 avis 5 étoiles en 90 jours.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span><span class="tag tag-gemini">Gemini</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>30. Plan de contenu SEO 90 jours</h3>
+                <div class="p-text">Tu es un stratège SEO. Crée un plan de contenu SEO sur 90 jours pour [SITE] dans la
+                    niche [NICHE]. Pour chaque semaine propose : 1 article pilier (2000+ mots), 2 articles satellites
+                    (800-1200 mots), les mots-clés ciblés, le maillage interne entre les articles, et les KPIs attendus
+                    (trafic, positions). Inclus un calendrier de publication avec des thèmes saisonniers quand c'est
+                    pertinent.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>31. Optimisation balises méta en lot</h3>
+                <div class="p-text">Tu es un spécialiste SEO on-page. Pour les 10 pages suivantes de mon site [LISTE DES
+                    PAGES], rédige pour chacune : un title tag optimisé (55-60 caractères), une meta description
+                    engageante (150-155 caractères), et un H1 unique. Chaque balise doit inclure le mot-clé principal,
+                    être unique, et inciter au clic. Fournis aussi une suggestion d'URL canonique pour chaque page.
+                </div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>32. Analyse de la concurrence SEO</h3>
+                <div class="p-text">Tu es un analyste SEO compétitif. Analyse le positionnement SEO de mes 3 principaux
+                    concurrents [CONCURRENT 1, 2, 3] dans la niche [NICHE]. Pour chacun identifie : les mots-clés sur
+                    lesquels ils rankent, les pages qui génèrent le plus de trafic, leur stratégie de contenu, leurs
+                    sources de backlinks, et les failles que je peux exploiter. Termine par un plan d'action de 5 quick
+                    wins SEO.</div>
+                <div class="tags"><span class="tag tag-gemini">Gemini</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>33. FAQ optimisée pour le SEO</h3>
+                <div class="p-text">Tu es un expert en SEO et en featured snippets. Crée une section FAQ optimisée pour
+                    [SUJET/PRODUIT]. Génère 15 questions que les internautes posent réellement (format "People Also
+                    Ask"), avec des réponses concises (40-60 mots chacune) qui visent la position zéro de Google.
+                    Fournis aussi le code HTML schema markup FAQ pour l'intégrer directement sur mon site.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span><span class="tag tag-claude">Claude</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>34. Script YouTube SEO-optimisé</h3>
+                <div class="p-text">Tu es un expert en YouTube SEO et création de contenu vidéo. Écris un script vidéo
+                    YouTube complet sur [SUJET] ciblant le mot-clé [MOT-CLÉ]. Inclus : titre optimisé (60 caractères
+                    max), hook des 5 premières secondes, structure complète du script (intro, 3-5 sections, conclusion),
+                    description optimisée (500 mots), 15 tags pertinents, et 3 idées de miniatures avec texte.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+        </section>
+
+        <!-- ══════ 4. RÉSEAUX SOCIAUX (10 prompts) ══════ -->
+        <section class="cat-section">
+            <div class="cat-header"><span class="icon">📱</span>
+                <h2>Réseaux Sociaux</h2><span class="count">10 prompts</span>
+            </div>
+
+            <div class="p-card">
+                <h3>35. Calendrier Instagram 30 jours</h3>
+                <div class="p-text">Tu es un social media manager expert Instagram. Crée un calendrier de 30 jours pour
+                    [BUSINESS] avec 1 post/jour. Alterne entre : carrousels éducatifs, posts inspirants, témoignages
+                    clients, coulisses, reels divertissants, et stories interactives. Pour chaque post : le visuel
+                    décrit, le caption complet, 15 hashtags stratégiques (mix popular + niche), et le meilleur horaire
+                    pour l'Afrique francophone.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>36. Stratégie LinkedIn personal branding</h3>
+                <div class="p-text">Tu es un expert LinkedIn avec 50K+ followers. Crée une stratégie complète de
+                    personal branding sur LinkedIn pour [NOM] expert en [DOMAINE]. Inclus : optimisation complète du
+                    profil (titre, résumé, expériences), plan de contenu hebdomadaire (3 posts/semaine), 10 idées de
+                    posts viraux avec hooks, stratégie de networking (10 actions/jour), et comment convertir les
+                    connexions en clients. Objectif : 10K followers en 6 mois.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span><span class="tag tag-claude">Claude</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>37. Pack de 10 carrousels Instagram</h3>
+                <div class="p-text">Tu es un créateur de contenu Instagram viral. Crée 10 carrousels éducatifs pour
+                    [NICHE]. Pour chaque carrousel (10 slides) : slide 1 (titre accrocheur), slides 2-9 (contenu de
+                    valeur, 1 idée par slide, max 30 mots par slide), slide 10 (CTA + "enregistre ce post"). Les thèmes
+                    doivent couvrir : astuces, erreurs courantes, step-by-step, comparaisons, mythes vs réalité.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>38. Stratégie Facebook Groups</h3>
+                <div class="p-text">Tu es un expert en communautés Facebook. Crée une stratégie complète pour gérer et
+                    monétiser un groupe Facebook autour de [THÉMATIQUE]. Inclus : nom et description du groupe, 5 règles
+                    du groupe, planning hebdomadaire de posts (live, sondage, contenu gratuit, promo), stratégie
+                    d'engagement (thèmes récurrents, challenges), et comment convertir les membres en acheteurs sans
+                    être agressif.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>39. Gestion de crise sur les réseaux</h3>
+                <div class="p-text">Tu es un expert en communication de crise digitale. Mon business [BUSINESS] fait
+                    face à [SITUATION DE CRISE : avis négatif viral, bad buzz, plainte publique...]. Rédige : la réponse
+                    publique idéale (empathique et professionnelle), le message privé à envoyer au plaignant, un post de
+                    communication officielle pour ma communauté, et un plan de récupération d'image en 7 jours.</div>
+                <div class="tags"><span class="tag tag-claude">Claude</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>40. Pack de 20 hooks viraux</h3>
+                <div class="p-text">Tu es un expert en contenu viral. Génère 20 hooks (phrases d'accroche) pour des
+                    vidéos TikTok/Reels dans la niche [NICHE]. Chaque hook doit : captiver en moins de 3 secondes, créer
+                    de la curiosité ou de la controverse, et inciter à regarder jusqu'à la fin. Organise-les en
+                    catégories : éducatif, storytelling, choquant, question, défi. Donne un exemple de développement
+                    pour chaque hook.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>41. Stratégie WhatsApp Business</h3>
+                <div class="p-text">Tu es un expert en WhatsApp marketing pour l'Afrique. Crée une stratégie complète
+                    d'utilisation de WhatsApp Business pour [BUSINESS]. Inclus : configuration du profil (message
+                    d'accueil, réponses rapides, catalogue), stratégie de broadcast lists, templates de messages pour :
+                    prospection, relance, livraison, feedback. Ajoute un calendrier de diffusion hebdomadaire et les
+                    règles anti-spam à respecter.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>42. Contenu éducatif Twitter/X (thread)</h3>
+                <div class="p-text">Tu es un expert en threads Twitter/X. Rédige un thread viral de 15 tweets sur
+                    [SUJET] pour positionner [NOM] comme expert dans [DOMAINE]. Tweet 1 : hook irrésistible. Tweets 2-14
+                    : une idée par tweet, utilise chiffres, listes, et analogies. Tweet 15 : résumé + CTA (follow +
+                    retweet). Chaque tweet max 280 caractères. Inclus des emojis stratégiques et des sauts de ligne pour
+                    la lisibilité.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>43. Réponses aux commentaires et DMs</h3>
+                <div class="p-text">Tu es un community manager expert. Crée un guide de réponses types pour gérer les
+                    interactions sur les réseaux sociaux de [BUSINESS]. Inclus 15 templates de réponses pour :
+                    compliments, questions sur les prix, demandes de réduction, plaintes, demandes de collaboration,
+                    spam, et prospects intéressés. Chaque réponse doit être chaleureuse, professionnelle, et pousser
+                    vers la conversion quand c'est pertinent.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>44. Stratégie de contenu Pinterest</h3>
+                <div class="p-text">Tu es un expert Pinterest marketing. Crée une stratégie complète pour [BUSINESS] sur
+                    Pinterest. Inclus : optimisation du profil business, 10 tableaux à créer avec titres et descriptions
+                    SEO, types d'épingles à publier (standard, vidéo, idea pins), fréquence de publication, stratégie de
+                    mots-clés Pinterest, et comment diriger le trafic vers [SITE WEB]. Objectif : 100K vues mensuelles
+                    en 6 mois.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+        </section>
+
+        <!-- ══════ 5. BUSINESS & STRATÉGIE (10 prompts) ══════ -->
+        <section class="cat-section">
+            <div class="cat-header"><span class="icon">💼</span>
+                <h2>Business & Stratégie</h2><span class="count">10 prompts</span>
+            </div>
+
+            <div class="p-card">
+                <h3>45. Business plan complet</h3>
+                <div class="p-text">Tu es un consultant en stratégie d'entreprise. Rédige un business plan complet pour
+                    [PROJET/BUSINESS]. Inclus : executive summary, description de l'entreprise, analyse du marché
+                    (TAM/SAM/SOM), modèle économique (business model canvas), stratégie marketing, plan opérationnel,
+                    équipe et compétences clés, projections financières sur 3 ans (revenus, charges, bénéfices), besoins
+                    de financement, et analyse des risques avec plans de mitigation.</div>
+                <div class="tags"><span class="tag tag-claude">Claude</span><span class="tag tag-chatgpt">ChatGPT</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>46. Pitch deck investisseurs (10 slides)</h3>
+                <div class="p-text">Tu es un expert en levée de fonds. Crée le contenu textuel d'un pitch deck de 10
+                    slides pour [STARTUP/PROJET]. Slide 1 : Title + tagline. Slide 2 : Problème. Slide 3 : Solution.
+                    Slide 4 : Marché (taille + opportunité). Slide 5 : Produit (démo/features). Slide 6 : Traction
+                    (métriques). Slide 7 : Business model. Slide 8 : Concurrence (matrice). Slide 9 : Équipe. Slide 10 :
+                    Ask (montant + utilisation). Pour chaque slide, rédige le titre, les bullet points, et les notes du
+                    présentateur.</div>
+                <div class="tags"><span class="tag tag-claude">Claude</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>47. Analyse SWOT intelligente</h3>
+                <div class="p-text">Tu es un consultant stratégique. Réalise une analyse SWOT détaillée pour
+                    [BUSINESS/PROJET] dans le marché [MARCHÉ]. Pour chaque quadrant, identifie 5 éléments précis avec
+                    explications. Ensuite propose : 3 stratégies S-O (exploiter forces + opportunités), 3 stratégies W-O
+                    (compenser faiblesses via opportunités), 3 stratégies S-T (utiliser forces contre menaces), et 3
+                    stratégies W-T (protéger faiblesses des menaces). Termine par les 3 actions prioritaires.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>48. Création d'offre irrésistible</h3>
+                <div class="p-text">Tu es un expert en construction d'offres commerciales (méthode Alex Hormozi). Mon
+                    produit actuel est [PRODUIT] à [PRIX]. Aide-moi à le transformer en offre irrésistible. Inclus : le
+                    dream outcome (résultat rêvé du client), la perceived likelihood of achievement, le time delay
+                    (rapidité des résultats), le effort & sacrifice requis. Propose 5 bonus numériques à ajouter, un nom
+                    marketing percutant, une garantie rassurante, et le nouveau stack de valeur avec pricing.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span><span class="tag tag-claude">Claude</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>49. Plan d'action 90 jours</h3>
+                <div class="p-text">Tu es un coach business. Crée un plan d'action détaillé sur 90 jours pour [OBJECTIF
+                    BUSINESS]. Organise en 3 phases de 30 jours : Phase 1 (fondation), Phase 2 (croissance), Phase 3
+                    (optimisation). Pour chaque semaine, liste : 3 actions prioritaires, les KPIs à atteindre, les
+                    outils nécessaires, et le temps estimé. Inclus des checkpoints de révision tous les 15 jours et des
+                    critères de réussite mesurables.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>50. Système de pricing et packages</h3>
+                <div class="p-text">Tu es un stratège en pricing. Crée un système de tarification pour
+                    [SERVICE/PRODUIT]. Propose 3 niveaux (Basic, Pro, Premium) avec : le nom de chaque package, les
+                    features incluses, les limites, le prix et sa justification psychologique, le package "recommandé"
+                    mis en avant, et les upsells entre chaque niveau. Applique les principes de pricing décimal,
+                    d'ancrage, et d'aversion à la perte.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>51. Modèle de business en ligne</h3>
+                <div class="p-text">Tu es un expert en business digitaux. Propose 5 modèles de business en ligne adaptés
+                    à quelqu'un qui a des compétences en [COMPÉTENCES] et un budget de départ de [BUDGET]. Pour chaque
+                    modèle : description, investissement initial, revenus potentiels à 6 mois, avantages et
+                    inconvénients, outils nécessaires, et les 5 premières actions pour démarrer cette semaine.
+                    Classe-les par facilité de démarrage.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>52. Processus d'onboarding client</h3>
+                <div class="p-text">Tu es un consultant en expérience client. Crée un processus d'onboarding complet
+                    pour les nouveaux clients de [SERVICE]. Inclus : email de bienvenue, questionnaire d'onboarding (10
+                    questions), guide de démarrage rapide, planning de la première semaine, template de kick-off
+                    meeting, les 3 quick wins à livrer dans les 48h, et le système de suivi des 30 premiers jours.
+                    Objectif : un client opérationnel et satisfait en 7 jours.</div>
+                <div class="tags"><span class="tag tag-claude">Claude</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>53. Contrat et CGV freelance</h3>
+                <div class="p-text">Tu es un consultant juridique spécialisé en freelance. Rédige un modèle de contrat
+                    de prestation de service pour un freelance [MÉTIER]. Inclus : identification des parties, objet de
+                    la mission, livrables attendus, planning et jalons, tarification et modalités de paiement, propriété
+                    intellectuelle, confidentialité, conditions de résiliation, et limitations de responsabilité. Le
+                    tout en langage clair et professionnel, adapté au droit OHADA (Afrique francophone).</div>
+                <div class="tags"><span class="tag tag-claude">Claude</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>54. Dashboard de KPIs business</h3>
+                <div class="p-text">Tu es un data analyst business. Crée un tableau de bord de KPIs pour [BUSINESS].
+                    Identifie les 15 métriques les plus importantes à suivre, organisées en 4 catégories : acquisition
+                    (visiteurs, leads, coût d'acquisition), conversion (taux de conversion, panier moyen), rétention
+                    (churn, LTV, NPS), et finance (CA, marge, cash flow). Pour chaque KPI : formule de calcul, fréquence
+                    de suivi, objectif cible, et action si le KPI est en rouge.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+        </section>
+
+        <!-- ══════ 6. E-COMMERCE (10 prompts) ══════ -->
+        <section class="cat-section">
+            <div class="cat-header"><span class="icon">🛒</span>
+                <h2>E-commerce</h2><span class="count">10 prompts</span>
+            </div>
+
+            <div class="p-card">
+                <h3>55. Fiche produit qui convertit</h3>
+                <div class="p-text">Tu es un expert e-commerce. Rédige une fiche produit complète pour [PRODUIT] sur
+                    [PLATEFORME]. Inclus : titre optimisé SEO, 5 bullet points bénéfices, description longue
+                    émotionnelle (300 mots), spécifications techniques, guide des tailles/dimensions si applicable, FAQ
+                    produit (5 questions), et suggestion de produits complémentaires pour l'upsell.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>56. Stratégie de lancement e-commerce</h3>
+                <div class="p-text">Tu es un consultant e-commerce. Crée un plan de lancement pour ma boutique en ligne
+                    [NOM] vendant [PRODUITS]. Inclus : sélection de la plateforme idéale, stratégie de sourcing, pricing
+                    et marges, plan marketing pré-lancement (30 jours), stratégie de contenu produit, setup des outils
+                    (analytics, email, paiement), et les 10 premières actions à réaliser cette semaine.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>57. Séquence email panier abandonné</h3>
+                <div class="p-text">Tu es un spécialiste en récupération de paniers abandonnés. Crée une séquence de 3
+                    emails pour récupérer les paniers abandonnés de ma boutique [BOUTIQUE]. Email 1 (H+1) : rappel
+                    amical. Email 2 (H+24) : ajout de preuve sociale + FAQ. Email 3 (H+72) : offre spéciale limitée.
+                    Pour chaque email : objet (2 variantes A/B), preview text, contenu, et CTA. Ton conversationnel, pas
+                    agressif.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span><span class="tag tag-claude">Claude</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>58. Stratégie de cross-selling et upselling</h3>
+                <div class="p-text">Tu es un expert en maximisation du panier moyen. Pour ma boutique [BOUTIQUE] qui
+                    vend [CATÉGORIE DE PRODUITS], crée : 10 paires de produits complémentaires (cross-sell), 5 versions
+                    premium de mes produits existants (upsell), les textes marketing pour chaque suggestion ("Les
+                    clients qui ont acheté... ont aussi aimé..."), et l'endroit idéal pour placer chaque suggestion dans
+                    le parcours d'achat.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>59. Politique de retour et SAV e-commerce</h3>
+                <div class="p-text">Tu es un expert en service client e-commerce. Rédige une politique de retour
+                    complète et une page FAQ pour [BOUTIQUE]. Inclus : conditions de retour, processus étape par étape,
+                    délais, remboursement vs échange, frais d'expédition retour, cas spéciaux, et 15 questions/réponses
+                    FAQ courantes. Le ton doit être rassurant et transparente pour maximiser la confiance à l'achat.
+                </div>
+                <div class="tags"><span class="tag tag-claude">Claude</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>60. Stratégie d'avis clients</h3>
+                <div class="p-text">Tu es un expert en social proof e-commerce. Crée une stratégie complète pour
+                    collecter et exploiter les avis clients pour [BOUTIQUE]. Inclus : email de demande d'avis post-achat
+                    (template), séquence de relance si pas d'avis, incitations légales (réduction, tirage au sort),
+                    comment répondre aux avis négatifs (5 templates), et comment afficher les avis pour maximiser les
+                    conversions.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>61. Descriptions de catégories e-commerce</h3>
+                <div class="p-text">Tu es un rédacteur SEO e-commerce. Rédige les descriptions de 5 catégories de
+                    produits pour [BOUTIQUE] : [CAT1], [CAT2], [CAT3], [CAT4], [CAT5]. Chaque description doit faire
+                    200-300 mots, inclure les mots-clés SEO pertinents, expliquer les avantages de cette catégorie, et
+                    se terminer par un CTA. L'objectif est d'améliorer le SEO et de guider l'acheteur dans son choix.
+                </div>
+                <div class="tags"><span class="tag tag-gemini">Gemini</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>62. Stratégie de prix psychologiques</h3>
+                <div class="p-text">Tu es un spécialiste en pricing e-commerce. Analyse mon catalogue de produits [LISTE
+                    SIMPLIFIÉE] et propose : la stratégie de prix psychologique idéale (99 vs 00, ancrage, bundle), les
+                    seuils de livraison gratuite optimaux, le meilleur moment pour lancer des promotions, une stratégie
+                    de prix par palier (1 acheté = X% de réduction), et comment afficher les prix pour maximiser les
+                    conversions.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>63. Page "À propos" de boutique</h3>
+                <div class="p-text">Tu es un storyteller de marque e-commerce. Rédige une page "À propos" captivante
+                    pour [BOUTIQUE]. Structure : l'histoire de la fondation (pourquoi), la mission et les valeurs, ce
+                    qui nous différencie (USP), l'engagement qualité/éthique, et un appel à rejoindre la communauté.
+                    Maximum 500 mots, ton authentique et inspirant. Termine par une photo team caption et un CTA vers
+                    les produits.</div>
+                <div class="tags"><span class="tag tag-claude">Claude</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>64. Campagne de soldes / Black Friday</h3>
+                <div class="p-text">Tu es un expert en promotions e-commerce. Crée un plan complet de campagne pour
+                    [ÉVÉNEMENT : Black Friday / Soldes / Anniversary Sale] pour [BOUTIQUE]. Inclus : le calendrier
+                    (avant, pendant, après), les offres par catégorie, les emails (5 messages), les posts sociaux (10
+                    posts), le design de bannières (descriptions), et les KPIs attendus. Budget marketing : [BUDGET].
+                </div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+        </section>
+
+        <!-- ══════ 7. SERVICE CLIENT (10 prompts) ══════ -->
+        <section class="cat-section">
+            <div class="cat-header"><span class="icon">🛡️</span>
+                <h2>Service Client</h2><span class="count">10 prompts</span>
+            </div>
+
+            <div class="p-card">
+                <h3>65. Réponses clients mécontents (10 scénarios)</h3>
+                <div class="p-text">Tu es un expert SAV diplomate. Crée 10 templates de réponses pour les situations
+                    clients les plus courantes : délai de livraison dépassé, produit endommagé, mauvaise taille/couleur,
+                    résultat décevant, demande de remboursement, plainte sur les réseaux, comparaison avec un
+                    concurrent, question technique, demande de réduction, et remerciement client. Chaque réponse :
+                    empathique, solution concrète, fidélisation.</div>
+                <div class="tags"><span class="tag tag-claude">Claude</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>66. FAQ complète pour site web</h3>
+                <div class="p-text">Tu es un UX writer spécialisé en FAQ. Crée une FAQ complète pour [BUSINESS/PRODUIT]
+                    avec 20 questions organisées en catégories : Commande & Paiement (5 Q), Livraison & Suivi (5 Q),
+                    Retours & Remboursements (5 Q), Produit & Utilisation (5 Q). Chaque réponse doit être concise (50-80
+                    mots), rassurante, et contenir un lien vers l'action appropriée quand c'est pertinent.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>67. Script de chatbot WhatsApp</h3>
+                <div class="p-text">Tu es un expert en chatbots conversationnels. Crée un arbre décisionnel complet pour
+                    un chatbot WhatsApp pour [BUSINESS]. Couvre les parcours : accueil, catalogue produits, questions
+                    sur les prix, processus de commande, suivi de livraison, réclamation, demande de devis, et transfert
+                    vers un humain. Pour chaque nœud : le message du bot, les boutons de réponse, et la réponse
+                    suivante. Max 3 niveaux de profondeur.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>68. Enquête de satisfaction client</h3>
+                <div class="p-text">Tu es un expert en Customer Success. Crée un questionnaire de satisfaction pour
+                    [BUSINESS]. Inclus : 10 questions (mix NPS, choix multiples, échelles 1-5, questions ouvertes),
+                    l'email d'invitation à participer, l'email de remerciement, comment analyser les résultats, et un
+                    plan d'action basé sur les 3 scénarios classiques (satisfaction haute/moyenne/basse).</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>69. Programme de fidélité client</h3>
+                <div class="p-text">Tu es un expert en rétention client. Conçois un programme de fidélité pour
+                    [BUSINESS]. Inclus : le système de points ou paliers, les récompenses par niveau, les conditions
+                    d'accès, le texte de communication de lancement, les emails automatiques (bienvenue, milestone,
+                    réactivation), et les KPIs à suivre (taux d'activation, taux de rachat, LTV). Adapte pour un
+                    business africain avec des moyens de paiement locaux.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span><span class="tag tag-claude">Claude</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>70. Guide d'utilisation produit</h3>
+                <div class="p-text">Tu es un rédacteur technique. Crée un guide d'utilisation complet pour
+                    [PRODUIT/SERVICE]. Structure : introduction (à quoi ça sert), démarrage rapide (5 étapes), guide
+                    détaillé (toutes les fonctionnalités), astuces avancées (5 tips pro), dépannage (10 problèmes
+                    courants + solutions), et glossaire des termes. Ton : simple et accessible, même pour un débutant
+                    complet.</div>
+                <div class="tags"><span class="tag tag-claude">Claude</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>71. Processus de gestion des plaintes</h3>
+                <div class="p-text">Tu es un consultant en qualité de service. Crée un processus complet de gestion des
+                    plaintes pour [BUSINESS]. Inclus : le formulaire de réclamation, le workflow interne (qui traite
+                    quoi, délais de réponse), les templates d'email à chaque étape (accusé de réception, investigation,
+                    résolution), les critères d'escalade, et le système de suivi post-résolution. Objectif : résoudre
+                    95% des plaintes en moins de 48h.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>72. Réponses aux avis Google/Facebook</h3>
+                <div class="p-text">Tu es un expert en e-reputation. Crée 10 templates de réponses aux avis en ligne
+                    pour [BUSINESS]. 5 réponses pour les avis positifs (5 étoiles, 4 étoiles) qui remercient et
+                    encouragent le bouche-à-oreille. 5 réponses pour les avis négatifs (3 étoiles à 1 étoile) qui
+                    montrent de l'empathie, proposent une solution, et invitent à reprendre contact en privé. Ton :
+                    professionnel, humain, jamais défensif.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>73. Onboarding nouveau client premium</h3>
+                <div class="p-text">Tu es un Customer Success Manager. Crée un parcours d'onboarding VIP pour les
+                    clients premium de [BUSINESS]. Inclus : l'email de bienvenue personnalisé, le kit de démarrage
+                    (checklist + guide + contacts), le planning des 30 premiers jours (touchpoints), les templates de
+                    messages de suivi (J+3, J+7, J+14, J+30), et les critères de réussite de l'onboarding. L'objectif
+                    est de créer un effet "wow" dès les premiers instants.</div>
+                <div class="tags"><span class="tag tag-claude">Claude</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>74. Script appel de suivi post-achat</h3>
+                <div class="p-text">Tu es un expert en relations clients. Rédige un script d'appel téléphonique de suivi
+                    post-achat pour [BUSINESS]. L'appel doit durer 5-7 minutes et couvrir : la vérification de
+                    satisfaction, les questions sur l'utilisation du produit, la collecte de feedback, la suggestion
+                    d'un produit complémentaire (soft upsell), et la demande de testimonial/recommandation. Inclus les
+                    transitions naturelles entre chaque partie.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+        </section>
+
+        <!-- ══════ 8. EMAIL MARKETING (10 prompts) ══════ -->
+        <section class="cat-section">
+            <div class="cat-header"><span class="icon">📧</span>
+                <h2>Email Marketing</h2><span class="count">10 prompts</span>
+            </div>
+
+            <div class="p-card">
+                <h3>75. Séquence de nurturing (7 emails)</h3>
+                <div class="p-text">Tu es un expert en email nurturing. Crée une séquence de 7 emails pour transformer
+                    un prospect froid en acheteur de [PRODUIT]. Email 1 : valeur gratuite (astuce). Email 2 : histoire
+                    inspirante. Email 3 : preuve sociale. Email 4 : contenu éducatif. Email 5 : cas d'étude. Email 6 :
+                    soft sell + objections. Email 7 : offre + urgence. Pour chaque email : objet, timing d'envoi,
+                    contenu complet (300-400 mots), et CTA.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>76. Objet d'email — 50 variantes testées</h3>
+                <div class="p-text">Tu es un expert en email marketing avec des taux d'ouverture de 40%+. Génère 50
+                    objets d'email pour [BUSINESS/CAMPAGNE]. Organise-les en 5 catégories de 10 : curiosité,
+                    urgence/scarcity, bénéfice direct, personnalisé, et storytelling. Chaque objet : max 50 caractères,
+                    pas de spam words, et compatible mobile. Indique pour chaque catégorie le meilleur moment d'envoi.
+                </div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>77. Email de réactivation (clients dormants)</h3>
+                <div class="p-text">Tu es un expert en réengagement. Crée une séquence de 3 emails pour réactiver les
+                    clients qui n'ont pas acheté depuis [DURÉE] chez [BUSINESS]. Email 1 : "On vous manque" + rappel de
+                    valeur. Email 2 : "Voici ce que vous avez manqué" + nouveautés. Email 3 : offre exclusive "retour"
+                    avec deadline. Ton : personnel et authentique, jamais culpabilisant. Inclus les objets avec emojis.
+                </div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span><span class="tag tag-claude">Claude</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>78. Newsletter mensuelle template</h3>
+                <div class="p-text">Tu es un rédacteur de newsletters. Crée un template de newsletter mensuelle pour
+                    [BUSINESS]. Sections : édito du fondateur (100 mots), les 3 contenus du mois (résumés avec liens),
+                    un témoignage client spotlight, une astuce ou outil du mois, les prochains événements, et une offre
+                    exclusive newsletter. Rédige un numéro complet comme exemple sur le thème [THÈME].</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>79. Séquence de lancement par email</h3>
+                <div class="p-text">Tu es un expert en lancement de produit par email. Crée une séquence de 8 emails
+                    pour le lancement de [PRODUIT] au prix de [PRIX]. J-7 : annonce/teaser. J-5 : problème identifié.
+                    J-3 : solution révélée. J-1 : témoignages. J0 : lancement officiel. J+1 : FAQ. J+3 : rappel + bonus.
+                    J+5 : fermeture. Pour chaque email : objet, contenu complet, et analyse de l'émotion ciblée.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>80. Email de partenariat/collaboration</h3>
+                <div class="p-text">Tu es un expert en business development. Rédige 5 templates d'emails de prospection
+                    pour proposer des partenariats à [TYPE DE PARTENAIRE]. Template 1 : co-création de contenu. Template
+                    2 : affiliation croisée. Template 3 : webinaire commun. Template 4 : offre bundle partagée. Template
+                    5 : échange de visibilité. Chaque email : objet accrocheur, corps court (150 mots max), proposition
+                    de valeur claire, et CTA simple.</div>
+                <div class="tags"><span class="tag tag-claude">Claude</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>81. Segmentation et personnalisation</h3>
+                <div class="p-text">Tu es un expert en email marketing avancé. Pour ma liste de [NOMBRE] abonnés de
+                    [BUSINESS], crée une stratégie de segmentation. Identifie : 5 segments clés basés sur le
+                    comportement (acheteurs, abandons, nouveaux, VIP, dormants), le contenu personnalisé pour chaque
+                    segment, les triggers d'automatisation, les critères de passage d'un segment à l'autre, et les KPIs
+                    à suivre par segment.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>82. A/B Testing email — Plan de test</h3>
+                <div class="p-text">Tu es un data-driven email marketer. Crée un plan d'A/B testing complet pour
+                    optimiser les emails de [BUSINESS]. Propose : 10 éléments à tester (objet, expéditeur, heure, CTA,
+                    longueur, images, etc.), la méthodologie pour chaque test (taille d'échantillon, durée, metric
+                    principale), un template de rapport de résultats, et les 5 premiers tests à lancer par ordre de
+                    priorité impact.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>83. Email de témoignage client</h3>
+                <div class="p-text">Tu es un expert en collecte de testimonials. Crée : l'email de demande de témoignage
+                    (avec 5 questions guidées pour faciliter la réponse), le questionnaire simplifié (format
+                    formulaire), le template de mise en page du témoignage pour le site web, le post social media basé
+                    sur le témoignage, et l'email de remerciement avec une surprise (réduction VIP). Le tout pour
+                    [BUSINESS].</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span><span class="tag tag-claude">Claude</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>84. Email de bienvenue post-achat</h3>
+                <div class="p-text">Tu es un expert en expérience post-achat. Rédige un email de bienvenue mémorable
+                    envoyé immédiatement après l'achat de [PRODUIT]. L'email doit : confirmer la commande avec
+                    enthousiasme, expliquer les prochaines étapes, fournir un guide de démarrage rapide (3 étapes),
+                    proposer de rejoindre la communauté, et créer de l'anticipation ("Voici ce que vous allez
+                    découvrir..."). Inclus un PS avec un bonus surprise.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+        </section>
+
+        <!-- ══════ 9. PRODUCTIVITÉ (10 prompts) ══════ -->
+        <section class="cat-section">
+            <div class="cat-header"><span class="icon">⚡</span>
+                <h2>Productivité & Organisation</h2><span class="count">10 prompts</span>
+            </div>
+
+            <div class="p-card">
+                <h3>85. Planning hebdomadaire optimisé</h3>
+                <div class="p-text">Tu es un expert en productivité et time management. Crée un planning hebdomadaire
+                    optimisé pour un entrepreneur [TYPE] qui doit gérer [RESPONSABILITÉS]. Utilise la méthode du
+                    time-blocking : blocs de deep work (matin), blocs administratifs (après-midi), blocs créatifs.
+                    Inclus les routines matinale et du soir, les jours de thème (Marketing Monday, Finance Friday...),
+                    et les rituels hebdomadaires (review, planning).</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>86. Système de gestion de projet</h3>
+                <div class="p-text">Tu es un expert en gestion de projet agile. Crée un système complet de gestion de
+                    projet pour [TYPE DE PROJETS] en utilisant la méthode Kanban. Définis : les colonnes du tableau (5-6
+                    statuts), les catégories de tâches, les tags priorité, le template de carte de tâche (titre,
+                    description, assigné, deadline, checklist), le processus de review hebdomadaire, et les templates de
+                    rapport d'avancement client.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>87. Automatisation de tâches répétitives</h3>
+                <div class="p-text">Tu es un expert en automatisation de processus business. Liste les 15 tâches les
+                    plus répétitives d'un [TYPE D'ENTREPRENEUR] et pour chacune propose : l'outil d'automatisation idéal
+                    (Zapier, Make, IFTTT, outil natif), le workflow automatisé étape par étape, le temps gagné par
+                    semaine, et la difficulté de mise en place (facile/moyen/expert). Objectif : automatiser 80% des
+                    tâches répétitives.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span><span class="tag tag-gemini">Gemini</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>88. Template réunion efficace (30 min max)</h3>
+                <div class="p-text">Tu es un expert en facilitation de réunions. Crée un système de réunion efficace
+                    pour [TYPE D'ÉQUIPE]. Inclus : template d'ordre du jour (à envoyer 24h avant), le script du
+                    facilitateur (ouverture, tour de table, décisions, prochaines étapes), le template de compte-rendu
+                    (à envoyer dans l'heure), les règles d'or (chrono, pas de téléphone, stand-up), et le template de
+                    réunion async (pour les sujets qui ne nécessitent pas de réunion).</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>89. Délégation efficace (SOP)</h3>
+                <div class="p-text">Tu es un expert en management et délégation. Crée 5 SOPs (Standard Operating
+                    Procedures) pour les tâches suivantes de [BUSINESS] : [TÂCHE1], [TÂCHE2], [TÂCHE3], [TÂCHE4],
+                    [TÂCHE5]. Pour chaque SOP : objectif, pré-requis, étapes détaillées avec captures d'écran
+                    descriptions, critères de qualité, erreurs courantes à éviter, et le temps estimé. Format : prêt à
+                    donner à un assistant virtuel ou un employé.</div>
+                <div class="tags"><span class="tag tag-claude">Claude</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>90. Système de prise de notes intelligent</h3>
+                <div class="p-text">Tu es un expert en knowledge management. Crée un système de prise de notes pour un
+                    [PROFIL] utilisant [OUTIL : Notion/Obsidian/Google Docs]. Inclus : la structure des dossiers, les
+                    templates de notes (réunion, idée, projet, apprentissage), le système de tags, le processus de
+                    review hebdomadaire (méthode GTD), et comment retrouver n'importe quelle information en moins de 30
+                    secondes.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>91. Routine quotidienne d'entrepreneur</h3>
+                <div class="p-text">Tu es un coach de performance pour entrepreneurs. Conçois une routine quotidienne
+                    optimisée pour un entrepreneur [TYPE] qui veut [OBJECTIF]. Inclus : routine matinale (6h-9h), bloc
+                    de travail profond (9h-12h), pause et recharge (12h-14h), bloc opérationnel (14h-17h), routine de
+                    fin de journée (17h-18h), et routine du soir (20h-22h). Chaque bloc : activités précises, durées, et
+                    pourquoi c'est dans cet ordre. Base-toi sur les neurosciences.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>92. Audit de productivité personnelle</h3>
+                <div class="p-text">Tu es un coach en productivité. Pose-moi 15 questions diagnostiques pour évaluer ma
+                    productivité actuelle (gestion du temps, outils, habitudes, distractions, énergie). Après mes
+                    réponses, fournis : mon score de productivité /100, mes 3 forces, mes 5 axes d'amélioration
+                    prioritaires, un plan d'action personnalisé sur 21 jours, et 3 outils à adopter immédiatement.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span><span class="tag tag-claude">Claude</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>93. Gestion de l'énergie (pas du temps)</h3>
+                <div class="p-text">Tu es un expert en performance humaine. Crée un plan de gestion de l'énergie pour un
+                    entrepreneur qui travaille [HEURES/SEMAINE]. Organise la journée en 4 types d'énergie : physique
+                    (alimentation, sommeil, exercice), émotionnelle (relations, motivation), mentale (focus,
+                    créativité), et spirituelle (purpose, vision). Pour chaque type : 3 pratiques quotidiennes, les
+                    signaux d'alerte de burnout, et les rituels de récupération.</div>
+                <div class="tags"><span class="tag tag-claude">Claude</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>94. Tableau de bord Notion/workspace</h3>
+                <div class="p-text">Tu es un expert Notion. Décris la structure complète d'un workspace Notion pour un
+                    [TYPE D'ENTREPRENEUR]. Inclus : le dashboard principal (widgets et liens rapides), la base de
+                    données Projets (propriétés et vues), la base de données Clients (CRM simple), le calendrier
+                    éditorial, le tracker d'habitudes, la section Finances (revenus et dépenses), et le wiki personnel.
+                    Donne les formules Notion pour les calculs automatiques.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+        </section>
+
+        <!-- ══════ 10. ANALYSE DE DONNÉES (10 prompts) ══════ -->
+        <section class="cat-section">
+            <div class="cat-header"><span class="icon">📊</span>
+                <h2>Analyse de Données & Décisions</h2><span class="count">10 prompts</span>
+            </div>
+
+            <div class="p-card">
+                <h3>95. Analyse de données de vente</h3>
+                <div class="p-text">Tu es un data analyst business. Voici mes données de vente du dernier trimestre :
+                    [COLLER LES DONNÉES]. Analyse : le chiffre d'affaires total et l'évolution mensuelle, le panier
+                    moyen, les produits best-sellers, les tendances saisonnières, le taux de conversion, et les
+                    anomalies. Présente les résultats avec des observations clés et 5 recommandations actionnables pour
+                    augmenter le CA de 20% le trimestre prochain.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span><span class="tag tag-gemini">Gemini</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>96. Analyse de campagne publicitaire</h3>
+                <div class="p-text">Tu es un expert en performance publicitaire. Voici les résultats de ma campagne
+                    [PLATEFORME] : budget [X], impressions [Y], clics [Z], conversions [N], CA généré [MONTANT]. Calcule
+                    : CTR, CPC, CPM, CPA, ROAS. Compare avec les benchmarks du secteur [SECTEUR]. Identifie les points
+                    forts et faiblesses. Propose 5 optimisations concrètes pour la prochaine campagne et le budget
+                    optimal.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>97. Étude de marché express</h3>
+                <div class="p-text">Tu es un analyste de marché. Réalise une étude de marché express pour
+                    [PRODUIT/SERVICE] dans [ZONE GÉOGRAPHIQUE]. Inclus : taille du marché (estimation), tendances
+                    actuelles, profil du consommateur type, analyse des 5 concurrents principaux, barrières à l'entrée,
+                    opportunités inexploitées, et recommandation Go/No-Go avec justification. Présente sous forme de
+                    rapport structuré avec des chiffres.</div>
+                <div class="tags"><span class="tag tag-gemini">Gemini</span><span class="tag tag-claude">Claude</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>98. Tableau financier prévisionnel</h3>
+                <div class="p-text">Tu es un expert financier pour startups. Crée un tableau prévisionnel sur 12 mois
+                    pour [BUSINESS]. Inclus : revenus prévisionnels (par source), coûts fixes (loyer, salaires,
+                    abonnements), coûts variables (marketing, commissions), marge brute, résultat net, point mort
+                    (break-even), et cash flow mensuel. Donne les formules et hypothèses utilisées. Présente aussi le
+                    scénario pessimiste et optimiste.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span><span class="tag tag-claude">Claude</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>99. Analyse de feedback client</h3>
+                <div class="p-text">Tu es un expert en analyse qualitative. Voici [NOMBRE] avis/commentaires de mes
+                    clients : [COLLER LES AVIS]. Analyse-les pour identifier : les 5 thèmes positifs les plus
+                    récurrents, les 5 problèmes les plus mentionnés, le sentiment général (score /10), les suggestions
+                    d'amélioration, et les verbatims à utiliser comme témoignages marketing. Présente un rapport
+                    structuré avec des recommandations.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span><span class="tag tag-claude">Claude</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>100. Analyse Google Analytics simplifiée</h3>
+                <div class="p-text">Tu es un expert web analytics. Voici les données clés de mon site pour le dernier
+                    mois : [DONNÉES]. Explique-moi en langage simple : d'où viennent mes visiteurs, quelles pages
+                    performent le mieux, où les utilisateurs abandonnent, quel est mon taux de rebond et ce qu'il
+                    signifie, et les 5 actions pour améliorer mes conversions. Présente sous forme de rapport exécutif
+                    avec un score de santé du site /100.</div>
+                <div class="tags"><span class="tag tag-gemini">Gemini</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>101. Veille concurrentielle automatisée</h3>
+                <div class="p-text">Tu es un expert en intelligence économique. Crée un système de veille
+                    concurrentielle pour [BUSINESS] dans le secteur [SECTEUR]. Inclus : les 10 sources d'information à
+                    surveiller (sites, réseaux, newsletters), les outils gratuits de monitoring, le template de fiche
+                    concurrent, le planning de veille (quotidien/hebdomadaire/mensuel), et le process pour transformer
+                    les insights en actions stratégiques.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>102. Rapport d'activité mensuel</h3>
+                <div class="p-text">Tu es un contrôleur de gestion. Crée un template de rapport d'activité mensuel pour
+                    [BUSINESS]. Sections : résumé exécutif (5 lignes), KPIs du mois (vs objectifs et vs mois précédent),
+                    faits marquants, problèmes rencontrés et solutions, prévisions M+1, et demandes/besoins. Rédige un
+                    exemplaire complet fictif pour illustrer le format idéal. Le rapport doit tenir en 2 pages maximum.
+                </div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>103. Calcul de Customer Lifetime Value</h3>
+                <div class="p-text">Tu es un expert en métriques business. Pour [BUSINESS], aide-moi à calculer la
+                    Customer Lifetime Value (CLV). Mes données : panier moyen [X], fréquence d'achat annuelle [Y], durée
+                    de vie client moyenne [Z ans], marge brute [W%]. Calcule : CLV simple, CLV historique, et CLV
+                    prédictive. Explique ce que chaque chiffre signifie et propose 5 stratégies concrètes pour augmenter
+                    ma CLV de 30%.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span><span class="tag tag-gemini">Gemini</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>104. Dashboard de suivi des objectifs OKR</h3>
+                <div class="p-text">Tu es un expert en pilotage d'entreprise par les OKR (Objectives and Key Results).
+                    Crée un système d'OKR complet pour [BUSINESS] pour le trimestre [Q1/Q2/Q3/Q4]. Définis : 3 objectifs
+                    stratégiques, 3-4 key results mesurables par objectif, les initiatives (actions) à mener, le
+                    template de check-in hebdomadaire, le scoring des OKR (0-1.0), et le template de review
+                    trimestrielle.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+        </section>
+
+        <!-- ══════ BONUS : 20 MÉGA-PROMPTS ══════ -->
+        <section class="cat-section">
+            <div class="cat-header"><span class="icon">🏆</span>
+                <h2>BONUS — 20 Méga-Prompts</h2><span class="count">20 méga-prompts</span>
+            </div>
+
+            <div class="p-card">
+                <h3>MEGA #1 — Consultant IA Personnel <span class="mega-badge">MEGA</span></h3>
+                <div class="p-text">Tu es maintenant mon consultant business personnel. Tu es un expert polyvalent avec
+                    20 ans d'expérience en marketing digital, stratégie d'entreprise, finance et développement
+                    personnel.
+
+                    Voici mon contexte :
+                    - Mon business : [DESCRIPTION]
+                    - Mon chiffre d'affaires actuel : [CA]
+                    - Mon objectif : [OBJECTIF]
+                    - Mon principal défi : [DÉFI]
+                    - Mon délai : [DÉLAI]
+
+                    À chaque message, tu dois :
+                    1. Analyser ma situation avec un regard d'expert
+                    2. Identifier les opportunités que je ne vois pas
+                    3. Proposer 3 actions concrètes et prioritaires
+                    4. Me challenger si mes idées sont faibles
+                    5. Me donner des exemples de réussite similaires
+                    6. Fixer des jalons mesurables
+
+                    Commence par me poser 5 questions stratégiques pour mieux comprendre ma situation.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span><span
+                        class="tag tag-claude">Claude</span><span class="tag tag-gemini">Gemini</span></div><button
+                    class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>MEGA #2 — Créateur de cours en ligne <span class="mega-badge">MEGA</span></h3>
+                <div class="p-text">Tu es un expert en création de formations en ligne à succès. Aide-moi à créer un
+                    cours complet sur [SUJET].
+
+                    Phase 1 — Architecture : Titre accrocheur, sous-titre, description de vente, prérequis, public
+                    cible, objectifs d'apprentissage (5-8).
+
+                    Phase 2 — Curriculum : 6-10 modules avec titres, 3-5 leçons par module, durée estimée par leçon,
+                    type de contenu (vidéo, texte, quiz, exercice), ressources téléchargeables.
+
+                    Phase 3 — Monétisation : Stratégie de pricing, plateformes recommandées, plan de lancement 30 jours,
+                    stratégie marketing.
+
+                    Commence par la Phase 1.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>MEGA #3 — Rédacteur de livre/ebook <span class="mega-badge">MEGA</span></h3>
+                <div class="p-text">Tu es un auteur et coach d'écriture. Aide-moi à écrire un ebook/livre sur [SUJET]
+                    pour [AUDIENCE]. Étape 1 : Propose 5 titres accrocheurs + sous-titres. Étape 2 : Crée un plan
+                    détaillé avec 10-12 chapitres (titre + résumé de chaque). Étape 3 : Rédige l'introduction complète
+                    (1000 mots). Étape 4 : Développe le chapitre 1 en entier (2000 mots). Pour la suite, je te
+                    demanderai chapitre par chapitre. Style : [FORMEL/CONVERSATIONNEL/STORYTELLING].</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span><span class="tag tag-claude">Claude</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>MEGA #4 — Stratège de marque complète <span class="mega-badge">MEGA</span></h3>
+                <div class="p-text">Tu es un brand strategist de renommée internationale. Crée une identité de marque
+                    complète pour [BUSINESS]. Livre : le positionnement (Brand Positioning Statement), la mission, la
+                    vision, les valeurs (5), la personnalité de marque (si c'était une personne), le ton de voix (avec
+                    exemples), la tagline, le brand story, les guidelines visuelles (couleurs, typo, style photo), et le
+                    brand book résumé (1 page).</div>
+                <div class="tags"><span class="tag tag-claude">Claude</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>MEGA #5 — Coach financier personnel <span class="mega-badge">MEGA</span></h3>
+                <div class="p-text">Tu es un conseiller financier expert pour entrepreneurs. Mon CA mensuel est [CA],
+                    mes charges fixes [CHARGES], mon épargne [ÉPARGNE]. Analyse ma situation et crée : un budget
+                    optimisé, une stratégie d'épargne (règle 50/30/20 adaptée), un plan d'investissement progressif, des
+                    alertes financières à mettre en place, et un plan de secours (fonds d'urgence). Donne-moi un score
+                    de santé financière /100 et les 3 actions immédiates.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>MEGA #6 — Générateur de business digital <span class="mega-badge">MEGA</span></h3>
+                <div class="p-text">Tu es un serial entrepreneur digital. Mes compétences : [COMPÉTENCES], budget :
+                    [BUDGET], temps dispo : [HEURES/SEMAINE]. Génère 10 idées de business digitaux adaptées. Pour chaque
+                    idée : description, modèle de revenus, investissement initial, potentiel de revenus à 6 mois, les 10
+                    premières étapes, et les outils nécessaires. Classe-les par : facilité, rapidité de rentabilité, et
+                    potentiel long-terme.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>MEGA #7 — Expert recrutement et RH <span class="mega-badge">MEGA</span></h3>
+                <div class="p-text">Tu es un DRH expert. Aide-moi à recruter un [POSTE] pour [BUSINESS]. Crée : la fiche
+                    de poste complète, l'annonce de recrutement (LinkedIn + Indeed), le tableau de scoring des
+                    candidats, les 15 questions d'entretien (techniques + soft skills), le test pratique à donner,
+                    l'email d'offre, le plan d'intégration des 30 premiers jours, et le template de contrat de travail
+                    simplifié.</div>
+                <div class="tags"><span class="tag tag-claude">Claude</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>MEGA #8 — Créateur de podcast <span class="mega-badge">MEGA</span></h3>
+                <div class="p-text">Tu es un producteur de podcast à succès. Aide-moi à lancer un podcast sur
+                    [THÉMATIQUE] pour [AUDIENCE]. Crée : le concept (nom, tagline, format, durée), la bande-annonce
+                    scriptée, les 10 premiers épisodes (titre + plan détaillé), le template de questions pour les
+                    invités, la checklist technique (équipement, hébergement), la stratégie de promotion, et le plan de
+                    monétisation (sponsors, affiliation, premium).</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>MEGA #9 — Assistant de rédaction CV/LinkedIn <span class="mega-badge">MEGA</span></h3>
+                <div class="p-text">Tu es un expert en développement de carrière. Aide-moi à optimiser mon profil
+                    professionnel. Mon parcours : [RÉSUMÉ]. Crée : un CV moderne (contenu textuel structuré), un profil
+                    LinkedIn optimisé (headline, résumé, expériences, compétences), une lettre de motivation générique
+                    personnalisable, un portfolio description (5 projets), et un email de candidature spontanée. Tout
+                    optimisé pour le secteur [SECTEUR] avec des mots-clés ATS.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>MEGA #10 — Architecte de site web <span class="mega-badge">MEGA</span></h3>
+                <div class="p-text">Tu es un UX designer et architecte web. Conçois l'architecture complète d'un site
+                    web pour [BUSINESS]. Inclus : le sitemap (toutes les pages), le wireframe textuel de chaque page
+                    (header, sections, footer), le contenu de chaque section (titres, textes, CTAs), les parcours
+                    utilisateurs (3 personas), la stratégie de conversion par page, et les recommandations SEO
+                    techniques. Le tout doit être prêt à briefer un développeur.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span><span class="tag tag-claude">Claude</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>MEGA #11 — Expert en négociation <span class="mega-badge">MEGA</span></h3>
+                <div class="p-text">Tu es un coach en négociation. Prépare-moi pour une négociation avec [TYPE DE
+                    PERSONNE] concernant [OBJET]. Analyse : mes arguments forts, mes faiblesses, la position probable de
+                    l'autre partie, les BATNA (alternatives) de chaque côté. Puis donne-moi : le script d'ouverture, 5
+                    techniques de négociation adaptées, les phrases clés à utiliser, les pièges à éviter, et le plan B
+                    si la négociation échoue.</div>
+                <div class="tags"><span class="tag tag-claude">Claude</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>MEGA #12 — Système d'affiliation <span class="mega-badge">MEGA</span></h3>
+                <div class="p-text">Tu es un expert en marketing d'affiliation. Crée un programme d'affiliation complet
+                    pour [PRODUIT/SERVICE]. Inclus : le taux de commission idéal, les conditions du programme, la page
+                    de recrutement d'affiliés, le kit marketing affilié (bannières descriptions, emails templates, posts
+                    sociaux), le système de tracking, la politique de paiement, et le plan pour recruter 50 affiliés
+                    actifs en 90 jours.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>MEGA #13 — Créateur de communauté <span class="mega-badge">MEGA</span></h3>
+                <div class="p-text">Tu es un expert en community building. Crée une stratégie pour bâtir une communauté
+                    engagée autour de [THÉMATIQUE]. Inclus : la plateforme idéale (Discord, Skool, Facebook, Telegram),
+                    les règles de la communauté, le calendrier d'animation (événements hebdomadaires), les contenus
+                    exclusifs à créer, la stratégie de gamification, le plan de croissance (de 0 à 1000 membres), et le
+                    modèle de monétisation.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>MEGA #14 — Expert juridique digital <span class="mega-badge">MEGA</span></h3>
+                <div class="p-text">Tu es un consultant juridique spécialisé en droit digital et OHADA. Crée les
+                    documents juridiques essentiels pour [BUSINESS EN LIGNE] : Conditions Générales de Vente (CGV),
+                    Politique de Confidentialité (RGPD adaptée), Mentions Légales, Conditions d'Utilisation, et
+                    Politique de Cookies. Adapte le tout au contexte juridique de [PAYS AFRICAIN]. Utilise un langage
+                    clair et compréhensible.</div>
+                <div class="tags"><span class="tag tag-claude">Claude</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>MEGA #15 — Générateur de contenu IA avancé <span class="mega-badge">MEGA</span></h3>
+                <div class="p-text">Tu es un content strategist expert. Crée un système de production de contenu pour
+                    [BUSINESS] qui permette de publier 5x plus avec 2x moins d'effort. Inclus : le workflow de création
+                    (idéation → rédaction → édition → publication → promotion), les templates réutilisables pour chaque
+                    type de contenu, la stratégie de repurposing (1 contenu = 10 formats), et le planning de batch
+                    creation.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>MEGA #16 — Formateur et speaker <span class="mega-badge">MEGA</span></h3>
+                <div class="p-text">Tu es un coach de prise de parole en public. Aide-moi à préparer une
+                    présentation/formation de [DURÉE] sur [SUJET] pour [AUDIENCE]. Crée : le plan de la présentation, le
+                    script complet, les slides (contenu textuel), les exercices interactifs (3 minimum), les questions
+                    d'évaluation, et les techniques de captation d'attention. Ajoute des notes de speaker pour chaque
+                    section (rythme, pauses, anecdotes).</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span><span class="tag tag-claude">Claude</span>
+                </div><button class="copy-btn" onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>MEGA #17 — Expert en automatisation Zapier/Make <span class="mega-badge">MEGA</span></h3>
+                <div class="p-text">Tu es un expert en no-code et automatisation. Crée 10 workflows d'automatisation
+                    pour [BUSINESS] utilisant Zapier ou Make. Pour chaque workflow : le déclencheur, les étapes
+                    intermédiaires, le résultat final, le temps gagné par semaine, et les instructions étape par étape
+                    pour le configurer. Couvre : génération de leads, onboarding, facturation, suivi client, reporting,
+                    et publication de contenu.</div>
+                <div class="tags"><span class="tag tag-chatgpt">ChatGPT</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>MEGA #18 — Stratège média payant (Ads) <span class="mega-badge">MEGA</span></h3>
+                <div class="p-text">Tu es un média buyer expert. Crée une stratégie publicitaire multiplateforme pour
+                    [PRODUIT] avec un budget mensuel de [BUDGET]. Inclus : la répartition du budget par plateforme
+                    (Meta, Google, TikTok), le ciblage d'audience (3 segments), les créatives à produire (descriptions),
+                    la structure des campagnes (warm/cold audiences), le plan de test A/B, et les KPIs de rentabilité à
+                    atteindre à chaque étape du funnel.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>MEGA #19 — Coach de développement personnel <span class="mega-badge">MEGA</span></h3>
+                <div class="p-text">Tu es un coach de vie et de mindset pour entrepreneurs. Je fais face à [DÉFI
+                    PERSONNEL : procrastination, syndrome de l'imposteur, burnout, peur de l'échec, etc.]. Aide-moi avec
+                    : une analyse de la racine du problème, 5 exercices pratiques quotidiens, un plan de transformation
+                    sur 30 jours, des affirmations personnalisées, des livres et podcasts recommandés, et un système de
+                    suivi de progrès. Sois empathique mais ferme.</div>
+                <div class="tags"><span class="tag tag-claude">Claude</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+
+            <div class="p-card">
+                <h3>MEGA #20 — Plan de scaling business <span class="mega-badge">MEGA</span></h3>
+                <div class="p-text">Tu es un consultant en croissance (growth advisor). Mon business [BUSINESS] génère
+                    actuellement [CA/MOIS]. Je veux atteindre [OBJECTIF CA] en [DÉLAI]. Crée un plan de scaling complet
+                    : les leviers de croissance à activer (acquisition, conversion, rétention, pricing), les ressources
+                    nécessaires (humaines, techniques, financières), le planning trimestre par trimestre, les risques et
+                    comment les mitiger, et les milestones clés à atteindre. Sois réaliste mais ambitieux.</div>
+                <div class="tags"><span class="tag tag-all">Tous les outils IA</span></div><button class="copy-btn"
+                    onclick="copyPrompt(this)">📋 Copier</button>
+            </div>
+        </section>
+
+    </div>
+    <footer>
+        <p>⚡ DigitalBoost AI — Pack 100+ Prompts IA Premium — Édition 2025-2026</p>
+        <p style="margin-top: 8px;">© 2025-2026 Tous droits réservés. Usage personnel uniquement.</p>
+    </footer>
+    <script>
+        function copyPrompt(btn) { const card = btn.closest('.p-card'); const text = card.querySelector('.p-text').textContent.trim(); navigator.clipboard.writeText(text).then(() => { btn.textContent = '✅ Copié !'; btn.style.color = 'var(--green)'; setTimeout(() => { btn.textContent = '📋 Copier'; btn.style.color = '' }, 2000) }).catch(() => { const t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select(); document.execCommand('copy'); document.body.removeChild(t); btn.textContent = '✅ Copié !'; setTimeout(() => { btn.textContent = '📋 Copier' }, 2000) }) }
+    </script>
+</body>
+
+</html>

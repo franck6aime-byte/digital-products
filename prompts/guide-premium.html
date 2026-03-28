@@ -1,0 +1,591 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUIDE PREMIUM : 100+ PROMPTS IA - DigitalBoost AI</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,700;9..144,900&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --paper: #FAFAF7;
+            --ink: #0D1117;
+            --muted: #6B7280;
+            --gold: #C9A84C;
+            --green: #1A6B3C;
+            --border: #E5E2D9;
+            --card: transparent;
+            --text-secondary: #2D3139;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--ink);
+            margin: 0;
+            padding: 0;
+            background: var(--paper);
+        }
+
+        @media print {
+            .page-break {
+                display: none;
+            }
+
+            body {
+                background: white;
+                font-size: 11pt;
+            }
+
+            .no-print {
+                display: none;
+            }
+
+            .category-section {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                page-break-before: always;
+            }
+
+            .prompt-card {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                margin-bottom: 30px;
+            }
+
+            .category-header,
+            .prompt-title {
+                break-after: avoid;
+                page-break-after: avoid;
+            }
+
+            p,
+            ul,
+            ol,
+            div {
+                orphans: 3;
+                widows: 3;
+            }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px 50px;
+        }
+
+        .header-pill {
+            display: inline-block;
+            background-color: rgba(201, 168, 76, 0.15);
+            color: var(--gold);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            vertical-align: middle;
+        }
+
+        header h1 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.5rem, 6vw, 3.5rem);
+            font-weight: 900;
+            color: var(--ink);
+            margin: 0 0 20px 0;
+            line-height: 1.2;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            color: var(--muted);
+            margin: 0 auto;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .header-meta {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: var(--muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .category-section {
+            margin-bottom: 70px;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .category-icon {
+            font-size: 1.8rem;
+        }
+
+        .category-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin: 0;
+            flex: 1;
+            color: var(--ink);
+        }
+
+        .prompt-card {
+            background: transparent;
+            border: none;
+            padding: 0;
+            margin-bottom: 50px;
+        }
+
+        .prompt-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 0 15px;
+            color: var(--ink);
+            display: block;
+        }
+
+        .prompt-content {
+            background: #fff;
+            border-left: 4px solid var(--gold);
+            padding: 24px 30px;
+            border-radius: 0 12px 12px 0;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+            white-space: pre-wrap;
+            position: relative;
+        }
+
+        .prompt-usage {
+            font-size: 0.95rem;
+            color: var(--muted);
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 60px 24px;
+            color: var(--muted);
+            font-size: 0.95rem;
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+        }
+
+        .badge-new {
+            background: #ff4757;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+
+        /* Print Button */
+        .print-btn-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+
+        .btn-print {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(108, 92, 231, 0.4);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-print:hover {
+            transform: scale(1.05);
+            background: var(--secondary);
+        }
+
+        /* Cover Page */
+        .cover-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background: #EFECE5;
+            color: #4A453C;
+            text-align: left;
+            padding: 80px 40px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 0;
+        }
+
+        .cover-content {
+            width: 100%;
+            max-width: 900px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cover-catchphrase {
+            font-family: 'DM Sans', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 500;
+            color: #4A453C;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            max-width: 600px;
+            letter-spacing: -0.5px;
+        }
+
+        .cover-title-mega {
+            font-family: 'DM Sans', sans-serif;
+            font-size: clamp(6.5rem, 16vw, 13rem);
+            font-weight: 900;
+            color: #5B564C;
+            line-height: 0.75;
+            letter-spacing: -4px;
+            margin: 0;
+            padding-bottom: 20px;
+            text-transform: uppercase;
+            text-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+            margin-left: -5px;
+        }
+
+        .cover-stamp {
+            position: absolute;
+            right: 0%;
+            top: 60%;
+            transform: translateY(-50%) rotate(15deg);
+            width: 180px;
+            height: 180px;
+            border: 2px dashed rgba(91, 86, 76, 0.4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 4px;
+            color: #5B564C;
+            text-transform: uppercase;
+            padding: 20px;
+        }
+
+        .cover-pill-bottom {
+            margin-top: 60px;
+            display: inline-block;
+            background-color: #DBC8A6;
+            color: #3A352C;
+            padding: 12px 28px;
+            border-radius: 12px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        @media print {
+            .cover-page {
+                min-height: auto;
+                padding: 120px 40px;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            header {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="print-btn-container no-print">
+        <button class="btn-print" onclick="window.print()">
+            <span>🖨️ Exporter en PDF</span>
+        </button>
+    </div>
+
+    <!-- COVER PAGE -->
+    <div class="cover-page">
+        <div class="cover-content">
+            <div class="cover-catchphrase">Accompagnement<br>business<br>pour entrepreneurs.</div>
+            <h1 class="cover-title-mega">GUIDE<br>PREMIUM</h1>
+
+            <div class="cover-stamp">
+                Édition<br>Ultime<br>2026
+            </div>
+
+            <div class="cover-pill-bottom">digitalboost.ai</div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Screen-only header -->
+        <header style="padding-top: 40px; background: transparent; padding-bottom: 20px;" class="no-print">
+            <div class="header-pill"
+                style="color: var(--gold); border: 1px solid var(--gold); padding: 5px 15px; border-radius: 20px; margin-bottom: 15px; font-weight: bold; font-size: 0.8rem;">
+                💎 GUIDE D'ACCOMPAGNEMENT</div>
+            <h1 style="color: var(--ink); font-family: 'Fraunces', serif;">100+ Prompts <span
+                    style="color: var(--gold);">IA</span></h1>
+            <p style="color: var(--muted); font-size: 1.1rem; max-width: 500px; margin: 10px auto;">L'arsenal ultime
+                pour les entrepreneurs - Edition 2026</p>
+        </header>
+
+
+        <!-- Introduction -->
+        <section class="category-section">
+            <h2 class="category-title" style="border: none;">Bienvenue dans l'Elite de l'IA</h2>
+            <p>Ce guide contient une sélection rigoureuse de prompts optimisés pour obtenir des résultats exceptionnels
+                avec ChatGPT (GPT-4), Claude 3.5 et Gemini 1.5. Remplacez les éléments entre crochets <code>[ ]</code>
+                par vos informations spécifiques.</p>
+        </section>
+
+        <div class="page-break"></div>
+
+        <!-- Section 1: MARKETING -->
+        <section class="category-section">
+            <div class="category-header">
+                <span class="category-icon">📢</span>
+                <h2 class="category-title">Marketing Stratégique</h2>
+            </div>
+
+            <div class="prompt-card">
+                <span class="prompt-title">1. Création de Stratégie de Contenu 360°</span>
+                <div class="prompt-content">"Tu es un expert en marketing digital de renommée mondiale. Ma niche est
+                    [NICHE] et mon produit principal est [PRODUIT]. Crée une stratégie de contenu complète pour les 30
+                    prochains jours. Pour chaque jour, fournis :
+                    - Le sujet du post
+                    - L'angle psychologique (peur de manquer, preuve sociale, autorité, etc.)
+                    - Le format recommandé (Reel, Carrousel, Post long)
+                    - 3 hashtags stratégiques
+                    L'objectif est de [OBJECTIF : Vendre / Notoriété / Engagement]."</div>
+                <div class="prompt-usage">Idéal pour planifier un mois de contenu en 2 minutes.</div>
+            </div>
+
+            <div class="prompt-card">
+                <span class="prompt-title">2. Définition du Persona Client (Avatar)</span>
+                <div class="prompt-content">"Analyse en profondeur mon client idéal pour [PRODUIT/SERVICE]. Ne te
+                    contente pas de la démographie. Identifie :
+                    - Ses 3 plus grandes frustrations nocturnes
+                    - Ses 3 désirs secrets les plus profonds
+                    - Les objections exactes qu'il aura face à mon offre
+                    - Les comptes qu'il suit et le vocabulaire spécifique qu'il utilise.
+                    Présente cela sous forme de tableau."</div>
+            </div>
+
+            <div class="prompt-card">
+                <span class="prompt-title">3. Angle de Marketing Virale</span>
+                <div class="prompt-content">"Prends ce concept : [VOTRE CONCEPT/IDÉE] et transforme-le en 5 angles de
+                    marketing 'controversés' mais éthiques qui captiveront l'attention immédiate sur les réseaux
+                    sociaux. Évite les clichés."</div>
+            </div>
+        </section>
+
+        <div class="page-break"></div>
+
+        <!-- Section 2: COPYWRITING -->
+        <section class="category-section">
+            <div class="category-header">
+                <span class="category-icon">✍️</span>
+                <h2 class="category-title">Copywriting Haute Conversion</h2>
+            </div>
+
+            <div class="prompt-card">
+                <span class="prompt-title">4. Page de Vente Structure PAS (Problème-Agitation-Solution)</span>
+                <div class="prompt-content">"Rédige une page de vente hypnotique pour [PRODUIT] en utilisant la formule
+                    PAS.
+                    1. Problème : Décris la douleur de ne pas avoir le produit de manière viscérale.
+                    2. Agitation : Explique pourquoi la situation va empirer sans action.
+                    3. Solution : Présente [PRODUIT] comme l'unique issue de secours.
+                    Style : Direct, empathique et persuasif."</div>
+            </div>
+
+            <div class="prompt-card">
+                <span class="prompt-title">5. Accroches Irrésistibles (Hooks)</span>
+                <div class="prompt-content">"Génère 10 accroches pour une publicité Facebook concernant [PRODUIT].
+                    - 3 accroches basées sur la curiosité
+                    - 3 accroches basées sur un bénéfice immédiat
+                    - 2 accroches basées sur une statistique choquante
+                    - 2 accroches sous forme de question provocatrice."</div>
+            </div>
+
+            <div class="prompt-card">
+                <span class="prompt-title">6. Réécriture pour la Clarté et l'Impact</span>
+                <div class="prompt-content">"Prends ce texte suivant et réécris-le pour un enfant de 10 ans tout en
+                    gardant une force de persuasion maximale. Supprime tout le jargon.
+                    Texte : [VOTRE TEXTE]"</div>
+            </div>
+        </section>
+
+        <div class="page-break"></div>
+
+        <!-- Section 3: VENTES & BUSINESS -->
+        <section class="category-section">
+            <div class="category-header">
+                <span class="category-icon">💼</span>
+                <h2 class="category-title">Business & Entrepreneuriat</h2>
+            </div>
+
+            <div class="prompt-card">
+                <span class="prompt-title">7. Analyse de Business Model</span>
+                <div class="prompt-content">"Je souhaite lancer un business de [IDÉE BUSINESS]. Agis comme un consultant
+                    en stratégie McKinsey. Analyse mon idée et identifie :
+                    1. Les 3 failles majeures qui pourraient me faire couler.
+                    2. Le levier de croissance le plus sous-estimé dans ce secteur.
+                    3. Un modèle de revenus récurrents (abonnement) applicable à ce business."</div>
+            </div>
+
+            <div class="prompt-card">
+                <span class="prompt-title">8. Script de Vente par Téléphone/DM</span>
+                <div class="prompt-content">"Crée un script de vente pour une conversation DM Instagram. L'objectif est
+                    de transformer un prospect froid qui a juste aimé mon post en un client pour [OFFRE]. Le ton doit
+                    être naturel, pas 'vendeur de tapis', et basé sur le conseil."</div>
+            </div>
+        </section>
+
+        <div class="page-break"></div>
+
+        <!-- Section 4: SEO & VISIBILITÉ -->
+        <section class="category-section">
+            <div class="category-header">
+                <span class="category-icon">🔍</span>
+                <h2 class="category-title">SEO & Visibilité</h2>
+            </div>
+
+            <div class="prompt-card">
+                <span class="prompt-title">9. Recherche de Mots-Clés Sémantiques</span>
+                <div class="prompt-content">"Mon mot-clé principal est [MOT-CLÉ]. Génère une liste de 20 mots-clés de
+                    longue traîne (long-tail) avec une intention de recherche 'commerciale'. Inclus également les
+                    questions les plus posées sur Google concernant ce sujet."</div>
+            </div>
+
+            <div class="prompt-card">
+                <span class="prompt-title">10. Rédaction d'Article Optimisé (Silo)</span>
+                <div class="prompt-content">"Écris un plan d'article de blog de 2000 mots pour [SUJET]. L'article doit
+                    être structuré pour le SEO : H1 captivant, H2 avec mots-clés, H3 détaillés. Inclus également une
+                    suggestion de Meta Description et le texte alternatif pour 3 images."</div>
+            </div>
+        </section>
+
+        <div class="page-break"></div>
+
+        <!-- Section 6: SAV ET EXPÉRIENCE CLIENT -->
+        <section class="category-section">
+            <div class="category-header">
+                <span class="category-icon">🤝</span>
+                <h2 class="category-title">SAV & Expérience Client</h2>
+            </div>
+
+            <div class="prompt-card">
+                <span class="prompt-title">13. Réponse Diplomatique à un Avis Négatif</span>
+                <div class="prompt-content">"Un client a laissé cet avis négatif : [AVIS]. En tant que Responsable
+                    Relation Client, rédige une réponse publique qui :
+                    1. Remercie pour le feedback.
+                    2. Exprime une empathie sincère sans être sur la défensive.
+                    3. Propose une solution concrète en privé.
+                    Le but est de transformer cette critique en preuve de notre sérieux aux yeux des autres futurs
+                    clients."</div>
+            </div>
+
+            <div class="prompt-card">
+                <span class="prompt-title">14. Création de FAQ Dynamique</span>
+                <div class="prompt-content">"Analyse mon produit [NOM DU PRODUIT]. Liste les 10 questions/inquiétudes
+                    les plus probables que les clients pourraient avoir. Pour chaque question, rédige une réponse
+                    courte, rassurante et qui lève l'objection de manière définitive."</div>
+            </div>
+        </section>
+
+        <div class="page-break"></div>
+
+        <!-- Section 7: FINANCE ET GESTION -->
+        <section class="category-section">
+            <div class="category-header">
+                <span class="category-icon">💰</span>
+                <h2 class="category-title">Finance & Optimisation</h2>
+            </div>
+
+            <div class="prompt-card">
+                <span class="prompt-title">15. Analyse de Rentabilité</span>
+                <div class="prompt-content">"Voici mes chiffres du mois : [CHIFFRES]. Agis comme un DAF (Directeur
+                    Administratif et Financier). Calcule ma marge brute, identifie mes 3 plus gros centres de dépense et
+                    suggère 3 actions pour réduire mes coûts de 15% sans sacrifier la qualité."</div>
+            </div>
+        </section>
+
+        <!-- NOTE: PACK COMPLET 100+ PROMPTS -->
+        <section class="category-section"
+            style="text-align: center; background: #f0f0f5; padding: 40px; border-radius: 20px;">
+            <p>🔥 <strong>Contenu de l'offre Premium :</strong> Vous venez de consulter les premiers prompts
+                stratégiques. Le pack complet inclut les 85 autres prompts spécialisés dans le Juridique, les RH, la
+                Programmation et plus encore.</p>
+        </section>
+
+        <!-- Bonus Section -->
+        <section class="category-section"
+            style="background: var(--gray-100); padding: 40px; border-radius: 20px; border: 2px dashed var(--primary);">
+            <h2 class="category-title">🚀 Méga-Prompt : Le Consultant IA Personnel</h2>
+            <div class="prompt-content">"Désormais, tu es mon Chief Al Officer (CAO). Ton rôle est de superviser tous
+                les aspects de mon business [NOM DU BUSINESS]. Avant de répondre à mes demandes, tu dois toujours me
+                poser les 3 questions les plus pertinentes pour affiner ton analyse. Tu dois être critique, stratégique
+                et orienté ROI. Est-ce que tu acceptes cette mission ?"</div>
+            <p style="margin-top: 15px; font-weight: bold; color: var(--secondary);">Activez ce prompt au début d'une
+                session pour transformer l'IA en véritable partenaire.</p>
+        </section>
+
+    </div>
+
+    <footer class="footer">
+        <p>© 2025-2026 DigitalBoost AI - Tous droits réservés.</p>
+        <p>Ce document est destiné à un usage personnel uniquement.</p>
+        <div style="margin-top: 20px;">
+            <a href="../index.html" class="no-print"
+                style="color: var(--primary); text-decoration: none; font-weight: bold;">← Retour au site</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

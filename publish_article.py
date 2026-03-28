@@ -1,0 +1,115 @@
+import json
+import os
+import subprocess
+import argparse
+from datetime import datetime
+
+# CONFIGURATION
+CONFIG_FILE = "articles-config.json"
+BLOG_INDEX = "blog.html"
+BASE_URL = "https://digitalboostai.vercel.app"
+
+def add_to_blog_html(title, excerpt, file_name, emoji, read_time, date_str):
+    with open(BLOG_INDEX, "r", encoding="utf-8") as f:
+        content = f.read()
+    
+    # Éviter les doublons de carte
+    if file_name in content:
+        print(f"⚠️ La carte pour {file_name} semble déjà exister dans blog.html.")
+        return
+
+    # Création du bloc HTML de la nouvelle carte d'article
+    gradient = "linear-gradient(135deg, #0D1117 0%, #1A4B9E 50%, #C9A84C 100%)"
+    
+    new_card = f"""
+            <!-- NOUVEL ARTICLE AUTO-INJECTE -->
+            <article class="blog-card">
+                <div class="blog-image"
+                    style="background: {gradient};">{emoji}</div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span>📅 {date_str}</span>
+                        <span>⏱️ {read_time}</span>
+                    </div>
+                    <h3 class="blog-title">{title}</h3>
+                    <p class="blog-excerpt">{excerpt}</p>
+                    <a href="blog/{file_name}" class="btn-read">Lire l'article →</a>
+                </div>
+            </article>
+"""
+    # Injection dans le HTML juste avant la fermeture des conteneurs
+    target = "        </div>\n    </main>"
+    if target in content:
+        content = content.replace(target, new_card + "\n" + target)
+    else:
+        content = content.replace("</main>", new_card + "\n    </main>")
+
+    with open(BLOG_INDEX, "w", encoding="utf-8") as f:
+        f.write(content)
+    print("✅ blog.html mis à jour visuellement (nouvelle carte ajoutée).")
+
+def publish_article(article_id, title, excerpt, file_name, emoji, category, read_time):
+    print(f"🚀 Préparation Publication Totale : {title}")
+    
+    if not os.path.exists(CONFIG_FILE):
+        print(f"❌ Erreur : {CONFIG_FILE} introuvable.")
+        return
+
+    with open(CONFIG_FILE, 'r', encoding='utf-8') as f:
+        config = json.load(f)
+
+    # 1. Mise à jour config (JSON)
+    for article in config['articles']:
+        if article['id'] == article_id:
+            print(f"⚠️ L'article {article_id} existe déjà dans {CONFIG_FILE}. Remplacement...")
+            config['articles'].remove(article)
+            break
+
+    # Date formatée
+    mois = ["", "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
+    now = datetime.now()
+    date_str = f"{now.day} {mois[now.month]} {now.year}"
+    date_iso = now.strftime("%Y-%m-%d")
+
+    new_article = {
+        "id": article_id,
+        "titre": title,
+        "excerpt": excerpt,
+        "url": f"{BASE_URL}/blog/{file_name}",
+        "emoji": emoji,
+        "categorie": category,
+        "temps_lecture": read_time,
+        "date_publication": date_iso,
+        "newsletter_envoyee": False
+    }
+    config['articles'].append(new_article)
+
+    with open(CONFIG_FILE, 'w', encoding='utf-8') as f:
+        json.dump(config, f, indent=2, ensure_ascii=False)
+    
+    print(f"✅ {CONFIG_FILE} mis à jour (pour la Newsletter).")
+
+    # 2. Ajout de la carte (HTML)
+    add_to_blog_html(title, excerpt, file_name, emoji, read_time, date_str)
+
+    # 3. Déploiement Vercel automatique
+    print("☁️ Déploiement sur serveur Vercel...")
+    try:
+        subprocess.run(["npx", "vercel", "--prod", "--yes"], capture_output=True, text=True, check=True)
+        print("🎉 Déploiement 100% réussi !")
+        print(f"🔗 URL LIVE : {BASE_URL}/blog/{file_name}")
+    except subprocess.CalledProcessError as e:
+        print(f"❌ Erreur de déploiement Vercel : {e.stderr}")
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Automatisation TOTALE Publication Blog")
+    parser.add_argument("--id", required=True, help="Identifiant unique (ex: article-004)")
+    parser.add_argument("--title", required=True, help="Titre principal de l'article")
+    parser.add_argument("--excerpt", required=True, help="Résumé court (2-3 phrases)")
+    parser.add_argument("--file", required=True, help="Nom du fichier (ex: le-nom.html)")
+    parser.add_argument("--emoji", required=True, help="Un emoji (ex: 🚀)")
+    parser.add_argument("--category", required=True, help="Catégorie (ex: Intelligence Artificielle)")
+    parser.add_argument("--time", required=True, help="Temps de lecture (ex: 5 min de lecture)")
+    args = parser.parse_args()
+
+    publish_article(args.id, args.title, args.excerpt, args.file, args.emoji, args.category, args.time)

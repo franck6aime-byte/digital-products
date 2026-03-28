@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calendrier Éditorial — DigitalBoostAI 2026</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f4f6fb;
+            color: #1a1a2e;
+            font-size: 12px;
+        }
+
+        /* COVER */
+        .cover {
+            width: 100%;
+            min-height: 680px;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, #0a1128 0%, #1a2a6c 55%, #b21f1f 100%);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            page-break-after: always;
+        }
+
+        .cover .badge {
+            background: rgba(212, 175, 55, .22);
+            border: 1px solid #D4AF37;
+            color: #D4AF37;
+            padding: 5px 18px;
+            border-radius: 30px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .cover h1 {
+            font-size: 36px;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 14px;
+        }
+
+        .cover h1 span {
+            color: #D4AF37;
+        }
+
+        .cover p {
+            font-size: 14px;
+            opacity: .78;
+            max-width: 500px;
+            line-height: 1.65;
+            margin-bottom: 32px;
+        }
+
+        .cover .stats {
+            display: flex;
+            gap: 28px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cover .stats div {
+            text-align: center;
+        }
+
+        .cover .stats .n {
+            font-size: 26px;
+            font-weight: 900;
+            color: #D4AF37;
+        }
+
+        .cover .stats .l {
+            font-size: 10px;
+            opacity: .65;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cover .foot {
+            margin-top: 36px;
+            font-size: 11px;
+            opacity: .4;
+        }
+
+        /* LAYOUT */
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 24px 28px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 900;
+            color: #fff;
+            background: linear-gradient(90deg, #1a2a6c, #b21f1f);
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin: 32px 0 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 18px;
+        }
+
+        .leg {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+
+        /* TABLE */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
+            margin-bottom: 28px;
+        }
+
+        thead tr {
+            background: linear-gradient(90deg, #0a1128, #1a2a6c);
+        }
+
+        th {
+            color: #fff;
+            font-weight: 700;
+            font-size: 10.5px;
+            padding: 10px 8px;
+            text-align: left;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 8px 8px;
+            border-bottom: 1px solid #eef0f8;
+            vertical-align: top;
+            line-height: 1.5;
+        }
+
+        tr:hover td {
+            background: #f9f9ff;
+        }
+
+        tr.week-sep td {
+            background: #e8ecf8;
+            font-weight: 700;
+            font-size: 10.5px;
+            color: #1a2a6c;
+            padding: 5px 8px;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+        }
+
+        /* CELL TYPES */
+        .date-cell {
+            font-weight: 700;
+            white-space: nowrap;
+            color: #0a1128;
+        }
+
+        .week-num {
+            color: #888;
+            font-size: 10px;
+        }
+
+        .type-pill {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .4px;
+            white-space: nowrap;
+            margin-bottom: 2px;
+        }
+
+        .tiktok {
+            background: #e8f0fe;
+            color: #1a2a6c;
+        }
+
+        .blog {
+            background: #fef3e2;
+            color: #b45309;
+        }
+
+        .email {
+            background: #e8fdf0;
+            color: #166534;
+        }
+
+        .promo {
+            background: #fde8e8;
+            color: #991b1b;
+        }
+
+        .rest {
+            background: #f3f4f6;
+            color: #6b7280;
+        }
+
+        .hook-text {
+            font-weight: 600;
+            color: #1a1a2e;
+            font-size: 11.5px;
+        }
+
+        .desc-text {
+            color: #555;
+            font-size: 11px;
+            margin-top: 2px;
+        }
+
+        .cta-text {
+            color: #b21f1f;
+            font-size: 10.5px;
+            font-weight: 600;
+        }
+
+        /* REVENUE TABLE */
+        .revenue-table td {
+            text-align: center;
+        }
+
+        .revenue-table td:first-child {
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .rev-up {
+            color: #166534;
+            font-weight: 700;
+        }
+
+        .bar-bg {
+            background: #eef;
+            border-radius: 4px;
+            height: 8px;
+            width: 100%;
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: middle;
+            min-width: 60px;
+        }
+
+        .bar-fill {
+            height: 8px;
+            border-radius: 4px;
+            background: linear-gradient(90deg, #1a2a6c, #D4AF37);
+        }
+
+        /* FOOTER */
+        .doc-footer {
+            text-align: center;
+            padding: 20px;
+            color: #aaa;
+            font-size: 10px;
+            border-top: 1px solid #e0e4f0;
+            margin-top: 24px;
+        }
+
+        .doc-footer strong {
+            color: #D4AF37;
+        }
+
+        @media print {
+            body {
+                background: #fff;
+            }
+
+            .cover,
+            .section-title {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            table {
+                page-break-inside: auto;
+            }
+
+            tr {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- COVER -->
+    <div class="cover">
+        <div class="badge">Document Officiel — Usage Interne</div>
+        <h1>Calendrier Éditorial<br><span>DigitalBoostAI 2026</span></h1>
+        <p>Plan de campagne complet · TikTok / Reels / Shorts · Blog · Email Marketing · Promotions · 6 mois</p>
+        <div class="stats">
+            <div>
+                <div class="n">6</div>
+                <div class="l">Mois</div>
+            </div>
+            <div>
+                <div class="n">180+</div>
+                <div class="l">Vidéos</div>
+            </div>
+            <div>
+                <div class="n">24</div>
+                <div class="l">Articles Blog</div>
+            </div>
+            <div>
+                <div class="n">26</div>
+                <div class="l">Newsletters</div>
+            </div>
+            <div>
+                <div class="n">3€K+</div>
+                <div class="l">Objectif M6</div>
+            </div>
+        </div>
+        <div class="foot">DigitalBoostAI &nbsp;|&nbsp; Mars – Août 2026 &nbsp;|&nbsp; Plan de Notoriété & Monétisation
+        </div>
+    </div>
+
+    <div class="page">
+
+        <!-- LÉGENDE -->
+        <div class="section-title">📌 Légende des Types de Contenu</div>
+        <div class="legend">
+            <div class="leg">
+                <div class="dot" style="background:#1a2a6c;"></div> TikTok / Reels / Shorts
+            </div>
+            <div class="leg">
+                <div class="dot" style="background:#b45309;"></div> Article de Blog
+            </div>
+            <div class="leg">
+                <div class="dot" style="background:#166534;"></div> Newsletter Email
+            </div>
+            <div class="leg">
+                <div class="dot" style="background:#991b1b;"></div> Promotion / Offre
+            </div>
+            <div class="leg">
+                <div class="dot" style="background:#6b7280;"></div> Repos / Analyse
+            </div>
+        </div>
+
+        <!-- ═══════════ MOIS 1 ═══════════ -->
+        <div class="section-title">📅 MOIS 1 — Lancement (10 Mars – 6 Avril 2026)</div>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:88px">Date</th>
+                    <th style="width:72px">Semaine</th>
+                    <th style="width:90px">Type</th>
+                    <th>Hook / Titre</th>
+                    <th style="width:160px">Description courte</th>
+                    <th style="width:100px">CTA</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr class="week-sep">
+                    <td colspan="6">🗓 Semaine 1 — 10 au 16 Mars</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Lun 10 Mars</td>
+                    <td class="week-num">S1</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">Ce prompt IA remplace 2h de travail 🤯</td>
+                    <td class="desc-text">Astuce choc — prompt productivité</td>
+                    <td class="cta-text">Abonne-toi</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Mar 11 Mars</td>
+                    <td class="week-num">S1</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">95% font cette erreur avec ChatGPT ❌</td>
+                    <td class="desc-text">Hook — mauvaise utilisation IA</td>
+                    <td class="cta-text">Commente ton domaine</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Mer 12 Mars</td>
+                    <td class="week-num">S1</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">J'ai créé un eBook en 3 jours avec l'IA 📖</td>
+                    <td class="desc-text">Valeur + vente douce eBook</td>
+                    <td class="cta-text">Lien en bio</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Jeu 13 Mars</td>
+                    <td class="week-num">S1</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">POV : Tu décides de ne plus dépendre de ton patron</td>
+                    <td class="desc-text">Tendance — texte à l'écran storytelling</td>
+                    <td class="cta-text">Lien en bio</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Ven 14 Mars</td>
+                    <td class="week-num">S1</td>
+                    <td><span class="type-pill promo">Promo</span></td>
+                    <td class="hook-text">Ce que tu obtiens dans le Bundle Ultime 💎</td>
+                    <td class="desc-text">Vente directe — Bundle -66%</td>
+                    <td class="cta-text">Lien en bio — urgence</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Sam 15 Mars</td>
+                    <td class="week-num">S1</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">Ce que personne ne sait sur moi...</td>
+                    <td class="desc-text">Storytime — création entreprise</td>
+                    <td class="cta-text">Abonne-toi</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Dim 16 Mars</td>
+                    <td class="week-num">S1</td>
+                    <td><span class="type-pill rest">Analyse</span></td>
+                    <td class="hook-text">Réponses commentaires en vidéo (×3)</td>
+                    <td class="desc-text">Engagement — réponses vidéo TikTok</td>
+                    <td class="cta-text">—</td>
+                </tr>
+
+                <tr class="week-sep">
+                    <td colspan="6">🗓 Semaine 2 — 17 au 23 Mars</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Lun 17 Mars</td>
+                    <td class="week-num">S2</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">3 prompts IA = 10h gagnées par semaine ⏱️</td>
+                    <td class="desc-text">Astuce choc — 3 meilleurs prompts</td>
+                    <td class="cta-text">Sauvegarde</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Mar 18 Mars</td>
+                    <td class="week-num">S2</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">On t'a MENTI sur le business en ligne</td>
+                    <td class="desc-text">Hook — démystification gurus</td>
+                    <td class="cta-text">Commente VRAI</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Mer 19 Mars</td>
+                    <td class="week-num">S2</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">Je poste 1 vidéo/jour sans jamais manquer d'idées</td>
+                    <td class="desc-text">Valeur — workflow contenu IA</td>
+                    <td class="cta-text">Pack prompts — lien bio</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Jeu 20 Mars</td>
+                    <td class="week-num">S2</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">AVANT l'IA : 12h/jour 😮‍💨 APRÈS : 3h 💪</td>
+                    <td class="desc-text">Tendance — avant/après transformation</td>
+                    <td class="cta-text">Lien en bio</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Ven 21 Mars</td>
+                    <td class="week-num">S2</td>
+                    <td><span class="type-pill promo">Promo</span></td>
+                    <td class="hook-text">Mon Bundle n'est PAS pour tout le monde</td>
+                    <td class="desc-text">Vente ciblée — profil idéal</td>
+                    <td class="cta-text">Lien en bio</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Sam 22 Mars</td>
+                    <td class="week-num">S2</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">Ma routine du matin avec l'IA (30 min)</td>
+                    <td class="desc-text">Coulisses — routine productivité</td>
+                    <td class="cta-text">Abonne-toi</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Dim 23 Mars</td>
+                    <td class="week-num">S2</td>
+                    <td><span class="type-pill rest">Analyse</span></td>
+                    <td class="hook-text">Réponses commentaires + stats semaine</td>
+                    <td class="desc-text">Engagement + analyse métriques</td>
+                    <td class="cta-text">—</td>
+                </tr>
+
+                <tr class="week-sep">
+                    <td colspan="6">🗓 Semaine 3 — 24 au 30 Mars</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Lun 24 Mars</td>
+                    <td class="week-num">S3</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">L'IA peut écrire tes DM Instagram à ta place 😱</td>
+                    <td class="desc-text">Astuce — déléguer messages à l'IA</td>
+                    <td class="cta-text">Sauvegarde + Tag</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Mar 25 Mars</td>
+                    <td class="week-num">S3</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">Pourquoi tu n'as pas encore de business en ligne</td>
+                    <td class="desc-text">Hook — les vrais blocages</td>
+                    <td class="cta-text">Commente ton blocage</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Mer 26 Mars</td>
+                    <td class="week-num">S3</td>
+                    <td><span class="type-pill tiktok">TikTok</span><br><span class="type-pill blog">Blog</span></td>
+                    <td class="hook-text">Créer un produit digital en 48h — Guide IA</td>
+                    <td class="desc-text">Tuto vidéo + <strong>Article Blog #1</strong></td>
+                    <td class="cta-text">eBook en bio</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Jeu 27 Mars</td>
+                    <td class="week-num">S3</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">300M d'emplois menacés — et toi ?</td>
+                    <td class="desc-text">Tendance — IA et futur du travail</td>
+                    <td class="cta-text">Pack prompts bio</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Ven 28 Mars</td>
+                    <td class="week-num">S3</td>
+                    <td><span class="type-pill promo">Promo</span></td>
+                    <td class="hook-text">Ce que le Bundle a rendu possible</td>
+                    <td class="desc-text">Vente — preuve de résultats</td>
+                    <td class="cta-text">Lien en bio</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Sam 29 Mars</td>
+                    <td class="week-num">S3</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">Mon rapport à l'argent — pourquoi j'ai tout changé</td>
+                    <td class="desc-text">Storytime émotion — connexion audience</td>
+                    <td class="cta-text">Abonne-toi</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Dim 30 Mars</td>
+                    <td class="week-num">S3</td>
+                    <td><span class="type-pill email">Email</span></td>
+                    <td class="hook-text">Newsletter #1 — 3 astuces IA de la semaine</td>
+                    <td class="desc-text">1ère newsletter aux inscrits</td>
+                    <td class="cta-text">Bundle en bio</td>
+                </tr>
+
+                <tr class="week-sep">
+                    <td colspan="6">🗓 Semaine 4 — 31 Mars au 6 Avril</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Lun 31 Mars</td>
+                    <td class="week-num">S4</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">Génère 30 jours de contenu en 10 minutes ⏱️</td>
+                    <td class="desc-text">Astuce — calendrier IA automatique</td>
+                    <td class="cta-text">Sauvegarde</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Mar 1 Avr</td>
+                    <td class="week-num">S4</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">Ce que j'aurais fait différemment dès le début</td>
+                    <td class="desc-text">Hook — 3 leçons clés apprises</td>
+                    <td class="cta-text">Commente</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Mer 2 Avr</td>
+                    <td class="week-num">S4</td>
+                    <td><span class="type-pill tiktok">TikTok</span><br><span class="type-pill blog">Blog</span></td>
+                    <td class="hook-text">5 outils IA gratuits testés en 2026</td>
+                    <td class="desc-text">Valeur + <strong>Article Blog #2</strong> comparatif</td>
+                    <td class="cta-text">Guide bio</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Jeu 3 Avr</td>
+                    <td class="week-num">S4</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">Tendance — challenge IA du moment</td>
+                    <td class="desc-text">Tendance virale + ton positionnement</td>
+                    <td class="cta-text">Lien en bio</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Ven 4 Avr</td>
+                    <td class="week-num">S4</td>
+                    <td><span class="type-pill promo">Promo</span></td>
+                    <td class="hook-text">Dernière chance cette semaine — Bundle -66%</td>
+                    <td class="desc-text">Vente urgence — timer countdown</td>
+                    <td class="cta-text">Lien en bio</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Sam 5 Avr</td>
+                    <td class="week-num">S4</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">Bilan Mois 1 — mes vrais chiffres 📊</td>
+                    <td class="desc-text">Transparence — stats réels Mois 1</td>
+                    <td class="cta-text">Abonne-toi M2</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Dim 6 Avr</td>
+                    <td class="week-num">S4</td>
+                    <td><span class="type-pill email">Email</span><br><span class="type-pill rest">Analyse</span></td>
+                    <td class="hook-text">Newsletter #2 + Analyse complète Mois 1</td>
+                    <td class="desc-text">Email bilan + préparation Mois 2</td>
+                    <td class="cta-text">—</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <!-- ═══════════ MOIS 2 ═══════════ -->
+        <div class="section-title">📅 MOIS 2 — Croissance (7 Avril – 4 Mai 2026)</div>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:88px">Date</th>
+                    <th style="width:72px">Sem.</th>
+                    <th style="width:90px">Type</th>
+                    <th>Hook / Titre</th>
+                    <th style="width:160px">Description courte</th>
+                    <th style="width:100px">CTA</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr class="week-sep">
+                    <td colspan="6">🗓 Semaine 5 — 7 au 13 Avril</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Lun 7 Avr</td>
+                    <td class="week-num">S5</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">Le prompt que tout le monde me demande (V2) ✨</td>
+                    <td class="desc-text">Remake hit S1 — version améliorée</td>
+                    <td class="cta-text">Abonne-toi</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Mar 8 Avr</td>
+                    <td class="week-num">S5</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">⚠️ PARTIE 2 — Vous avez demandé la suite</td>
+                    <td class="desc-text">Suite de la vidéo la plus commentée</td>
+                    <td class="cta-text">Abonne-toi P3</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Mer 9 Avr</td>
+                    <td class="week-num">S5</td>
+                    <td><span class="type-pill tiktok">TikTok</span><br><span class="type-pill blog">Blog</span></td>
+                    <td class="hook-text">Automatiser sa newsletter avec l'IA</td>
+                    <td class="desc-text">Valeur + <strong>Article Blog #3</strong> email marketing</td>
+                    <td class="cta-text">Formulaire email bio</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Jeu 10 Avr</td>
+                    <td class="week-num">S5</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">Janvier → Premier revenu — Mon histoire</td>
+                    <td class="desc-text">Tendance cinématique — journey</td>
+                    <td class="cta-text">Lien en bio</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Ven 11 Avr</td>
+                    <td class="week-num">S5</td>
+                    <td><span class="type-pill email">Email</span><br><span class="type-pill promo">Promo</span></td>
+                    <td class="hook-text">🎁 LANCEMENT LEAD MAGNET — Guide gratuit</td>
+                    <td class="desc-text">Lancement capture email + vidéo cadeau</td>
+                    <td class="cta-text">Email dans bio</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Sam 12 Avr</td>
+                    <td class="week-num">S5</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">Ce que j'ai appris en postant 30 vidéos</td>
+                    <td class="desc-text">Storytime — leçons créateur contenu</td>
+                    <td class="cta-text">Abonne-toi</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Dim 13 Avr</td>
+                    <td class="week-num">S5</td>
+                    <td><span class="type-pill email">Email</span></td>
+                    <td class="hook-text">Newsletter #3 — Le lead magnet expliqué</td>
+                    <td class="desc-text">Email présentation du guide gratuit</td>
+                    <td class="cta-text">Bundle upsell</td>
+                </tr>
+
+                <tr class="week-sep">
+                    <td colspan="6">🗓 Semaine 6 — 14 au 20 Avril</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Lun 14 Avr</td>
+                    <td class="week-num">S6</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">Voici ce qu'il y a dans le guide GRATUIT 👀</td>
+                    <td class="desc-text">Teaser contenu lead magnet</td>
+                    <td class="cta-text">Email dans bio</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Mar 15 Avr</td>
+                    <td class="week-num">S6</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">L'erreur fatale de la plupart des créateurs</td>
+                    <td class="desc-text">Hook — pas de liste email = pas de ventes</td>
+                    <td class="cta-text">Guide bio</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Mer 16 Avr</td>
+                    <td class="week-num">S6</td>
+                    <td><span class="type-pill tiktok">TikTok</span><br><span class="type-pill blog">Blog</span></td>
+                    <td class="hook-text">52 newsletters en 1 heure avec ce prompt</td>
+                    <td class="desc-text">Valeur + <strong>Article Blog #4</strong> newsletter IA</td>
+                    <td class="cta-text">Formulaire email</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Jeu 17 Avr</td>
+                    <td class="week-num">S6</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">Tendance — storytelling parcours entrepreneur</td>
+                    <td class="desc-text">Son tendance + texte à l'écran parcours</td>
+                    <td class="cta-text">Lien en bio</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Ven 18 Avr</td>
+                    <td class="week-num">S6</td>
+                    <td><span class="type-pill promo">Promo</span></td>
+                    <td class="hook-text">Tu as aimé le guide gratuit ? Voilà la version complète</td>
+                    <td class="desc-text">Vente — upsell naturel lead magnet → Bundle</td>
+                    <td class="cta-text">Lien en bio</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Sam 19 Avr</td>
+                    <td class="week-num">S6</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">Comment je gère mes revenus en ligne</td>
+                    <td class="desc-text">Coulisses finances — crédibilité</td>
+                    <td class="cta-text">Abonne-toi</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Dim 20 Avr</td>
+                    <td class="week-num">S6</td>
+                    <td><span class="type-pill email">Email</span></td>
+                    <td class="hook-text">Newsletter #4 — Pourquoi l'email bat les réseaux</td>
+                    <td class="desc-text">Email — valeur + CTA bundle</td>
+                    <td class="cta-text">Bundle bio</td>
+                </tr>
+
+                <tr class="week-sep">
+                    <td colspan="6">🗓 Semaine 7 — 21 au 27 Avril</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Lun 21 Avr</td>
+                    <td class="week-num">S7</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">6 semaines de contenu — mes vrais chiffres 📊</td>
+                    <td class="desc-text">Transparence — stats mi-parcours</td>
+                    <td class="cta-text">Abonne-toi</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Mar 22 Avr</td>
+                    <td class="week-num">S7</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">Pourquoi 97% abandonnent avant de réussir</td>
+                    <td class="desc-text">Hook motivationnel — persévérance</td>
+                    <td class="cta-text">Commente ton jour</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Mer 23 Avr</td>
+                    <td class="week-num">S7</td>
+                    <td><span class="type-pill tiktok">TikTok</span><br><span class="type-pill blog">Blog</span></td>
+                    <td class="hook-text">Prompt copywriting — page de vente en 30 sec</td>
+                    <td class="desc-text">Valeur + <strong>Article Blog #5</strong> copywriting IA</td>
+                    <td class="cta-text">Bundle bio</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Jeu 24 Avr</td>
+                    <td class="week-num">S7</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">Tendance — transformation IA 2026</td>
+                    <td class="desc-text">Tendance virale du moment</td>
+                    <td class="cta-text">Lien en bio</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Ven 25 Avr</td>
+                    <td class="week-num">S7</td>
+                    <td><span class="type-pill promo">Promo</span></td>
+                    <td class="hook-text">⚠️ IL RESTE 48H À CE PRIX</td>
+                    <td class="desc-text">Vente urgence — countdown 48h</td>
+                    <td class="cta-text">Lien en bio — urgent</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Sam 26 Avr</td>
+                    <td class="week-num">S7</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">Dans 1 an, ta vie ressemble à quoi ?</td>
+                    <td class="desc-text">Storytime — vision long terme</td>
+                    <td class="cta-text">Lien en bio</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Dim 27 Avr</td>
+                    <td class="week-num">S7</td>
+                    <td><span class="type-pill email">Email</span></td>
+                    <td class="hook-text">Newsletter #5 — Tes résultats en 7 semaines</td>
+                    <td class="desc-text">Email engagement + offre bundle</td>
+                    <td class="cta-text">Bundle bio</td>
+                </tr>
+
+                <tr class="week-sep">
+                    <td colspan="6">🗓 Semaine 8 — 28 Avril au 4 Mai</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Lun 28 Avr</td>
+                    <td class="week-num">S8</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">Ce qui change sur cette chaîne dès mai 📣</td>
+                    <td class="hook-text"></td>
+                    <td class="desc-text">Teaser Phase 2 — nouveautés</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Mar 29 Avr</td>
+                    <td class="week-num">S8</td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">L'IA va créer plus de millionnaires que la bourse</td>
+                    <td class="desc-text">Hook futurisme — IA 2026</td>
+                    <td class="cta-text">Lien en bio</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Mer 30 Avr</td>
+                    <td class="week-num">S8</td>
+                    <td><span class="type-pill email">Email</span><br><span class="type-pill blog">Blog</span></td>
+                    <td class="hook-text">5 scripts TikTok viraux offerts 🎁</td>
+                    <td class="desc-text">Email bonus fidélité + <strong>Article Blog #6</strong></td>
+                    <td class="cta-text">Newsletter bio</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Ven 1 Mai</td>
+                    <td class="week-num">S8</td>
+                    <td><span class="type-pill promo">Promo</span></td>
+                    <td class="hook-text">2 mois — bilan + invitation finale</td>
+                    <td class="desc-text">Vente — grand CTA bilan Phase 1</td>
+                    <td class="cta-text">Lien en bio</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Dim 3 Mai</td>
+                    <td class="week-num">S8</td>
+                    <td><span class="type-pill email">Email</span><br><span class="type-pill rest">Analyse</span></td>
+                    <td class="hook-text">Newsletter #6 + Bilan complet Phase 1</td>
+                    <td class="desc-text">Email bilan + statistiques Phase 1</td>
+                    <td class="cta-text">—</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <!-- ═══════════ MOIS 3 & 4 ═══════════ -->
+        <div class="section-title">📅 MOIS 3 & 4 — Optimisation (Mai – Juin 2026)</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Période</th>
+                    <th>Type</th>
+                    <th>Contenu Clé</th>
+                    <th>Articles Blog Prévus</th>
+                    <th>Newsletters</th>
+                    <th>Objectif</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="date-cell">Sem 9-10<br><small>5–18 Mai</small></td>
+                    <td><span class="type-pill tiktok">TikTok</span></td>
+                    <td class="hook-text">Formats gagnants Mois 1-2 reproduits + Produit Upsell lancé (50€)</td>
+                    <td class="desc-text">Blog #7 : Comment choisir son produit digital<br>Blog #8 : Créer une page de
+                        vente avec l'IA</td>
+                    <td class="desc-text">NL #7 — Lancement upsell<br>NL #8 — Tips productivité</td>
+                    <td class="desc-text">500€ revenus mois</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Sem 11-12<br><small>19 Mai–1 Juin</small></td>
+                    <td><span class="type-pill tiktok">TikTok</span><br><span class="type-pill email">Email</span></td>
+                    <td class="hook-text">Séquence email automatisée lancée (5 emails) · Premières réponses DM
+                        automatiques IA</td>
+                    <td class="desc-text">Blog #9 : Automatiser ses ventes en ligne<br>Blog #10 : Séquence email qui
+                        convertit</td>
+                    <td class="desc-text">NL #9 — Automatisation<br>NL #10 — Résultats réels</td>
+                    <td class="desc-text">Séquence email active</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Sem 13-14<br><small>2–15 Juin</small></td>
+                    <td><span class="type-pill tiktok">TikTok</span><br><span class="type-pill blog">Blog</span></td>
+                    <td class="hook-text">Vidéos longues YouTube (10 min) lancées · SEO blog commence</td>
+                    <td class="desc-text">Blog #11 : Guide complet ChatGPT débutants<br>Blog #12 : Les 10 prompts
+                        indispensables 2026</td>
+                    <td class="desc-text">NL #11 — Contenu long<br>NL #12 — Bilan 3 mois</td>
+                    <td class="desc-text">Trafic SEO organique</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Sem 15-16<br><small>16–30 Juin</small></td>
+                    <td><span class="type-pill promo">Promo</span><br><span class="type-pill email">Email</span></td>
+                    <td class="hook-text">Campagne promo fin de mois · Offre bundle summer · A/B test pages de vente
+                    </td>
+                    <td class="desc-text">Blog #13 : IA et liberté financière<br>Blog #14 : Mes outils pour travailler
+                        de partout</td>
+                    <td class="desc-text">NL #13 — Promo summer<br>NL #14 — Bilan 4 mois</td>
+                    <td class="desc-text">1 000€+ mois</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- ═══════════ MOIS 5 & 6 ═══════════ -->
+        <div class="section-title">📅 MOIS 5 & 6 — Scalabilité (Juillet – Août 2026)</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Période</th>
+                    <th>Type</th>
+                    <th>Contenu Clé</th>
+                    <th>Articles Blog Prévus</th>
+                    <th>Newsletters</th>
+                    <th>Objectif</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="date-cell">Sem 17-20<br><small>Juil 2026</small></td>
+                    <td><span class="type-pill tiktok">TikTok</span><br><span class="type-pill blog">Blog</span></td>
+                    <td class="hook-text">Recyclage meilleures vidéos · Programme d'affiliation lancé · Collaboration
+                        créateurs</td>
+                    <td class="desc-text">Blog #15-18 : Série complète "Business IA de A à Z"<br>(4 articles 1 par
+                        semaine)</td>
+                    <td class="desc-text">NL #15-18<br>Série "Business IA"</td>
+                    <td class="desc-text">1 500–2 500€/mois</td>
+                </tr>
+                <tr>
+                    <td class="date-cell">Sem 21-24<br><small>Août 2026</small></td>
+                    <td><span class="type-pill tiktok">TikTok</span><br><span class="type-pill promo">Promo</span></td>
+                    <td class="desc-text">Vidéo virale potentielle (100k+ vues) · Webinaire gratuit lancé · Nouveau
+                        produit 97€</td>
+                    <td class="desc-text">Blog #19-22 : Guides avancés IA<br>Blog #23 : Bilan 6 mois public<br>Blog #24
+                        : Roadmap Phase 3</td>
+                    <td class="desc-text">NL #19-22 — Avancé<br>NL #23 — Bilan 6 mois<br>NL #24 — Roadmap</td>
+                    <td class="desc-text">3 000€+/mois</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- ═══════════ PROJECTIONS ═══════════ -->
+        <div class="section-title">💰 Projections de Revenus — 6 Mois</div>
+        <table class="revenue-table">
+            <thead>
+                <tr>
+                    <th>Mois</th>
+                    <th>Trafic Site</th>
+                    <th>Emails</th>
+                    <th>Ventes</th>
+                    <th>CA Estimé</th>
+                    <th>Croissance</th>
+                    <th>Progression</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mois 1 — Mars/Avr</td>
+                    <td>500</td>
+                    <td>20</td>
+                    <td>5</td>
+                    <td class="rev-up">100€</td>
+                    <td>—</td>
+                    <td>
+                        <div class="bar-bg">
+                            <div class="bar-fill" style="width:3%"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mois 2 — Avr/Mai</td>
+                    <td>1 500</td>
+                    <td>80</td>
+                    <td>15</td>
+                    <td class="rev-up">300€</td>
+                    <td>+200%</td>
+                    <td>
+                        <div class="bar-bg">
+                            <div class="bar-fill" style="width:10%"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mois 3 — Mai/Juin</td>
+                    <td>3 000</td>
+                    <td>200</td>
+                    <td>30</td>
+                    <td class="rev-up">600€</td>
+                    <td>+100%</td>
+                    <td>
+                        <div class="bar-bg">
+                            <div class="bar-fill" style="width:20%"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mois 4 — Juin/Juil</td>
+                    <td>5 000</td>
+                    <td>400</td>
+                    <td>50+</td>
+                    <td class="rev-up">1 300€</td>
+                    <td>+117%</td>
+                    <td>
+                        <div class="bar-bg">
+                            <div class="bar-fill" style="width:43%"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mois 5 — Juil/Aoû</td>
+                    <td>8 000</td>
+                    <td>700</td>
+                    <td>80+</td>
+                    <td class="rev-up">2 000€</td>
+                    <td>+54%</td>
+                    <td>
+                        <div class="bar-bg">
+                            <div class="bar-fill" style="width:67%"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr style="background:#fff9e6;">
+                    <td><strong>Mois 6 — Août</strong></td>
+                    <td><strong>12 000+</strong></td>
+                    <td><strong>1 200+</strong></td>
+                    <td><strong>120+</strong></td>
+                    <td class="rev-up" style="font-size:14px"><strong>3 000€+</strong></td>
+                    <td><strong>+50%</strong></td>
+                    <td>
+                        <div class="bar-bg">
+                            <div class="bar-fill" style="width:100%"></div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="doc-footer">
+            Document confidentiel &nbsp;·&nbsp; <strong>DigitalBoostAI</strong> &nbsp;·&nbsp;
+            Calendrier Éditorial Complet 2026 &nbsp;·&nbsp; Mars → Août 2026
+        </div>
+    </div><!-- /page -->
+</body>
+
+</html>

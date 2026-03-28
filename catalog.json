@@ -1,0 +1,29 @@
+{
+  "prompts": {
+    "name": "Pack 100+ Prompts IA Premium",
+    "displayName": "Starter — Prompts IA 🔥 Promo",
+    "price": 2000,
+    "prix_texte": "2 000 FCFA",
+    "chariowLink": "https://ppawzaph.mychariow.shop/prd_cav6sr/checkout",
+    "lien_page": "https://digitalboostai.vercel.app/products/prompts.html",
+    "lien_short": "https://ppawzaph.mychariow.shop/prd_cav6sr"
+  },
+  "ebook": {
+    "name": "eBook \"Maîtrisez l'IA\"",
+    "displayName": "Pro — eBook Premium",
+    "price": 9900,
+    "prix_texte": "9 900 FCFA",
+    "chariowLink": "https://ppawzaph.mychariow.shop/prd_u83162/checkout",
+    "lien_page": "https://digitalboostai.vercel.app/products/ebook.html",
+    "lien_short": "https://ppawzaph.mychariow.shop/prd_u83162"
+  },
+  "bundle": {
+    "name": "Bundle Ultime — Tout inclus",
+    "displayName": "Bundle Ultime",
+    "price": 14900,
+    "prix_texte": "14 900 FCFA",
+    "chariowLink": "https://ppawzaph.mychariow.shop/prd_woqpd3/checkout",
+    "lien_page": "https://digitalboostai.vercel.app/#pricing",
+    "lien_short": "https://ppawzaph.mychariow.shop/prd_woqpd3"
+  }
+}

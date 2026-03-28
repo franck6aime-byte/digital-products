@@ -1,0 +1,76 @@
+{
+  "blog": {
+    "site_name": "DigitalBoost AI",
+    "base_url": "https://digitalboostai.vercel.app",
+    "blog_url": "https://digitalboostai.vercel.app/blog.html",
+    "logo_url": "https://digitalboostai.vercel.app/img/prompts_pack_banner_1772478827392.png"
+  },
+  "articles": [
+    {
+      "id": "article-001",
+      "titre": "Comment Automatiser votre Business avec l'IA en 2026",
+      "excerpt": "Le guide complet pour les entrepreneurs qui veulent gagner du temps, multiplier leurs revenus et garder une longueur d'avance.",
+      "url": "https://digitalboostai.vercel.app/blog/automatiser-business-ia.html",
+      "emoji": "📈",
+      "categorie": "Automatisation & Business",
+      "temps_lecture": "8 min de lecture",
+      "date_publication": "2026-03-03",
+      "newsletter_envoyee": true
+    },
+    {
+      "id": "article-002",
+      "titre": "L'IA va transformer l'éducation africaine — ce que révèle la conférence UNESCO 2026",
+      "excerpt": "La Chaire UNESCO IAHSO a tenu une tribune historique de 5 heures sur l'IA dans l'enseignement. Magic School AI, prompt engineering, classe inversée : voici tout ce que vous devez retenir.",
+      "url": "https://digitalboostai.vercel.app/blog/ia-education-afrique-unesco.html",
+      "emoji": "🎓",
+      "categorie": "IA & Éducation en Afrique",
+      "temps_lecture": "12 min de lecture",
+      "date_publication": "2026-03-07",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-003",
+      "titre": "8 Mars 2026 : La Vraie Liberté des Femmes Ivoiriennes Passe Aussi par l'IA",
+      "excerpt": "Seules 15% des entreprises en Côte d'Ivoire sont créées par des femmes. Le manque de temps et de financement les freine. Voici comment l'IA change la donne aujourd'hui.",
+      "url": "https://digitalboostai.vercel.app/blog/ia-femmes-ivoiriennes-8-mars-2026.html",
+      "emoji": "💜",
+      "categorie": "8 Mars & Leadership",
+      "temps_lecture": "5 min de lecture",
+      "date_publication": "2026-03-08",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-004",
+      "titre": "Les 3 Erreurs que 99% des Étudiants Ivoiriens Font sur ChatGPT en 2026",
+      "excerpt": "ChatGPT est gratuit, disponible 24h/24 et plus puissant qu'un assistant personnel. Pourtant, la majorité des jeunes d'Abidjan n'utilisent que 5% de son potentiel. Voici les 3 erreurs fatales — et comment les corriger dès aujourd'hui.",
+      "url": "https://digitalboostai.vercel.app/blog/erreurs-chatgpt-etudiants-ivoiriens.html",
+      "emoji": "🎓",
+      "categorie": "IA & Éducation",
+      "temps_lecture": "6 min de lecture",
+      "date_publication": "2026-03-11",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-005",
+      "titre": "Mon Workflow pour Créer 7 Jours de Contenu en 30 Minutes avec l'IA",
+      "excerpt": "85% des marketeurs utilisent déjà l'IA pour créer du contenu. Voici le workflow exact — hooks, scripts, descriptions, hashtags — pour planifier une semaine entière de TikTok en 30 minutes chrono.",
+      "url": "https://digitalboostai.vercel.app/blog/workflow-contenu-ia-7-jours-30-minutes.html",
+      "emoji": "⚡",
+      "categorie": "Workflow Contenu IA",
+      "temps_lecture": "8 min de lecture",
+      "date_publication": "2026-03-18",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-006",
+      "titre": "Comment Créer un Produit Digital en 48h avec l'IA (Guide Complet 2026)",
+      "excerpt": "Le marché digital africain croît de 25% par an. Voici comment créer et vendre ton premier produit digital en 48 heures — avec 3 prompts IA gratuits.",
+      "url": "https://digitalboostai.vercel.app/blog/creer-produit-digital-ia-48h.html",
+      "emoji": "🚀",
+      "categorie": "Produit Digital & IA",
+      "temps_lecture": "8 min de lecture",
+      "date_publication": "2026-03-26",
+      "newsletter_envoyee": false
+    }
+  ]
+}

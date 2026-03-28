@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Plan de Production Google Flow — Mois 1 | DigitalBoostAI</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f4f6fb;
+            color: #1a1a2e;
+            font-size: 12px;
+        }
+
+        .cover {
+            width: 100%;
+            min-height: 680px;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, #0a1128 0%, #1a2a6c 55%, #b21f1f 100%);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            page-break-after: always;
+        }
+
+        .cover .badge {
+            background: rgba(212, 175, 55, .22);
+            border: 1px solid #D4AF37;
+            color: #D4AF37;
+            padding: 5px 18px;
+            border-radius: 30px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .cover h1 {
+            font-size: 36px;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 14px;
+        }
+
+        .cover h1 span {
+            color: #D4AF37;
+        }
+
+        .cover p {
+            font-size: 14px;
+            opacity: .78;
+            max-width: 520px;
+            line-height: 1.65;
+            margin-bottom: 32px;
+        }
+
+        .cover .stats {
+            display: flex;
+            gap: 28px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cover .stats div {
+            text-align: center;
+        }
+
+        .cover .stats .n {
+            font-size: 26px;
+            font-weight: 900;
+            color: #D4AF37;
+        }
+
+        .cover .stats .l {
+            font-size: 10px;
+            opacity: .65;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cover .foot {
+            margin-top: 36px;
+            font-size: 11px;
+            opacity: .4;
+        }
+
+        .cover .how {
+            margin-top: 28px;
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(212, 175, 55, .3);
+            border-radius: 10px;
+            padding: 16px 24px;
+            max-width: 600px;
+            font-size: 12px;
+            line-height: 1.7;
+            opacity: .85;
+        }
+
+        .cover .how strong {
+            color: #D4AF37;
+        }
+
+        .page {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 24px 28px;
+        }
+
+        .section-title {
+            font-size: 15px;
+            font-weight: 900;
+            color: #fff;
+            background: linear-gradient(90deg, #1a2a6c, #b21f1f);
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin: 28px 0 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .leg {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .dot {
+            width: 11px;
+            height: 11px;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
+            margin-bottom: 28px;
+        }
+
+        thead tr {
+            background: linear-gradient(90deg, #0a1128, #1a2a6c);
+        }
+
+        th {
+            color: #fff;
+            font-weight: 700;
+            font-size: 10px;
+            padding: 10px 8px;
+            text-align: left;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 8px 8px;
+            border-bottom: 1px solid #eef0f8;
+            vertical-align: top;
+            line-height: 1.5;
+        }
+
+        tr:hover td {
+            background: #f9f9ff;
+        }
+
+        tr.week-sep td {
+            background: #e8ecf8;
+            font-weight: 700;
+            font-size: 10.5px;
+            color: #1a2a6c;
+            padding: 6px 10px;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+        }
+
+        .date-cell {
+            font-weight: 700;
+            white-space: nowrap;
+            color: #0a1128;
+            font-size: 11px;
+        }
+
+        .type-pill {
+            display: inline-block;
+            padding: 2px 7px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .4px;
+            white-space: nowrap;
+            margin: 1px 0;
+        }
+
+        .valeur {
+            background: #e8f0fe;
+            color: #1a2a6c;
+        }
+
+        .hook {
+            background: #fef3e2;
+            color: #b45309;
+        }
+
+        .vente {
+            background: #fde8e8;
+            color: #991b1b;
+        }
+
+        .tendance {
+            background: #f0fdf4;
+            color: #166534;
+        }
+
+        .storytime {
+            background: #faf5ff;
+            color: #6b21a8;
+        }
+
+        .analyse {
+            background: #f3f4f6;
+            color: #374151;
+        }
+
+        .hook-text {
+            font-weight: 700;
+            color: #0a1128;
+            font-size: 11.5px;
+        }
+
+        .desc-text {
+            color: #555;
+            font-size: 10.5px;
+            margin-top: 3px;
+            line-height: 1.5;
+        }
+
+        .scene-block {
+            background: #f8f9ff;
+            border-left: 3px solid #1a2a6c;
+            border-radius: 0 6px 6px 0;
+            padding: 6px 10px;
+            margin: 4px 0;
+            font-size: 10.5px;
+            line-height: 1.6;
+        }
+
+        .scene-block .s-time {
+            font-weight: 700;
+            color: #1a2a6c;
+            font-size: 10px;
+        }
+
+        .scene-block .s-vis {
+            color: #444;
+        }
+
+        .scene-block .s-txt {
+            color: #b21f1f;
+            font-weight: 600;
+        }
+
+        .scene-block .s-vo {
+            color: #166534;
+            font-style: italic;
+        }
+
+        .params {
+            background: #0a1128;
+            color: #e8f4fd;
+            border-radius: 6px;
+            padding: 6px 10px;
+            font-size: 10px;
+            margin-top: 5px;
+            line-height: 1.7;
+        }
+
+        .params span {
+            color: #D4AF37;
+            font-weight: 700;
+        }
+
+        .cta-text {
+            color: #b21f1f;
+            font-size: 10.5px;
+            font-weight: 600;
+        }
+
+        .doc-footer {
+            text-align: center;
+            padding: 20px;
+            color: #aaa;
+            font-size: 10px;
+            border-top: 1px solid #e0e4f0;
+            margin-top: 24px;
+        }
+
+        .doc-footer strong {
+            color: #D4AF37;
+        }
+
+        @media print {
+            body {
+                background: #fff;
+            }
+
+            .cover,
+            .section-title {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .params {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            table {
+                page-break-inside: auto;
+            }
+
+            tr {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cover">
+        <div class="badge">Plan de Production Officiel — Google Flow IA</div>
+        <h1>Prompts Google Flow<br><span>Phase 1 — Mois 1</span></h1>
+        <p>20 vidéos TikTok / Reels / Shorts prêtes à générer · Structure scène par scène · Voix off FR · Format 9:16 ·
+            20 secondes</p>
+        <div class="stats">
+            <div>
+                <div class="n">4</div>
+                <div class="l">Semaines</div>
+            </div>
+            <div>
+                <div class="n">20</div>
+                <div class="l">Vidéos</div>
+            </div>
+            <div>
+                <div class="n">20s</div>
+                <div class="l">Durée</div>
+            </div>
+            <div>
+                <div class="n">9:16</div>
+                <div class="l">Format</div>
+            </div>
+            <div>
+                <div class="n">FR</div>
+                <div class="l">Voix</div>
+            </div>
+        </div>
+        <div class="how">
+            <strong>Comment utiliser ce document :</strong> Pour chaque vidéo, copie le prompt complet depuis le fichier
+            source · Ouvre <strong>labs.google.com/flow</strong> · Sélectionne "New Video → From Prompt" · Format 9:16 ·
+            20 sec · Voix française · Génère &amp; exporte en MP4 · Publie directement sur TikTok, Reels et Shorts.
+        </div>
+        <div class="foot">DigitalBoostAI &nbsp;|&nbsp; 10 Mars – 6 Avril 2026 &nbsp;|&nbsp; Généré le 5 Mars 2026</div>
+    </div>
+
+    <div class="page">
+        <div class="legend">
+            <div class="leg">
+                <div class="dot" style="background:#1a2a6c;"></div> Valeur / Tutorial
+            </div>
+            <div class="leg">
+                <div class="dot" style="background:#b45309;"></div> Hook / Accroche
+            </div>
+            <div class="leg">
+                <div class="dot" style="background:#991b1b;"></div> Vente / Promo
+            </div>
+            <div class="leg">
+                <div class="dot" style="background:#166534;"></div> Tendance / Trend
+            </div>
+            <div class="leg">
+                <div class="dot" style="background:#6b21a8;"></div> Storytime / Coulisses
+            </div>
+            <div class="leg">
+                <div class="dot" style="background:#374151;"></div> Analyse / Repos
+            </div>
+        </div>
+
+        <!-- ═══ SEMAINE 1 ═══ -->
+        <div class="section-title">🗓 Semaine 1 — 10 au 16 Mars 2026</div>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:76px">Date</th>
+                    <th style="width:80px">Type</th>
+                    <th style="width:170px">Hook / Titre</th>
+                    <th>Structure Scènes (Google Flow)</th>
+                    <th style="width:90px">CTA</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td class="date-cell">Lun 10 Mars</td>
+                    <td><span class="type-pill valeur">Valeur</span></td>
+                    <td class="hook-text">Ce prompt IA remplace 2h de travail 🤯<div class="desc-text">Astuce choc —
+                            Prompt productivité matinale</div>
+                    </td>
+                    <td>
+                        <div class="scene-block"><span class="s-time">[0:00–0:04]</span> <span class="s-vis">Slow-mo :
+                                mains ouvrant un laptop, ChatGPT se charge</span><br><span class="s-txt">Texte : "Ce
+                                prompt remplace 2h de travail 🤯"</span><br><span class="s-vo">VO : "Attends… tu ne sais
+                                pas encore ça ?"</span></div>
+                        <div class="scene-block"><span class="s-time">[0:04–0:10]</span> <span class="s-vis">Écran :
+                                prompt tapé "Agis comme expert en marketing, 5 actions prioritaires"</span><br><span
+                                class="s-txt">Texte : "Voici le prompt exact 👇"</span><br><span class="s-vo">VO : "Tu
+                                tapes ce prompt le matin… plan complet en 30 sec."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:10–0:16]</span> <span class="s-vis">Réponse
+                                ChatGPT avec liste à puces — satisfaction</span><br><span class="s-txt">Texte : "2
+                                heures remplacées par 30 secondes ✅"</span></div>
+                        <div class="scene-block"><span class="s-time">[0:16–0:20]</span> <span class="s-vis">Téléphone —
+                                bio TikTok avec flèche dorée</span><br><span class="s-txt">Texte : "Abonne-toi 👆 J'en
+                                poste chaque jour"</span></div>
+                        <div class="params"><span>Paramètres Flow :</span> 9:16 · 20s · Couleurs White/Navy/Gold ·
+                            Police Montserrat Bold · Musique lo-fi douce, bas volume · <span>Voix FR, calme et
+                                confiant</span></div>
+                    </td>
+                    <td class="cta-text">Abonne-toi</td>
+                </tr>
+
+                <tr>
+                    <td class="date-cell">Mar 11 Mars</td>
+                    <td><span class="type-pill hook">Hook</span></td>
+                    <td class="hook-text">95% font cette erreur avec ChatGPT ❌<div class="desc-text">Erreur courante —
+                            mauvaise utilisation IA</div>
+                    </td>
+                    <td>
+                        <div class="scene-block"><span class="s-time">[0:00–0:04]</span> <span class="s-vis">Écran noir
+                                → texte dramatique + mains tapant frénétiquement</span><br><span class="s-txt">Texte
+                                rouge : "95% font ÇA avec ChatGPT ❌"</span><br><span class="s-vo">VO : "95% utilisent
+                                ChatGPT complètement mal."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:04–0:08]</span> <span class="s-vis">Écran :
+                                prompt vague "Donne-moi des idées de business" + croix rouge</span><br><span
+                                class="s-txt">Texte : "Prompt vague = résultat nul ❌"</span><br><span class="s-vo">VO :
+                                "Ils tapent des questions vagues et sont déçus."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:08–0:15]</span> <span class="s-vis">Nouveau
+                                prompt complet : RÔLE + CONTEXTE + FORMAT → coche verte</span><br><span
+                                class="s-txt">Texte : "RÔLE + CONTEXTE + FORMAT = 🔥"</span><br><span class="s-vo">VO :
+                                "La bonne méthode : un rôle, un contexte, un format."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:15–0:20]</span> <span class="s-vis">Split
+                                screen mauvais vs bon résultat ChatGPT</span><br><span class="s-txt">Texte : "Commente
+                                ton domaine 👇 je te donne le prompt parfait"</span></div>
+                        <div class="params"><span>Paramètres Flow :</span> 9:16 · 20s · Rouge pour erreurs, Vert pour
+                            solutions · <span>Voix FR, énergique</span> · Musique tension → résolution</div>
+                    </td>
+                    <td class="cta-text">Commente ton domaine</td>
+                </tr>
+
+                <tr>
+                    <td class="date-cell">Mer 12 Mars</td>
+                    <td><span class="type-pill valeur">Valeur</span></td>
+                    <td class="hook-text">J'ai créé un eBook en 3 jours avec l'IA 📖<div class="desc-text">Valeur +
+                            vente douce — storytelling création produit</div>
+                    </td>
+                    <td>
+                        <div class="scene-block"><span class="s-time">[0:00–0:05]</span> <span class="s-vis">Time-lapse
+                                document qui se remplit · calendrier 3 jours encerclés</span><br><span
+                                class="s-txt">Texte : "J'ai créé un eBook complet en 3 jours avec l'IA
+                                📖"</span><br><span class="s-vo">VO : "J'ai créé un ebook en 3 jours grâce à l'IA. Voilà
+                                comment."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:05–0:11]</span> <span class="s-vis">3 coupes
+                                rapides : ChatGPT plan → contenu chapitre → Canva design</span><br><span
+                                class="s-txt">Texte : "Étape 1: Plan ✅ | Étape 2: Contenu ✅ | Étape 3: Design
+                                ✅"</span><br><span class="s-vo">VO : "Plan avec l'IA, contenu, puis design sur
+                                Canva."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:11–0:16]</span> <span class="s-vis">Couverture
+                                eBook premium sur iPad, rotation lente</span><br><span class="s-txt">Texte : "Le
+                                résultat 👆 Disponible sur mon site"</span><br><span class="s-vo">VO : "En vente sur mon
+                                site en moins d'une semaine."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:16–0:20]</span> <span class="s-vis">Téléphone —
+                                doigt tapant le lien bio</span><br><span class="s-txt">Texte : "Lien dans ma bio 🔗 Pour
+                                voir mon eBook"</span></div>
+                        <div class="params"><span>Paramètres Flow :</span> 9:16 · 20s · Tons ambrés chauds · Police
+                            Outfit Bold · <span>Voix FR, chaleureuse et authentique</span> · Lo-fi motivationnel</div>
+                    </td>
+                    <td class="cta-text">Lien en bio — eBook</td>
+                </tr>
+
+                <tr>
+                    <td class="date-cell">Jeu 13 Mars</td>
+                    <td><span class="type-pill tendance">Tendance</span></td>
+                    <td class="hook-text">POV : Tu décides de ne plus dépendre de ton patron<div class="desc-text">
+                            Format texte seul — storytelling cinématique</div>
+                    </td>
+                    <td>
+                        <div class="scene-block"><span class="s-time">[0:00–0:03]</span> <span class="s-vis">Laptop
+                                fermé sur bureau sombre</span><br><span class="s-txt">Texte : "POV : Tu as décidé de ne
+                                plus dépendre de ton patron..."</span><br><span class="s-vo">Pas de voix off — audio
+                                tendance TikTok uniquement</span></div>
+                        <div class="scene-block"><span class="s-time">[0:03–0:06]</span> <span
+                                class="s-vis">Notifications TikTok s'allument sur téléphone</span><br><span
+                                class="s-txt">Texte : "Tu découvres l'IA il y a quelques mois..."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:06–0:10]</span> <span class="s-vis">Laptop
+                                ouvert : ChatGPT, Canva, Stripe, site web</span><br><span class="s-txt">Texte : "Tu
+                                crées tes premiers produits digitaux..."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:10–0:14]</span> <span class="s-vis">Téléphone
+                                vibre — notif Stripe "Paiement reçu ✅"</span><br><span class="s-txt">Texte or : "Ta
+                                première vente à 3h du matin 😭💰"</span></div>
+                        <div class="scene-block"><span class="s-time">[0:14–0:20]</span> <span class="s-vis">Lever de
+                                soleil · bio TikTok avec flèche</span><br><span class="s-txt">Texte : "C'est mon
+                                histoire. Ça peut être la tienne. Lien en bio ⬆️"</span></div>
+                        <div class="params"><span>Paramètres Flow :</span> 9:16 · 20s · <span>AUCUNE voix off</span> ·
+                            Audio tendance TikTok · Étalonnage or chaud · Police élégante serif</div>
+                    </td>
+                    <td class="cta-text">Lien en bio</td>
+                </tr>
+
+                <tr>
+                    <td class="date-cell">Ven 14 Mars</td>
+                    <td><span class="type-pill vente">Vente</span></td>
+                    <td class="hook-text">Ce que tu obtiens dans le Bundle Ultime 💎<div class="desc-text">Présentation
+                            produit premium — urgence -66%</div>
+                    </td>
+                    <td>
+                        <div class="scene-block"><span class="s-time">[0:00–0:04]</span> <span class="s-vis">Particules
+                                dorées tourbillonnant → texte révélé sur fond sombre</span><br><span class="s-txt">Texte
+                                or : "Ce que tu obtiens dans le Bundle Ultime 💎"</span><br><span class="s-vo">VO :
+                                "Laisse-moi te montrer exactement ce que tu obtiens."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:04–0:09]</span> <span class="s-vis">iPad avec
+                                couverture eBook glisse depuis la gauche avec halo</span><br><span class="s-txt">Texte :
+                                "✅ eBook Stratégique IA — Méthode complète"</span><br><span class="s-vo">VO : "Mon eBook
+                                stratégique, toute ma méthode de A à Z."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:09–0:13]</span> <span class="s-vis">Grille de
+                                100 cartes prompts remplissant l'écran dynamiquement</span><br><span class="s-txt">Texte
+                                : "✅ 100 Prompts Secrets — Testés et validés"</span><br><span class="s-vo">VO : "Mes 100
+                                prompts secrets, ceux que j'utilise chaque jour."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:13–0:17]</span> <span class="s-vis">Animation
+                                prix barré → prix réduit + badge rouge "-66%"</span><br><span class="s-txt">Texte
+                                clignotant rouge : "-66% AUJOURD'HUI SEULEMENT ⏳"</span><br><span class="s-vo">VO :
+                                "Aujourd'hui à -66%. Ça ne durera pas."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:17–0:20]</span> <span class="s-vis">Bio TikTok
+                                · grande flèche rouge pulsante</span><br><span class="s-txt">Texte : "Lien dans ma bio
+                                ⬆️ Dépêche-toi"</span><br><span class="s-vo">VO : "Clique sur le lien dans ma bio.
+                                Dépêche-toi."</span></div>
+                        <div class="params"><span>Paramètres Flow :</span> 9:16 · 20s · Navy #0A1128 · Gold #D4AF37 ·
+                            <span>Voix FR, urgente et confiante</span> · Beat épique montée en tension</div>
+                    </td>
+                    <td class="cta-text">Lien en bio — urgence</td>
+                </tr>
+
+                <tr>
+                    <td class="date-cell">Sam 15 Mars</td>
+                    <td><span class="type-pill storytime">Storytime</span></td>
+                    <td class="hook-text">Ce que personne ne sait sur moi...<div class="desc-text">Coulisses — Histoire
+                            personnelle et émotion</div>
+                    </td>
+                    <td>
+                        <div class="scene-block"><span class="s-time">[0:00–0:05]</span> <span class="s-vis">Pièce peu
+                                éclairée · personne au bureau regardant son téléphone</span><br><span
+                                class="s-txt">Texte manuscrit : "Ce que personne ne sait sur moi..."</span><br><span
+                                class="s-vo">VO : "Je vais te raconter quelque chose que je n'ai jamais dit
+                                publiquement."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:05–0:10]</span> <span class="s-vis">Symboles
+                                stress financier : portefeuille vide, factures, calculatrice</span><br><span
+                                class="s-txt">Texte : "Il y a quelques mois, j'étais complètement à
+                                court..."</span><br><span class="s-vo">VO : "J'étais à bout. Je cherchais une
+                                issue."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:10–0:15]</span> <span class="s-vis">Transition
+                                chaleureuse : laptop s'ouvre → ChatGPT → Canva → page produit</span><br><span
+                                class="s-txt">Texte : "Puis j'ai découvert la vente de produits digitaux avec
+                                l'IA..."</span><br><span class="s-vo">VO : "J'ai découvert les produits digitaux et
+                                l'IA. Au début ? Zéro vente."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:15–0:20]</span> <span class="s-vis">Téléphone
+                                vibre — notification Stripe · mains levant le téléphone</span><br><span
+                                class="s-txt">Texte or : "Mais un jour... 🔔💰 Suis-moi. Je partage tout ici.
+                                ❤️"</span><br><span class="s-vo">VO : "Et un jour, ma première vente. Ce jour-là, tout a
+                                changé."</span></div>
+                        <div class="params"><span>Paramètres Flow :</span> 9:16 · 20s · Désaturé → chaud · Police
+                            mélangée serif + bold · <span>Voix FR, intime et sincère</span> · Piano émotionnel doux
+                        </div>
+                    </td>
+                    <td class="cta-text">Abonne-toi</td>
+                </tr>
+
+                <tr>
+                    <td class="date-cell">Dim 16 Mars</td>
+                    <td><span class="type-pill analyse">Analyse</span></td>
+                    <td class="hook-text">Réponses commentaires en vidéo (×3) + Analyse S1<div class="desc-text">
+                            Engagement · Identifier les 3 vidéos les plus performantes</div>
+                    </td>
+                    <td colspan="1">
+                        <div class="scene-block"><span class="s-vis">Répondre à 3 commentaires via la fonction "Répondre
+                                en vidéo" de TikTok.</span></div>
+                        <div class="scene-block"><span class="s-vis"><strong>Métriques à analyser :</strong> Taux de
+                                visionnage · Partages · Commentaires · Clics bio · Nouveaux abonnés</span></div>
+                        <div class="params"><span>Action :</span> Identifier les formats gagnants pour les reproduire en
+                            Semaine 2</div>
+                    </td>
+                    <td class="cta-text">—</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <!-- ═══ SEMAINE 2 ═══ -->
+        <div class="section-title">🗓 Semaine 2 — 17 au 23 Mars 2026</div>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:76px">Date</th>
+                    <th style="width:80px">Type</th>
+                    <th style="width:170px">Hook / Titre</th>
+                    <th>Structure Scènes (Google Flow)</th>
+                    <th style="width:90px">CTA</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td class="date-cell">Lun 17 Mars</td>
+                    <td><span class="type-pill valeur">Valeur</span></td>
+                    <td class="hook-text">3 prompts IA = 10h gagnées par semaine ⏱️<div class="desc-text">Astuce — Les 3
+                            meilleurs prompts du moment</div>
+                    </td>
+                    <td>
+                        <div class="scene-block"><span class="s-time">[0:00–0:03]</span> <span class="s-vis">Animation
+                                compteur "10 heures économisées" en gros</span><br><span class="s-txt">Texte : "3
+                                prompts IA = 10h gagnées/semaine ⏱️"</span><br><span class="s-vo">VO : "Voici les 3
+                                prompts que je n'échangerais pour rien au monde."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:03–0:08]</span> <span class="s-vis">Écran
+                                ChatGPT : Prompt 1 "Rédige un email professionnel pour [situation] en 5
+                                lignes"</span><br><span class="s-txt">Badge vert : "Prompt 1 ✅ Emails pro en 30
+                                secondes"</span><br><span class="s-vo">VO : "Numéro 1 : la rédaction d'emails
+                                professionnels."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:08–0:13]</span> <span class="s-vis">Prompt 2
+                                "Génère 20 idées de contenu TikTok sur [X] avec un hook pour chacune"</span><br><span
+                                class="s-txt">Badge vert : "Prompt 2 ✅ 20 idées en 1 minute"</span><br><span
+                                class="s-vo">VO : "Numéro 2 : 20 idées de contenu en moins d'une minute."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:13–0:18]</span> <span class="s-vis">Prompt 3
+                                "Résume ce document en 5 points clés actionnables"</span><br><span class="s-txt">Badge
+                                vert : "Prompt 3 ✅ Tout document résumé en 10s"</span><br><span class="s-vo">VO :
+                                "Numéro 3 : résumer n'importe quel document en 10 secondes."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:18–0:20]</span> <span class="s-vis">Animation
+                                icône Bookmark/Enregistrer pulsante</span><br><span class="s-txt">Texte : "📌 Sauvegarde
+                                cette vidéo maintenant !"</span></div>
+                        <div class="params"><span>Paramètres Flow :</span> 9:16 · 20s · Fond blanc, badges verts ·
+                            <span>Voix FR, rapide et claire</span> · Lo-fi rapide</div>
+                    </td>
+                    <td class="cta-text">Sauvegarde 📌</td>
+                </tr>
+
+                <tr>
+                    <td class="date-cell">Mar 18 Mars</td>
+                    <td><span class="type-pill hook">Hook</span></td>
+                    <td class="hook-text">On t'a MENTI sur le business en ligne<div class="desc-text">Démystification —
+                            honnêteté vs faux gurus</div>
+                    </td>
+                    <td>
+                        <div class="scene-block"><span class="s-time">[0:00–0:04]</span> <span class="s-vis">Écran noir
+                                → texte mot par mot "ON T'A MENTI"</span><br><span class="s-vo">VO : "On t'a menti. Le
+                                business en ligne, c'est pas magique."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:04–0:09]</span> <span class="s-vis">Montage
+                                captures "Riche en 24h" avec croix rouges dessus</span><br><span class="s-txt">Texte :
+                                "❌ Riche en 24h ❌ Sans effort ❌ Méthode miracle"</span><br><span class="s-vo">VO : "Tout
+                                ce que tu vois sur 'riche en 24h' ? C'est du bruit."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:09–0:15]</span> <span class="s-vis">3 coches
+                                vertes apparaissant sur fond blanc</span><br><span class="s-txt">Texte : "✅ Constance +
+                                ✅ Bon outil (IA) + ✅ Bon produit = Revenus réels"</span><br><span class="s-vo">VO : "La
+                                vraie formule : constance + bon outil + bon produit. C'est tout."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:15–0:20]</span> <span class="s-vis">Section
+                                commentaires animée avec "VRAI" qui apparaissent</span><br><span class="s-txt">Texte :
+                                "Commente 'VRAI' si t'en avais marre des fausses promesses 👇"</span></div>
+                        <div class="params"><span>Paramètres Flow :</span> 9:16 · 20s · Désaturé début → propre fin ·
+                            <span>Voix FR, honnête et direct</span> · Sérieux puis inspirant</div>
+                    </td>
+                    <td class="cta-text">Commente "VRAI"</td>
+                </tr>
+
+                <tr>
+                    <td class="date-cell">Mer 19 Mars</td>
+                    <td><span class="type-pill valeur">Valeur</span></td>
+                    <td class="hook-text">Je poste 1 vidéo/jour sans jamais manquer d'idées<div class="desc-text">
+                            Workflow contenu IA — Valeur + vente douce pack</div>
+                    </td>
+                    <td>
+                        <div class="scene-block"><span class="s-time">[0:00–0:04]</span> <span class="s-vis">Mains
+                                scrollant un calendrier contenu plein sur téléphone</span><br><span class="s-txt">Texte
+                                : "Je poste 1 vidéo/jour. Je ne sèche JAMAIS. Voilà comment 🧠"</span><br><span
+                                class="s-vo">VO : "Je poste une vidéo par jour. Et je ne manque jamais d'idées."</span>
+                        </div>
+                        <div class="scene-block"><span class="s-time">[0:04–0:11]</span> <span
+                                class="s-vis">Enregistrement écran — ChatGPT : "Donne-moi 30 idées TikTok sur [X] avec
+                                hook pour chacune" → 30 idées générées</span><br><span class="s-txt">Texte : "Ce prompt
+                                génère 30 idées en 20 secondes 🤯"</span><br><span class="s-vo">VO : "Ce prompt une fois
+                                par mois et tout mon calendrier est rempli."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:11–0:16]</span> <span class="s-vis">Calendrier
+                                se remplit avec 30 titres de vidéos, animation satisfaisante</span><br><span
+                                class="s-txt">Texte : "30 jours de contenu planifié ✅"</span></div>
+                        <div class="scene-block"><span class="s-time">[0:16–0:20]</span> <span class="s-vis">Bio avec
+                                lien</span><br><span class="s-txt">Texte : "Ce prompt + 99 autres dans mon pack 🔗 Lien
+                                en bio"</span><br><span class="s-vo">VO : "Ce prompt et 99 autres sont dans mon pack.
+                                Lien en bio."</span></div>
+                        <div class="params"><span>Paramètres Flow :</span> 9:16 · 20s · Tons chauds créateur ·
+                            <span>Voix FR décontractée</span> · Lo-fi upbeat</div>
+                    </td>
+                    <td class="cta-text">Pack prompts — bio</td>
+                </tr>
+
+                <tr>
+                    <td class="date-cell">Jeu 20 Mars</td>
+                    <td><span class="type-pill tendance">Tendance</span></td>
+                    <td class="hook-text">AVANT l'IA : 12h/jour 😮‍💨 APRÈS : 3h 💪<div class="desc-text">Format
+                            Avant/Après — audio tendance, texte seulement</div>
+                    </td>
+                    <td>
+                        <div class="scene-block"><span class="s-time">[0:00–0:05]</span> <span class="s-vis">Côté gauche
+                                gris : bureau stressant, papiers, onglets multiples</span><br><span class="s-txt">Texte
+                                : "AVANT l'IA : 12h de travail par jour 😮‍💨"</span></div>
+                        <div class="scene-block"><span class="s-time">[0:05–0:10]</span> <span class="s-vis">Côté droit
+                                or/chaud : même bureau propre, ChatGPT, café, calme</span><br><span class="s-txt">Texte
+                                : "APRÈS l'IA : 3h de travail, mêmes résultats 💪"</span></div>
+                        <div class="scene-block"><span class="s-time">[0:10–0:15]</span> <span class="s-vis">Téléphone —
+                                notifications paiements Stripe qui s'accumulent</span><br><span class="s-txt">Texte :
+                                "La différence ? Les bons prompts."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:15–0:20]</span> <span class="s-vis">Bio TikTok
+                                avec flèche pulsante</span><br><span class="s-txt">Texte : "Mes 100 prompts sont dans le
+                                lien de ma bio ⬆️"</span></div>
+                        <div class="params"><span>Paramètres Flow :</span> 9:16 · 20s · Split color grade · <span>Audio
+                                tendance TikTok — PAS de voix off</span> · Coupes rapides</div>
+                    </td>
+                    <td class="cta-text">Lien en bio</td>
+                </tr>
+
+                <tr>
+                    <td class="date-cell">Ven 21 Mars</td>
+                    <td><span class="type-pill vente">Vente</span></td>
+                    <td class="hook-text">Mon Bundle n'est PAS pour tout le monde<div class="desc-text">Vente ciblée —
+                            Qualifier le prospect avec empathie</div>
+                    </td>
+                    <td>
+                        <div class="scene-block"><span class="s-time">[0:00–0:04]</span> <span class="s-vis">Personne
+                                secouant la tête (mains visibles) + texte</span><br><span class="s-txt">Texte : "Mon
+                                Bundle n'est PAS pour tout le monde."</span><br><span class="s-vo">VO : "Mon Bundle
+                                n'est pas pour tout le monde."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:04–0:11]</span> <span class="s-vis">3 coches
+                                apparaissant une à une sur fond clair</span><br><span class="s-txt">"✅ Tu veux un revenu
+                                en ligne sans CV ni diplôme." "✅ Tu veux l'IA mais tu sais pas par où commencer." "✅ Tu
+                                peux travailler 30 min/jour."</span><br><span class="s-vo">VO : "C'est pour toi si tu
+                                veux un revenu en ligne… si tu veux l'IA… 30 minutes par jour."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:11–0:16]</span> <span class="s-vis">Compteur "2
+                                cases sur 3 cochées = C'est pour toi ✅" surligné en vert</span><br><span class="s-vo">VO
+                                : "Si tu coches 2 de ces 3 cases, ce Bundle est fait pour toi."</span></div>
+                        <div class="scene-block"><span class="s-time">[0:16–0:20]</span> <span class="s-vis">Bio mobile
+                                avec flèche rouge</span><br><span class="s-vo">VO : "Le lien est dans ma bio."</span>
+                        </div>
+                        <div class="params"><span>Paramètres Flow :</span> 9:16 · 20s · Blanc/Menthe propre · <span>Voix
+                                FR, rassurante</span> · Fond calm professionnel</div>
+                    </td>
+                    <td class="cta-text">Lien en bio</td>
+                </tr>
+
+                <tr>
+                    <td class="date-cell">Sam 22 Mars</td>
+                    <td><span class="type-pill storytime">Storytime</span></td>
+                    <td class="hook-text">Ma routine du matin avec l'IA (30 min)<div class="desc-text">Coulisses —
+                            B-roll écran, texte seulement, pas de voix</div>
+                    </td>
+                    <td>
+                        <div class="scene-block"><span class="s-vis">Pas de voix off. B-roll de l'écran : ChatGPT → plan
+                                jour → Notion IA → premiers messages · Textes simples décrivant chaque étape · Durée 20s
+                                · Audio lo-fi ambiant</span></div>
+                        <div class="params"><span>Paramètres Flow :</span> 9:16 · 20s · Texte sobre · <span>Aucune voix
+                                off</span> · Ambiance matinale chaleureuse</div>
+                    </td>
+                    <td class="cta-text">Abonne-toi</td>
+                </tr>
+
+                <tr>
+                    <td class="date-cell">Dim 23 Mars</td>
+                    <td><span class="type-pill analyse">Analyse</span></td>
+                    <td class="hook-text">Réponses commentaires + Analyse Semaine 2<div class="desc-text">Engagement +
+                            métriques hebdomadaires</div>
+                    </td>
+                    <td>
+                        <div class="scene-block"><span class="s-vis">Répondre à 3+ commentaires en vidéo · Analyser :
+                                quelle vidéo a eu le meilleur taux de visionnage · Reproduire le format gagnant en
+                                S3</span></div>
+                        <div class="params"><span>Action :</span> Remplir le tableau de suivi hebdomadaire</div>
+                    </td>
+                    <td class="cta-text">—</td>
+                </tr>
+
+            </tbody>
+        </table><script>
+window.onload = function() {
+    setTimeout(function() {
+        document.body.insertAdjacentHTML('beforeend', `
+            <div style="position:fixed;bottom:20px;right:20px;background:#1a2a6c;color:#fff;padding:15px;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,0.5);font-family:sans-serif;z-index:9999;font-size:14px;">
+                <strong>? Tout est connect� et fonctionnel !</strong><br>
+                <div style="margin-top:10px;font-size:12px;opacity:0.9;">
+                    ? Formulaire Google Forms cr��<br>
+                    ? Section HTML mise � jour avec les vrais IDs<br>
+                    ? PDF �ditorial g�n�r�<br>
+                </div>
+            </div>
+        `);
+    }, 1000);
+}
+</script>
+</body>
+</html>

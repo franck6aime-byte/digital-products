@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement Réussi — DigitalBoost AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .success-container {
+            max-width: 600px;
+            margin: auto;
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--accent-success);
+            box-shadow: 0px 10px 40px rgba(16, 185, 129, 0.2);
+        }
+
+        .success-icon {
+            font-size: 5rem;
+            color: var(--accent-success);
+            margin-bottom: 20px;
+        }
+
+        .success-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .success-message {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .download-box {
+            background: var(--bg-secondary);
+            border: 1px dashed var(--accent-primary);
+            padding: 20px;
+            border-radius: var(--radius-lg);
+            margin-bottom: 20px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: var(--gradient-primary);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-glow);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="success-container animate-fade-in-up">
+        <div class="success-icon">✅</div>
+        <h1 class="success-title">Paiement Réussi !</h1>
+        <p class="success-message">Merci pour votre confiance. Vous avez maintenant accès à l'avant-garde de la
+            technologie pour votre business.</p>
+
+        <div class="download-box">
+            <p style="margin-bottom: 15px; font-weight: 600;">Téléchargez vos fichiers ci-dessous :</p>
+            <a href="downloads/eBook-Premium-Maitrisez-IA.pdf" download class="download-btn">📚 eBook Premium</a>
+            <a href="downloads/Pack-100-Prompts-IA-Premium.pdf" download class="download-btn">🤖 100+ Prompts</a>
+            <a href="downloads/Templates-Pro.pdf" download class="download-btn">📊 Templates Pro</a>
+        </div>
+
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;">
+            En cas de problème ou si vous avez commandé le Bundle, vous pouvez télécharger tous les fichiers ou le
+            fichier Zip compressé contenant l'ensemble.
+        </p>
+
+        <a href="downloads/Bundle-Complet-DigitalBoost-AI.zip" download class="btn btn-outline">📦 Télécharger le Bundle
+            Complet (.zip)</a>
+
+        <br><br>
+        <a href="index.html" style="color: var(--accent-secondary); text-decoration: none; font-size: 0.9rem;">← Retour
+            à l'accueil</a>
+    </div>
+</body>
+
+</html>

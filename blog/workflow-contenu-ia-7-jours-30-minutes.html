@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon Workflow pour Créer 7 Jours de Contenu en 30 Minutes avec l'IA | DigitalBoost AI</title>
+    <meta name="description" content="Découvrez le workflow exact pour planifier et créer une semaine entière de contenu TikTok, Instagram et blog en seulement 30 minutes grâce à l'IA. Hooks, scripts, descriptions, hashtags — tout y est." />
+    <meta name="keywords" content="workflow contenu IA, créer contenu IA, planifier contenu TikTok IA, batch content creation, workflow TikTok IA, créer contenu semaine IA, productivité contenu, DigitalBoost AI, prompts contenu Afrique" />
+    <meta name="author" content="DigitalBoost AI" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://digitalboostai.vercel.app/blog/workflow-contenu-ia-7-jours-30-minutes" />
+
+    <meta property="og:title" content="⚡ Mon Workflow pour Créer 7 Jours de Contenu en 30 Minutes avec l'IA" />
+    <meta property="og:description" content="85% des marketeurs utilisent déjà l'IA pour créer du contenu. Voici le workflow exact que j'utilise pour planifier une semaine entière en 30 minutes — hooks, scripts, hashtags inclus." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://digitalboostai.vercel.app/blog/workflow-contenu-ia-7-jours-30-minutes" />
+    <meta property="og:site_name" content="DigitalBoost AI" />
+    <meta property="og:image" content="https://digitalboostai.vercel.app/img/seo_thumbnail_pack_prompts_1773108784835.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <meta property="og:image:alt" content="DigitalBoost AI — Workflow contenu IA 7 jours en 30 minutes" />
+    <meta property="og:locale" content="fr_CI" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="⚡ Créer 7 Jours de Contenu en 30 Minutes avec l'IA" />
+    <meta name="twitter:description" content="Le workflow exact pour planifier hooks, scripts, descriptions et hashtags pour une semaine entière de TikTok — en 30 minutes chrono." />
+    <meta name="twitter:image" content="https://digitalboostai.vercel.app/img/seo_thumbnail_pack_prompts_1773108784835.png" />
+
+    <meta name="author" content="DigitalBoost AI" />
+    <meta property="article:published_time" content="2026-03-18T08:00:00+00:00" />
+    <meta property="article:author" content="DigitalBoost AI" />
+    <meta property="article:tag" content="Workflow Contenu IA" />
+    <meta property="article:tag" content="Productivité" />
+    <meta property="article:tag" content="TikTok" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Mon Workflow pour Créer 7 Jours de Contenu en 30 Minutes avec l'IA",
+      "description": "Le workflow exact pour planifier et créer une semaine entière de contenu TikTok en seulement 30 minutes grâce à l'IA — hooks, scripts, descriptions, hashtags.",
+      "author": { "@type": "Organization", "name": "DigitalBoost AI" },
+      "publisher": { "@type": "Organization", "name": "DigitalBoost AI" },
+      "datePublished": "2026-03-18",
+      "keywords": "workflow contenu IA, créer contenu TikTok IA, batch content creation, productivité contenu",
+      "mainEntityOfPage": "https://digitalboostai.vercel.app/blog/workflow-contenu-ia-7-jours-30-minutes"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <style>
+        :root {
+            --ink: #0D1117;
+            --paper: #FAFAF7;
+            --gold: #C9A84C;
+            --gold-light: #F0E0A8;
+            --accent: #1A6B3C;
+            --accent-light: #E8F5EE;
+            --muted: #6B7280;
+            --border: #E5E2D9;
+            --max: 780px;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'DM Sans', sans-serif; background: var(--paper); color: var(--ink); font-size: 17px; line-height: 1.8; }
+        #progress-bar { position: fixed; top: 0; left: 0; height: 3px; width: 0%; background: linear-gradient(90deg, var(--gold), var(--accent)); z-index: 9999; transition: width 0.1s linear; }
+        .site-header { position: sticky; top: 0; background: rgba(250, 250, 247, 0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; z-index: 100; }
+        .site-header .logo { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 900; color: var(--ink); text-decoration: none; letter-spacing: -0.5px; }
+        .site-header .logo span { color: var(--gold); }
+        .header-cta { background: var(--ink); color: var(--paper); padding: 8px 18px; border-radius: 100px; font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: background 0.2s; }
+        .header-cta:hover { background: var(--accent); }
+        .hero { max-width: 860px; margin: 0 auto; padding: 80px 24px 60px; text-align: center; }
+        .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-size: 0.78rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 14px; border-radius: 100px; margin-bottom: 24px; }
+        .hero h1 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.15; letter-spacing: -1px; color: var(--ink); margin-bottom: 24px; }
+        .hero h1 em { font-style: italic; color: var(--gold); }
+        .hero-subtitle { font-size: 1.15rem; color: var(--muted); max-width: 600px; margin: 0 auto 36px; line-height: 1.7; }
+        .meta-row { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; font-size: 0.85rem; color: var(--muted); padding-bottom: 48px; border-bottom: 1px solid var(--border); }
+        .article-layout { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 280px; gap: 60px; align-items: start; }
+        @media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } .sidebar { display: none; } }
+        .article-body { padding: 60px 0; max-width: var(--max); }
+        .article-body h2 { font-family: 'Fraunces', serif; font-size: 1.8rem; font-weight: 700; color: var(--ink); margin: 56px 0 20px; letter-spacing: -0.5px; line-height: 1.25; }
+        .article-body h3 { font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 700; color: var(--ink); margin: 36px 0 14px; }
+        .article-body p { margin-bottom: 20px; color: #2D3139; }
+        .article-body strong { color: var(--ink); font-weight: 600; }
+        .intro-block { background: var(--ink); color: var(--paper); border-radius: 16px; padding: 32px 36px; margin: 40px 0; position: relative; overflow: hidden; }
+        .intro-block::before { content: '"'; position: absolute; top: -20px; right: 20px; font-family: 'Fraunces', serif; font-size: 120px; color: var(--gold); opacity: 0.3; line-height: 1; }
+        .intro-block p { color: var(--paper); font-size: 1.1rem; line-height: 1.75; position: relative; z-index: 1; }
+        .intro-block strong { color: var(--gold); }
+        .conclusion strong { color: var(--gold); }
+        .tip-block { border-left: 4px solid var(--gold); background: var(--gold-light); padding: 20px 24px; border-radius: 0 12px 12px 0; margin: 32px 0; }
+        .tip-block .tip-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #8B6914; margin-bottom: 8px; }
+        .tip-block p { margin: 0; color: var(--ink); }
+        .accent-block { border-left: 4px solid var(--accent); background: var(--accent-light); padding: 20px 24px; border-radius: 0 12px 12px 0; margin: 32px 0; }
+        .accent-block p { margin: 0; color: var(--ink); }
+        .prompt-box { background: #0D1117; border-radius: 12px; padding: 20px 24px; margin: 20px 0; }
+        .prompt-box .prompt-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+        .prompt-box p { color: #E5E2D9; font-size: 0.93rem; line-height: 1.7; margin: 0; font-family: monospace; }
+        .cta-inline { background: linear-gradient(135deg, var(--ink) 0%, #1a2a1a 100%); border-radius: 20px; padding: 44px 40px; margin: 56px 0; text-align: center; position: relative; overflow: hidden; }
+        .cta-inline::before { content: '⚡'; position: absolute; font-size: 180px; opacity: 0.04; top: -30px; right: -20px; line-height: 1; }
+        .cta-inline h3 { font-family: 'Fraunces', serif; color: var(--paper); font-size: 1.6rem; margin-bottom: 12px; letter-spacing: -0.5px; }
+        .cta-inline p { color: rgba(250, 250, 247, 0.7); margin-bottom: 28px; font-size: 0.95rem; }
+        .cta-btn-group { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+        .btn-gold { display: inline-block; background: var(--gold); color: var(--ink); padding: 14px 28px; border-radius: 100px; font-weight: 700; font-size: 0.95rem; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+        .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201, 168, 76, 0.4); }
+        .btn-outline { display: inline-block; border: 2px solid rgba(250, 250, 247, 0.3); color: var(--paper); padding: 14px 28px; border-radius: 100px; font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: border-color 0.2s; }
+        .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+        .conclusion { background: var(--ink); color: var(--paper); border-radius: 20px; padding: 48px 40px; margin: 56px 0 0; text-align: center; }
+        .conclusion h2 { font-family: 'Fraunces', serif; color: var(--paper); font-size: 1.8rem; margin-bottom: 16px; }
+        .conclusion p { color: rgba(250, 250, 247, 0.75); margin-bottom: 28px; }
+        .sidebar { position: sticky; top: 100px; padding: 60px 0; }
+        .sidebar-card { background: white; border: 1.5px solid var(--border); border-radius: 16px; padding: 28px 24px; margin-bottom: 20px; }
+        .sidebar-card h4 { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 16px; color: var(--ink); }
+        .toc-list { list-style: none; }
+        .toc-list li { padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 0.85rem; }
+        .toc-list li:last-child { border-bottom: none; }
+        .toc-list a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+        .toc-list a:hover { color: var(--gold); }
+        .sidebar-cta { background: var(--ink); border-radius: 16px; padding: 28px 24px; text-align: center; }
+        .sidebar-cta h4 { font-family: 'Fraunces', serif; color: var(--paper); font-size: 1.1rem; margin-bottom: 10px; }
+        .sidebar-cta p { color: rgba(250, 250, 247, 0.65); font-size: 0.82rem; margin-bottom: 20px; }
+        .sidebar-cta .btn-gold { width: 100%; display: block; }
+        .site-footer { border-top: 1px solid var(--border); padding: 40px 24px; text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 80px; }
+        .site-footer a { color: var(--gold); text-decoration: none; }
+        .seo-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 32px 0; }
+        .seo-tag { background: var(--accent-light); color: var(--accent); font-size: 0.78rem; font-weight: 500; padding: 4px 12px; border-radius: 100px; }
+
+        /* ─── BOUTONS DE PARTAGE ─── */
+        .share-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.2s, opacity 0.2s, box-shadow 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .share-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.18); }
+        .share-wa  { background: #25D366; }
+        .share-fb  { background: #1877F2; }
+        .share-li  { background: #0A66C2; }
+        .share-tw  { background: #000000; }
+
+        .accroche-block { background: linear-gradient(135deg, #0D1117 0%, #1A3A5C 100%); border-radius: 20px; padding: 40px 36px; margin: 0 24px 40px; text-align: center; }
+        .accroche-block .accroche-eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+        .accroche-block h2 { font-family: 'Fraunces', serif; color: #FAFAF7; font-size: clamp(1.3rem, 3vw, 2rem); font-weight: 900; line-height: 1.3; margin-bottom: 20px; }
+        .accroche-block p { color: rgba(250,250,247,0.75); font-size: 1rem; line-height: 1.7; max-width: 580px; margin: 0 auto 24px; }
+        .accroche-promise { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-top: 16px; }
+        .accroche-promise span { background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.4); color: var(--gold); font-size: 0.82rem; font-weight: 600; padding: 6px 16px; border-radius: 100px; }
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 32px 0; }
+        .tool-card { background: white; border: 1.5px solid var(--border); border-radius: 16px; padding: 24px; transition: transform 0.2s, box-shadow 0.2s; }
+        .tool-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+        .tool-card .tool-emoji { font-size: 2rem; margin-bottom: 12px; }
+        .tool-card h4 { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
+        .tool-card p { font-size: 0.88rem; color: var(--muted); margin: 0; line-height: 1.6; }
+        .table-wrap { overflow-x: auto; margin: 32px 0; }
+        .table-wrap table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+        .table-wrap th { background: var(--ink); color: var(--paper); padding: 12px 16px; text-align: left; font-weight: 600; white-space: nowrap; }
+        .table-wrap td { padding: 12px 16px; border-bottom: 1px solid var(--border); color: #2D3139; }
+        .table-wrap tr:hover td { background: rgba(201, 168, 76, 0.05); }
+    </style>
+</head>
+
+<body>
+<div id="progress-bar"></div>
+
+<header class="site-header">
+    <a href="https://digitalboostai.vercel.app/" class="logo">⚡DigitalBoost <span>AI</span></a>
+    <a href="https://digitalboostai.vercel.app/#pricing" class="header-cta">Obtenir les produits →</a>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+    <span class="category-tag">⚡ Workflow Contenu IA</span>
+    <h1>Mon Workflow pour Créer <em>7 Jours de Contenu</em> en 30 Minutes avec l'IA</h1>
+    <p class="hero-subtitle">85% des marketeurs utilisent déjà l'IA pour créer du contenu. Voici le système exact que j'utilise pour planifier une semaine entière de TikTok — hooks, scripts, descriptions, hashtags — en une seule session de 30 minutes.</p>
+    <div class="meta-row">
+        <span>📅 18 Mars 2026</span>
+        <span class="dot">·</span>
+        <span>⏱️ 8 min de lecture</span>
+        <span class="dot">·</span>
+        <span>✍️ DigitalBoost AI</span>
+    </div>
+</div>
+
+<!-- ACCROCHE -->
+<div class="accroche-block">
+    <div class="accroche-eyebrow">🎬 Le secret des créateurs prolifiques</div>
+    <h2>Pendant que vous passez 2 heures par jour à chercher des idées,<br>d'autres planifient leur semaine entière en 30 minutes.</h2>
+    <p>Le « content batching » assisté par l'IA est la méthode utilisée par les créateurs qui publient <strong style="color:#C9A84C;">chaque jour sans jamais être à court d'idées</strong>. Ce n'est ni de la magie ni de la triche — c'est un workflow structuré. Et aujourd'hui, on vous le donne.</p>
+    <div class="accroche-promise">
+        <span>✅ 3 prompts copiables</span>
+        <span>✅ Workflow en 4 étapes</span>
+        <span>✅ Résultat : 7 jours de contenu</span>
+    </div>
+</div>
+
+<!-- BLOC PARTAGE HAUT -->
+<div style="text-align:center; padding: 0 24px 40px;">
+    <p style="font-size:1rem; color:#0D1117; font-weight:700; margin-bottom:6px;">💡 Ce workflow vous a ouvert les yeux ?</p>
+    <p style="font-size:0.88rem; color:#6B7280; margin-bottom:20px;">Partagez-le avec un ami créateur ou entrepreneur — il vous remerciera 🙏</p>
+    <div class="share-row">
+
+        <!-- WHATSAPP -->
+        <a href="#"
+           onclick="window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent('Hé ! 👋 Tu passes des heures à chercher quoi poster sur TikTok ?\n\nCet article montre comment créer 7 JOURS de contenu complet en seulement 30 minutes avec l\'IA 🔥\n\n✅ 3 prompts copiables\n✅ Hooks + Scripts + Descriptions + Hashtags\n✅ Tout est gratuit dans l\'article\n\n👉 https://digitalboostai.vercel.app/blog/workflow-contenu-ia-7-jours-30-minutes\n\nTeste ça lundi matin, tu vas gagner des heures ! ⚡'), '_blank'); return false;"
+           class="share-btn share-wa" aria-label="Partager sur WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zm-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+            </svg>
+            Envoyer sur WhatsApp
+        </a>
+
+        <!-- FACEBOOK -->
+        <a href="#"
+           onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('https://digitalboostai.vercel.app/blog/workflow-contenu-ia-7-jours-30-minutes') + '&quote=' + encodeURIComponent('🤯 85% des marketeurs utilisent déjà l\'IA pour créer du contenu — et moi j\'ai découvert comment planifier 7 jours de TikTok en 30 minutes !\n\n3 prompts + 4 étapes = une semaine entière de contenu prête à publier.\nHooks, scripts, descriptions, hashtags : TOUT est dans l\'article 👇\n\nJe teste ça dès lundi ! 💪'), '_blank'); return false;"
+           class="share-btn share-fb" aria-label="Partager sur Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Partager sur Facebook
+        </a>
+
+        <!-- LINKEDIN — endpoint moderne share-offsite : affiche la preview OG card -->
+        <a href="#"
+           onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent('https://digitalboostai.vercel.app/blog/workflow-contenu-ia-7-jours-30-minutes'), '_blank'); return false;"
+           class="share-btn share-li" aria-label="Partager sur LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            Partager sur LinkedIn
+        </a>
+
+        <!-- X / TWITTER -->
+        <a href="#"
+           onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent('⚡ Je viens de lire un article qui change tout pour la création de contenu :\n\n→ 7 jours de TikTok planifiés en 30 minutes avec l\'IA\n→ 3 prompts copiables (hooks, scripts, descriptions, hashtags)\n→ Gratuit dans l\'article\n\nSi tu crées du contenu, tu dois lire ça 👇') + '&url=' + encodeURIComponent('https://digitalboostai.vercel.app/blog/workflow-contenu-ia-7-jours-30-minutes') + '&hashtags=IA,ContentCreation,TikTok,DigitalBoostAI', '_blank'); return false;"
+           class="share-btn share-tw" aria-label="Partager sur X / Twitter">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Tweeter sur X
+        </a>
+    </div>
+</div>
+
+<!-- CONTENU ARTICLE -->
+<div class="article-layout">
+    <main class="article-body" id="article-main">
+
+        <div class="intro-block">
+            <p><strong>Mot de DIGITALBOOST AI :</strong> Chaque semaine, on publie des vidéos TikTok, des articles de blog et du contenu sur plusieurs plateformes. Des gens nous demandent souvent : « Mais comment vous faites pour publier autant ? ». La réponse est simple : on ne crée pas au jour le jour. On a un <strong>workflow contenu IA</strong> qui nous permet de tout planifier en une seule session. Aujourd'hui, on vous révèle tout.</p>
+        </div>
+
+        <h2 id="probleme">Le vrai problème : créer du contenu au jour le jour</h2>
+        <p>Si vous êtes créateur de contenu, entrepreneur ou étudiant qui veut se lancer sur TikTok ou Instagram, vous connaissez cette situation : il est 22h, vous n'avez toujours pas publié de vidéo aujourd'hui, vous n'avez pas d'idée, et vous finissez par ne rien poster.</p>
+        <p>Résultat ? <strong>Irrégularité</strong>, perte de momentum, et l'algorithme qui vous oublie. Selon les données de 2025, TikTok compte déjà 1,88 milliard d'utilisateurs actifs mondiaux. L'utilisateur moyen passe 61 minutes par jour sur la plateforme et regarde environ 265 vidéos. La concurrence est féroce — et <strong>la régularité est votre seule arme</strong>.</p>
+
+        <div class="accent-block">
+            <p>📊 <strong>Le chiffre clé :</strong> 85% des marketeurs utilisent déjà l'IA pour créer du contenu en 2025. Et 41% des créateurs de contenu intègrent l'IA dans leur workflow quotidien en 2026. Si vous ne le faites pas encore, vous avez une longueur de retard.</p>
+        </div>
+
+        <p>La solution ? Le <strong>content batching</strong> — la méthode qui consiste à créer tout le contenu d'une semaine en une seule session concentrée. Et avec l'IA, cette session ne prend que <strong>30 minutes</strong>.</p>
+
+        <h2 id="workflow">⚡ Le Workflow en 4 Étapes (30 minutes chrono)</h2>
+        <p>Voici le workflow exact que nous utilisons chez DigitalBoost AI. Il repose sur 3 prompts du Pack 100+ Prompts IA (Prompt #1, MEGA #5, Prompt #55) et 4 étapes simples.</p>
+
+        <h2 id="etape-1">📋 Étape 1 : Générer le plan de contenu de la semaine (5 min)</h2>
+        <p>Tout commence par le <strong>plan</strong>. Au lieu de réfléchir chaque jour à « quoi poster », vous demandez à l'IA de vous générer 7 jours de contenu d'un coup — avec les hooks, les types de vidéos et les CTA adaptés.</p>
+
+        <div class="prompt-box">
+            <div class="prompt-label">✅ Prompt #1 — Stratégie Contenu 30 Jours (adapté à 7 jours)</div>
+            <p>Tu es un stratège de contenu digital spécialisé dans TikTok et les réseaux sociaux pour le marché africain francophone.
+
+Mon activité : [décrivez en 1-2 phrases].
+Mon audience cible : [étudiants ivoiriens / entrepreneurs africains / professionnels].
+Mes piliers de contenu : [Valeur/Tutorial, Hook/Accroche, Tendance, Vente].
+
+Génère-moi un calendrier de contenu pour les 7 prochains jours avec pour CHAQUE JOUR :
+1. Le TYPE de vidéo (Valeur, Hook, Tendance, Vente, Storytime)
+2. Le HOOK exact (première phrase qui accroche en moins de 3 secondes)
+3. L'ANGLE principal (quel problème/désir on adresse)
+4. Le CTA de fin (Abonne-toi / Sauvegarde / Commente / Lien bio)
+
+Format : tableau [Jour | Type | Hook | Angle | CTA]
+Contrainte : alterner les types pour ne jamais lasser l'audience.</p>
+        </div>
+
+        <div class="tip-block">
+            <div class="tip-label">💡 Ce que vous obtenez en 30 secondes</div>
+            <p>Un tableau complet de 7 jours avec des hooks percutants, des angles variés et des CTA adaptés. <strong>Plus besoin de réfléchir chaque matin à quoi poster.</strong></p>
+        </div>
+
+        <h2 id="etape-2">🎬 Étape 2 : Générer les scripts vidéo complets (10 min)</h2>
+        <p>Maintenant que vous avez votre plan, il faut transformer chaque hook en <strong>script complet</strong>. C'est là que le MEGA-prompt entre en jeu — il vous génère des scripts structurés scène par scène, avec voix off et texte à l'écran.</p>
+
+        <div class="prompt-box">
+            <div class="prompt-label">✅ MEGA #5 — Générateur de Scripts Vidéo (adapté TikTok)</div>
+            <p>Tu es un scripteur vidéo expert spécialisé dans le format court (15-60 secondes) pour TikTok et Instagram Reels.
+
+Voici les 7 hooks de ma semaine :
+1. [Hook Jour 1]  2. [Hook Jour 2]  3. [Hook Jour 3]
+4. [Hook Jour 4]  5. [Hook Jour 5]  6. [Hook Jour 6]  7. [Hook Jour 7]
+
+Pour CHAQUE hook, génère un script vidéo de 20 secondes :
+— [0:00-0:04] ACCROCHE : texte à l'écran + voix off
+— [0:04-0:12] DÉVELOPPEMENT : 2-3 points clés + voix off
+— [0:12-0:17] RÉSULTAT/PREUVE : ce que l'audience gagne
+— [0:17-0:20] CTA : action demandée
+
+Style : direct, sans jargon, adapté au public jeune africain francophone.</p>
+        </div>
+
+        <div class="accent-block">
+            <p>🔑 <strong>Résultat :</strong> en une seule requête, vous obtenez <strong>7 scripts vidéo complets</strong>, prêts à être filmés ou envoyés dans Google Flow.</p>
+        </div>
+
+        <div class="cta-inline">
+            <h3>Ces prompts viennent du Pack 100+ Prompts IA</h3>
+            <p>Le Prompt #1 et le MEGA #5 font partie des 124 prompts testés du Pack. 12 prompts Marketing Digital + 20 MEGA-prompts pour couvrir chaque aspect de votre business.</p>
+            <div class="cta-btn-group">
+                <a href="https://ppawzaph.mychariow.shop/prd_cav6sr" class="btn-gold">🤖 Obtenir les 100+ Prompts — 2 000 FCFA 🔥</a>
+                <a href="https://digitalboostai.vercel.app/products/prompts.html" class="btn-outline">Voir le détail →</a>
+            </div>
+        </div>
+
+        <h2 id="etape-3">📝 Étape 3 : Descriptions + hashtags en masse (10 min)</h2>
+        <p>Vous avez vos scripts. Maintenant il faut les <strong>descriptions TikTok</strong>, les <strong>hashtags optimisés</strong> et les <strong>textes pour les autres plateformes</strong>. Un seul prompt fait tout ça d'un coup.</p>
+
+        <div class="prompt-box">
+            <div class="prompt-label">✅ Prompt #55 — Descriptions & Hashtags Multi-Plateformes</div>
+            <p>Tu es un expert en SEO social pour TikTok, Instagram Reels et YouTube Shorts.
+
+Voici les 7 titres/hooks de mes vidéos :
+1. [Titre 1]  2. [Titre 2]  3. [Titre 3]  4. [Titre 4]
+5. [Titre 5]  6. [Titre 6]  7. [Titre 7]
+
+Ma niche : IA et business digital pour l'Afrique francophone.
+
+Pour CHAQUE vidéo, génère :
+📱 DESCRIPTION TIKTOK (max 150 car.) : hook + emoji + CTA
+📸 DESCRIPTION INSTAGRAM (max 200 car.) : valeur + hashtags
+🎬 DESCRIPTION YOUTUBE SHORTS (max 100 car.) : mot-clé SEO + CTA
+#️⃣ 5 hashtags description + 10 hashtags 1er commentaire
+
+Format : tableau [Vidéo | TikTok | Instagram | YouTube | Hashtags]</p>
+        </div>
+
+        <h3>✅ Exemple de résultat pour une vidéo</h3>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Plateforme</th><th>Contenu généré</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>TikTok</strong></td><td>🤯 Ce prompt remplace 3h de travail → Sauvegarde avant qu'il disparaisse 📌</td></tr>
+                    <tr><td><strong>Instagram</strong></td><td>J'ai remplacé 3h de travail par 1 prompt IA. Voici le résultat concret 👇 #intelligenceartificielle #promptengineering</td></tr>
+                    <tr><td><strong>YouTube Shorts</strong></td><td>Prompt IA productivité — gain 3h par jour 🔥</td></tr>
+                    <tr><td><strong>Hashtags desc.</strong></td><td>#ia #chatgpt #productivite #cotedivoire #promptsecret</td></tr>
+                    <tr><td><strong>Hashtags 1er com.</strong></td><td>#digitalboostai #afriquedigitale #businessenligne #tiktokfrancophone #intelligenceartificielle #outils #etudiant #abidjan #revenusenligne #motivation</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 id="etape-4">🚀 Étape 4 : Programmer et publier (5 min)</h2>
+        <p>La dernière étape est la plus simple : vous filmez (ou générez via Google Flow), puis vous programmez avec les descriptions et hashtags déjà prêts.</p>
+
+        <div class="tools-grid">
+            <div class="tool-card"><div class="tool-emoji">🎥</div><h4>Google Flow</h4><p>Collez votre script → Voix FR → Exportez en 9:16. Vidéo prête en 2 minutes.</p></div>
+            <div class="tool-card"><div class="tool-emoji">📅</div><h4>Buffer / Later</h4><p>Programmez vos 7 vidéos avec descriptions et hashtags. Publication automatique.</p></div>
+            <div class="tool-card"><div class="tool-emoji">📊</div><h4>TikTok Studio</h4><p>Programmez directement depuis TikTok avec analytics intégrés.</p></div>
+        </div>
+
+        <h2 id="recapitulatif">📊 Récapitulatif : votre semaine en 30 minutes</h2>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Étape</th><th>Ce que vous faites</th><th>Temps</th><th>Résultat</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>1. Plan</strong></td><td>Prompt #1 → calendrier 7 jours</td><td>5 min</td><td>7 hooks + types + CTA</td></tr>
+                    <tr><td><strong>2. Scripts</strong></td><td>MEGA #5 → 7 scripts complets</td><td>10 min</td><td>7 scripts scène par scène</td></tr>
+                    <tr><td><strong>3. Descriptions</strong></td><td>Prompt #55 → descriptions + hashtags</td><td>10 min</td><td>21 descriptions (3 plateformes × 7)</td></tr>
+                    <tr><td><strong>4. Publication</strong></td><td>Programmation via Buffer/TikTok</td><td>5 min</td><td>Semaine entière programmée</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="accent-block">
+            <p>⏱️ <strong>Total : 30 minutes.</strong> Pour une semaine complète de contenu. Sans stress. Sans page blanche.</p>
+        </div>
+
+        <h2 id="aller-plus-loin">Pour aller plus loin</h2>
+        <p>Ce workflow utilise 3 prompts du Pack 100+ Prompts IA. Mais il y en a <strong>124 au total</strong> — couvrant le marketing, le copywriting, le SEO, l'email, le e-commerce, la productivité et plus encore.</p>
+        <p>Si vous débutez avec l'IA, lisez d'abord notre article sur <a href="https://digitalboostai.vercel.app/blog/erreurs-chatgpt-etudiants-ivoiriens" style="color: var(--gold); font-weight: 600;">les 3 erreurs que 99% des étudiants ivoiriens font sur ChatGPT</a>.</p>
+
+        <div class="cta-inline">
+            <h3>124 prompts. 11 catégories. Votre arsenal contenu complet.</h3>
+            <p>Le Pack contient les 3 prompts de ce workflow — plus 121 autres pour le marketing, la vente, le SEO, l'email et la productivité. Compatible ChatGPT, Claude et Gemini.</p>
+            <div class="cta-btn-group">
+                <a href="https://ppawzaph.mychariow.shop/prd_cav6sr" class="btn-gold">🤖 Obtenir les 100+ Prompts — 2 000 FCFA 🔥</a>
+                <a href="https://ppawzaph.mychariow.shop/prd_u83162" class="btn-outline">📚 eBook "Maîtrisez l'IA" →</a>
+            </div>
+        </div>
+
+        <!-- BLOC PARTAGE BAS -->
+        <div style="background: linear-gradient(135deg, #0D1117 0%, #1A2A3A 100%); border-radius:20px; padding:36px 32px; text-align:center; margin: 40px 0;">
+            <p style="font-family:'Fraunces',serif; font-weight:900; color:#FAFAF7; font-size:1.25rem; margin-bottom:8px;">📤 Cet article vous a été utile ?</p>
+            <p style="color:rgba(250,250,247,0.65); font-size:0.9rem; margin-bottom:24px;">Offrez ce gain de temps à un ami créateur ou entrepreneur — c'est le meilleur cadeau digital 🎁</p>
+            <div class="share-row" style="margin-top: 0;">
+
+                <!-- WHATSAPP -->
+                <a href="#"
+                   onclick="window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent('Tu postes encore au jour le jour sur TikTok ? 😅\n\nJe viens de lire un article qui m\'a soufflé : comment créer 7 jours de contenu complet en seulement 30 minutes avec l\'IA.\n\n✅ Hooks percutants\n✅ Scripts scène par scène\n✅ Descriptions + hashtags pour TikTok, Instagram & YouTube\n\nTout est gratuit dans l\'article 👇\nhttps://digitalboostai.vercel.app/blog/workflow-contenu-ia-7-jours-30-minutes\n\nTeste ça lundi, tu ne posteras plus jamais au jour le jour ! 🔥'), '_blank'); return false;"
+                   class="share-btn share-wa" aria-label="Partager sur WhatsApp">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zm-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+                    </svg>
+                    Envoyer sur WhatsApp
+                </a>
+
+                <!-- FACEBOOK -->
+                <a href="#"
+                   onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('https://digitalboostai.vercel.app/blog/workflow-contenu-ia-7-jours-30-minutes') + '&quote=' + encodeURIComponent('🤯 Ce workflow IA a changé ma façon de créer du contenu !\n\n30 minutes le lundi = 7 jours de TikTok planifiés.\nHooks, scripts, descriptions et hashtags : TOUT est généré par l\'IA.\n\nJe partage parce que ça vaut vraiment le coup d\'être lu 💪'), '_blank'); return false;"
+                   class="share-btn share-fb" aria-label="Partager sur Facebook">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    Partager sur Facebook
+                </a>
+
+                <!-- LINKEDIN — endpoint moderne share-offsite : affiche la preview OG card -->
+                <a href="#"
+                   onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent('https://digitalboostai.vercel.app/blog/workflow-contenu-ia-7-jours-30-minutes'), '_blank'); return false;"
+                   class="share-btn share-li" aria-label="Partager sur LinkedIn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    Partager sur LinkedIn
+                </a>
+
+                <!-- X / TWITTER -->
+                <a href="#"
+                   onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent('Je viens de lire un article qui m\'a changé la vie en tant que créateur 🔥\n\n7 jours de contenu TikTok planifiés en 30 minutes grâce à l\'IA.\n\n→ Hooks percutants\n→ Scripts complets (scène par scène)\n→ Descriptions + hashtags pour toutes les plateformes\n\n3 prompts copiables. Zéro abonnement. 👇') + '&url=' + encodeURIComponent('https://digitalboostai.vercel.app/blog/workflow-contenu-ia-7-jours-30-minutes') + '&hashtags=IA,TikTok,ContentCreation,DigitalBoostAI', '_blank'); return false;"
+                   class="share-btn share-tw" aria-label="Partager sur X / Twitter">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    Tweeter sur X
+                </a>
+            </div>
+        </div>
+
+        <!-- CONCLUSION -->
+        <div class="conclusion">
+            <h2>30 minutes le lundi. Zéro stress le reste de la semaine.</h2>
+            <p>Ce workflow n'est pas théorique — c'est <strong style="color: var(--gold);">exactement ce que nous utilisons chez DigitalBoost AI</strong>. La différence entre les créateurs qui réussissent et ceux qui abandonnent, c'est le <strong style="color: var(--gold);">système</strong>. Maintenant, vous avez le vôtre.</p>
+            <a href="https://ppawzaph.mychariow.shop/prd_cav6sr" class="btn-gold" style="margin-top:16px;">🚀 Obtenir les 100+ Prompts Premium — 2 000 FCFA</a>
+        </div>
+
+        <!-- TAGS SEO -->
+        <div class="seo-tags" style="margin-top:40px;">
+            <span class="seo-tag">workflow contenu ia</span>
+            <span class="seo-tag">créer contenu tiktok ia</span>
+            <span class="seo-tag">batch content creation</span>
+            <span class="seo-tag">planifier contenu ia</span>
+            <span class="seo-tag">productivité contenu</span>
+            <span class="seo-tag">prompts tiktok</span>
+            <span class="seo-tag">intelligence artificielle afrique</span>
+            <span class="seo-tag">digitalboost ai</span>
+        </div>
+
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="sidebar-card">
+            <h4>📑 Sommaire</h4>
+            <ul class="toc-list">
+                <li><a href="#probleme">Le problème du jour-le-jour</a></li>
+                <li><a href="#workflow">Le Workflow en 4 étapes</a></li>
+                <li><a href="#etape-1">Étape 1 — Plan de la semaine</a></li>
+                <li><a href="#etape-2">Étape 2 — Scripts vidéo</a></li>
+                <li><a href="#etape-3">Étape 3 — Descriptions & hashtags</a></li>
+                <li><a href="#etape-4">Étape 4 — Programmer & publier</a></li>
+                <li><a href="#recapitulatif">Récapitulatif</a></li>
+                <li><a href="#aller-plus-loin">Pour aller plus loin</a></li>
+            </ul>
+        </div>
+        <div class="sidebar-cta">
+            <h4>100+ Prompts IA</h4>
+            <p>Les 3 prompts de ce workflow + 121 autres pour couvrir tout votre business digital.</p>
+            <a href="https://ppawzaph.mychariow.shop/prd_cav6sr" class="btn-gold">Obtenir — 2 000 FCFA 🔥</a>
+        </div>
+    </aside>
+</div>
+
+<footer class="site-footer">
+    <p>© 2026 <a href="https://digitalboostai.vercel.app/">DigitalBoost AI</a> — Tous droits réservés &nbsp;·&nbsp;
+    <a href="/mentions-legales">Mentions légales</a> &nbsp;·&nbsp;
+    <a href="/politique-confidentialite">Confidentialité</a></p>
+</footer>
+
+<script>
+    const progressBar = document.getElementById("progress-bar");
+    window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        progressBar.style.width = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + "%";
+    });
+</script>
+</body>
+</html>

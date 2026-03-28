@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalBoost AI — Produits Digitaux Premium pour Entrepreneurs</title>
+    <meta name="description"
+        content="Découvrez nos produits digitaux alimentés par l'IA : eBooks, Prompts, Templates et outils pour booster votre business en ligne. Automatisez, créez, prospérez.">
+    <!-- Meta de base SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="KfOVMQpCt2aeAxcwVENMGpUrrcxgw0748YQ0xltvFmg" />
+    <link rel="canonical" href="https://digitalboostai.vercel.app/" />
+
+    <!-- Favicon (Logo Google) -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.svg" sizes="any">
+    <link rel="apple-touch-icon" href="/favicon.svg">
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Open Graph / Web et Réseaux Sociaux -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DigitalBoost AI">
+    <meta property="og:url" content="https://digitalboostai.vercel.app/">
+    <meta property="og:title" content="DigitalBoost AI — Devenez Expert en Intelligence Artificielle">
+    <meta property="og:description"
+        content="eBook, Prompts Premium et Templates pour entrepreneurs. Automatisez votre business, créez du contenu 10x plus vite et augmentez vos revenus avec l'IA.">
+    <meta property="og:image" content="https://digitalboostai.vercel.app/img/prompts_pack_banner_1772478827392.png">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://digitalboostai.vercel.app/">
+    <meta name="twitter:title" content="DigitalBoost AI — Boostez votre Business avec l'IA">
+    <meta name="twitter:description"
+        content="La meilleure collection d'outils digitaux pour maîtriser ChatGPT, Claude et Gemini. Guide, Prompts et Templates inclus.">
+    <meta name="twitter:image" content="https://digitalboostai.vercel.app/img/prompts_pack_banner_1772478827392.png">
+
+    <!-- Structured Data JSON-LD pour Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "DigitalBoost AI",
+      "url": "https://digitalboostai.vercel.app/",
+      "image": "https://digitalboostai.vercel.app/prompts_pack_banner_1772478827392.png",
+      "description": "Boutique en ligne spécialisée dans les produits digitaux liés à l'intelligence artificielle pour entrepreneurs : eBooks, packs de prompts pour ChatGPT et templates professionnels.",
+      "telephone": "",
+      "priceRange": "2000XOF - 14900XOF",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Abidjan",
+        "addressCountry": "CI"
+      },
+      "sameAs": []
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "DigitalBoost AI",
+      "alternateName": ["DIGITALBOOST AI", "DigitalBoostAI", "Digital Boost AI"],
+      "url": "https://digitalboostai.vercel.app/",
+      "description": "Produits digitaux IA premium pour entrepreneurs africains : eBooks, Prompts, Templates.",
+      "inLanguage": "fr",
+      "publisher": {
+        "@type": "Organization",
+        "name": "DigitalBoost AI",
+        "url": "https://digitalboostai.vercel.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://digitalboostai.vercel.app/favicon.svg"
+        }
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://digitalboostai.vercel.app/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts — non-blocking (preload + swap) -->
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap"></noscript>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Digital<span class="logo-accent">Boost</span> AI</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#products" class="nav-link">Produits</a>
+                <a href="#features" class="nav-link">Avantages</a>
+                <a href="/blog" class="nav-link">Blog</a>
+                <a href="#testimonials" class="nav-link">Témoignages</a>
+                <a href="#pricing" class="nav-link">Tarifs</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#pricing" class="btn btn-primary btn-nav">Accéder Maintenant</a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge animate-fade-in">
+                    <span class="badge-dot"></span>
+                    <span>🔥 +2 500 entrepreneurs nous font déjà confiance</span>
+                </div>
+                <h1 class="hero-title animate-fade-in-up">
+                    Automatisez votre business avec <span class="gradient-text">l'Intelligence Artificielle</span>
+                </h1>
+                <p class="hero-subtitle animate-fade-in-up delay-1">
+                    Accédez à notre collection exclusive de produits digitaux : Guide Stratégique complet,
+                    100+ prompts IA premium et templates professionnels. Tout ce dont vous avez
+                    besoin pour lancer et scaler votre activité en ligne.
+                </p>
+                <div class="hero-cta animate-fade-in-up delay-2">
+                    <a href="#pricing" class="btn btn-primary btn-lg">
+                        <span>🚀 Obtenir le Pack Complet</span>
+                        <span class="btn-price">à partir de 2 000 FCFA</span>
+                    </a>
+                    <a href="#products" class="btn btn-outline btn-lg">
+                        Découvrir les produits →
+                    </a>
+                </div>
+                <div class="hero-stats animate-fade-in-up delay-3">
+                    <div class="stat">
+                        <span class="stat-number" data-target="2547">2 547</span>
+                        <span class="stat-label">Clients satisfaits</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="100">100</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Prompts premium</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="4.9">4.9</span><span class="stat-suffix">/5</span>
+                        <span class="stat-label">Note moyenne</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual animate-fade-in-right">
+                <div class="hero-card-stack">
+                    <a href="#product-ebook" class="hero-card card-1">
+                        <div class="card-icon">📚</div>
+                        <p class="hero-card-title">eBook Premium</p>
+                        <p>Guide Stratégique Complet</p>
+                        <div class="card-shine"></div>
+                    </a>
+                    <a href="#product-prompts" class="hero-card card-2">
+                        <div class="card-icon">🤖</div>
+                        <p class="hero-card-title">100+ Prompts IA</p>
+                        <p>ChatGPT, Claude, Gemini</p>
+                        <div class="card-shine"></div>
+                    </a>
+                    <a href="#product-bundle" class="hero-card card-3">
+                        <div class="card-icon">📊</div>
+                        <p class="hero-card-title">Templates Pro</p>
+                        <p>Notion, Canva, Business</p>
+                        <div class="card-shine"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ═══ NEWSLETTER SECTION — Position haute pour max capture ═══ -->
+    <section id="newsletter" style="
+        padding: 60px 20px;
+        background: linear-gradient(135deg, #0a1128 0%, #1a2a6c 50%, #0f1f44 100%);
+        position: relative;
+        overflow: hidden;
+        border-bottom: 1px solid rgba(212,175,55,0.2);
+    ">
+        <!-- Glow background -->
+        <div
+            style="position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:700px;height:350px;background:radial-gradient(ellipse,rgba(212,175,55,.15),transparent 70%);pointer-events:none;">
+        </div>
+        <div
+            style="position:absolute;bottom:-60px;right:-60px;width:300px;height:300px;background:radial-gradient(ellipse,rgba(99,102,241,.12),transparent 70%);pointer-events:none;">
+        </div>
+
+        <div
+            style="max-width:900px;margin:0 auto;position:relative;z-index:1;display:grid;grid-template-columns:1fr 420px;gap:48px;align-items:center;">
+
+            <!-- COLONNE GAUCHE : Texte de valeur -->
+            <div>
+                <!-- Badge urgence -->
+                <div
+                    style="display:inline-flex;align-items:center;gap:8px;background:rgba(212,175,55,.18);border:1px solid rgba(212,175,55,.5);color:#D4AF37;padding:6px 16px;border-radius:30px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;">
+                    🎁 Cadeau Gratuit · Accès Immédiat
+                </div>
+
+                <!-- Titre percutant -->
+                <h2
+                    style="font-family:'Fraunces',serif;font-size:clamp(22px,3.5vw,34px);font-weight:900;color:#fff;line-height:1.2;margin-bottom:14px;">
+                    Reçois mon Guide des<br><span style="color:#D4AF37;">10 Prompts IA Indispensables</span>
+                </h2>
+
+                <!-- Pitch -->
+                <p style="color:rgba(255,255,255,.85);font-size:15px;line-height:1.7;margin-bottom:20px;">
+                    Rejoins <strong style="color:#fff;">+2 500 entrepreneurs</strong> et reçois
+                    <strong style="color:#D4AF37;">immédiatement</strong> le mini-guide PDF gratuit
+                    — les mêmes prompts que j'utilise chaque jour pour travailler 4× moins.
+                </p>
+
+                <!-- Preuves sociales -->
+                <div style="display:flex;flex-direction:column;gap:10px;">
+                    <div style="display:flex;align-items:center;gap:10px;">
+                        <span style="font-size:18px;">⚡</span>
+                        <span style="color:rgba(255,255,255,.88);font-size:14px;">Gain de temps immédiat dès le 1er
+                            prompt</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:10px;">
+                        <span style="font-size:18px;">🔒</span>
+                        <span style="color:rgba(255,255,255,.88);font-size:14px;">100% gratuit · Zéro spam · Désabo en 1
+                            clic</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:10px;">
+                        <span style="font-size:18px;">📬</span>
+                        <span style="color:rgba(255,255,255,.88);font-size:14px;">Guide envoyé instantanément par
+                            email</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLONNE DROITE : Formulaire -->
+            <div>
+                <form id="newsletterForm"
+                    action="https://docs.google.com/forms/d/e/1FAIpQLScNC3J4zzzRxaqwLIEUHfozQMHmlPnTK-ZIXWgNI2u7l9JVOQ/formResponse"
+                    method="POST" target="hidden_iframe" onsubmit="return handleNewsletterSubmit(event)"
+                    style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:32px 28px;">
+
+                    <p
+                        style="color:#D4AF37;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:20px;text-align:center;">
+                        📥 Ton guide gratuit t'attend</p>
+
+                    <!-- Champ Prénom -->
+                    <div style="margin-bottom:14px;">
+                        <label
+                            style="display:block;color:rgba(255,255,255,.7);font-size:12px;font-weight:600;margin-bottom:6px;text-transform:uppercase;letter-spacing:.8px;">Prénom</label>
+                        <input type="text" name="entry.456873559" id="nl-prenom" placeholder="Ton prénom" required
+                            style="width:100%;padding:13px 16px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:10px;color:#fff;font-size:14px;outline:none;transition:border-color .2s;box-sizing:border-box;"
+                            onfocus="this.style.borderColor='#D4AF37'"
+                            onblur="this.style.borderColor='rgba(255,255,255,.18)'">
+                    </div>
+
+                    <!-- Champ Email -->
+                    <div style="margin-bottom:20px;">
+                        <label
+                            style="display:block;color:rgba(255,255,255,.7);font-size:12px;font-weight:600;margin-bottom:6px;text-transform:uppercase;letter-spacing:.8px;">Adresse
+                            Email</label>
+                        <input type="email" name="entry.1636962496" id="nl-email" placeholder="ton@email.com" required
+                            style="width:100%;padding:13px 16px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:10px;color:#fff;font-size:14px;outline:none;transition:border-color .2s;box-sizing:border-box;"
+                            onfocus="this.style.borderColor='#D4AF37'"
+                            onblur="this.style.borderColor='rgba(255,255,255,.18)'">
+                    </div>
+
+                    <!-- Bouton Submit -->
+                    <button type="submit" id="nl-submit" style="
+                        width:100%;padding:16px;
+                        background:linear-gradient(135deg,#D4AF37,#f0cc5a);
+                        color:#0a1128;font-weight:900;font-size:15px;
+                        border:none;border-radius:12px;cursor:pointer;
+                        transition:transform .15s,box-shadow .15s;
+                        box-shadow:0 4px 20px rgba(212,175,55,.4);
+                        letter-spacing:0.3px;
+                    " onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 30px rgba(212,175,55,.55)'"
+                        onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(212,175,55,.4)'">
+                        🎁 Recevoir mon Guide Gratuit →
+                    </button>
+
+                    <!-- Message de confirmation (caché par défaut) -->
+                    <div id="nl-success"
+                        style="display:none;margin-top:16px;padding:14px;background:rgba(22,101,52,.3);border:1px solid rgba(74,222,128,.4);border-radius:10px;color:#4ade80;font-size:14px;font-weight:600;text-align:center;">
+                        🎉 Super ! Vérifie ta boîte email — ton guide arrive dans quelques secondes !
+                    </div>
+
+                    <p style="color:rgba(255,255,255,.55);font-size:11px;margin-top:14px;text-align:center;">
+                        🔒 Données protégées · <a href="politique-confidentialite.html"
+                            style="color:rgba(255,255,255,.5);">Politique de confidentialité</a>
+                    </p>
+                </form>
+
+                <!-- iFrame caché pour soumission sans rechargement -->
+                <iframe name="hidden_iframe" title="Formulaire newsletter" style="display:none;"></iframe>
+            </div>
+        </div>
+
+        <!-- Responsive mobile -->
+        <style>
+            @media (max-width: 768px) {
+                #newsletter>div[style*="grid"] {
+                    grid-template-columns: 1fr !important;
+                    gap: 32px !important;
+                }
+            }
+        </style>
+    </section>
+
+    <!-- Logos / Social Proof Bar -->
+    <section class="social-proof">
+        <div class="container">
+            <p class="social-proof-text">Nos clients travaillent avec</p>
+            <div class="logo-scroll">
+                <div class="logo-track">
+                    <span class="company-logo">🏢 Startups</span>
+                    <span class="company-logo">💼 Freelances</span>
+                    <span class="company-logo">🏪 E-commerce</span>
+                    <span class="company-logo">📱 Agences</span>
+                    <span class="company-logo">🎓 Formateurs</span>
+                    <span class="company-logo">✍️ Créateurs</span>
+                    <span class="company-logo">📈 Consultants</span>
+                    <span class="company-logo">🏢 Startups</span>
+                    <span class="company-logo">💼 Freelances</span>
+                    <span class="company-logo">🏪 E-commerce</span>
+                    <span class="company-logo">📱 Agences</span>
+                    <span class="company-logo">🎓 Formateurs</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Nos Produits</span>
+                <h2 class="section-title">Tout ce qu'il vous faut pour <span class="gradient-text">réussir en
+                        ligne</span></h2>
+                <p class="section-subtitle">Des produits digitaux conçus par des experts, alimentés par l'IA, pour vous
+                    donner un avantage compétitif immédiat.</p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1: eBook -->
+                <div class="product-card product-featured" id="product-ebook">
+                    <div class="product-badge">🔥 Best-seller</div>
+                    <div class="product-image">
+                        <div class="ebook-preview">
+                            <div class="ebook-cover">
+                                <div class="ebook-spine"></div>
+                                <div class="ebook-front">
+                                    <div class="ebook-label">GUIDE 2026</div>
+                                    <h3>Maîtrisez l'IA</h3>
+                                    <p>Le Guide Ultime pour Entrepreneurs</p>
+                                    <div class="ebook-author">par DigitalBoost AI</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">📚 eBook Premium</div>
+                        <h3 class="product-title">Maîtrisez l'IA : Le Guide Ultime pour Entrepreneurs</h3>
+                        <p class="product-desc">Un guide stratégique de haute valeur rempli de tutoriels et cas
+                            pratiques pour intégrer l'IA
+                            dans votre business et multiplier vos revenus.</p>
+                        <ul class="product-features">
+                            <li>✅ 12 chapitres détaillés</li>
+                            <li>✅ 50+ cas pratiques réels</li>
+                            <li>✅ Templates et checklists inclus</li>
+                            <li>✅ Mises à jour gratuites à vie</li>
+                        </ul>
+                        <div class="product-pricing">
+                            <span class="price-current">9 900 FCFA</span>
+                        </div>
+                        <a href="products/ebook.html" class="btn btn-primary btn-full">
+                            📖 Découvrir l'eBook
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 2: Prompts Pack -->
+                <div class="product-card" id="product-prompts">
+                    <div class="product-badge product-badge-new">⚡ Nouveau</div>
+                    <div class="product-image">
+                        <div class="prompts-preview">
+                            <div class="prompt-line">
+                                <span class="prompt-tag">Marketing</span>
+                                <span class="prompt-text">Génère une stratégie de contenu pour...</span>
+                            </div>
+                            <div class="prompt-line">
+                                <span class="prompt-tag">Copywriting</span>
+                                <span class="prompt-text">Écris un email de vente qui...</span>
+                            </div>
+                            <div class="prompt-line">
+                                <span class="prompt-tag">SEO</span>
+                                <span class="prompt-text">Optimise cette page web pour...</span>
+                            </div>
+                            <div class="prompt-line">
+                                <span class="prompt-tag">Business</span>
+                                <span class="prompt-text">Crée un business plan pour...</span>
+                            </div>
+                            <div class="prompt-counter">+96 autres prompts</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">🤖 Pack Prompts IA</div>
+                        <h3 class="product-title">100+ Prompts IA Premium pour Entrepreneurs</h3>
+                        <p class="product-desc">La collection ultime de prompts optimisés pour ChatGPT, Claude et
+                            Gemini. Gagnez des heures de travail chaque semaine.</p>
+                        <ul class="product-features">
+                            <li>✅ 100+ prompts testés & optimisés</li>
+                            <li>✅ 10 catégories business</li>
+                            <li>✅ Guide d'utilisation inclus</li>
+                            <li>✅ Bonus : 20 méga-prompts</li>
+                        </ul>
+                        <div class="product-pricing">
+                            <span class="price-old">4 900 FCFA</span>
+                            <span class="price-current">2 000 FCFA</span>
+                        </div>
+                        <a href="products/prompts.html" class="btn btn-secondary btn-full">
+                            🤖 Voir les Prompts
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 3: Bundle -->
+                <div class="product-card product-bundle" id="product-bundle">
+                    <div class="product-badge product-badge-deal">💎 Meilleure offre</div>
+                    <div class="product-image">
+                        <div class="bundle-preview">
+                            <div class="bundle-items">
+                                <div class="bundle-item">📚</div>
+                                <span class="bundle-plus">+</span>
+                                <div class="bundle-item">🤖</div>
+                                <span class="bundle-plus">+</span>
+                                <div class="bundle-item">📊</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">💎 Pack Complet</div>
+                        <h3 class="product-title">Bundle Ultime — Tout inclus</h3>
+                        <p class="product-desc">L'eBook + les 100+ Prompts + les Templates Pro réunis dans un pack
+                            exclusif à prix réduit. L'arsenal complet de l'entrepreneur digital.</p>
+                        <ul class="product-features">
+                            <li>✅ eBook "Maîtrisez l'IA" (valeur 9 900 FCFA)</li>
+                            <li>✅ 100+ Prompts Premium (valeur 4 900 FCFA)</li>
+                            <li>✅ Templates Notion & Canva (valeur 20 100 FCFA)</li>
+                            <li>✅ Accès communauté privée</li>
+                        </ul>
+                        <div class="product-pricing">
+                            <span class="price-current">14 900 FCFA</span>
+                        </div>
+                        <a href="#pricing" class="btn btn-accent btn-full">
+                            💎 Obtenir le Bundle — 14 900 FCFA
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Pourquoi Nous Choisir</span>
+                <h2 class="section-title">Des résultats concrets pour <span class="gradient-text">votre business</span>
+                </h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Gain de temps immédiat</h3>
+                    <p>Nos prompts et templates vous font gagner 10+ heures par semaine sur vos tâches récurrentes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>ROI garanti</h3>
+                    <p>Nos clients génèrent en moyenne 5x le prix du pack en revenus additionnels dès le premier mois.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Prêt à l'emploi</h3>
+                    <p>Pas besoin de compétences techniques. Copiez, collez, personnalisez et utilisez directement.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Mises à jour gratuites</h3>
+                    <p>Recevez toutes les futures mises à jour et les nouveaux prompts sans frais supplémentaires.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Multi-plateforme</h3>
+                    <p>Compatible ChatGPT, Claude, Gemini, Copilot et tous les principaux outils IA du marché.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Support prioritaire</h3>
+                    <p>Accédez à notre communauté privée et obtenez des réponses à vos questions sous 24h.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Comment ça marche</span>
+                <h2 class="section-title">3 étapes pour <span class="gradient-text">transformer votre business</span>
+                </h2>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Choisissez votre pack</h3>
+                        <p>Sélectionnez le produit qui correspond à vos besoins : eBook, prompts, ou le bundle complet.
+                        </p>
+                    </div>
+                    <div class="step-arrow">→</div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Téléchargement instant</h3>
+                        <p>Recevez immédiatement vos fichiers par email. Accès à vie, téléchargement illimité.</p>
+                    </div>
+                    <div class="step-arrow">→</div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Appliquez et gagnez</h3>
+                        <p>Utilisez les stratégies et prompts pour automatiser votre travail et augmenter vos revenus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Témoignages</span>
+                <h2 class="section-title">Ils ont transformé leur business <span class="gradient-text">grâce à nos
+                        produits</span></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Les prompts m'ont fait gagner un temps fou. Je crée maintenant en 1h ce
+                        qui me prenait une journée entière. Mon chiffre d'affaires a augmenté de 40% en 2 mois."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <strong>Sophie M.</strong>
+                            <span>Consultante Marketing Digital</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"L'eBook est une mine d'or. Les stratégies sont concrètes et directement
+                        applicables. J'ai lancé mon premier produit digital grâce à ce guide et j'ai fait 2 000 000 FCFA
+                        le
+                        premier mois."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">TK</div>
+                        <div class="author-info">
+                            <strong>Thomas K.</strong>
+                            <span>Entrepreneur E-commerce</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Le bundle complet est un investissement incroyable. Pour moins de 15
+                        000 FCFA,
+                        j'ai tout ce dont j'ai besoin pour automatiser mon content marketing. Indispensable !"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AL</div>
+                        <div class="author-info">
+                            <strong>Aminata L.</strong>
+                            <span>Créatrice de contenu</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"En tant que freelance, ces templates Notion ont transformé ma gestion
+                        de projets. Je suis passé de 3 clients à 8 clients en 3 mois grâce au temps gagné."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div class="author-info">
+                            <strong>Jean D.</strong>
+                            <span>Développeur Freelance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Tarifs</span>
+                <h2 class="section-title">Investissez dans votre <span class="gradient-text">succès digital</span></h2>
+                <p class="section-subtitle">Paiement unique. Accès à vie. Mises à jour gratuites.</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Starter -->
+                <div class="pricing-card" id="pricing-starter">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Starter</h3>
+                        <p class="pricing-desc">Idéal pour débuter</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-amount">2 000<sup>FCFA</sup></span>
+                        <span class="price-period">paiement unique · 🔥 Promo en cours</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li class="included">✅ 100+ Prompts IA Premium</li>
+                        <li class="included">✅ 10 catégories business</li>
+                        <li class="included">✅ Guide d'utilisation</li>
+                        <li class="included">✅ Mises à jour gratuites</li>
+                        <li class="excluded">❌ eBook complet</li>
+                        <li class="excluded">❌ Templates Pro</li>
+                        <li class="excluded">❌ Communauté privée</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-full btn-buy" data-product="prompts">
+                        Choisir Starter
+                    </a>
+                </div>
+
+                <!-- Pro - Recommended -->
+                <div class="pricing-card pricing-popular" id="pricing-pro">
+                    <div class="pricing-popular-badge">⭐ Plus populaire</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Pro</h3>
+                        <p class="pricing-desc">Le plus populaire</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-amount">9 900<sup>FCFA</sup></span>
+                        <span class="price-period">paiement unique</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li class="included">✅ eBook "Maîtrisez l'IA"</li>
+                        <li class="included">✅ 50+ cas pratiques</li>
+                        <li class="included">✅ Templates & checklists inclus</li>
+                        <li class="included">✅ Mises à jour gratuites à vie</li>
+                        <li class="included">✅ Support par email</li>
+                        <li class="excluded">❌ Prompts Premium</li>
+                        <li class="excluded">❌ Communauté privée</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary btn-full btn-buy" data-product="ebook">
+                        Choisir Pro
+                    </a>
+                </div>
+
+                <!-- Bundle -->
+                <div class="pricing-card pricing-bundle" id="pricing-bundle">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Bundle Ultime</h3>
+                        <p class="pricing-desc">L'arsenal complet</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-amount">14 900<sup>FCFA</sup></span>
+                        <span class="price-period">paiement unique</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li class="included">✅ eBook complet</li>
+                        <li class="included">✅ 100+ Prompts IA Premium</li>
+                        <li class="included">✅ Templates Notion & Canva</li>
+                        <li class="included">✅ 20 méga-prompts bonus</li>
+                        <li class="included">✅ Accès communauté privée</li>
+                        <li class="included">✅ Support prioritaire</li>
+                        <li class="included">✅ Toutes les futures mises à jour</li>
+                    </ul>
+                    <a href="#" class="btn btn-accent btn-full btn-buy" data-product="bundle">
+                        💎 Obtenir le Bundle — 14 900 FCFA
+                    </a>
+                </div>
+            </div>
+
+            <!-- Guarantee -->
+            <div class="guarantee">
+                <div class="guarantee-icon">🛡️</div>
+                <div class="guarantee-content">
+                    <h3>Garantie satisfait ou remboursé 30 jours</h3>
+                    <p>Testez nos produits sans risque. Si vous n'êtes pas satisfait, nous vous remboursons
+                        intégralement, sans questions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">FAQ</span>
+                <h2 class="section-title">Questions <span class="gradient-text">fréquentes</span></h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q1">
+                        <span>Comment recevoir mes produits après l'achat ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-a1">
+                        <p>Après votre paiement, vous recevez immédiatement un email avec les liens de téléchargement.
+                            Vous pouvez aussi accéder à vos produits depuis votre espace client. Le téléchargement est
+                            illimité et l'accès est à vie.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q2">
+                        <span>Les prompts fonctionnent avec quels outils IA ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-a2">
+                        <p>Nos prompts sont optimisés pour ChatGPT (GPT-4), Claude, Gemini, et Copilot. Ils fonctionnent
+                            également avec la plupart des autres outils IA basés sur des modèles de langage.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q3">
+                        <span>Est-ce que je recevrai les mises à jour ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-a3">
+                        <p>Oui ! Tous les acheteurs reçoivent automatiquement les mises à jour par email. Nous ajoutons
+                            régulièrement de nouveaux prompts, stratégies et contenus sans frais supplémentaires.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q4">
+                        <span>Puis-je obtenir un remboursement ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-a4">
+                        <p>Absolument. Nous offrons une garantie satisfait ou remboursé de 30 jours. Si nos produits ne
+                            correspondent pas à vos attentes, contactez-nous et nous vous remboursons intégralement.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q5">
+                        <span>Ai-je besoin de compétences techniques ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-a5">
+                        <p>Non, aucune compétence technique n'est requise. Nos produits sont conçus pour être
+                            accessibles à tous. L'eBook vous guide pas à pas, et les prompts sont prêts à copier-coller
+                            dans votre outil IA préféré.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q6">
+                        <span>Quelle est la différence entre le pack Starter et le Bundle ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-a6">
+                        <p>Le pack Starter inclut uniquement les 100+ prompts IA. Le Bundle Ultime inclut les prompts +
+                            l'eBook complet + les templates Notion/Canva + l'accès à la communauté privée, le tout avec
+                            une réduction de 70%.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-final">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Prêt à transformer votre business avec l'IA ?</h2>
+                <p>Rejoignez +2 500 entrepreneurs qui ont déjà boosté leurs revenus grâce à nos produits digitaux.</p>
+                <div class="cta-buttons">
+                    <a href="#pricing" class="btn btn-accent btn-lg">
+                        🚀 Commencer maintenant — à partir de 2 000 FCFA
+                    </a>
+                </div>
+                <p class="cta-guarantee">🛡️ Garantie 30 jours satisfait ou remboursé</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script anti-spam newsletter -->
+    <script>
+        // 🚨 NOUVELLE SÉCURITÉ ANTI-BOTS (WEB APP APPS SCRIPT)
+        // Mettez l'URL obtenue après avoir "Déployé" votre script ci-dessous :
+        const WEBHOOK_SÉCURISÉ = ""; // EXEMPLE: "https://script.google.com/macros/s/AKfycbz.../exec"
+
+        let disposableDomains = new Set();
+        fetch('/data/disposable_domains.txt')
+            .then(response => response.text())
+            .then(text => {
+                const domains = text.split('\n').filter(d => d.trim().length > 0);
+                disposableDomains = new Set(domains);
+                ['mailna.co', 'mailna.me', 'mailna.in', 'mohmal.com', 'mohmal.in', 'cleantempmail.com', 'temp-mail.org', '10minutemail.com', 'guerrillamail.com', 'simplelogin.io', 'emailondeck.com', 'mailinator.com', 'tempmail.plus', 'throwawaymail.com'].forEach(d => disposableDomains.add(d));
+            })
+            .catch(err => console.error("Erreur de chargement de la liste anti-spam", err));
+
+        function handleNewsletterSubmit(event) {
+            var emailInput = document.getElementById('nl-email');
+            var prenomInput = document.getElementById('nl-prenom');
+            var btn = document.getElementById('nl-submit');
+            var success = document.getElementById('nl-success');
+            var email = emailInput.value.toLowerCase().trim();
+            var domaine = email.split('@')[1];
+
+            // 1. Vérification Javascript Client
+            if (disposableDomains.has(domaine)) {
+                if (event) event.preventDefault();
+                btn.innerHTML = '⚠️ Adresses temporaires refusées';
+                btn.style.background = 'linear-gradient(135deg, #b21f1f, #dc2626)';
+                btn.style.color = '#ffffff';
+                btn.style.boxShadow = '0 4px 20px rgba(220, 38, 38, 0.4)';
+                setTimeout(function () {
+                    btn.innerHTML = '🎁 Recevoir mon Guide Gratuit →';
+                    btn.style.background = 'linear-gradient(135deg,#D4AF37,#f0cc5a)';
+                    btn.style.color = '#0a1128';
+                    btn.style.boxShadow = '0 4px 20px rgba(212,175,55,.4)';
+                }, 3000);
+                return false;
+            }
+
+            // 2. Si un Webhook sécurisé est défini, utiliser fetch !
+            if (WEBHOOK_SÉCURISÉ && WEBHOOK_SÉCURISÉ.startsWith("https://script.google.com/")) {
+                if (event) event.preventDefault(); // Bloque complètement l'envoi direct
+                btn.innerHTML = '⏳ Envoi en cours...';
+                
+                fetch(WEBHOOK_SÉCURISÉ, {
+                    method: 'POST',
+                    body: JSON.stringify({ prenom: prenomInput.value, email: email })
+                }).then(() => {
+                    setTimeout(function () {
+                        if (btn) btn.style.display = 'none';
+                        if (success) success.style.display = 'block';
+                        if (prenomInput) prenomInput.value = '';
+                        if (emailInput) emailInput.value = '';
+                    }, 500);
+                }).catch(() => {
+                    btn.innerHTML = '⚠️ Erreur, réessayez';
+                });
+                return false;
+            }
+
+            // 3. Fallback (Google Forms Natif classique, non recommandé à long terme)
+            setTimeout(function () {
+                if (btn) btn.style.display = 'none';
+                if (success) success.style.display = 'block';
+                if (prenomInput) prenomInput.value = '';
+                if (emailInput) emailInput.value = '';
+            }, 1200);
+            return true;
+        }
+    </script>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <span class="logo-icon">⚡</span>
+                        <span class="logo-text">Digital<span class="logo-accent">Boost</span> AI</span>
+                    </a>
+                    <p>Produits digitaux premium pour entrepreneurs ambitieux. Automatisez, créez et développez votre
+                        business avec la puissance de l'IA.</p>
+                </div>
+                <div class="footer-links">
+                    <p class="footer-heading">Produits</p>
+                    <a href="products/ebook.html">eBook Premium</a>
+                    <a href="products/prompts.html">Pack Prompts IA</a>
+                    <a href="products/templates.html">Templates Pro</a>
+                    <a href="#pricing">Bundle Ultime</a>
+                </div>
+                <div class="footer-links">
+                    <p class="footer-heading">Ressources</p>
+                    <a href="/blog">Blog</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="communaute.html">Communauté</a>
+                </div>
+                <div class="footer-links">
+                    <p class="footer-heading">Légal</p>
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="cgv.html">CGV</a>
+                    <a href="politique-confidentialite.html">Politique de confidentialité</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 DigitalBoost AI. Tous droits réservés.</p>
+                <div class="footer-payment">
+                    <span>Paiements sécurisés :</span>
+                    <span class="payment-icons">💳 Cartes (Visa, Mastercard) · 📱 Mobile Money (Wave, Orange,
+                        MTN)</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Purchase Modal -->
+    <div class="modal-overlay" id="purchaseModal">
+        <div class="modal">
+            <button class="modal-close" id="modalClose">×</button>
+            <div class="modal-header">
+                <div class="modal-icon">🎉</div>
+                <h2>Finalisez votre commande</h2>
+                <p id="modalProduct">Pack sélectionné</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-price-summary">
+                    <div class="modal-line">
+                        <span id="modalItemName">Produit</span>
+                        <span id="modalItemPrice">0 FCFA</span>
+                    </div>
+
+                    <div class="modal-line modal-total">
+                        <span>Total</span>
+                        <span id="modalTotal">0 FCFA</span>
+                    </div>
+                </div>
+                <div class="payment-section" id="paymentSection">
+                    <h3 class="payment-heading">Choisissez votre mode de paiement :</h3>
+                    <div class="payment-methods" id="custom-payment-btn-container">
+                        <button class="payment-btn chariow-btn" data-method="chariow"
+                            style="border-color: var(--accent-primary); background-color: rgba(99, 102, 241, 0.05);">
+                            <span class="payment-icon">🔐</span>
+                            <div class="payment-info">
+                                <strong>Paiement Sécurisé (Chariow)</strong>
+                                <span>Mobile Money (Wave, Orange) & Cartes Bancaires</span>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Conteneur généré dynamiquement par l'API Chariow -->
+                    <div id="chariow-widget-container" style="margin-top:20px;display:none;text-align:center;"></div>
+
+                    <!-- Instructions dynamiques -->
+                    <div class="payment-instructions" id="paymentInstructions" style="display: none;">
+                        <button class="btn btn-outline btn-sm back-btn" id="backToMethods">← Retour aux choix de
+                            paiement</button>
+                        <div id="instructionContent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
