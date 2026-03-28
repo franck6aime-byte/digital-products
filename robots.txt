@@ -1,5 +1,9 @@
 User-agent: *
 Allow: /
 
+Disallow: /downloads/
+Disallow: /success.html
+Disallow: /success
+
 # Sitemap
 Sitemap: https://digitalboostai.tech/sitemap.xml
