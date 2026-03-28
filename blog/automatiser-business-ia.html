@@ -36,7 +36,10 @@
     </script>
 
     <link rel="preload" href="../fonts/dm-sans-v17-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/dm-sans-v17-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/fraunces-v38-latin-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../fonts/fraunces-v38-latin-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/fraunces-v38-latin-italic-400.woff2" as="font" type="font/woff2" crossorigin>
 
     <style>
 /* ── FONTS AUTO-HÉBERGÉES ── */
@@ -84,6 +87,13 @@
             --muted: #6B7280;
             --border: #E5E2D9;
             --max: 780px;
+        }
+
+        /* Classe utilitaire pour lecteurs d'écran uniquement (déplacée dans le HEAD pour éviter le CLS) */
+        .sr-only {
+            position: absolute; width: 1px; height: 1px;
+            padding: 0; margin: -1px; overflow: hidden;
+            clip: rect(0,0,0,0); white-space: nowrap; border: 0;
         }
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -836,15 +846,6 @@
         <p>© 2026 <a href="https://digitalboostai.tech/">DigitalBoost AI</a> — Produits digitaux premium pour entrepreneurs africains.</p>
         <p style="margin-top:8px;">🛡️ Garantie satisfait ou remboursé 30 jours · Paiement sécurisé · Wave, Orange Money, MTN, Carte bancaire</p>
     </footer>
-
-    <!-- Classe utilitaire pour lecteurs d'écran uniquement -->
-    <style>
-        .sr-only {
-            position: absolute; width: 1px; height: 1px;
-            padding: 0; margin: -1px; overflow: hidden;
-            clip: rect(0,0,0,0); white-space: nowrap; border: 0;
-        }
-    </style>
 
     <script>
         const bar = document.getElementById('progress-bar');
