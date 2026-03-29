@@ -71,6 +71,17 @@
       "temps_lecture": "8 min de lecture",
       "date_publication": "2026-03-26",
       "newsletter_envoyee": false
+    },
+    {
+      "id": "article-007",
+      "titre": "3 Habitudes Secrètes pour Intégrer l'IA dans son Quotidien en 2026",
+      "excerpt": "L'IA n'est pas qu'un outil occasionnel. Intégrez-la dans votre quotidien avec ces 3 routines simples et puissantes pour gagner 5 heures par semaine.",
+      "url": "https://digitalboostai.vercel.app/blog/habitudes-ia-productivite.html",
+      "emoji": "⏱️",
+      "categorie": "Productivité & IA",
+      "temps_lecture": "5 min de lecture",
+      "date_publication": "2026-03-29",
+      "newsletter_envoyee": false
     }
   ]
 }
