@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>DigitalBoost AI Blog</title>
+  <link>https://digitalboostai.vercel.app/blog</link>
+  <description>Workflows, stratégies et prompts concrets pour entrepreneurs et créateurs africains qui veulent aller plus vite grâce à l'intelligence artificielle.</description>
+  <language>fr</language>
+  <atom:link href="https://digitalboostai.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>3 Habitudes Simples pour Intégrer l'IA dans son Quotidien en 2026</title>
+    <link>https://digitalboostai.tech/blog/habitudes-ia-productivite</link>
+    <description>Beaucoup voient l'IA comme un outil occasionnel. Ces 3 routines concrètes vous montrent comment l'intégrer intelligemment pour structurer vos journées et alléger votre charge mentale.</description>
+    <pubDate>Sun, 29 Mar 2026 08:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://digitalboostai.tech/blog/habitudes-ia-productivite</guid>
+    <category>Productivité &amp; IA</category>
+  </item>
+  <item>
+    <title>Comment Créer un Produit Digital en 48h avec l'IA (Guide Complet 2026)</title>
+    <link>https://digitalboostai.tech/blog/creer-produit-digital-ia-48h</link>
+    <description>Le marché digital africain croît de 25% par an. Voici comment créer et vendre ton premier produit digital en 48 heures — avec 3 prompts IA gratuits.</description>
+    <pubDate>Thu, 26 Mar 2026 08:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://digitalboostai.tech/blog/creer-produit-digital-ia-48h</guid>
+    <category>Produit Digital &amp; IA</category>
+  </item>
+  <item>
+    <title>Mon Workflow pour Créer 7 Jours de Contenu en 30 Minutes avec l'IA</title>
+    <link>https://digitalboostai.tech/blog/workflow-contenu-ia-7-jours-30-minutes</link>
+    <description>85% des marketeurs utilisent déjà l'IA pour créer du contenu. Voici le workflow exact — hooks, scripts, descriptions, hashtags — pour planifier une semaine entière de TikTok en 30 minutes chrono.</description>
+    <pubDate>Wed, 18 Mar 2026 08:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://digitalboostai.tech/blog/workflow-contenu-ia-7-jours-30-minutes</guid>
+    <category>Workflow Contenu IA</category>
+  </item>
+  <item>
+    <title>Les 3 Erreurs que 99% des Étudiants Ivoiriens Font sur ChatGPT en 2026</title>
+    <link>https://digitalboostai.tech/blog/erreurs-chatgpt-etudiants-ivoiriens</link>
+    <description>ChatGPT est gratuit, disponible 24h/24 et plus puissant qu'un assistant personnel. Pourtant, la majorité des jeunes d'Abidjan n'utilisent que 5% de son potentiel. Voici les 3 erreurs fatales — et comment les corriger dès aujourd'hui.</description>
+    <pubDate>Wed, 11 Mar 2026 08:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://digitalboostai.tech/blog/erreurs-chatgpt-etudiants-ivoiriens</guid>
+    <category>IA &amp; Éducation</category>
+  </item>
+  <item>
+    <title>8 Mars 2026 : La Vraie Liberté des Femmes Ivoiriennes Passe Aussi par l'IA</title>
+    <link>https://digitalboostai.tech/blog/ia-femmes-ivoiriennes-8-mars-2026</link>
+    <description>Seules 15% des entreprises en Côte d'Ivoire sont créées par des femmes. Le manque de temps et de financement les freine. Voici comment l'IA change la donne aujourd'hui.</description>
+    <pubDate>Sun, 08 Mar 2026 08:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://digitalboostai.tech/blog/ia-femmes-ivoiriennes-8-mars-2026</guid>
+    <category>8 Mars &amp; Leadership</category>
+  </item>
+  <item>
+    <title>L'IA va transformer l'éducation africaine — ce que révèle la conférence UNESCO 2026</title>
+    <link>https://digitalboostai.tech/blog/ia-education-afrique-unesco</link>
+    <description>La Chaire UNESCO IAHSO a tenu une tribune historique de 5 heures sur l'IA dans l'enseignement. Magic School AI, prompt engineering, classe inversée : voici tout ce que vous devez retenir.</description>
+    <pubDate>Sat, 07 Mar 2026 08:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://digitalboostai.tech/blog/ia-education-afrique-unesco</guid>
+    <category>IA &amp; Éducation en Afrique</category>
+  </item>
+  <item>
+    <title>Comment Automatiser votre Business avec l'IA en 2026</title>
+    <link>https://digitalboostai.tech/blog/automatiser-business-ia</link>
+    <description>Le guide complet pour les entrepreneurs qui veulent gagner du temps, multiplier leurs revenus et garder une longueur d'avance.</description>
+    <pubDate>Tue, 03 Mar 2026 08:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://digitalboostai.tech/blog/automatiser-business-ia</guid>
+    <category>Automatisation &amp; Business</category>
+  </item>
+</channel>
+</rss>

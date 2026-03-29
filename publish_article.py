@@ -3,15 +3,23 @@ import os
 import subprocess
 import argparse
 from datetime import datetime
+import re
 
 # CONFIGURATION
 CONFIG_FILE = "articles-config.json"
 BLOG_INDEX = "blog.html"
 BASE_URL = "https://digitalboostai.vercel.app"
 
-def add_to_blog_html(title, excerpt, file_name, emoji, read_time, date_str):
+def add_to_blog_html(title, excerpt, file_name, emoji, read_time, date_str, total_articles):
     with open(BLOG_INDEX, "r", encoding="utf-8") as f:
         content = f.read()
+
+    # Mise à jour du compteur d'articles
+    content = re.sub(
+        r'<span class="num">\d+</span><span class="label">Articles publiés</span>',
+        f'<span class="num">{total_articles}</span><span class="label">Articles publiés</span>',
+        content
+    )
     
     # Éviter les doublons de carte
     if file_name in content:
@@ -89,8 +97,16 @@ def publish_article(article_id, title, excerpt, file_name, emoji, category, read
     
     print(f"✅ {CONFIG_FILE} mis à jour (pour la Newsletter).")
 
-    # 2. Ajout de la carte (HTML)
-    add_to_blog_html(title, excerpt, file_name, emoji, read_time, date_str)
+    # 2. Ajout de la carte (HTML) et mise à jour du compteur
+    total_articles = len(config['articles'])
+    add_to_blog_html(title, excerpt, file_name, emoji, read_time, date_str, total_articles)
+
+    # 3. Génération du Flux RSS
+    print("📡 Mise à jour du flux RSS (rss.xml)...")
+    try:
+        subprocess.run(["python", "generate_rss.py"], check=True)
+    except Exception as e:
+        print(f"⚠️ Erreur lors de la génération RSS : {e}")
 
     # 3. Déploiement Vercel automatique
     print("☁️ Déploiement sur serveur Vercel...")
