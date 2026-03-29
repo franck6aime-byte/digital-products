@@ -30,25 +30,64 @@
 
     <!-- Structured Data Product -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Maîtrisez l'IA : Le Guide Ultime pour Entrepreneurs",
-      "description": "Guide stratégique complet de 12 chapitres avec 50+ cas pratiques pour intégrer l'IA dans votre business et multiplier vos revenus.",
-      "brand": {"@type": "Brand", "name": "DigitalBoost AI"},
-      "offers": {
+{
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Maîtrisez l'IA : Le Guide Ultime pour Entrepreneurs",
+    "description": "Guide stratégique complet de 12 chapitres avec 50+ cas pratiques pour intégrer l'IA dans votre business et multiplier vos revenus.",
+    "brand": {
+        "@type": "Brand",
+        "name": "DigitalBoost AI"
+    },
+    "offers": {
         "@type": "Offer",
         "price": "9900",
         "priceCurrency": "XOF",
         "availability": "https://schema.org/InStock",
-        "url": "https://digitalboostai.tech/products/ebook.html"
-      },
-      "aggregateRating": {
+        "url": "https://digitalboostai.tech/products/ebook.html",
+        "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "CI",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 30,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+        },
+        "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": 0,
+                "currency": "XOF"
+            },
+            "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "CI"
+            },
+            "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 0,
+                    "unitCode": "DAY"
+                },
+                "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 0,
+                    "unitCode": "DAY"
+                }
+            }
+        }
+    },
+    "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.8",
         "reviewCount": "47"
-      }
-    }
+    },
+    "image": "https://digitalboostai.tech/img/ebook-banner-851x315.png"
+}
     </script>
     
     
