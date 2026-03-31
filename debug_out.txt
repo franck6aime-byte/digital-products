@@ -1,0 +1,1 @@
+{"error":"Erreur lors de l'initialisation","details":"\nInvalid `prisma.settings.findFirst()` invocation:\n\n\nThe table `main.Settings` does not exist in the current database."}

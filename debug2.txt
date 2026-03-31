@@ -1,0 +1,1 @@
+{"message":"Plateforme configurée. Compte admin créé (Admin / admin)"}

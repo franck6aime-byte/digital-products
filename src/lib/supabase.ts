@@ -1,0 +1,11 @@
+import { createClient } from '@supabase/supabase-js';
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || '';
+
+if (!supabaseUrl || !supabaseServiceKey) {
+  console.warn('Supabase URL or Service Key is missing. Check your environment variables.');
+}
+
+// Client administratif pour gérer le stockage sans restrictions RLS
+export const supabase = createClient(supabaseUrl, supabaseServiceKey);

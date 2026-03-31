@@ -1,0 +1,64 @@
+datasource db {
+  provider = "postgresql"
+}
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+model Settings {
+  id               String @id @default(cuid())
+  isInitialized    Boolean @default(false)
+}
+
+model User {
+  id               String   @id @default(cuid())
+  identifiant      String   @unique
+  fullName         String
+  password         String
+  role             String
+  createdAt        DateTime @default(now())
+  serviceId        String?
+  service          Service? @relation("ServiceMembers", fields: [serviceId], references: [id], onDelete: SetNull)
+  filesUploaded    File[]   @relation("FileUploader")
+}
+
+model Service {
+  id               String   @id @default(cuid())
+  name             String   @unique
+  adminPassword    String?
+  users            User[]   @relation("ServiceMembers")
+  files            File[]
+  folders          Folder[]
+}
+
+model File {
+  id               String   @id @default(cuid())
+  name             String
+  originalName     String
+  size             Int
+  mimeType         String
+  url              String
+  createdAt        DateTime @default(now())
+  uploaderId       String?
+  uploader         User?    @relation("FileUploader", fields: [uploaderId], references: [id], onDelete: SetNull)
+  serviceId        String
+  service          Service  @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  folderId         String?
+  folder           Folder?  @relation(fields: [folderId], references: [id], onDelete: SetNull)
+  isHidden         Boolean  @default(false)
+}
+
+model Folder {
+  id               String   @id @default(cuid())
+  name             String
+  createdAt        DateTime @default(now())
+  serviceId        String
+  service          Service  @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  parentId         String?
+  parent           Folder?  @relation("SubFolders", fields: [parentId], references: [id], onDelete: SetNull)
+  children         Folder[] @relation("SubFolders")
+  files            File[]
+  isHidden         Boolean  @default(false)
+}
