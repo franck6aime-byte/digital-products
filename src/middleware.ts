@@ -8,7 +8,7 @@ export function middleware(request: NextRequest) {
   // 1. Redirection optionnelle : (Supprimée car l'utilisateur souhaite toujours voir la page de login)
 
   // 2. Protection globale (Login obligatoire pour tout sauf exceptions)
-  if (!isAuthenticated && !path.startsWith('/login') && !path.startsWith('/api') && !path.startsWith('/_next') && path !== '/favicon.ico' && !path.match(/\.(svg|png|jpg|jpeg|gif|webp)$/)) {
+  if (!isAuthenticated && !path.startsWith('/login') && !path.startsWith('/api') && !path.startsWith('/_next') && path !== '/favicon.ico' && path !== '/sitemap.xml' && path !== '/robots.txt' && !path.match(/\.(svg|png|jpg|jpeg|gif|webp|xml|txt)$/)) {
     return NextResponse.redirect(new URL('/login', request.url));
   }
 
@@ -39,6 +39,6 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+    '/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|.*\\.(?:svg|png|jpg|jpeg|gif|webp|xml|txt)$).*)',
   ],
 };
