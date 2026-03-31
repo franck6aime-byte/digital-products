@@ -47,7 +47,13 @@ export async function POST(req: Request, { params }: { params: Promise<{ id: str
     if (!file) return NextResponse.json({ error: 'Pas de fichier' }, { status: 400 });
 
     const buffer = Buffer.from(await file.arrayBuffer());
-    const safeFileName = file.name.replace(/\s+/g, '_');
+    
+    // SÉCURISATION DU NOM DE FICHIER (enlève accents et caractères spéciaux pour Supabase)
+    const safeFileName = file.name
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "") // Retire les accents
+      .replace(/[^a-zA-Z0-9.-]/g, '_'); // Ne garde que lettres, chiffres, tirets et points
+
     const fileName = `${Date.now()}-${safeFileName}`;
     const filePath = `${serviceId}/${fileName}`;
 

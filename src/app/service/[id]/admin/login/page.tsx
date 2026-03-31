@@ -2,10 +2,11 @@
 
 import { useState } from 'react';
 import { useRouter, useParams } from 'next/navigation';
-import { ShieldAlert, ArrowLeft } from 'lucide-react';
+import { ShieldAlert, ArrowLeft, User } from 'lucide-react';
 import Link from 'next/link';
 
 export default function AdminLogin() {
+  const [identifiant, setIdentifiant] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -14,7 +15,7 @@ export default function AdminLogin() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!password) return;
+    if (!identifiant || !password) return;
     setIsSubmitting(true);
     setError('');
 
@@ -22,20 +23,18 @@ export default function AdminLogin() {
       const res = await fetch('/api/auth/service', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ password, serviceId: params?.id }),
+        body: JSON.stringify({ identifiant, password, serviceId: params?.id }),
       });
 
       if (res.ok) {
-        // Utiliser window.location.href au lieu de router.push pour garantir que le middleware
-        // voit bien le nouveau cookie de session du service immédiatement.
         window.location.href = `/service/${params?.id}/admin`;
       } else {
         const data = await res.json();
-        setError(data.error || 'Mot de passe incorrect');
+        setError(data.error || 'Identifiant ou mot de passe incorrect.');
         setIsSubmitting(false);
       }
     } catch (err) {
-      setError('Erreur de connexion au serveur');
+      setError('Erreur de connexion au serveur.');
       setIsSubmitting(false);
     }
   };
@@ -70,34 +69,67 @@ export default function AdminLogin() {
             Zone <span className="text-gradient-emerald">Sécurisée</span>
           </h1>
           <p style={{ color: 'var(--slate-500)', fontSize: '0.95rem', marginBottom: '2.5rem', lineHeight: 1.5 }}>
-            Veuillez saisir la clé d'habilitation pour accéder à l'environnement de gestion.
+            Connectez-vous avec vos identifiants personnels d'agent pour accéder à l'espace de gestion.
           </p>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} style={{ width: '100%' }}>
+          <form onSubmit={handleSubmit} style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             
             {error && (
-              <div style={{ backgroundColor: '#fee2e2', border: '1px solid #fecaca', color: '#ef4444', padding: '0.875rem', borderRadius: '10px', marginBottom: '1.5rem', fontSize: '0.85rem', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
+              <div style={{ backgroundColor: '#fee2e2', border: '1px solid #fecaca', color: '#ef4444', padding: '0.875rem', borderRadius: '10px', fontSize: '0.85rem', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', marginBottom: '0.5rem' }}>
                 <ShieldAlert size={16} /> {error}
               </div>
             )}
 
-            <div style={{ marginBottom: '2rem' }}>
+            {/* Champ Identifiant */}
+            <div style={{ textAlign: 'left' }}>
+              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 700, color: 'var(--slate-700)', marginBottom: '0.4rem' }}>
+                Identifiant Agent
+              </label>
+              <div style={{ position: 'relative' }}>
+                <div style={{ position: 'absolute', left: '1rem', top: '50%', transform: 'translateY(-50%)', color: '#94a3b8' }}>
+                  <User size={16} />
+                </div>
+                <input
+                  type="text"
+                  value={identifiant}
+                  onChange={(e) => setIdentifiant(e.target.value)}
+                  placeholder="Ex: jean.kouame"
+                  className="form-input"
+                  style={{
+                    paddingLeft: '2.75rem',
+                    borderRadius: '12px',
+                    boxShadow: 'var(--shadow-soft)',
+                    backgroundColor: 'rgba(255,255,255,0.8)',
+                  }}
+                  disabled={isSubmitting}
+                  required
+                  autoComplete="username"
+                />
+              </div>
+            </div>
+
+            {/* Champ Mot de passe */}
+            <div style={{ textAlign: 'left', marginBottom: '1rem' }}>
+              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 700, color: 'var(--slate-700)', marginBottom: '0.4rem' }}>
+                Mot de passe
+              </label>
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="Mot de passe du département"
+                placeholder="••••••••"
                 className="form-input"
                 style={{
                   padding: '1.125rem 1.25rem',
                   borderRadius: '12px',
                   boxShadow: 'var(--shadow-soft)',
                   backgroundColor: 'rgba(255,255,255,0.8)',
-                  textAlign: 'center',
                   letterSpacing: '0.2em'
                 }}
                 disabled={isSubmitting}
+                required
+                autoComplete="current-password"
               />
             </div>
 

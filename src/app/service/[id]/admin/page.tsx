@@ -47,6 +47,9 @@ const IconMaximize = () => (
 const IconDownload = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
 );
+const IconSettings = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+);
 
 type Folder = { id: string; name: string; createdAt: string; isHidden?: boolean };
 type FileDoc = { id: string; name: string; size: number; url: string; mimeType: string; createdAt: string; isHidden?: boolean; uploader?: { fullName: string } };
@@ -72,6 +75,12 @@ export default function WorkspaceAdminPage() {
   const [actContent, setActContent] = useState('');
   const [viewerUrl, setViewerUrl] = useState<{url: string, name: string} | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
+
+  // Password Modal State
+  const [isPasswordModalOpen, setIsPasswordModalOpen] = useState(false);
+  const [passwordForm, setPasswordForm] = useState({ identifiant: '', oldPassword: '', newPassword: '' });
+  const [passwordError, setPasswordError] = useState('');
+  const [isPasswordSubmitting, setIsPasswordSubmitting] = useState(false);
 
   useEffect(() => {
     if (serviceId) fetchContent(currentFolder?.id || null);
@@ -163,6 +172,9 @@ export default function WorkspaceAdminPage() {
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '0.75rem', fontWeight: 800, color: '#64748b', letterSpacing: '0.05em' }}>
             <span style={{ height: '8px', width: '8px', backgroundColor: '#10b981', borderRadius: '50%', boxShadow: '0 0 10px #10b981' }}></span> ACCÈS RESTREINT DR-MCNSLP
           </div>
+          <button onClick={() => setIsPasswordModalOpen(true)} className="chariow-chip" style={{ background: 'white', color: '#0f172a', border: '1px solid #e2e8f0', padding: '0.6rem 1.2rem', boxShadow: '0 2px 4px rgba(0,0,0,0.02)'}}>
+            <IconSettings /> Sécurité
+          </button>
           <button onClick={handleSecureLogout} className="chariow-chip" style={{ background: '#0f172a', color: 'white', border: 'none', padding: '0.6rem 1.2rem'}}>
             <IconLogOut /> Quitter l'espace
           </button>
@@ -407,38 +419,99 @@ export default function WorkspaceAdminPage() {
         </div>
       )}
 
-      {/* VIEWER MODAL */}
-      {viewerUrl && (
-        <div style={{ position: 'fixed', inset: 0, background: 'rgba(15,23,42,0.95)', zIndex: 10000, display: 'flex', flexDirection: 'column' }}>
-           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1.5rem 3rem', color: 'white' }}>
-             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                 <div style={{ color: '#10b981' }}><IconEye /></div>
-                 <h3 style={{ margin: 0, fontWeight: 700, fontSize: '1.2rem' }}>Aperçu : {viewerUrl.name}</h3>
-             </div>
-             <div style={{ display: 'flex', gap: '1rem' }}>
-               <a 
-                 href={viewerUrl.url} 
-                 target="_blank" 
-                 rel="noopener noreferrer"
-                 style={{ backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', padding: '0.6rem 1.25rem', borderRadius: '10px', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}
-               >
-                 <IconMaximize /> Ouvrir l'original
-               </a>
-               <a 
-                 href={`/api/download?url=${encodeURIComponent(viewerUrl.url)}&name=${encodeURIComponent(viewerUrl.name)}`}
-                 style={{ backgroundColor: '#3b82f6', color: 'white', padding: '0.6rem 1.25rem', borderRadius: '10px', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}
-               >
-                 <IconDownload /> Télécharger
-               </a>
-               <button onClick={() => setViewerUrl(null)} style={{ background: '#ef4444', color: 'white', border: 'none', padding: '0.6rem 1.25rem', borderRadius: '10px', fontWeight: 700, boxShadow: '0 4px 10px rgba(239, 68, 68, 0.4)' }}>Fermer l'aperçu</button>
-             </div>
-           </div>
-           <iframe 
-              src={['doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx'].includes(viewerUrl.name.split('.').pop()?.toLowerCase() || '') 
-                ? `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(viewerUrl.url)}` 
-                : viewerUrl.url} 
-              style={{ flex: 1, border: 'none', background: 'white', margin: '0 3rem 3rem', borderRadius: '24px', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)' }} 
-           />
+       {/* VIEWER MODAL */}
+       {viewerUrl && (
+         <div style={{ position: 'fixed', inset: 0, background: 'rgba(15,23,42,0.95)', zIndex: 10000, display: 'flex', flexDirection: 'column' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1.5rem 3rem', color: 'white' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                  <div style={{ color: '#10b981' }}><IconEye /></div>
+                  <h3 style={{ margin: 0, fontWeight: 700, fontSize: '1.2rem' }}>Aperçu : {viewerUrl.name}</h3>
+              </div>
+              <div style={{ display: 'flex', gap: '1rem' }}>
+                <a 
+                  href={viewerUrl.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={{ backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', padding: '0.6rem 1.25rem', borderRadius: '10px', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', border: '1px solid rgba(255,255,255,0.2)' }}
+                >
+                  <IconMaximize /> Ouvrir l'original
+                </a>
+                <a 
+                  href={`/api/download?url=${encodeURIComponent(viewerUrl.url)}&name=${encodeURIComponent(viewerUrl.name)}`}
+                  style={{ backgroundColor: '#3b82f6', color: 'white', padding: '0.6rem 1.25rem', borderRadius: '10px', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}
+                >
+                  <IconDownload /> Télécharger
+                </a>
+                <button onClick={() => setViewerUrl(null)} style={{ background: '#ef4444', color: 'white', border: 'none', padding: '0.6rem 1.25rem', borderRadius: '10px', fontWeight: 700, boxShadow: '0 4px 10px rgba(239, 68, 68, 0.4)' }}>Fermer l'aperçu</button>
+              </div>
+            </div>
+            <iframe 
+               src={['doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx'].includes(viewerUrl.name.split('.').pop()?.toLowerCase() || '') 
+                 ? `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(viewerUrl.url)}` 
+                 : viewerUrl.url} 
+               style={{ flex: 1, border: 'none', background: 'white', margin: '0 3rem 3rem', borderRadius: '24px', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)' }} 
+            />
+         </div>
+       )}
+
+      {/* PASSWORD MODAL */}
+      {isPasswordModalOpen && (
+        <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(15,23,42,0.6)', backdropFilter: 'blur(8px)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000 }}>
+          <div className="premium-card" style={{ padding: '2.5rem', width: '450px' }}>
+             <h2 className="font-outfit" style={{ fontSize: '1.75rem', marginBottom: '0.5rem', textAlign: 'center' }}>Sécurité Compte</h2>
+             <p style={{ color: '#64748b', fontSize: '0.9rem', marginBottom: '2rem', textAlign: 'center' }}>Modifier votre mot de passe d'accès agent.</p>
+             
+             {passwordError && (
+               <div style={{ padding: '0.8rem', backgroundColor: '#fee2e2', color: '#ef4444', borderRadius: '8px', marginBottom: '1.5rem', fontSize: '0.85rem', fontWeight: 600, textAlign: 'center' }}>
+                 {passwordError}
+               </div>
+             )}
+
+             <form onSubmit={async e => {
+                e.preventDefault();
+                setIsPasswordSubmitting(true);
+                setPasswordError('');
+                try {
+                  const res = await fetch('/api/auth/change-password', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ ...passwordForm, serviceId })
+                  });
+                  const data = await res.json();
+                  if (res.ok) {
+                    alert('✅ Mot de passe modifié avec succès !');
+                    setIsPasswordModalOpen(false);
+                    setPasswordForm({ identifiant: '', oldPassword: '', newPassword: '' });
+                  } else {
+                    setPasswordError(data.error || 'Erreur lors du changement.');
+                  }
+                } catch {
+                  setPasswordError('Erreur de connexion serveur.');
+                } finally {
+                  setIsPasswordSubmitting(false);
+                }
+             }}>
+               <div style={{ marginBottom: '1rem' }}>
+                 <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 700, marginBottom: '0.4rem', color: '#334155' }}>Identifiant Réseau</label>
+                 <input type="text" value={passwordForm.identifiant} onChange={e => setPasswordForm({...passwordForm, identifiant: e.target.value})} placeholder="Ex: jean.kouame" style={{ width: '100%', padding: '0.9rem', border: '1px solid #e2e8f0', borderRadius: '10px', outline: 'none', fontSize: '0.95rem' }} required />
+               </div>
+               <div style={{ marginBottom: '1rem' }}>
+                 <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 700, marginBottom: '0.4rem', color: '#334155' }}>Mot de Passe Actuel</label>
+                 <input type="password" value={passwordForm.oldPassword} onChange={e => setPasswordForm({...passwordForm, oldPassword: e.target.value})} placeholder="••••••••" style={{ width: '100%', padding: '0.9rem', border: '1px solid #e2e8f0', borderRadius: '10px', outline: 'none', fontSize: '0.95rem', letterSpacing: '0.1em' }} required />
+               </div>
+               <div style={{ marginBottom: '2rem' }}>
+                 <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 700, marginBottom: '0.4rem', color: '#334155' }}>Nouveau Mot de Passe</label>
+                 <input type="password" value={passwordForm.newPassword} onChange={e => setPasswordForm({...passwordForm, newPassword: e.target.value})} placeholder="••••••••" style={{ width: '100%', padding: '0.9rem', border: '1px solid #e2e8f0', borderRadius: '10px', outline: 'none', fontSize: '0.95rem', letterSpacing: '0.1em' }} required />
+               </div>
+               
+               <div style={{ display: 'flex', gap: '1rem' }}>
+                 <button type="button" onClick={() => setIsPasswordModalOpen(false)} style={{ flex: 1, padding: '1rem', background: '#f1f5f9', borderRadius: '12px', fontWeight: 700 }}>Annuler</button>
+                 <button type="submit" disabled={isPasswordSubmitting} className="bg-gradient-emerald" style={{ flex: 1, padding: '1rem', color: 'white', borderRadius: '12px', fontWeight: 700, opacity: isPasswordSubmitting ? 0.7 : 1 }}>
+                   {isPasswordSubmitting ? 'Mise à jour...' : 'Sauvegarder'}
+                 </button>
+               </div>
+             </form>
+          </div>
         </div>
       )}
 
