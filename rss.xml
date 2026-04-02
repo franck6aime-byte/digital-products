@@ -2,10 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
   <title>DigitalBoost AI Blog</title>
-  <link>https://digitalboostai.vercel.app/blog</link>
+  <link>https://digitalboostai.tech/blog</link>
   <description>Workflows, stratégies et prompts concrets pour entrepreneurs et créateurs africains qui veulent aller plus vite grâce à l'intelligence artificielle.</description>
   <language>fr</language>
-  <atom:link href="https://digitalboostai.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
+  <atom:link href="https://digitalboostai.tech/rss.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>Comment Utiliser l'IA de Canva comme un Pro du Design (Guide Pratique 2026)</title>
+    <link>https://digitalboostai.tech/blog/canva-ia-pro-design-guide-pratique</link>
+    <description>Magic Edit, Création en Bloc, prompts IA : le guide complet pour créer 30 visuels professionnels en quelques minutes — même sans être graphiste.</description>
+    <pubDate>Wed, 01 Apr 2026 08:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://digitalboostai.tech/blog/canva-ia-pro-design-guide-pratique</guid>
+    <category>IA &amp; Création</category>
+  </item>
   <item>
     <title>3 Habitudes Simples pour Intégrer l'IA dans son Quotidien en 2026</title>
     <link>https://digitalboostai.tech/blog/habitudes-ia-productivite</link>
