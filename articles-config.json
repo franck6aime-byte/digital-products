@@ -102,16 +102,17 @@
       "date_publication": "2026-03-15",
       "newsletter_envoyee": false
     },
+
     {
       "id": "article-009",
-      "titre": "3 Habitudes Simples pour Intégrer l'IA dans son Quotidien (Édition v3)",
-      "excerpt": "Ne travaillez pas plus dur, travaillez plus intelligemment. Voici la version optimisée des routines quotidiennes pour exploiter l'IA sans effort.",
-      "url": "https://digitalboostai.tech/blog/habitudes-ia-productivite-v3-editorial.html",
-      "image_url": "https://digitalboostai.tech/img/habitudes_ia_productivite.png",
-      "emoji": "⚡",
-      "categorie": "Productivité & IA",
-      "temps_lecture": "5 min de lecture",
-      "date_publication": "2026-03-29",
+      "titre": "Comment Créer un eBook Complet avec l'IA en 10 Minutes (Guide Pratique 2026)",
+      "excerpt": "Structurez, rédigez et designez un eBook professionnel avec Claude et ChatGPT en moins de 10 minutes. Le guide étape par étape pour entrepreneurs et étudiants africains.",
+      "url": "https://digitalboostai.tech/blog/ebook-ia-guide-10-minutes.html",
+      "image_url": "https://digitalboostai.tech/img/ebook_ia_guide.png",
+      "emoji": "📖",
+      "categorie": "Création & IA",
+      "temps_lecture": "7 min de lecture",
+      "date_publication": "2026-03-11",
       "newsletter_envoyee": false
     },
     {
