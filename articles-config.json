@@ -82,6 +82,28 @@
       "temps_lecture": "5 min de lecture",
       "date_publication": "2026-03-29",
       "newsletter_envoyee": false
+    },
+    {
+      "id": "article-008",
+      "titre": "Rapport : Analyse du Marché des Produits Digitaux IA 2026",
+      "excerpt": "Le marché africain des ressources IA explose. Analyse concurrentielle des acteurs clés et recommandations stratégiques pour dominer le secteur.",
+      "url": "https://digitalboostai.vercel.app/blog/rapport-analyse-marche-ia.html",
+      "emoji": "📊",
+      "categorie": "Étude de Marché & IA",
+      "temps_lecture": "6 min de lecture",
+      "date_publication": "2026-03-15",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-009",
+      "titre": "3 Habitudes Simples pour Intégrer l'IA dans son Quotidien (Édition v3)",
+      "excerpt": "Ne travaillez pas plus dur, travaillez plus intelligemment. Voici la version optimisée des routines quotidiennes pour exploiter l'IA sans effort.",
+      "url": "https://digitalboostai.vercel.app/blog/habitudes-ia-productivite-v3-editorial.html",
+      "emoji": "⚡",
+      "categorie": "Productivité & IA",
+      "temps_lecture": "5 min de lecture",
+      "date_publication": "2026-03-29",
+      "newsletter_envoyee": false
     }
   ]
 }
