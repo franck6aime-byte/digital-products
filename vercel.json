@@ -11,6 +11,17 @@
       "source": "/communaute.html",
       "destination": "/communaute",
       "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "digitalboostai.vercel.app"
+        }
+      ],
+      "destination": "https://digitalboostai.tech/$1",
+      "permanent": true
     }
   ]
 }
