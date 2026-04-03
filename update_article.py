@@ -91,8 +91,8 @@ new_main_content = """<main class="article-body" id="article-main">
                     <h3>Vous voulez maîtriser ces outils IA ?</h3>
                     <p>Notre guide de 50 prompts IA vous permet de démarrer immédiatement — que vous soyez enseignant, entrepreneur ou étudiant.</p>
                     <div class="cta-btn-group">
-                        <a href="https://digitalboostai.vercel.app/products/prompts.html" class="btn-gold">Obtenir les 50 Prompts IA →</a>
-                        <a href="https://digitalboostai.vercel.app/#products" class="btn-outline">Voir tous les produits</a>
+                        <a href="https://digitalboostai.tech/products/prompts.html" class="btn-gold">Obtenir les 50 Prompts IA →</a>
+                        <a href="https://digitalboostai.tech/#products" class="btn-outline">Voir tous les produits</a>
                     </div>
                 </div>
 
@@ -207,8 +207,8 @@ new_main_content = """<main class="article-body" id="article-main">
                     </p>
                     
                     <div class="cta-btn-group" style="margin-top:20px;">
-                        <a href="https://digitalboostai.vercel.app/products/prompts.html" class="btn-gold">Commencer avec nos Prompts IA →</a>
-                        <a href="https://digitalboostai.vercel.app/blog.html" class="btn-outline">← Retour au Blog</a>
+                        <a href="https://digitalboostai.tech/products/prompts.html" class="btn-gold">Commencer avec nos Prompts IA →</a>
+                        <a href="https://digitalboostai.tech/blog.html" class="btn-outline">← Retour au Blog</a>
                     </div>
                 </div>
 

@@ -8,7 +8,7 @@ import re
 # CONFIGURATION
 CONFIG_FILE = "articles-config.json"
 BLOG_INDEX = "blog.html"
-BASE_URL = "https://digitalboostai.vercel.app"
+BASE_URL = "https://digitalboostai.tech"
 
 def add_to_blog_html(title, excerpt, file_name, emoji, read_time, date_str, total_articles):
     with open(BLOG_INDEX, "r", encoding="utf-8") as f:

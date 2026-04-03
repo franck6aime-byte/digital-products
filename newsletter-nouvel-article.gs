@@ -43,7 +43,7 @@
     EMAIL_REPONDRE: 'noreply@digitalboostai.com',
 
     // 🔗 URL du fichier de config des articles (sur Vercel)
-    URL_CONFIG_ARTICLES: 'https://digitalboostai.vercel.app/articles-config.json',
+    URL_CONFIG_ARTICLES: 'https://digitalboostai.tech/articles-config.json',
 
     // ⏱ Fréquence de vérification (en heures)
     // 6 = vérification 4 fois par jour
@@ -103,7 +103,7 @@
       const subject = "&#127873; Ton cadeau : 10 Prompts IA Indispensables";
       const htmlBody = _genererHTMLBienvenue(prenom);
 
-      const pdfUrl = "https://digitalboostai.vercel.app/Guide_Gratuit_10_Prompts.pdf";
+      const pdfUrl = "https://digitalboostai.tech/Guide_Gratuit_10_Prompts.pdf";
       
       let attachments = [];
       try {
@@ -135,7 +135,7 @@
    * 🎨 TEMPLATE HTML EMAIL BIENVENUE & CADEAU
    */
   function _genererHTMLBienvenue(prenom) {
-    const baseUrl = "https://digitalboostai.vercel.app";
+    const baseUrl = "https://digitalboostai.tech";
     return `
   <!DOCTYPE html>
   <html lang="fr">
@@ -687,15 +687,15 @@
       id: 'test-001',
       titre: "[TEST] L'IA va transformer l'éducation africaine — conférence UNESCO 2026",
       excerpt: "Ceci est un email de test pour vérifier le bon fonctionnement de la newsletter automatique DigitalBoost AI.",
-      url: 'https://digitalboostai.vercel.app/blog/ia-education-afrique-unesco.html',
+      url: 'https://digitalboostai.tech/blog/ia-education-afrique-unesco.html',
       emoji: '🎓',
       categorie: 'IA & Éducation en Afrique',
       temps_lecture: '12 min de lecture',
       date_publication: '2026-03-07'
     };
     const blogConfig = {
-      base_url: 'https://digitalboostai.vercel.app',
-      blog_url: 'https://digitalboostai.vercel.app/blog.html'
+      base_url: 'https://digitalboostai.tech',
+      blog_url: 'https://digitalboostai.tech/blog.html'
     };
 
     MailApp.sendEmail({
