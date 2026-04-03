@@ -102,7 +102,6 @@
       "date_publication": "2026-03-15",
       "newsletter_envoyee": false
     },
-
     {
       "id": "article-009",
       "titre": "Comment Créer un eBook Complet avec l'IA en 10 Minutes (Guide Pratique 2026)",
@@ -120,11 +119,10 @@
       "titre": "Comment Utiliser l'IA de Canva comme un Pro du Design (Guide Pratique 2026)",
       "excerpt": "Magic Edit, Création en Bloc, prompts IA : le guide concret pour créer des dizaines de visuels professionnels en quelques minutes — même sans être graphiste.",
       "url": "https://digitalboostai.tech/blog/canva-ia-pro-design-guide-pratique.html",
-      "image_url": "https://digitalboostai.tech/img/canva_ia_pro_design.png",
       "emoji": "🎨",
       "categorie": "IA & Création",
       "temps_lecture": "7 min de lecture",
-      "date_publication": "2026-04-01",
+      "date_publication": "2026-04-03",
       "newsletter_envoyee": false
     }
   ]
