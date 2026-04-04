@@ -4,6 +4,8 @@ Allow: /
 Disallow: /downloads/
 Disallow: /success.html
 Disallow: /success
+Disallow: /sports-app-congrats.html
+Disallow: /sports-app-congrats
 
 # Sitemap
 Sitemap: https://digitalboostai.tech/sitemap.xml

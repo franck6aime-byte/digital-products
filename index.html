@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DigitalBoost AI — Produits Digitaux Premium pour Entrepreneurs</title>
     <meta name="description"
-        content="Découvrez nos produits digitaux alimentés par l'IA : eBooks, Prompts, Templates et outils pour booster votre business en ligne. Automatisez, créez, prospérez.">
+        content="Découvrez nos produits digitaux alimentés par l'IA : eBooks, Prompts, Templates et notre application de sport illimitée. Automatisez, créez, vibrez devant vos matchs.">
+    <meta name="keywords" content="sport en direct, streaming illimité, sans abonnement, CAN direct Afrique, football HD mobile, IA entrepreneurs, produits digitaux Côte d'Ivoire, DigitalBoost AI">
     <!-- Meta de base SEO -->
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="mjEhBz27mTpUhNTxqjbBMyd86M7aP3Y5O6y9H7mExmI" />
     <link rel="canonical" href="https://digitalboostai.tech/" />
+    <meta property="og:url" content="https://digitalboostai.tech/" />
 
     <!-- Favicon (Logo Google) -->
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -50,6 +52,37 @@
         "@type": "PostalAddress",
         "addressLocality": "Abidjan",
         "addressCountry": "CI"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services DigitalBoost AI",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Application Sport Illimité",
+              "description": "Streaming sportif HD sans abonnement pour smartphone.",
+              "image": "https://digitalboostai.tech/img/sport-app-promo.png"
+            },
+            "price": "2500",
+            "priceCurrency": "XOF",
+            "availability": "https://schema.org/InStock",
+            "url": "https://ppawzaph.mychariow.shop/prd_7vmhru/checkout"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Pack Prompts IA Starter",
+              "description": "100+ prompts premium pour ChatGPT, Claude et Gemini."
+            },
+            "price": "2000",
+            "priceCurrency": "XOF",
+            "availability": "https://schema.org/InStock",
+            "url": "https://ppawzaph.mychariow.shop/prd_u83162"
+          }
+        ]
       },
       "sameAs": []
     }
@@ -439,13 +472,143 @@
         <!-- Responsive mobile -->
         <style>
             @media (max-width: 768px) {
-                #newsletter>div[style*="grid"] {
+                #newsletter > div[style*="grid"] {
                     grid-template-columns: 1fr !important;
                     gap: 32px !important;
+                }
+                /* === SPORTS APP — Responsive mobile === */
+                .sports-app-section-wrapper {
+                    margin: 40px 16px;
+                    border-radius: 20px;
+                    overflow: hidden;
+                }
+                /* Sur mobile : layout colonne — image en haut, texte en bas */
+                .sports-app-inner {
+                    flex-direction: column !important;
+                    min-height: auto !important;
+                }
+                .sports-app-image-col {
+                    width: 100% !important;
+                    height: 240px !important;
+                    min-height: 240px !important;
+                    flex-shrink: 0;
+                }
+                .sports-app-content-col {
+                    width: 100% !important;
+                    padding: 28px 20px !important;
+                    background: #0a0f1e !important;
+                }
+                .sports-app-title {
+                    font-size: 1.6rem !important;
+                }
+                .sports-app-benefits {
+                    gap: 10px !important;
+                }
+                #sports-app-btn {
+                    width: 100% !important;
+                    font-size: 0.9rem !important;
+                    padding: 16px 20px !important;
+                    justify-content: center !important;
                 }
             }
         </style>
     </section>
+ 
+    <!-- Sports App Download Section — Redesigned -->
+    <div class="sports-app-section-wrapper" id="sports-app-section" style="max-width:1200px; margin:60px auto; border-radius:24px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.3); padding:0 24px; box-sizing:content-box;">
+        <div style="border-radius:24px; overflow:hidden;">
+        <div class="sports-app-inner" style="display:flex; min-height:520px;">
+
+            <!-- COLONNE GAUCHE : Image cinématique -->
+            <div class="sports-app-image-col" style="width:52%; position:relative; overflow:hidden; flex-shrink:0; min-height:400px;">
+                <img src="img/sport-app-promo.png" alt="Application sport streaming match football en direct" loading="lazy"
+                    style="width:100%; height:100%; object-fit:cover; display:block; position:absolute; top:0; left:0; transition:transform 0.6s ease;"
+                    onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+                <!-- Overlay latéral droit pour transition vers le contenu -->
+                <div style="position:absolute; top:0; right:0; width:80px; height:100%; background:linear-gradient(to right, transparent, #0a0f1e); pointer-events:none;"></div>
+                <!-- Badge flottant sur l'image -->
+                <div style="position:absolute; top:20px; left:20px; background:rgba(255,71,87,0.95); color:#fff; padding:8px 16px; border-radius:30px; font-size:0.8rem; font-weight:800; letter-spacing:1px; text-transform:uppercase; box-shadow:0 4px 15px rgba(255,71,87,0.5); backdrop-filter:blur(4px);">
+                    🔴 LIVE HD
+                </div>
+                <!-- Badge disponibilité -->
+                <div style="position:absolute; bottom:20px; left:20px; background:rgba(0,0,0,0.75); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.15); color:#fff; padding:10px 16px; border-radius:12px; font-size:0.78rem; line-height:1.5;">
+                    <span style="color:#4ade80; font-size:1rem;">●</span> <strong>CAN · Ligue 1 · Champions League</strong><br>
+                    <span style="opacity:0.7;">Tous les matchs. Toujours disponibles.</span>
+                </div>
+            </div>
+
+            <!-- COLONNE DROITE : Contenu persuasif -->
+            <div class="sports-app-content-col" style="width:48%; padding:48px 40px; background:linear-gradient(135deg, #0a0f1e 0%, #111827 60%, #0f172a 100%); display:flex; flex-direction:column; justify-content:center;">
+
+                <!-- Badge offre -->
+                <div style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,71,87,0.15); border:1px solid rgba(255,71,87,0.5); color:#ff4757; padding:7px 16px; border-radius:30px; font-size:0.78rem; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:24px; width:fit-content;">
+                    🔥 Offre Spéciale · 2 500 FCFA seulement
+                </div>
+
+                <!-- Titre -->
+                <h2 class="sports-app-title" style="font-family:var(--font-display); font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:900; color:#fff; line-height:1.15; margin-bottom:16px;">
+                    📲 Regarde <span style="color:#ff4757;">tout le sport</span><br>depuis ton mobile
+                </h2>
+
+                <!-- Pitch principal -->
+                <p style="color:rgba(255,255,255,0.8); font-size:1rem; line-height:1.75; margin-bottom:28px;">
+                    Marre de rater tes matchs ? Notre application te donne un accès <strong style="color:#fff;">instantané et illimité</strong> à tous les événements sportifs en HD — sans abonnement mensuel, sans coupure, directement sur ton smartphone.
+                </p>
+
+                <!-- Bénéfices clés -->
+                <div class="sports-app-benefits" style="display:flex; flex-direction:column; gap:14px; margin-bottom:32px;">
+                    <div style="display:flex; align-items:flex-start; gap:12px;">
+                        <span style="font-size:1.3rem; flex-shrink:0;">📺</span>
+                        <div>
+                            <strong style="color:#fff; font-size:0.9rem;">Streaming HD illimité</strong>
+                            <p style="color:rgba(255,255,255,0.65); font-size:0.82rem; margin:2px 0 0;">CAN, Champions League, Ligue 1, NBA et plus — sans limite de visionnage</p>
+                        </div>
+                    </div>
+                    <div style="display:flex; align-items:flex-start; gap:12px;">
+                        <span style="font-size:1.3rem; flex-shrink:0;">⚡</span>
+                        <div>
+                            <strong style="color:#fff; font-size:0.9rem;">Accès immédiat après paiement</strong>
+                            <p style="color:rgba(255,255,255,0.65); font-size:0.82rem; margin:2px 0 0;">Reçois ton lien de téléchargement en moins de 2 minutes par email</p>
+                        </div>
+                    </div>
+                    <div style="display:flex; align-items:flex-start; gap:12px;">
+                        <span style="font-size:1.3rem; flex-shrink:0;">💳</span>
+                        <div>
+                            <strong style="color:#fff; font-size:0.9rem;">Paiement unique — pas d'abonnement</strong>
+                            <p style="color:rgba(255,255,255,0.65); font-size:0.82rem; margin:2px 0 0;">Tu paies une seule fois 2 500 FCFA, c'est à toi pour toujours</p>
+                        </div>
+                    </div>
+                    <div style="display:flex; align-items:flex-start; gap:12px;">
+                        <span style="font-size:1.3rem; flex-shrink:0;">📱</span>
+                        <div>
+                            <strong style="color:#fff; font-size:0.9rem;">Compatible Android &amp; iOS</strong>
+                            <p style="color:rgba(255,255,255,0.65); font-size:0.82rem; margin:2px 0 0;">Fonctionne sur tous les smartphones, même les anciens modèles</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="https://ppawzaph.mychariow.shop/prd_7vmhru/checkout" id="sports-app-btn"
+                    style="display:inline-flex; align-items:center; justify-content:center; gap:12px; background:linear-gradient(135deg,#ff4757,#ff6b6b); color:#fff; padding:18px 32px; border-radius:14px; font-size:1rem; font-weight:800; text-transform:uppercase; letter-spacing:0.8px; transition:all 0.3s cubic-bezier(0.175,0.885,0.32,1.275); box-shadow:0 8px 25px rgba(255,71,87,0.5); border:none; text-decoration:none;"
+                    onmouseover="this.style.transform='translateY(-3px) scale(1.02)'; this.style.boxShadow='0 16px 40px rgba(255,71,87,0.65)'"
+                    onmouseout="this.style.transform='none'; this.style.boxShadow='0 8px 25px rgba(255,71,87,0.5)'">
+                    <span style="font-size:1.3rem;">📲</span>
+                    <span>Télécharger l'appli — 2 500 FCFA <span style="font-size:1.2rem;">→</span></span>
+                </a>
+
+                <!-- Preuve sociale mini -->
+                <div style="display:flex; align-items:center; gap:10px; margin-top:20px;">
+                    <div style="display:flex;">
+                        <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#ff4757,#c0392b);border:2px solid #0a0f1e;display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:#fff;font-weight:700;">KA</div>
+                        <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#f0cc5a,#D4AF37);border:2px solid #0a0f1e;display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:#0a1128;font-weight:700;margin-left:-8px;">MB</div>
+                        <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#4ade80,#16a34a);border:2px solid #0a0f1e;display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:#fff;font-weight:700;margin-left:-8px;">SF</div>
+                    </div>
+                    <p style="color:rgba(255,255,255,0.6); font-size:0.78rem; margin:0;">⭐⭐⭐⭐⭐ <strong style="color:rgba(255,255,255,0.85);">+1 200 fans</strong> regardent déjà leurs matchs avec cette appli</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
 
     <!-- Logos / Social Proof Bar -->
     <section class="social-proof">
@@ -682,6 +845,8 @@
             </div>
         </div>
     </section>
+
+
 
     <!-- Testimonials -->
     <section class="testimonials" id="testimonials">
