@@ -194,12 +194,11 @@
     <link rel="preload" href="../fonts/dm-sans-v17-latin-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../fonts/fraunces-v38-latin-900.woff2" as="font" type="font/woff2" crossorigin>
 
-    <!-- Google Translate IP-Based Script -->
+    <!-- Google Translate Dynamic IP Script -->
     <div id="google_translate_element" style="display:none;"></div>
     <script type="text/javascript">
         (function() {
             try {
-                // Table de correspondance Pays -> Langue
                 var countryToLang = {
                     'DE': 'de', 'AT': 'de', 'CH': 'de',
                     'ES': 'es', 'MX': 'es', 'AR': 'es', 'CO': 'es', 'PE': 'es', 'CL': 'es',
@@ -214,26 +213,48 @@
                     'TR': 'tr'
                 };
 
-                if (document.cookie.indexOf('googtrans=') === -1 && !sessionStorage.getItem('ip_checked')) {
-                    sessionStorage.setItem('ip_checked', 'true');
-                    fetch('https://get.geojs.io/v1/ip/country.json')
-                    .then(response => response.json())
-                    .then(data => {
-                        var country = data.country;
-                        var langCode = countryToLang[country];
-                        if (langCode && langCode !== 'fr') {
-                            var domain = window.location.hostname;
-                            document.cookie = "googtrans=/fr/" + langCode + "; path=/; domain=" + (domain || "");
-                            document.cookie = "googtrans=/fr/" + langCode + "; path=/";
-                            window.location.reload();
+                fetch('https://get.geojs.io/v1/ip/country.json')
+                .then(function(response) { return response.json(); })
+                .then(function(data) {
+                    var langCode = countryToLang[data.country] || 'fr';
+                    var expectedCookie = "/fr/" + langCode;
+                    var domain = window.location.hostname;
+                    
+                    var currentCookie = "";
+                    var match = document.cookie.match(new RegExp('(^| )googtrans=([^;]+)'));
+                    if (match) currentCookie = match[2];
+
+                    if (currentCookie !== expectedCookie) {
+                        if (langCode === 'fr') {
+                            // Supprimer et forcer en français
+                            document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                            document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+                            document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=." + domain;
                         } else {
-                            document.cookie = "googtrans=/fr/fr; path=/";
+                            // Activer la nouvelle langue
+                            document.cookie = "googtrans=" + expectedCookie + "; path=/; domain=" + domain;
+                            document.cookie = "googtrans=" + expectedCookie + "; path=/;";
+                            document.cookie = "googtrans=" + expectedCookie + "; path=/; domain=." + domain;
                         }
-                    })
-                    .catch(e => console.error(e));
-                }
+                        
+                        var reloadKey = 'lang_rl_' + langCode;
+                        if (!sessionStorage.getItem(reloadKey)) {
+                            sessionStorage.clear();
+                            sessionStorage.setItem(reloadKey, '1');
+                            window.location.reload();
+                        }
+                    } else {
+                        var k = 'lang_rl_' + langCode;
+                        if(!sessionStorage.getItem(k)) {
+                            sessionStorage.clear();
+                            sessionStorage.setItem(k, '1');
+                        }
+                    }
+                })
+                .catch(function(e) { console.error(e); });
             } catch(e) {}
         })();
+        
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({pageLanguage: 'fr', autoDisplay: false}, 'google_translate_element');
         }
