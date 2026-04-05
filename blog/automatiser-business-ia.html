@@ -493,6 +493,37 @@
         .share-tw { background: #000000; }
         .share-btn svg { width: 18px; height: 18px; fill: white; flex-shrink: 0; }
     </style>
+
+    <!-- Google Translate Auto-Script -->
+    <div id="google_translate_element" style="display:none;"></div>
+    <script type="text/javascript">
+        (function() {
+            try {
+                var userLang = navigator.language || navigator.userLanguage;
+                var langCode = userLang.split('-')[0];
+                var validLangs = ['en', 'es', 'de', 'it', 'pt', 'zh', 'ja', 'ru', 'ar', 'nl', 'tr'];
+                // If browser language is not French and is a valid target language
+                if (langCode !== 'fr' && document.cookie.indexOf('googtrans=') === -1) {
+                    var domain = window.location.hostname;
+                    // Add cookie for current session
+                    document.cookie = "googtrans=/fr/" + langCode + "; path=/; domain=" + (domain || "");
+                    document.cookie = "googtrans=/fr/" + langCode + "; path=/";
+                }
+            } catch(e) {}
+        })();
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'fr', autoDisplay: false}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async defer></script>
+    <style>
+        /* Invisible Google Translate Banner & Widget */
+        .skiptranslate iframe, .skiptranslate .goog-te-banner-frame { display: none !important; }
+        body { top: 0 !important; }
+        #goog-gt-tt { display: none !important; }
+        .goog-text-highlight { background-color: transparent !important; border: none !important; box-shadow: none !important; }
+    </style>
+
 </head>
 
 <body>
@@ -654,7 +685,7 @@
                 devient une machine à produire de la valeur.</p>
 
             <div class="cta-inline">
-                <div class="price-badge">🔥 Pack Prompts IA — 2 000 FCFA (Promo)</div>
+                <div class="price-badge">🔥 Pack Prompts IA — 2 000 FCFA <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~3€ / 3.20$)</span> (Promo)</div>
                 <h3>Arrêtez de perdre du temps avec des prompts basiques</h3>
                 <p>Accédez à notre collection de 100+ prompts IA premium, testés et optimisés pour les entrepreneurs
                     africains. Marketing, copywriting, SEO, business plan — tout est inclus.</p>
@@ -750,20 +781,20 @@
                     <span class="icon" aria-hidden="true">📚</span>
                     <div class="name">eBook Premium</div>
                     <div class="desc">Maîtrisez l'IA — Le Guide Ultime pour Entrepreneurs. 12 chapitres, 50+ cas pratiques.</div>
-                    <div class="price">9 900 FCFA</div>
+                    <div class="price">9 900 FCFA <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~15€ / 16$)</span></div>
                 </a>
                 <a href="https://digitalboostai.tech/products/prompts" class="product-card featured">
                     <span class="icon" aria-hidden="true">🤖</span>
                     <div class="name">100+ Prompts IA</div>
                     <div class="desc">Collection premium pour ChatGPT, Claude et Gemini. 10 catégories business.</div>
-                    <div class="old-price">4 900 FCFA</div>
-                    <div class="price">2 000 FCFA 🔥</div>
+                    <div class="old-price">4 900 FCFA <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~7.50€ / 8$)</span></div>
+                    <div class="price">2 000 FCFA <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~3€ / 3.20$)</span> 🔥</div>
                 </a>
                 <a href="https://digitalboostai.tech/#pricing" class="product-card">
                     <span class="icon" aria-hidden="true">💎</span>
                     <div class="name">Bundle Ultime</div>
                     <div class="desc">eBook + Prompts + Templates Notion & Canva + Communauté privée.</div>
-                    <div class="price">14 900 FCFA</div>
+                    <div class="price">14 900 FCFA <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~7.50€ / 8$)</span> <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~23€ / 25$)</span></div>
                 </a>
             </div>
 
@@ -798,7 +829,7 @@
                     ceux qui ne l'utilisent pas. Commencez aujourd'hui avec nos ressources conçues spécialement pour le
                     contexte africain.</p>
                 <div class="cta-btn-group">
-                    <a href="https://digitalboostai.tech/#pricing" class="btn-gold">🚀 Obtenir le Bundle Ultime — 14 900 FCFA</a>
+                    <a href="https://digitalboostai.tech/#pricing" class="btn-gold">🚀 Obtenir le Bundle Ultime — 14 900 FCFA <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~7.50€ / 8$)</span> <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~23€ / 25$)</span></a>
                     <a href="https://digitalboostai.tech/products/prompts" class="btn-outline">Voir les 100+ Prompts IA</a>
                 </div>
             </div>

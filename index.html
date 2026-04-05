@@ -245,6 +245,37 @@
     <noscript><link rel="stylesheet" href="styles.css"></noscript>
     <link rel="preload" href="./fonts/dm-sans-v17-latin-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/fraunces-v38-latin-900.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Google Translate Auto-Script -->
+    <div id="google_translate_element" style="display:none;"></div>
+    <script type="text/javascript">
+        (function() {
+            try {
+                var userLang = navigator.language || navigator.userLanguage;
+                var langCode = userLang.split('-')[0];
+                var validLangs = ['en', 'es', 'de', 'it', 'pt', 'zh', 'ja', 'ru', 'ar', 'nl', 'tr'];
+                // If browser language is not French and is a valid target language
+                if (langCode !== 'fr' && document.cookie.indexOf('googtrans=') === -1) {
+                    var domain = window.location.hostname;
+                    // Add cookie for current session
+                    document.cookie = "googtrans=/fr/" + langCode + "; path=/; domain=" + (domain || "");
+                    document.cookie = "googtrans=/fr/" + langCode + "; path=/";
+                }
+            } catch(e) {}
+        })();
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'fr', autoDisplay: false}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async defer></script>
+    <style>
+        /* Invisible Google Translate Banner & Widget */
+        .skiptranslate iframe, .skiptranslate .goog-te-banner-frame { display: none !important; }
+        body { top: 0 !important; }
+        #goog-gt-tt { display: none !important; }
+        .goog-text-highlight { background-color: transparent !important; border: none !important; box-shadow: none !important; }
+    </style>
+
 </head>
 
 <body>
@@ -298,7 +329,7 @@
                 <div class="hero-cta animate-fade-in-up delay-2">
                     <a href="#pricing" class="btn btn-primary btn-lg">
                         <span>🚀 Obtenir le Pack Complet</span>
-                        <span class="btn-price">à partir de 2 000 FCFA</span>
+                        <span class="btn-price">à partir de 2 000 FCFA <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~3€ / 3.20$)</span></span>
                     </a>
                     <a href="#products" class="btn btn-outline btn-lg">
                         Découvrir les produits →
@@ -542,7 +573,7 @@
 
                 <!-- Badge offre -->
                 <div style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,71,87,0.15); border:1px solid rgba(255,71,87,0.5); color:#ff4757; padding:7px 16px; border-radius:30px; font-size:0.78rem; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:24px; width:fit-content;">
-                    🔥 Offre Spéciale · 2 500 FCFA seulement
+                    🔥 Offre Spéciale · 2 500 FCFA <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~3.80€ / 4$)</span> seulement
                 </div>
 
                 <!-- Titre -->
@@ -575,7 +606,7 @@
                         <span style="font-size:1.3rem; flex-shrink:0;">💳</span>
                         <div>
                             <strong style="color:#fff; font-size:0.9rem;">Paiement unique — pas d'abonnement</strong>
-                            <p style="color:rgba(255,255,255,0.65); font-size:0.82rem; margin:2px 0 0;">Tu paies une seule fois 2 500 FCFA, c'est à toi pour toujours</p>
+                            <p style="color:rgba(255,255,255,0.65); font-size:0.82rem; margin:2px 0 0;">Tu paies une seule fois 2 500 FCFA <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~3.80€ / 4$)</span>, c'est à toi pour toujours</p>
                         </div>
                     </div>
                     <div style="display:flex; align-items:flex-start; gap:12px;">
@@ -593,7 +624,7 @@
                     onmouseover="this.style.transform='translateY(-3px) scale(1.02)'; this.style.boxShadow='0 16px 40px rgba(255,71,87,0.65)'"
                     onmouseout="this.style.transform='none'; this.style.boxShadow='0 8px 25px rgba(255,71,87,0.5)'">
                     <span style="font-size:1.3rem;">📲</span>
-                    <span>Télécharger l'appli — 2 500 FCFA <span style="font-size:1.2rem;">→</span></span>
+                    <span>Télécharger l'appli — 2 500 FCFA <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~3.80€ / 4$)</span> <span style="font-size:1.2rem;">→</span></span>
                 </a>
 
                 <!-- Preuve sociale mini -->
@@ -674,7 +705,7 @@
                             <li>✅ Mises à jour gratuites à vie</li>
                         </ul>
                         <div class="product-pricing">
-                            <span class="price-current">9 900 FCFA</span>
+                            <span class="price-current">9 900 FCFA <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~15€ / 16$)</span></span>
                         </div>
                         <a href="products/ebook" class="btn btn-primary btn-full">
                             📖 Découvrir l'eBook
@@ -718,8 +749,8 @@
                             <li>✅ Bonus : 20 méga-prompts</li>
                         </ul>
                         <div class="product-pricing">
-                            <span class="price-old">4 900 FCFA</span>
-                            <span class="price-current">2 000 FCFA</span>
+                            <span class="price-old">4 900 FCFA <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~7.50€ / 8$)</span></span>
+                            <span class="price-current">2 000 FCFA <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~3€ / 3.20$)</span></span>
                         </div>
                         <a href="products/prompts" class="btn btn-secondary btn-full">
                             🤖 Voir les Prompts
@@ -747,16 +778,16 @@
                         <p class="product-desc">L'eBook + les 100+ Prompts + les Templates Pro réunis dans un pack
                             exclusif à prix réduit. L'arsenal complet de l'entrepreneur digital.</p>
                         <ul class="product-features">
-                            <li>✅ eBook "Maîtrisez l'IA" (valeur 9 900 FCFA)</li>
-                            <li>✅ 100+ Prompts Premium (valeur 4 900 FCFA)</li>
+                            <li>✅ eBook "Maîtrisez l'IA" (valeur 9 900 FCFA <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~15€ / 16$)</span>)</li>
+                            <li>✅ 100+ Prompts Premium (valeur 4 900 FCFA <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~7.50€ / 8$)</span>)</li>
                             <li>✅ Templates Notion & Canva (valeur 20 100 FCFA)</li>
                             <li>✅ Accès communauté privée</li>
                         </ul>
                         <div class="product-pricing">
-                            <span class="price-current">14 900 FCFA</span>
+                            <span class="price-current">14 900 FCFA <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~7.50€ / 8$)</span> <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~23€ / 25$)</span></span>
                         </div>
                         <a href="#pricing" class="btn btn-accent btn-full">
-                            💎 Obtenir le Bundle — 14 900 FCFA
+                            💎 Obtenir le Bundle — 14 900 FCFA <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~7.50€ / 8$)</span> <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~23€ / 25$)</span>
                         </a>
                     </div>
                 </div>
@@ -990,7 +1021,7 @@
                         <li class="included">✅ Toutes les futures mises à jour</li>
                     </ul>
                     <a href="#" class="btn btn-accent btn-full btn-buy" data-product="bundle">
-                        💎 Obtenir le Bundle — 14 900 FCFA
+                        💎 Obtenir le Bundle — 14 900 FCFA <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~7.50€ / 8$)</span> <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~23€ / 25$)</span>
                     </a>
                 </div>
             </div>
@@ -1090,7 +1121,7 @@
                 <p>Rejoignez +2 500 entrepreneurs qui ont déjà boosté leurs revenus grâce à nos produits digitaux.</p>
                 <div class="cta-buttons">
                     <a href="#pricing" class="btn btn-accent btn-lg">
-                        🚀 Commencer maintenant — à partir de 2 000 FCFA
+                        🚀 Commencer maintenant — à partir de 2 000 FCFA <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~3€ / 3.20$)</span>
                     </a>
                 </div>
                 <p class="cta-guarantee">🛡️ Garantie 30 jours satisfait ou remboursé</p>

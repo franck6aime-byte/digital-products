@@ -193,6 +193,37 @@
     </style>
     <link rel="preload" href="../fonts/dm-sans-v17-latin-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../fonts/fraunces-v38-latin-900.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Google Translate Auto-Script -->
+    <div id="google_translate_element" style="display:none;"></div>
+    <script type="text/javascript">
+        (function() {
+            try {
+                var userLang = navigator.language || navigator.userLanguage;
+                var langCode = userLang.split('-')[0];
+                var validLangs = ['en', 'es', 'de', 'it', 'pt', 'zh', 'ja', 'ru', 'ar', 'nl', 'tr'];
+                // If browser language is not French and is a valid target language
+                if (langCode !== 'fr' && document.cookie.indexOf('googtrans=') === -1) {
+                    var domain = window.location.hostname;
+                    // Add cookie for current session
+                    document.cookie = "googtrans=/fr/" + langCode + "; path=/; domain=" + (domain || "");
+                    document.cookie = "googtrans=/fr/" + langCode + "; path=/";
+                }
+            } catch(e) {}
+        })();
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'fr', autoDisplay: false}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async defer></script>
+    <style>
+        /* Invisible Google Translate Banner & Widget */
+        .skiptranslate iframe, .skiptranslate .goog-te-banner-frame { display: none !important; }
+        body { top: 0 !important; }
+        #goog-gt-tt { display: none !important; }
+        .goog-text-highlight { background-color: transparent !important; border: none !important; box-shadow: none !important; }
+    </style>
+
 </head>
 
 <body>
@@ -295,7 +326,7 @@
             <h3>Ces prompts ne sont que le début</h3>
             <p>Le prompt de création d'eBook fait partie des 20 MEGA-prompts du Pack 100+. Chaque MEGA-prompt est un assistant IA spécialisé — rédacteur, marketeur, stratège.</p>
             <div class="cta-btn-group">
-                <a href="https://ppawzaph.mychariow.shop/prd_cav6sr" class="btn-gold">🚀 Obtenir le Pack 100+ Prompts — 2 000 FCFA 🔥</a>
+                <a href="https://ppawzaph.mychariow.shop/prd_cav6sr" class="btn-gold">🚀 Obtenir le Pack 100+ Prompts — 2 000 FCFA <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~3€ / 3.20$)</span> 🔥</a>
                 <a href="https://digitalboostai.tech/products/prompts" class="btn-outline">Voir le détail →</a>
             </div>
         </div>
@@ -310,7 +341,7 @@
         <div class="conclusion">
             <h2>10 minutes. Un eBook. <strong>Ton premier produit digital</strong>.</h2>
             <p>L'IA ne remplace pas ta créativité — elle <strong>accélère ta productivité</strong>. Avec ces 3 prompts et la bonne méthode, tu peux créer un produit pro que les gens voudront télécharger et partager.</p>
-            <a href="https://ppawzaph.mychariow.shop/prd_cav6sr" class="btn-gold" style="margin-top:16px;">📖 Obtenir les 100+ Prompts — 2 000 FCFA</a>
+            <a href="https://ppawzaph.mychariow.shop/prd_cav6sr" class="btn-gold" style="margin-top:16px;">📖 Obtenir les 100+ Prompts — 2 000 FCFA <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~3€ / 3.20$)</span></a>
         </div>
 
         <!-- TAGS SEO -->

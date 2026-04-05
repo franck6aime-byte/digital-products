@@ -176,8 +176,15 @@ async function initModal() {
 
             document.getElementById('modalProduct').textContent = product.displayName;
             document.getElementById('modalItemName').textContent = product.name;
-            document.getElementById('modalItemPrice').textContent = product.price.toLocaleString('fr-FR') + ' FCFA';
-            document.getElementById('modalTotal').textContent = product.price.toLocaleString('fr-FR') + ' FCFA';
+            let conversionText = "";
+            if(product.price === 2000) conversionText = " (~3€ / 3.20$)";
+            if(product.price === 9900) conversionText = " (~15€ / 16$)";
+            if(product.price === 14900) conversionText = " (~23€ / 25$)";
+            if(product.price === 2500) conversionText = " (~3.80€ / 4$)";
+            if(product.price === 4900) conversionText = " (~7.50€ / 8$)";
+            
+            document.getElementById('modalItemPrice').textContent = product.price.toLocaleString('fr-FR') + ' FCFA' + conversionText;
+            document.getElementById('modalTotal').textContent = product.price.toLocaleString('fr-FR') + ' FCFA' + conversionText;
 
             currentProductKey = productKey;
             

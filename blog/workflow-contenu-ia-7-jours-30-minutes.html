@@ -259,6 +259,37 @@
     </style>
     <link rel="preload" href="../fonts/dm-sans-v17-latin-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../fonts/fraunces-v38-latin-900.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Google Translate Auto-Script -->
+    <div id="google_translate_element" style="display:none;"></div>
+    <script type="text/javascript">
+        (function() {
+            try {
+                var userLang = navigator.language || navigator.userLanguage;
+                var langCode = userLang.split('-')[0];
+                var validLangs = ['en', 'es', 'de', 'it', 'pt', 'zh', 'ja', 'ru', 'ar', 'nl', 'tr'];
+                // If browser language is not French and is a valid target language
+                if (langCode !== 'fr' && document.cookie.indexOf('googtrans=') === -1) {
+                    var domain = window.location.hostname;
+                    // Add cookie for current session
+                    document.cookie = "googtrans=/fr/" + langCode + "; path=/; domain=" + (domain || "");
+                    document.cookie = "googtrans=/fr/" + langCode + "; path=/";
+                }
+            } catch(e) {}
+        })();
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'fr', autoDisplay: false}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async defer></script>
+    <style>
+        /* Invisible Google Translate Banner & Widget */
+        .skiptranslate iframe, .skiptranslate .goog-te-banner-frame { display: none !important; }
+        body { top: 0 !important; }
+        #goog-gt-tt { display: none !important; }
+        .goog-text-highlight { background-color: transparent !important; border: none !important; box-shadow: none !important; }
+    </style>
+
 </head>
 
 <body>
@@ -412,7 +443,7 @@ Style : direct, sans jargon, adapté au public jeune africain francophone.</p>
             <h3>Ces prompts viennent du Pack 100+ Prompts IA</h3>
             <p>Le Prompt #1 et le MEGA #5 font partie des 124 prompts testés du Pack. 12 prompts Marketing Digital + 20 MEGA-prompts pour couvrir chaque aspect de votre business.</p>
             <div class="cta-btn-group">
-                <a href="https://ppawzaph.mychariow.shop/prd_cav6sr" class="btn-gold">🤖 Obtenir les 100+ Prompts — 2 000 FCFA 🔥</a>
+                <a href="https://ppawzaph.mychariow.shop/prd_cav6sr" class="btn-gold">🤖 Obtenir les 100+ Prompts — 2 000 FCFA <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~3€ / 3.20$)</span> 🔥</a>
                 <a href="https://digitalboostai.tech/products/prompts" class="btn-outline">Voir le détail →</a>
             </div>
         </div>
@@ -487,7 +518,7 @@ Format : tableau [Vidéo | TikTok | Instagram | YouTube | Hashtags]</p>
             <h3>124 prompts. 11 catégories. Votre arsenal contenu complet.</h3>
             <p>Le Pack contient les 3 prompts de ce workflow — plus 121 autres pour le marketing, la vente, le SEO, l'email et la productivité. Compatible ChatGPT, Claude et Gemini.</p>
             <div class="cta-btn-group">
-                <a href="https://ppawzaph.mychariow.shop/prd_cav6sr" class="btn-gold">🤖 Obtenir les 100+ Prompts — 2 000 FCFA 🔥</a>
+                <a href="https://ppawzaph.mychariow.shop/prd_cav6sr" class="btn-gold">🤖 Obtenir les 100+ Prompts — 2 000 FCFA <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~3€ / 3.20$)</span> 🔥</a>
                 <a href="https://ppawzaph.mychariow.shop/prd_u83162" class="btn-outline">📚 eBook "Maîtrisez l'IA" →</a>
             </div>
         </div>
@@ -538,7 +569,7 @@ Format : tableau [Vidéo | TikTok | Instagram | YouTube | Hashtags]</p>
         <div class="conclusion">
             <h2>30 minutes le lundi. Zéro stress le reste de la semaine.</h2>
             <p>Ce workflow n'est pas théorique — c'est <strong style="color: var(--gold);">exactement ce que nous utilisons chez DigitalBoost AI</strong>. La différence entre les créateurs qui réussissent et ceux qui abandonnent, c'est le <strong style="color: var(--gold);">système</strong>. Maintenant, vous avez le vôtre.</p>
-            <a href="https://ppawzaph.mychariow.shop/prd_cav6sr" class="btn-gold" style="margin-top:16px;">🚀 Obtenir les 100+ Prompts Premium — 2 000 FCFA</a>
+            <a href="https://ppawzaph.mychariow.shop/prd_cav6sr" class="btn-gold" style="margin-top:16px;">🚀 Obtenir les 100+ Prompts Premium — 2 000 FCFA <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~3€ / 3.20$)</span></a>
         </div>
 
         <!-- TAGS SEO -->
@@ -575,7 +606,7 @@ Format : tableau [Vidéo | TikTok | Instagram | YouTube | Hashtags]</p>
         <div class="sidebar-cta">
                 <h2>100+ Prompts IA</h2>
             <p>Les 3 prompts de ce workflow + 121 autres pour couvrir tout votre business digital.</p>
-            <a href="https://ppawzaph.mychariow.shop/prd_cav6sr" class="btn-gold">Obtenir — 2 000 FCFA 🔥</a>
+            <a href="https://ppawzaph.mychariow.shop/prd_cav6sr" class="btn-gold">Obtenir — 2 000 FCFA <span class='price-converted' style='font-size:0.75em;opacity:0.85;font-weight:normal;'>(~3€ / 3.20$)</span> 🔥</a>
         </div>
     </aside>
 </div>
