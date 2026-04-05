@@ -183,20 +183,43 @@
     <link rel="preload" href="../fonts/dm-sans-v17-latin-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../fonts/fraunces-v38-latin-900.woff2" as="font" type="font/woff2" crossorigin>
 
-    <!-- Google Translate Auto-Script -->
+    <!-- Google Translate IP-Based Script -->
     <div id="google_translate_element" style="display:none;"></div>
     <script type="text/javascript">
         (function() {
             try {
-                var userLang = navigator.language || navigator.userLanguage;
-                var langCode = userLang.split('-')[0];
-                var validLangs = ['en', 'es', 'de', 'it', 'pt', 'zh', 'ja', 'ru', 'ar', 'nl', 'tr'];
-                // If browser language is not French and is a valid target language
-                if (langCode !== 'fr' && document.cookie.indexOf('googtrans=') === -1) {
-                    var domain = window.location.hostname;
-                    // Add cookie for current session
-                    document.cookie = "googtrans=/fr/" + langCode + "; path=/; domain=" + (domain || "");
-                    document.cookie = "googtrans=/fr/" + langCode + "; path=/";
+                // Table de correspondance Pays -> Langue
+                var countryToLang = {
+                    'DE': 'de', 'AT': 'de', 'CH': 'de',
+                    'ES': 'es', 'MX': 'es', 'AR': 'es', 'CO': 'es', 'PE': 'es', 'CL': 'es',
+                    'US': 'en', 'GB': 'en', 'CA': 'en', 'AU': 'en', 'NZ': 'en',
+                    'IT': 'it', 
+                    'PT': 'pt', 'BR': 'pt',
+                    'CN': 'zh-CN', 'TW': 'zh-TW', 
+                    'JP': 'ja', 
+                    'RU': 'ru', 
+                    'SA': 'ar', 'AE': 'ar', 'MA': 'ar', 'DZ': 'ar', 'EG': 'ar',
+                    'NL': 'nl', 
+                    'TR': 'tr'
+                };
+
+                if (document.cookie.indexOf('googtrans=') === -1 && !sessionStorage.getItem('ip_checked')) {
+                    sessionStorage.setItem('ip_checked', 'true');
+                    fetch('https://get.geojs.io/v1/ip/country.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        var country = data.country;
+                        var langCode = countryToLang[country];
+                        if (langCode && langCode !== 'fr') {
+                            var domain = window.location.hostname;
+                            document.cookie = "googtrans=/fr/" + langCode + "; path=/; domain=" + (domain || "");
+                            document.cookie = "googtrans=/fr/" + langCode + "; path=/";
+                            window.location.reload();
+                        } else {
+                            document.cookie = "googtrans=/fr/fr; path=/";
+                        }
+                    })
+                    .catch(e => console.error(e));
                 }
             } catch(e) {}
         })();
@@ -206,7 +229,6 @@
     </script>
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async defer></script>
     <style>
-        /* Invisible Google Translate Banner & Widget */
         .skiptranslate iframe, .skiptranslate .goog-te-banner-frame { display: none !important; }
         body { top: 0 !important; }
         #goog-gt-tt { display: none !important; }

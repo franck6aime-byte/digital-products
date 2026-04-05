@@ -1,57 +1,9 @@
-<!DOCTYPE html>
-<html lang="fr">
+import os
+import re
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentions Légales — DigitalBoost AI</title>
-    <meta name="description" content="Mentions légales du site DigitalBoost AI — éditeur, hébergement, propriété intellectuelle.">
-    <link rel="canonical" href="https://digitalboostai.tech/mentions-legales" />
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            background: #0f0f17;
-            color: white;
-            padding: 100px 20px;
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-        }
+dir_path = r"c:\Users\FRANCK-AIME YAO\OneDrive\Documents\AGENT AI\digital-products"
 
-        .legal-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        h1 {
-            color: #d8b4fe; /* Lighter purple for WCAG contrast */
-            margin-bottom: 30px;
-        }
-
-        h2 {
-            color: #fbcfe8; /* Lighter pink for WCAG contrast */
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-
-        p {
-            margin-bottom: 15px;
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #d8b4fe; /* Fixed for contrast */
-            text-decoration: none;
-        }
-    </style>
-
-    <!-- Google Translate IP-Based Script -->
+NEW_GTRANSLATE_HTML = """    <!-- Google Translate IP-Based Script -->
     <div id="google_translate_element" style="display:none;"></div>
     <script type="text/javascript">
         (function() {
@@ -101,31 +53,34 @@
         body { top: 0 !important; }
         #goog-gt-tt { display: none !important; }
         .goog-text-highlight { background-color: transparent !important; border: none !important; box-shadow: none !important; }
-    </style>
+    </style>"""
 
-</head>
+def process_file(filepath):
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+    except Exception as e:
+        return False
 
-<body>
-    <main id="main-content" class="legal-container">
-        <a href="/" class="back-link">← Retour au site</a>
-        <h1>Mentions Légales</h1>
+    # Regex pour trouver l'ancien bloc complet (à partir de <!-- Google Translate Auto-Script --> jusqu'à </style>)
+    pattern = re.compile(r"    <!-- Google Translate Auto-Script -->.*?</style>", re.DOTALL)
+    
+    if pattern.search(content):
+        # Remplacement
+        new_content = pattern.sub(NEW_GTRANSLATE_HTML, content)
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(new_content)
+        return True
+    return False
 
-        <h2>1. Éditeur du site</h2>
-        <p>Le site DigitalBoost AI est édité par : [Votre Nom / Votre Entreprise]<br>
-            Siège social : Côte d'Ivoire<br>
-            Email : [Votre Email]</p>
-
-        <h2>2. Hébergement</h2>
-        <p>Le site est hébergé par Netlify, Inc.<br>
-            Adresse : 2325 3rd Street, Suite 215, San Francisco, California 94107.</p>
-
-        <h2>3. Propriété intellectuelle</h2>
-        <p>L'ensemble des contenus (textes, images, produits digitaux) sont la propriété exclusive de DigitalBoost AI.
-            Toute reproduction est interdite sans autorisation préalable.</p>
-
-        <h2>4. Contact</h2>
-        <p>Pour toute question, vous pouvez nous contacter à l'adresse email mentionnée ci-dessus.</p>
-    </main>
-</body>
-
-</html>
+modified_count = 0
+for root, _, files in os.walk(dir_path):
+    if '.git' in root or '.vercel' in root:
+        continue
+    for file in files:
+        if file.endswith('.html'):
+            filepath = os.path.join(root, file)
+            if process_file(filepath):
+                modified_count += 1
+                
+print(f"Modified {modified_count} HTML files with new IP script.")
