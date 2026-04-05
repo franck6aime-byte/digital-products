@@ -124,6 +124,17 @@
       "temps_lecture": "7 min de lecture",
       "date_publication": "2026-04-03",
       "newsletter_envoyee": false
+    },
+    {
+      "id": "article-011",
+      "titre": "Bilan Transparent : Ce que j'ai appris après 1 mois à former sur l'IA",
+      "excerpt": "30 jours de DigitalBoostAI : chiffres réels, erreurs assumées, victoires inattendues. Le bilan honnête d'un créateur de contenu ivoirien qui forme à l'IA.",
+      "url": "https://digitalboostai.tech/blog/bilan-transparent-1-mois-ia.html",
+      "emoji": "📊",
+      "categorie": "Bilan & Transparence",
+      "temps_lecture": "8 min de lecture",
+      "date_publication": "2026-04-05",
+      "newsletter_envoyee": false
     }
   ]
 }
