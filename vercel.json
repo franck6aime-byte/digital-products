@@ -3,6 +3,16 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/fr",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/:path*",
+      "destination": "/:path*",
+      "permanent": true
+    },
+    {
       "source": "/blog.html",
       "destination": "/blog",
       "permanent": true
