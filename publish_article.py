@@ -10,7 +10,7 @@ CONFIG_FILE = "articles-config.json"
 BLOG_INDEX = "blog.html"
 BASE_URL = "https://digitalboostai.tech"
 
-def add_to_blog_html(title, excerpt, file_name, emoji, read_time, date_str, total_articles):
+def add_to_blog_html(title, excerpt, file_name, img_name, emoji, read_time, date_str, total_articles):
     with open(BLOG_INDEX, "r", encoding="utf-8") as f:
         content = f.read()
 
@@ -32,7 +32,9 @@ def add_to_blog_html(title, excerpt, file_name, emoji, read_time, date_str, tota
     # Format HTML de la nouvelle carte d'article
     new_card = f"""
         <a href="https://digitalboostai.tech/blog/{file_name}" class="article-card">
-            <div class="card-img" style="background: {gradient}; display:flex; align-items:center; justify-content:center; font-size:4rem;">{emoji}</div>
+            <div class="card-img">
+                <img src="img/{img_name}" alt="{title} - DigitalBoost AI" loading="lazy">
+            </div>
             <div class="card-body">
                 <span class="card-tag">{category}</span>
                 <h3 class="card-title">{title}</h3>
@@ -57,7 +59,7 @@ def add_to_blog_html(title, excerpt, file_name, emoji, read_time, date_str, tota
         f.write(content)
     print("✅ blog.html mis à jour visuellement (nouvelle carte ajoutée).")
 
-def publish_article(article_id, title, excerpt, file_name, emoji, category, read_time):
+def publish_article(article_id, title, excerpt, file_name, img_name, emoji, category, read_time):
     print(f"🚀 Préparation Publication Totale : {title}")
     
     if not os.path.exists(CONFIG_FILE):
@@ -85,6 +87,7 @@ def publish_article(article_id, title, excerpt, file_name, emoji, category, read
         "titre": title,
         "excerpt": excerpt,
         "url": f"{BASE_URL}/blog/{file_name}",
+        "image_url": f"{BASE_URL}/img/{img_name}",
         "emoji": emoji,
         "categorie": category,
         "temps_lecture": read_time,
@@ -100,7 +103,7 @@ def publish_article(article_id, title, excerpt, file_name, emoji, category, read
 
     # 2. Ajout de la carte (HTML) et mise à jour du compteur
     total_articles = len(config['articles'])
-    add_to_blog_html(title, excerpt, file_name, emoji, read_time, date_str, total_articles)
+    add_to_blog_html(title, excerpt, file_name, img_name, emoji, read_time, date_str, total_articles)
 
     # 3. Génération du Flux RSS
     print("📡 Mise à jour du flux RSS (rss.xml)...")
@@ -124,9 +127,10 @@ if __name__ == "__main__":
     parser.add_argument("--title", required=True, help="Titre principal de l'article")
     parser.add_argument("--excerpt", required=True, help="Résumé court (2-3 phrases)")
     parser.add_argument("--file", required=True, help="Nom du fichier (ex: le-nom.html)")
+    parser.add_argument("--image", required=True, help="Nom de l'image (ex: image.png)")
     parser.add_argument("--emoji", required=True, help="Un emoji (ex: 🚀)")
     parser.add_argument("--category", required=True, help="Catégorie (ex: Intelligence Artificielle)")
     parser.add_argument("--time", required=True, help="Temps de lecture (ex: 5 min de lecture)")
     args = parser.parse_args()
 
-    publish_article(args.id, args.title, args.excerpt, args.file, args.emoji, args.category, args.time)
+    publish_article(args.id, args.title, args.excerpt, args.file, args.image, args.emoji, args.category, args.time)
