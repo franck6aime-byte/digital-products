@@ -34,7 +34,7 @@ def add_to_blog_html(title, excerpt, file_name, emoji, read_time, date_str, tota
         <a href="https://digitalboostai.tech/blog/{file_name}" class="article-card">
             <div class="card-img" style="background: {gradient}; display:flex; align-items:center; justify-content:center; font-size:4rem;">{emoji}</div>
             <div class="card-body">
-                <span class="card-tag">⚡ Nouvelle Parution</span>
+                <span class="card-tag">{category}</span>
                 <h3 class="card-title">{title}</h3>
                 <p class="card-excerpt">{excerpt}</p>
                 <div class="card-meta">
