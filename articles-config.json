@@ -43,18 +43,6 @@
       "newsletter_envoyee": false
     },
     {
-      "id": "article-004",
-      "titre": "Les 3 Erreurs que 99% des Étudiants Ivoiriens Font sur ChatGPT en 2026",
-      "excerpt": "ChatGPT est gratuit, disponible 24h/24 et plus puissant qu'un assistant personnel. Pourtant, la majorité des jeunes d'Abidjan n'utilisent que 5% de son potentiel. Voici les 3 erreurs fatales — et comment les corriger dès aujourd'hui.",
-      "url": "https://digitalboostai.tech/blog/erreurs-chatgpt-etudiants-ivoiriens.html",
-      "image_url": "https://digitalboostai.tech/img/erreurs_chatgpt_etudiants.png",
-      "emoji": "🎓",
-      "categorie": "IA & Éducation",
-      "temps_lecture": "6 min de lecture",
-      "date_publication": "2026-03-11",
-      "newsletter_envoyee": false
-    },
-    {
       "id": "article-005",
       "titre": "Mon Workflow pour Créer 7 Jours de Contenu en 30 Minutes avec l'IA",
       "excerpt": "85% des marketeurs utilisent déjà l'IA pour créer du contenu. Voici le workflow exact — hooks, scripts, descriptions, hashtags — pour planifier une semaine entière de TikTok en 30 minutes chrono.",
@@ -134,6 +122,28 @@
       "categorie": "Bilan & Transparence",
       "temps_lecture": "8 min de lecture",
       "date_publication": "2026-04-05",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-012",
+      "titre": "Automatiser sa newsletter avec l'IA : la méthode complète",
+      "excerpt": "Découvrez le workflow complet Make.com + Brevo + Claude pour automatiser la rédaction et l'envoi de votre newsletter en 2026.",
+      "url": "https://digitalboostai.tech/blog/automatiser-newsletter-ia.html",
+      "emoji": "📩",
+      "categorie": "Automatisation & Email Marketing",
+      "temps_lecture": "6 min de lecture",
+      "date_publication": "2026-04-08",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-004",
+      "titre": "52 newsletters en 1 heure : le prompt ChatGPT qui change tout",
+      "excerpt": "Démonstration en live des prompts ChatGPT #24, #76 et #78 pour générer et automatiser vos 52 newsletters de l'année en 1 heure.",
+      "url": "https://digitalboostai.tech/blog/52-newsletters-1-heure-prompt-chatgpt.html",
+      "emoji": "📩",
+      "categorie": "Copywriting & IA",
+      "temps_lecture": "5 min de lecture",
+      "date_publication": "2026-04-12",
       "newsletter_envoyee": false
     }
   ]

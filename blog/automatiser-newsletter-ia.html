@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Automatiser sa newsletter avec l'IA : la méthode complète | DigitalBoost AI</title>
+    <meta name="description" content="Workflow complet Make.com + Brevo + Claude pour automatiser votre newsletter en Afrique : capture, rédaction et envoi automatiques en 2026." />
+    <meta name="keywords" content="automatiser newsletter IA, email marketing IA, Make.com, Brevo, Claude AI, business en ligne Afrique, newsletter entrepreneur africain" />
+    <meta name="author" content="DigitalBoost AI" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://digitalboostai.tech/blog/automatiser-newsletter-ia" />
+
+    <meta property="og:title" content="Automatiser sa newsletter avec l'IA : la méthode complète" />
+    <meta property="og:description" content="Workflow complet Make.com + Brevo + Claude pour automatiser votre newsletter de bout en bout." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://digitalboostai.tech/blog/automatiser-newsletter-ia" />
+    <meta property="og:site_name" content="DigitalBoost AI" />
+    <meta property="og:image" content="https://digitalboostai.tech/img/automatiser_newsletter_ia.png" />
+    <meta property="og:locale" content="fr_CI" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Automatiser sa newsletter avec l'IA : la méthode complète" />
+    <meta name="twitter:description" content="Workflow complet Make.com + Brevo + Claude pour automatiser votre newsletter de bout en bout." />
+    <meta name="twitter:image" content="https://digitalboostai.tech/img/automatiser_newsletter_ia.png" />
+
+    <meta property="article:published_time" content="2026-04-08T08:00:00+00:00" />
+    <meta property="article:author" content="DigitalBoost AI" />
+    <meta property="article:tag" content="Automatisation" />
+    <meta property="article:tag" content="IA" />
+    <meta property="article:tag" content="Email Marketing" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Automatiser sa newsletter avec l'IA : la méthode complète",
+      "description": "Workflow complet Make.com + Brevo + Claude pour automatiser votre newsletter en Afrique : capture, rédaction et envoi automatiques en 2026.",
+      "author": { "@type": "Organization", "name": "DigitalBoost AI" },
+      "publisher": { "@type": "Organization", "name": "DigitalBoost AI" },
+      "datePublished": "2026-04-08",
+      "keywords": "automatiser newsletter IA, email marketing, business en ligne Afrique",
+      "mainEntityOfPage": "https://digitalboostai.tech/blog/automatiser-newsletter-ia"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Peut-on automatiser une newsletter sans coder en Afrique ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Le stack Make.com + Brevo + Claude fonctionne sans écrire une seule ligne de code. Brevo est disponible en français et accepte les paiements internationaux accessibles depuis l'Afrique francophone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte ce système d'automatisation newsletter ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En version gratuite : Make.com offre 1000 opérations/mois, Brevo permet d'envoyer jusqu'à 300 emails/jour gratuitement. Pour débuter, le coût total est de 0 FCFA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ChatGPT ou Claude pour rédiger une newsletter automatisée ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les deux fonctionnent avec Make.com. Claude produit un texte plus nuancé et respecte mieux les contraintes de longueur. Pour un entrepreneur africain qui écrit en français, Claude est généralement recommandé."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Est-ce que mes abonnés vont sentir que c'est écrit par une IA ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Si tu utilises les prompts tels quels, peut-être. C'est pour ça que la relecture de 10 minutes est obligatoire — tu ajoutes ton anecdote personnelle, une référence locale, ta voix. L'IA pose le squelette, toi tu mets la chair."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <meta name="theme-color" content="#0D1117" />
+
+    <style>
+@font-face { font-family:'DM Sans';font-style:normal;font-weight:300;font-display:swap;src:url('../fonts/dm-sans-v17-latin-300.woff2') format('woff2'); }
+@font-face { font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url('../fonts/dm-sans-v17-latin-400.woff2') format('woff2'); }
+@font-face { font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url('../fonts/dm-sans-v17-latin-500.woff2') format('woff2'); }
+@font-face { font-family:'DM Sans';font-style:normal;font-weight:600;font-display:swap;src:url('../fonts/dm-sans-v17-latin-600.woff2') format('woff2'); }
+@font-face { font-family:'Fraunces';font-style:normal;font-weight:300;font-display:swap;src:url('../fonts/fraunces-v38-latin-300.woff2') format('woff2'); }
+@font-face { font-family:'Fraunces';font-style:normal;font-weight:700;font-display:swap;src:url('../fonts/fraunces-v38-latin-700.woff2') format('woff2'); }
+@font-face { font-family:'Fraunces';font-style:normal;font-weight:900;font-display:swap;src:url('../fonts/fraunces-v38-latin-900.woff2') format('woff2'); }
+
+        :root{--ink:#0D1117;--paper:#FAFAF7;--gold:#B8912A;--gold-light:#F0E0A8;--accent:#1A6B3C;--accent-light:#E8F5EE;--muted:#6B7280;--border:#E5E2D9;--max:780px}
+        img,svg{max-width:100%;height:auto}
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        html{scroll-behavior:smooth}
+        body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.8}
+        #progress-bar{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--gold),var(--accent));z-index:9999;transition:width .1s linear}
+        .site-header{position:sticky;top:0;background:rgba(250,250,247,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;z-index:100}
+        .site-header .logo{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:900;color:var(--ink);text-decoration:none;letter-spacing:-.5px}
+        .site-header .logo span{color:var(--gold)}
+        .header-cta{background:var(--ink);color:var(--paper);padding:10px 20px;border-radius:100px;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .2s;min-height:44px;display:inline-flex;align-items:center}
+        .header-cta:hover{background:var(--accent)}
+        .hero{max-width:860px;margin:0 auto;padding:80px 24px 60px;text-align:center}
+        .category-tag{display:inline-block;background:#D1E7DD;color:#0B4527;font-size:.78rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:24px}
+        .hero h1{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.15;letter-spacing:-1px;color:var(--ink);margin-bottom:24px}
+        .hero h1 em{font-style:italic;color:var(--gold)}
+        .hero-subtitle{font-size:1.15rem;color:var(--muted);max-width:600px;margin:0 auto 36px;line-height:1.7}
+        .meta-row{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;font-size:.85rem;color:var(--muted);padding-bottom:48px;border-bottom:1px solid var(--border)}
+        .article-layout{max-width:1100px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 280px;gap:60px;align-items:start}
+        @media(max-width:900px){.article-layout{grid-template-columns:1fr}.sidebar{display:none}}
+        .article-body{padding:60px 0;max-width:var(--max)}
+        .article-body h2{font-family:'Fraunces',serif;font-size:1.8rem;font-weight:700;color:var(--ink);margin:56px 0 16px;letter-spacing:-.5px;line-height:1.25}
+        .article-body h3{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:700;color:var(--ink);margin:36px 0 14px}
+        .article-body p{margin-bottom:20px;color:#2D3139}
+        .article-body strong{color:var(--ink);font-weight:600}
+        .section-hook{font-size:1.05rem;color:var(--muted);font-style:italic;margin-bottom:24px;line-height:1.7;border-left:3px solid var(--gold);padding-left:16px}
+        .intro-block{background:var(--ink);color:var(--paper);border-radius:16px;padding:32px 36px;margin:40px 0;position:relative;overflow:hidden}
+        .intro-block::before{content:'"';position:absolute;top:-20px;right:20px;font-family:'Fraunces',serif;font-size:120px;color:var(--gold);opacity:.3;line-height:1}
+        .intro-block p{color:var(--paper);font-size:1.05rem;line-height:1.8;position:relative;z-index:1;margin-bottom:14px}
+        .intro-block p:last-child{margin-bottom:0}
+        .intro-block .intro-eyebrow{font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;position:relative;z-index:1}
+        .intro-block strong,.intro-block em{color:var(--gold)}
+        .conclusion strong{color:var(--gold)}
+        .tip-block{border-left:4px solid var(--gold);background:var(--gold-light);padding:20px 24px;border-radius:0 12px 12px 0;margin:32px 0}
+        .tip-block .tip-label{font-size:.78rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#8B6914;margin-bottom:8px}
+        .tip-block p{margin:0;color:var(--ink)}
+        .accent-block{border-left:4px solid var(--accent);background:var(--accent-light);padding:20px 24px;border-radius:0 12px 12px 0;margin:32px 0}
+        .accent-block p{margin:0;color:var(--ink)}
+        .prompt-box{background:#0D1117;border-radius:12px;padding:20px 24px;margin:20px 0}
+        .prompt-box .prompt-label{font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+        .prompt-box p{color:#E5E2D9;font-size:.93rem;line-height:1.7;margin:0;font-family:monospace;white-space:pre-wrap}
+        .workflow-steps{margin:32px 0;display:flex;flex-direction:column;gap:0}
+        .workflow-step{display:flex;gap:20px;align-items:flex-start;padding:20px 0;border-bottom:1px solid var(--border)}
+        .workflow-step:last-child{border-bottom:none}
+        .step-num{flex-shrink:0;width:36px;height:36px;background:var(--ink);color:var(--paper);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;margin-top:2px}
+        .step-content h3{font-family:'Fraunces',serif;font-size:1rem;font-weight:700;margin-bottom:6px;color:var(--ink)}
+        .step-content p{margin:0;font-size:.92rem;color:#4B5563;line-height:1.65}
+        .step-content code{background:#F3F4F6;padding:2px 7px;border-radius:4px;font-size:.85rem;color:var(--ink)}
+        .cta-inline{background:linear-gradient(135deg,var(--ink) 0%,#1a2a1a 100%);border-radius:20px;padding:44px 40px;margin:56px 0;text-align:center;position:relative;overflow:hidden}
+        .cta-inline::before{content:'🚀';position:absolute;font-size:180px;opacity:.04;top:-30px;right:-20px;line-height:1}
+        .cta-inline h3{font-family:'Fraunces',serif;color:var(--paper);font-size:1.6rem;margin-bottom:12px;letter-spacing:-.5px}
+        .cta-inline p{color:rgba(250,250,247,.7);margin-bottom:28px;font-size:.95rem}
+        .cta-inline strong{color:var(--gold)}
+        .cta-btn-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+        .btn-gold{display:inline-block;background:var(--gold);color:var(--ink);padding:14px 28px;border-radius:100px;font-weight:700;font-size:.95rem;text-decoration:none;transition:transform .2s,box-shadow .2s;min-height:48px;line-height:1.3}
+        .btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,168,76,.4)}
+        .btn-outline{display:inline-block;border:2px solid rgba(250,250,247,.3);color:var(--paper);padding:14px 28px;border-radius:100px;font-weight:600;font-size:.95rem;text-decoration:none;transition:border-color .2s}
+        .btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+        .conclusion{background:var(--ink);color:var(--paper);border-radius:20px;padding:48px 40px;margin:56px 0 0;text-align:center}
+        .conclusion h2{font-family:'Fraunces',serif;color:var(--paper);font-size:1.8rem;margin-bottom:16px}
+        .conclusion p{color:rgba(250,250,247,.75);margin-bottom:28px}
+        .sidebar{position:sticky;top:100px;padding:60px 0}
+        .sidebar-card{background:white;border:1.5px solid var(--border);border-radius:16px;padding:28px 24px;margin-bottom:20px}
+        .sidebar-card h2{font-family:'Fraunces',serif;font-size:1rem;font-weight:700;margin-bottom:16px;color:var(--ink)}
+        .toc-list{list-style:none}
+        .toc-list li{padding:7px 0;border-bottom:1px solid var(--border);font-size:.85rem}
+        .toc-list li:last-child{border-bottom:none}
+        .toc-list a{color:#374151;text-decoration:underline;text-decoration-color:transparent;transition:color .2s}
+        .toc-list a:hover{color:#8B6914;text-decoration-color:#8B6914}
+        .sidebar-cta{background:var(--ink);border-radius:16px;padding:28px 24px;text-align:center}
+        .sidebar-cta h2{font-family:'Fraunces',serif;color:var(--paper);font-size:1.1rem;margin-bottom:10px}
+        .sidebar-cta p{color:rgba(250,250,247,.65);font-size:.82rem;margin-bottom:20px}
+        .sidebar-cta .btn-gold{width:100%;display:block}
+        .site-footer{border-top:1px solid var(--border);padding:40px 24px;text-align:center;font-size:.85rem;color:var(--muted);margin-top:80px}
+        .site-footer a{color:#8B6914;text-decoration:underline}
+        .seo-tags{display:flex;flex-wrap:wrap;gap:8px;margin:32px 0}
+        .seo-tag{background:var(--accent-light);color:var(--accent);font-size:.78rem;font-weight:500;padding:4px 12px;border-radius:100px}
+        .share-row{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:24px}
+        .share-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:100px;font-size:.85rem;font-weight:600;text-decoration:none;color:white;transition:transform .2s,opacity .2s,box-shadow .2s;border:none;cursor:pointer;min-height:44px}
+        .share-btn:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.18)}
+        .share-wa{background:#25D366}.share-fb{background:#1877F2}.share-li{background:#0A66C2}.share-tw{background:#1a1a1a}
+        .tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:32px 0}
+        .tool-card{background:white;border:1.5px solid var(--border);border-radius:16px;padding:24px;transition:transform .2s,box-shadow .2s}
+        .tool-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+        .tool-card .tool-emoji{font-size:2rem;margin-bottom:12px}
+        .tool-card h3{font-family:'Fraunces',serif;font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--ink)}
+        .tool-card p{font-size:.88rem;color:var(--muted);margin:0;line-height:1.6}
+        .tool-card .tool-badge{display:inline-block;margin-top:10px;background:var(--accent-light);color:var(--accent);font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:100px}
+        .faq-section{margin:60px 0 0}
+        .faq-section h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:700;color:var(--ink);margin-bottom:28px;letter-spacing:-.5px}
+        details.faq-item{border-bottom:1px solid var(--border);padding:20px 0}
+        details.faq-item:last-child{border-bottom:none}
+        details.faq-item summary{font-weight:600;cursor:pointer;color:var(--ink);font-size:1rem;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px}
+        details.faq-item summary::-webkit-details-marker{display:none}
+        details.faq-item summary::marker{display:none}
+        details.faq-item summary::after{content:'＋';font-size:1.2rem;color:var(--gold);flex-shrink:0;transition:transform .2s}
+        details.faq-item[open] summary::after{transform:rotate(45deg)}
+        details.faq-item p{margin:14px 0 0;color:#4B5563;font-size:.95rem;line-height:1.75}
+        .table-wrap{overflow-x:auto;margin:32px 0}
+        .table-wrap table{width:100%;border-collapse:collapse;font-size:.9rem}
+        .table-wrap th{background:var(--ink);color:var(--paper);padding:12px 16px;text-align:left;font-weight:600;white-space:nowrap}
+        .table-wrap td{padding:12px 16px;border-bottom:1px solid var(--border);color:#2D3139}
+        .table-wrap tr:hover td{background:rgba(201,168,76,.05)}
+    </style>
+</head>
+
+<body>
+<!-- Google Translate -->
+<div id="google_translate_element" style="display:none;"></div>
+<script type="text/javascript">
+    (function() {
+        try {
+            var countryToLang = {
+                'DE':'de','AT':'de','CH':'de','ES':'es','MX':'es','AR':'es','CO':'es','PE':'es','CL':'es',
+                'US':'en','GB':'en','CA':'en','AU':'en','NZ':'en','IT':'it','PT':'pt','BR':'pt',
+                'CN':'zh-CN','TW':'zh-TW','JP':'ja','RU':'ru',
+                'SA':'ar','AE':'ar','MA':'ar','DZ':'ar','EG':'ar','NL':'nl','TR':'tr'
+            };
+            fetch('https://get.geojs.io/v1/ip/country.json')
+            .then(function(r){return r.json();})
+            .then(function(data){
+                var langCode=countryToLang[data.country]||'fr';
+                var expectedCookie="/fr/"+langCode;
+                var domain=window.location.hostname;
+                var currentCookie="";
+                var match=document.cookie.match(new RegExp('(^| )googtrans=([^;]+)'));
+                if(match) currentCookie=match[2];
+                if(currentCookie!==expectedCookie){
+                    if(langCode==='fr'){
+                        document.cookie="googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                        document.cookie="googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain="+domain;
+                        document.cookie="googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=."+domain;
+                    } else {
+                        document.cookie="googtrans="+expectedCookie+"; path=/; domain="+domain;
+                        document.cookie="googtrans="+expectedCookie+"; path=/;";
+                        document.cookie="googtrans="+expectedCookie+"; path=/; domain=."+domain;
+                    }
+                    var reloadKey='lang_rl_'+langCode;
+                    if(!sessionStorage.getItem(reloadKey)){
+                        sessionStorage.clear();
+                        sessionStorage.setItem(reloadKey,'1');
+                        window.location.reload();
+                    }
+                } else {
+                    var k='lang_rl_'+langCode;
+                    if(!sessionStorage.getItem(k)){sessionStorage.clear();sessionStorage.setItem(k,'1');}
+                }
+            }).catch(function(e){console.error(e);});
+        } catch(e){}
+    })();
+    function googleTranslateElementInit(){
+        new google.translate.TranslateElement({pageLanguage:'fr',autoDisplay:false},'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async defer></script>
+<style>
+    .skiptranslate iframe,.skiptranslate .goog-te-banner-frame{display:none!important}
+    body{top:0!important}
+    #goog-gt-tt{display:none!important}
+    .goog-text-highlight{background-color:transparent!important;border:none!important;box-shadow:none!important}
+</style>
+
+<div id="progress-bar" role="progressbar" aria-label="Progression de lecture"></div>
+
+<header class="site-header">
+    <a href="https://digitalboostai.tech/" class="logo">⚡DigitalBoost <span>AI</span></a>
+    <a href="https://digitalboostai.tech/#pricing" class="header-cta">Obtenir les produits →</a>
+</header>
+
+<div class="hero">
+    <span class="category-tag">📩 Automatisation & Email Marketing</span>
+    <h1>Automatiser sa newsletter avec l'IA : <em>la méthode complète</em></h1>
+    <p class="hero-subtitle">Tu passes des heures à rédiger des emails que personne n'attend vraiment. Et si tu montais un système qui écrit, programme et envoie tes newsletters pendant que tu dors ? Voici le workflow Make.com + Brevo + Claude, étape par étape.</p>
+    <div class="meta-row">
+        <span>📅 8 Avril 2026</span>
+        <span>·</span>
+        <span>⏱️ 8 min de lecture</span>
+        <span>·</span>
+        <span>✍️ DigitalBoost AI</span>
+    </div>
+</div>
+
+<div style="text-align:center;padding:0 24px 40px;">
+    <p style="font-size:.82rem;color:#6B7280;margin-bottom:14px;letter-spacing:.5px;text-transform:uppercase;font-weight:600;">Partager cet article</p>
+    <div class="share-row">
+
+        <!-- WhatsApp -->
+        <a href="#"
+           onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent('🚀 J\'ai trouvé la méthode complète pour automatiser ma newsletter avec l\'IA (Make.com + Brevo + Claude) — 0 FCFA pour démarrer, workflow étape par étape.\n\nSi tu veux arrêter de remettre tes emails à plus tard, lis ça 👇\nhttps://digitalboostai.tech/blog/automatiser-newsletter-ia'),'_blank');return false;"
+           class="share-btn share-wa"
+           aria-label="Partager sur WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zm-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            Envoyer sur WhatsApp
+        </a>
+
+        <!-- Facebook -->
+        <a href="#"
+           onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('https://digitalboostai.tech/blog/automatiser-newsletter-ia')+'&quote='+encodeURIComponent('Ta newsletter ne s\'écrit plus toute seule — ou plutôt, si. Voici le workflow complet Make.com + Brevo + Claude pour automatiser l\'écriture et l\'envoi de tes emails, étape par étape.'),'_blank');return false;"
+           class="share-btn share-fb"
+           aria-label="Partager sur Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Partager sur Facebook
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="#"
+           onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent('https://digitalboostai.tech/blog/automatiser-newsletter-ia'),'_blank');return false;"
+           class="share-btn share-li"
+           aria-label="Partager sur LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            Partager sur LinkedIn
+        </a>
+
+        <!-- X (Twitter) -->
+        <a href="#"
+           onclick="window.open('https://x.com/intent/tweet?text='+encodeURIComponent('Ta newsletter repoussée chaque semaine ? Voici le système Make.com + Brevo + Claude qui écrit et envoie tes emails automatiquement — workflow complet, 0 code, 0 FCFA pour démarrer 🧵👇')+'&url='+encodeURIComponent('https://digitalboostai.tech/blog/automatiser-newsletter-ia')+'&hashtags='+encodeURIComponent('EmailMarketing,IA,BusinessAfrique,DigitalBoostAI'),'_blank');return false;"
+           class="share-btn share-tw"
+           aria-label="Partager sur X">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Partager sur X
+        </a>
+
+    </div>
+</div>
+
+<div class="article-layout">
+    <main class="article-body" id="article-main">
+
+        <!-- ACCROCHE -->
+        <div class="intro-block">
+            <div class="intro-eyebrow">📬 Tu te reconnais dans cette scène ?</div>
+            <p>Il est 22h. Tu fixes l'écran de ton téléphone — connexion moyenne, batterie à 18% — et tu te dis : <em>"Ma newsletter de cette semaine, je l'écrirai demain."</em></p>
+            <p>Demain devient vendredi. Vendredi devient "la semaine prochaine". Et ta liste d'abonnés, patiemment construite, prend la poussière.</p>
+            <p><strong>Ce n'est pas un problème de motivation. C'est un problème de système.</strong> Et dans cet article, tu vas construire le tien — même avec une connexion instable, même sans budget, même sans toucher à une seule ligne de code.</p>
+        </div>
+
+        <!-- SECTION 1 -->
+        <h2 id="outils">1. Le Stack Idéal : 3 Outils, 0 FCFA pour Démarrer</h2>
+        <p class="section-hook">Avant de construire quoi que ce soit, comprenons d'abord les pièces du puzzle. Un bon système d'automatisation, c'est comme un bon groupe musical : chaque instrument a un rôle précis.</p>
+
+        <p>La bonne nouvelle pour toi en tant qu'entrepreneur basé en Afrique francophone : ces trois outils sont accessibles depuis la Côte d'Ivoire, le Sénégal, le Cameroun ou ailleurs, et fonctionnent en français.</p>
+
+        <div class="tools-grid">
+            <div class="tool-card">
+                <div class="tool-emoji">⚙️</div>
+                <h3>Make.com</h3>
+                <p>Le chef d'orchestre. Il connecte tous tes outils entre eux et déclenche les actions automatiquement. Plus généreux que Zapier : 1 000 opérations gratuites par mois.</p>
+                <span class="tool-badge">Gratuit jusqu'à 1000 ops/mois</span>
+            </div>
+            <div class="tool-card">
+                <div class="tool-emoji">🧠</div>
+                <h3>Claude (ou ChatGPT)</h3>
+                <p>Le rédacteur. Tu lui donnes un cadre, il génère le contenu de l'email. Claude est particulièrement performant en français et respecte bien les contraintes de longueur.</p>
+                <span class="tool-badge">Version gratuite disponible</span>
+            </div>
+            <div class="tool-card">
+                <div class="tool-emoji">📧</div>
+                <h3>Brevo</h3>
+                <p>L'expéditeur. Anciennement Sendinblue, la plateforme est entièrement en français. Elle accepte les paiements internationaux et envoie jusqu'à 300 emails/jour gratuitement.</p>
+                <span class="tool-badge">300 emails/jour gratuits</span>
+            </div>
+        </div>
+
+        <div class="tip-block">
+            <div class="tip-label">💡 Note pratique Afrique</div>
+            <p>Brevo est l'outil le plus adapté à notre contexte : interface française, support réactif, et contrairement à Mailchimp, <strong>son interface ne ralentit pas sur les connexions lentes</strong>. Si tu es au Ghana ou au Nigeria, Mailchimp reste une alternative valide — le principe du workflow est identique.</p>
+        </div>
+
+        <!-- SECTION 2 -->
+        <h2 id="workflow">2. Le Workflow Complet, Étape par Étape</h2>
+        <p class="section-hook">Voici exactement comment les trois outils s'articulent ensemble. Pas de vague "connecte A à B" — chaque étape est décrite avec ce que tu dois cliquer.</p>
+
+        <p>Ce workflow se déclenche chaque mercredi matin à 7h00. Le résultat : un brouillon de newsletter dans Brevo t'attend, rédigé par Claude, prêt à être relu en 10 minutes avant envoi.</p>
+
+        <div class="workflow-steps">
+            <div class="workflow-step">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                    <h3>Crée un scénario Make.com avec un déclencheur "Schedule"</h3>
+                    <p>Dans Make.com, crée un nouveau scénario. Comme premier module, choisis <code>Tools → Schedule</code>. Configure-le sur "Chaque semaine" → Mercredi → 07:00. C'est lui qui va tout déclencher automatiquement.</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                    <h3>Ajoute un module "HTTP Request" pour appeler Claude</h3>
+                    <p>Ajoute un module <code>HTTP → Make a Request</code>. URL : <code>https://api.anthropic.com/v1/messages</code>. Méthode : POST. Dans le corps, colle ton prompt (voir section 3). Dans les headers, ajoute <code>x-api-key</code> avec ta clé API Anthropic et <code>anthropic-version: 2023-06-01</code>.</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                    <h3>Parse la réponse de Claude</h3>
+                    <p>Ajoute un module <code>JSON → Parse JSON</code>. Dans le champ "JSON String", mappe <code>data.content[0].text</code> — c'est là que Claude place sa réponse. Tu récupères ainsi l'objet et le corps de l'email comme deux variables séparées.</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="step-num">4</div>
+                <div class="step-content">
+                    <h3>Crée le brouillon dans Brevo</h3>
+                    <p>Ajoute le module <code>Brevo → Create Campaign</code>. Mappe l'objet de l'email (variable extraite à l'étape 3), le corps HTML, et configure l'expéditeur. Laisse le statut sur <code>DRAFT</code> — tu valides manuellement avant l'envoi.</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="step-num">5</div>
+                <div class="step-content">
+                    <h3>Reçois une notification et valide</h3>
+                    <p>Ajoute un dernier module <code>Email → Send an Email</code> (ou une notif WhatsApp via Twilio) qui t'alerte : "Ton brouillon de newsletter est prêt dans Brevo." Tu te connectes, tu relis en 10 minutes, et tu cliques sur Envoyer.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accent-block">
+            <p>⚡ <strong>Temps de mise en place la première fois :</strong> environ 3h si tu es débutant sur Make.com. Ensuite, chaque semaine, tu n'interviens que pour la relecture finale. C'est ton seul rôle dans ce système.</p>
+        </div>
+
+        <!-- SECTION 3 -->
+        <h2 id="prompts">3. Les Prompts qui Font Tourner la Machine</h2>
+        <p class="section-hook">Un système automatisé ne vaut que ce que valent ses instructions. Voici les trois prompts fondamentaux du workflow — chacun couvre une étape différente de la relation avec ton abonné.</p>
+
+        <h3>Prompt #15 — Séquence de Bienvenue (5 Emails)</h3>
+        <p>Quand quelqu'un s'inscrit à ta newsletter, il est à son niveau d'attention maximal. C'est maintenant que tu construis la confiance. Ce prompt génère les 5 emails que Brevo enverra automatiquement dans les 10 jours suivant l'inscription :</p>
+
+        <div class="prompt-box">
+            <div class="prompt-label">✅ Prompt #15 — Séquence Bienvenue 5 Emails</div>
+            <p>Tu es un expert en email marketing pour entrepreneurs africains francophones.
+Rédige une séquence de bienvenue de 5 emails.
+
+Thématique de ma newsletter : [Ta thématique]
+Mon audience cible : [Ton audience]
+Objectif : Créer de la confiance et introduire mon offre principale [Nom du produit]
+
+Structure :
+Email 1 : Le cadeau promis + ce que l'abonné va recevoir dans les prochains jours
+Email 2 : Mon histoire et pourquoi j'ai lancé ce projet
+Email 3 : Un mythe courant dans mon secteur que je démolis avec des faits
+Email 4 : Un témoignage ou un résultat concret d'un client/lecteur
+Email 5 : Une invitation naturelle (pas agressive) vers mon offre principale
+
+Contraintes :
+- Tutoyer le lecteur tout au long
+- Maximum 200 mots par email
+- Phrases courtes, paragraphes de 2 lignes maximum
+- Chaque email commence par une situation reconnaissable pour mon audience
+- Pour chaque email : Objet (max 50 caractères), Pré-header, Corps</p>
+        </div>
+
+        <div class="tip-block">
+            <div class="tip-label">💡 Implémentation dans Brevo</div>
+            <p>Va dans <strong>Brevo → Automatisations → Créer un workflow</strong>. Déclencheur : "Contact ajouté à une liste". Ensuite : Envoyer Email 1 → Attendre 2 jours → Email 2 → Attendre 2 jours → etc. Ta séquence tourne désormais 24h/24, même quand ta connexion saute.</p>
+        </div>
+
+        <h3>Prompt #24 — Newsletter Hebdomadaire</h3>
+        <p>C'est le prompt qui s'exécute chaque mercredi dans ton scénario Make.com. Il prend un sujet d'actualité ou un conseil de ta thématique et génère un email complet, personnel et actionnable :</p>
+
+        <div class="prompt-box">
+            <div class="prompt-label">✅ Prompt #24 — Newsletter Hebdomadaire</div>
+            <p>Tu es mon assistant rédacteur pour ma newsletter [Nom de ta newsletter].
+Mon audience : [Description précise]
+Ma voix : directe, chaleureuse, avec des références au contexte africain quand c'est pertinent.
+
+Rédige la newsletter de cette semaine.
+
+Sujet : [Le concept ou l'actualité de la semaine]
+Anecdote à intégrer : [Une situation vécue ou observée cette semaine]
+Appel à l'action : [Lien ou action souhaitée]
+
+Structure obligatoire :
+1. Objet : court, intrigant, max 50 caractères, inclut un chiffre si possible
+2. Pré-header : complète l'objet sans le répéter (max 80 caractères)
+3. Introduction : l'anecdote en 3-4 phrases maximum — parle à "toi"
+4. Corps : 3 conseils actionnables, format liste aérée
+5. Call-to-action unique et clair
+6. P.S. : une phrase intrigante qui donne envie de répondre à l'email
+
+Longueur totale : moins de 250 mots.
+Ton : tutoyant, phrases courtes, zéro jargon.</p>
+        </div>
+
+        <h3>Prompt #75 — Nurturing Evergreen (7 Emails)</h3>
+        <p>La séquence de bienvenue crée la confiance. La newsletter hebdomadaire maintient le lien. Mais entre les deux, il y a un troisième levier souvent ignoré : les emails evergreen. Ce sont des séquences intemporelles qui s'activent automatiquement selon le comportement de l'abonné — et qui accompagnent doucement vers l'achat.</p>
+
+        <p>Le principe est simple : tu ne vends pas, tu éduques. Chaque email résout un problème précis lié à ta thématique. À l'email 7, l'abonné a compris son problème — et ton offre devient la suite logique.</p>
+
+        <div class="prompt-box">
+            <div class="prompt-label">✅ Prompt #75 — Campagne Nurturing 7 Emails (Framework P-A-S)</div>
+            <p>Crée une séquence evergreen de 7 emails de nurturing.
+Objectif : éduquer l'abonné sur [problème précis] pour l'amener naturellement vers [ta solution payante].
+
+Framework global à appliquer sur l'ensemble des 7 emails : P-A-S
+- Emails 1-2 : Problème (nommer et valider la douleur)
+- Emails 3-4 : Agitation (montrer ce que ça coûte de ne rien faire)
+- Emails 5-6 : Solution (montrer la voie sans vendre encore)
+- Email 7 : Invitation douce vers l'offre
+
+Contraintes par email :
+- Maximum 150 mots
+- Format "Un jour, une idée" : une seule insight par email
+- Tutoyer le lecteur
+- Commencer par une question ou une situation concrète africaine
+- Aucun email ne doit ressembler à de la vente directe avant l'email 7
+
+Contexte culturel : mon audience est principalement en Afrique de l'Ouest francophone.
+Intègre des références contextuelles quand pertinent (rapport au temps, à l'argent, à la famille, aux défis de connectivité...).</p>
+        </div>
+
+        <div class="accent-block">
+            <p>🌍 <strong>Pourquoi contextualiser tes emails ?</strong> Un email qui dit "imagine que tu travailles depuis un café à Paris" ne résonne pas avec ton lecteur à Abidjan ou à Dakar. Un email qui dit "tu attends le réseau depuis 20 minutes et tu te demandes si l'occasion est passée" — lui, il le ressent. <strong>C'est cet ancrage qui transforme un lecteur en client.</strong></p>
+        </div>
+
+        <!-- SECTION 4 -->
+        <h2 id="resultats">4. Ce que ce Système Change Concrètement</h2>
+        <p class="section-hook">Un workflow Make.com, ça n'est pas un gadget techno. C'est une réorganisation de ton temps. Voici ce que tu gagnes — et ce que tu dois quand même faire toi-même.</p>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tâche</th>
+                        <th>Avant (manuel)</th>
+                        <th>Après (automatisé)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Trouver un sujet</td>
+                        <td>30-45 min de réflexion</td>
+                        <td>2 min (tu remplis une variable)</td>
+                    </tr>
+                    <tr>
+                        <td>Rédiger l'email</td>
+                        <td>1h à 2h</td>
+                        <td>Claude génère en 30 secondes</td>
+                    </tr>
+                    <tr>
+                        <td>Relire et personnaliser</td>
+                        <td>Inclus dans les 2h</td>
+                        <td>10-15 min (ta vraie valeur ajoutée)</td>
+                    </tr>
+                    <tr>
+                        <td>Programmer dans Brevo</td>
+                        <td>15 min</td>
+                        <td>Automatique</td>
+                    </tr>
+                    <tr>
+                        <td>Séquence bienvenue</td>
+                        <td>Jamais faite (manque de temps)</td>
+                        <td>Tourne en permanence</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>Ta mission réelle dans ce système se réduit à trois choses : <strong>choisir le sujet de la semaine, injecter une anecdote vraiment personnelle, et valider le brouillon.</strong> Tout le reste est délégué à la machine.</p>
+
+        <p>C'est aussi là que se situe ta différenciation. Claude génère un email correct. Toi, tu ajoutes ce que l'IA ne peut pas inventer : ce que tu as vécu cette semaine à Abidjan, à Douala ou à Lomé. Ce détail personnel transforme un email générique en email mémorable.</p>
+
+        <!-- CTA — en bas, après la valeur complète -->
+        <div class="cta-inline">
+            <h3>52 newsletters prêtes à personnaliser — générées en 1h</h3>
+            <p>Le <strong>Pack 100+ Prompts Premium</strong> contient 10 prompts Email Marketing complets : séquences de lancement, relances panier abandonné, A/B tests d'objets, campagnes de réactivation... Tous conçus pour les entrepreneurs francophones africains.</p>
+            <div class="cta-btn-group">
+                <a href="https://ppawzaph.mychariow.shop/prd_cav6sr" class="btn-gold">🤖 Découvrir le Pack Complet — 2 000 FCFA <span style="font-size:.75em;opacity:.85;font-weight:normal;">(~3€ / 3.20$)</span></a>
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq-section">
+            <h2>❓ Questions Fréquentes</h2>
+
+            <details class="faq-item">
+                <summary>Peut-on automatiser une newsletter sans coder en Afrique ?</summary>
+                <p>Oui, entièrement. Make.com fonctionne par interface visuelle "glisser-déposer". Brevo est en français et ne nécessite aucune compétence technique. La seule chose qui ressemble à du code est la clé API Anthropic — et c'est un simple copier-coller.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Combien coûte ce système en pratique ?</summary>
+                <p>Pour commencer : 0 FCFA. Make.com offre 1 000 opérations gratuites par mois (1 newsletter par semaine = environ 5 opérations). Brevo permet 300 emails/jour gratuitement. L'API Claude coûte quelques centimes par email généré — négligeable à petite échelle.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Claude ou ChatGPT pour ce workflow ?</summary>
+                <p>Les deux s'intègrent à Make.com via HTTP. Claude produit un français plus naturel et respecte mieux les contraintes de longueur — ce qui est important quand ton email doit faire exactement moins de 250 mots. ChatGPT est une bonne alternative si tu as déjà un abonnement actif.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Est-ce que mes abonnés vont sentir que c'est écrit par une IA ?</summary>
+                <p>Si tu utilises les prompts tels quels, peut-être. C'est pour ça que la relecture de 10 minutes est obligatoire — tu ajoutes ton anecdote personnelle, une référence locale, ta voix. L'IA pose le squelette, toi tu mets la chair.</p>
+            </details>
+        </div>
+
+        <!-- CONCLUSION -->
+        <div class="conclusion">
+            <h2>La newsletter que tu n'écris pas ne vendra jamais rien</h2>
+            <p>Tu as maintenant le workflow complet : Make.com qui orchestre, Claude qui rédige, Brevo qui distribue. Le système tourne même quand ta connexion coupe à 23h.</p>
+            <p>Ta seule mission désormais : <strong>rester humain là où la machine ne peut pas l'être.</strong> L'anecdote vraie, le détail ancré dans ta réalité d'entrepreneur africain — c'est ça qui crée la confiance. Et c'est la confiance qui crée les ventes.</p>
+            <a href="https://ppawzaph.mychariow.shop/prd_cav6sr" class="btn-gold" style="margin-top:16px;">🚀 Obtenir les 100+ Prompts Complets</a>
+        </div>
+
+        <div class="seo-tags" style="margin-top:40px;">
+            <span class="seo-tag">automatisation email marketing</span>
+            <span class="seo-tag">automatiser newsletter ia</span>
+            <span class="seo-tag">Make.com et Brevo</span>
+            <span class="seo-tag">prompt newsletter claude ai</span>
+            <span class="seo-tag">newsletter entrepreneur africain</span>
+            <span class="seo-tag">digitalboost ai</span>
+            <span class="seo-tag">business en ligne afrique</span>
+        </div>
+
+    </main>
+
+    <aside class="sidebar">
+        <div class="sidebar-card">
+            <h2>📑 Sommaire</h2>
+            <nav aria-label="Table des matières">
+                <ul class="toc-list">
+                    <li><a href="#outils">1. Le Stack Idéal (0 FCFA)</a></li>
+                    <li><a href="#workflow">2. Le Workflow Étape par Étape</a></li>
+                    <li><a href="#prompts">3. Les 3 Prompts Fondamentaux</a></li>
+                    <li><a href="#resultats">4. Ce que ça Change Concrètement</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="sidebar-cta">
+            <h2>100+ Prompts IA</h2>
+            <p>La boîte à outils pour scaler ton business en ligne en Afrique. 10 prompts Email Marketing inclus.</p>
+            <a href="https://ppawzaph.mychariow.shop/prd_cav6sr" class="btn-gold">Obtenir — 2 000 FCFA <span style="font-size:.72em;opacity:.85;font-weight:normal;">(~3€)</span> 🔥</a>
+        </div>
+    </aside>
+</div>
+
+<footer class="site-footer" role="contentinfo">
+    <p>© 2026 <a href="https://digitalboostai.tech/" aria-label="Accueil DigitalBoost AI">DigitalBoost AI</a> — Tous droits réservés &nbsp;·&nbsp;
+    <a href="/mentions-legales" aria-label="Mentions légales">Mentions légales</a> &nbsp;·&nbsp;
+    <a href="/politique-confidentialite" aria-label="Politique de confidentialité">Confidentialité</a></p>
+</footer>
+
+<script>
+    const progressBar = document.getElementById("progress-bar");
+    window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        progressBar.style.width = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + "%";
+    }, {passive: true});
+</script>
+</body>
+</html>
