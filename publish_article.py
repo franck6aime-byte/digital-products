@@ -29,27 +29,28 @@ def add_to_blog_html(title, excerpt, file_name, emoji, read_time, date_str, tota
     # Création du bloc HTML de la nouvelle carte d'article
     gradient = "linear-gradient(135deg, #0D1117 0%, #1A4B9E 50%, #C9A84C 100%)"
     
+    # Format HTML de la nouvelle carte d'article
     new_card = f"""
-            <!-- NOUVEL ARTICLE AUTO-INJECTE -->
-            <article class="blog-card">
-                <div class="blog-image"
-                    style="background: {gradient};">{emoji}</div>
-                <div class="blog-content">
-                    <div class="blog-meta">
-                        <span>📅 {date_str}</span>
-                        <span>⏱️ {read_time}</span>
-                    </div>
-                    <h3 class="blog-title">{title}</h3>
-                    <p class="blog-excerpt">{excerpt}</p>
-                    <a href="blog/{file_name}" class="btn-read">Lire l'article →</a>
+        <a href="https://digitalboostai.tech/blog/{file_name}" class="article-card">
+            <div class="card-img" style="background: {gradient}; display:flex; align-items:center; justify-content:center; font-size:4rem;">{emoji}</div>
+            <div class="card-body">
+                <span class="card-tag">⚡ Nouvelle Parution</span>
+                <h3 class="card-title">{title}</h3>
+                <p class="card-excerpt">{excerpt}</p>
+                <div class="card-meta">
+                    <span>📅 {date_str} &nbsp;·&nbsp; ⏱️ {read_time}</span>
+                    <span class="card-read">Lire →</span>
                 </div>
-            </article>
-"""
-    # Injection dans le HTML juste avant la fermeture des conteneurs
-    target = "        </div>\n    </main>"
+            </div>
+        </a>"""
+
+    # Injection au sommet de la grille d'articles
+    target = '<div class="articles-grid">\n'
     if target in content:
-        content = content.replace(target, new_card + "\n" + target)
+        content = content.replace(target, target + new_card + "\n")
     else:
+        print("⚠️ 'articles-grid' non trouvé dans blog.html, injection de base.")
+        # Fallback au pire si la grille bouge
         content = content.replace("</main>", new_card + "\n    </main>")
 
     with open(BLOG_INDEX, "w", encoding="utf-8") as f:
