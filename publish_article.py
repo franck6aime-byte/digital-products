@@ -4,13 +4,17 @@ import subprocess
 import argparse
 from datetime import datetime
 import re
+import requests
 
 # CONFIGURATION
 CONFIG_FILE = "articles-config.json"
 BLOG_INDEX = "blog.html"
 BASE_URL = "https://digitalboostai.tech"
 
-def add_to_blog_html(title, excerpt, file_name, img_name, emoji, read_time, date_str, total_articles):
+# URL de l'Application Web Google Script (à mettre à jour après déploiement)
+NEWSLETTER_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyPWPlHaXJrNYAMFubWVVHoioouR87t2XKPsuFePGwJB6CLl3hQO9REzSDnZ5VLY613ew/exec"
+
+def add_to_blog_html(title, excerpt, file_name, img_name, emoji, read_time, date_str, total_articles, category, date_iso):
     with open(BLOG_INDEX, "r", encoding="utf-8") as f:
         content = f.read()
 
@@ -31,7 +35,7 @@ def add_to_blog_html(title, excerpt, file_name, img_name, emoji, read_time, date
     
     # Format HTML de la nouvelle carte d'article
     new_card = f"""
-        <a href="https://digitalboostai.tech/blog/{file_name}" class="article-card">
+        <a href="https://digitalboostai.tech/blog/{file_name}" class="article-card" data-publish-date="{date_iso}">
             <div class="card-img">
                 <img src="img/{img_name}" alt="{title} - DigitalBoost AI" loading="lazy">
             </div>
@@ -58,6 +62,25 @@ def add_to_blog_html(title, excerpt, file_name, img_name, emoji, read_time, date
     with open(BLOG_INDEX, "w", encoding="utf-8") as f:
         f.write(content)
     print("✅ blog.html mis à jour visuellement (nouvelle carte ajoutée).")
+
+def trigger_newsletter_distribution():
+    """
+    Appelle le webhook du Google Apps Script pour forcer la distribution immédiate.
+    """
+    if not NEWSLETTER_WEBHOOK_URL or "REMPLACER_PAR_URL" in NEWSLETTER_WEBHOOK_URL:
+        print("⚠️ Newsletter : URL Webhook non configurée. Distribution automatique ignorée.")
+        return
+
+    print("🔔 Déclenchement de la distribution de la newsletter...")
+    try:
+        response = requests.get(NEWSLETTER_WEBHOOK_URL, timeout=10)
+        if response.status_code == 200:
+            print("🚀 Newsletter : Signal envoyé avec succès !")
+            print(f"📡 Réponse : {response.text}")
+        else:
+            print(f"❌ Newsletter : Erreur signal (Code: {response.status_code})")
+    except Exception as e:
+        print(f"⚠️ Newsletter : Échec de connexion au webhook : {e}")
 
 def publish_article(article_id, title, excerpt, file_name, img_name, emoji, category, read_time):
     print(f"🚀 Préparation Publication Totale : {title}")
@@ -103,7 +126,7 @@ def publish_article(article_id, title, excerpt, file_name, img_name, emoji, cate
 
     # 2. Ajout de la carte (HTML) et mise à jour du compteur
     total_articles = len(config['articles'])
-    add_to_blog_html(title, excerpt, file_name, img_name, emoji, read_time, date_str, total_articles)
+    add_to_blog_html(title, excerpt, file_name, img_name, emoji, read_time, date_str, total_articles, category, date_iso)
 
     # 3. Génération du Flux RSS
     print("📡 Mise à jour du flux RSS (rss.xml)...")
@@ -118,6 +141,10 @@ def publish_article(article_id, title, excerpt, file_name, img_name, emoji, cate
         subprocess.run(["npx", "vercel", "--prod", "--yes"], capture_output=True, text=True, check=True)
         print("🎉 Déploiement 100% réussi !")
         print(f"🔗 URL LIVE : {BASE_URL}/blog/{file_name}")
+
+        # 4. Déclencheur Newsletter (immédiat)
+        trigger_newsletter_distribution()
+
     except subprocess.CalledProcessError as e:
         print(f"❌ Erreur de déploiement Vercel : {e.stderr}")
 

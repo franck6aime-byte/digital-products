@@ -6,9 +6,9 @@ CONFIG_FILE = "articles-config.json"
 RSS_FILE = "rss.xml"
 
 def generate_rss():
-    print("📡 Génération du flux RSS...")
+    print("GENERATING RSS FEED...")
     if not os.path.exists(CONFIG_FILE):
-        print(f"❌ Erreur : {CONFIG_FILE} introuvable.")
+        print(f"Error : {CONFIG_FILE} introuvable.")
         return
 
     with open(CONFIG_FILE, 'r', encoding='utf-8') as f:
@@ -38,14 +38,20 @@ def generate_rss():
         category = article.get('categorie', '').replace('&', '&amp;')
         date_str = article.get('date_publication', '')
         
-        # Convertir la date (AAAA-MM-JJ) en RFC 822
+        # Convertir la date (AAAA-MM-JJ) en RFC 822 et filtrer les dates futures
         pub_date = ""
+        is_future = False
         if date_str:
             try:
                 dt = datetime.strptime(date_str, "%Y-%m-%d")
+                if dt.date() > datetime.today().date():
+                    is_future = True
                 pub_date = dt.strftime("%a, %d %b %Y 08:00:00 +0000")
             except Exception:
                 pub_date = ""
+        
+        if is_future:
+            continue
 
         rss_content.append('  <item>')
         rss_content.append(f'    <title>{title}</title>')
@@ -64,7 +70,7 @@ def generate_rss():
     with open(RSS_FILE, 'w', encoding='utf-8') as f:
         f.write('\n'.join(rss_content))
     
-    print(f"✅ Flux RSS généré avec succès dans {RSS_FILE} !")
+    print(f"Flux RSS généré avec succès dans {RSS_FILE} !")
 
 if __name__ == "__main__":
     generate_rss()

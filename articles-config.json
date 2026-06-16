@@ -28,7 +28,7 @@
       "categorie": "IA & Éducation en Afrique",
       "temps_lecture": "12 min de lecture",
       "date_publication": "2026-03-07",
-      "newsletter_envoyee": false
+      "newsletter_envoyee": true
     },
     {
       "id": "article-003",
@@ -40,7 +40,7 @@
       "categorie": "8 Mars & Leadership",
       "temps_lecture": "5 min de lecture",
       "date_publication": "2026-03-08",
-      "newsletter_envoyee": false
+      "newsletter_envoyee": true
     },
     {
       "id": "article-005",
@@ -52,7 +52,7 @@
       "categorie": "Workflow Contenu IA",
       "temps_lecture": "8 min de lecture",
       "date_publication": "2026-03-18",
-      "newsletter_envoyee": false
+      "newsletter_envoyee": true
     },
     {
       "id": "article-006",
@@ -64,7 +64,7 @@
       "categorie": "Produit Digital & IA",
       "temps_lecture": "8 min de lecture",
       "date_publication": "2026-03-26",
-      "newsletter_envoyee": false
+      "newsletter_envoyee": true
     },
     {
       "id": "article-007",
@@ -76,7 +76,7 @@
       "categorie": "Productivité & IA",
       "temps_lecture": "5 min de lecture",
       "date_publication": "2026-03-29",
-      "newsletter_envoyee": false
+      "newsletter_envoyee": true
     },
     {
       "id": "article-008",
@@ -88,7 +88,19 @@
       "categorie": "Étude de Marché & IA",
       "temps_lecture": "6 min de lecture",
       "date_publication": "2026-03-15",
-      "newsletter_envoyee": false
+      "newsletter_envoyee": true
+    },
+    {
+      "id": "article-004",
+      "titre": "Les 3 Erreurs que 99% des Étudiants Ivoiriens Font sur ChatGPT en 2026",
+      "excerpt": "Découvrez les 3 erreurs fatales que presque tous les étudiants et jeunes entrepreneurs de Côte d'Ivoire commettent sur ChatGPT — et comment les corriger grâce aux bons prompts IA.",
+      "url": "https://digitalboostai.tech/blog/erreurs-chatgpt-etudiants-ivoiriens.html",
+      "image_url": "https://digitalboostai.tech/img/erreurs_chatgpt_etudiants.png",
+      "emoji": "🚨",
+      "categorie": "🎓 IA & Éducation",
+      "temps_lecture": "6 min de lecture",
+      "date_publication": "2026-03-11",
+      "newsletter_envoyee": true
     },
     {
       "id": "article-009",
@@ -100,43 +112,46 @@
       "categorie": "Création & IA",
       "temps_lecture": "7 min de lecture",
       "date_publication": "2026-03-11",
-      "newsletter_envoyee": false
+      "newsletter_envoyee": true
     },
     {
       "id": "article-010",
       "titre": "Comment Utiliser l'IA de Canva comme un Pro du Design (Guide Pratique 2026)",
       "excerpt": "Magic Edit, Création en Bloc, prompts IA : le guide concret pour créer des dizaines de visuels professionnels en quelques minutes — même sans être graphiste.",
       "url": "https://digitalboostai.tech/blog/canva-ia-pro-design-guide-pratique.html",
+      "image_url": "https://digitalboostai.tech/img/canva_ia_pro_design.png",
       "emoji": "🎨",
       "categorie": "IA & Création",
       "temps_lecture": "7 min de lecture",
       "date_publication": "2026-04-03",
-      "newsletter_envoyee": false
+      "newsletter_envoyee": true
     },
     {
       "id": "article-011",
       "titre": "Bilan Transparent : Ce que j'ai appris après 1 mois à former sur l'IA",
       "excerpt": "30 jours de DigitalBoostAI : chiffres réels, erreurs assumées, victoires inattendues. Le bilan honnête d'un créateur de contenu ivoirien qui forme à l'IA.",
       "url": "https://digitalboostai.tech/blog/bilan-transparent-1-mois-ia.html",
+      "image_url": "https://digitalboostai.tech/img/bilan_transparent_1_mois_ia.png",
       "emoji": "📊",
       "categorie": "Bilan & Transparence",
       "temps_lecture": "8 min de lecture",
       "date_publication": "2026-04-05",
-      "newsletter_envoyee": false
+      "newsletter_envoyee": true
     },
     {
       "id": "article-012",
       "titre": "Automatiser sa newsletter avec l'IA : la méthode complète",
       "excerpt": "Découvrez le workflow complet Make.com + Brevo + Claude pour automatiser la rédaction et l'envoi de votre newsletter en 2026.",
       "url": "https://digitalboostai.tech/blog/automatiser-newsletter-ia.html",
+      "image_url": "https://digitalboostai.tech/img/automatiser_newsletter_ia.png",
       "emoji": "📩",
       "categorie": "Automatisation & Email Marketing",
       "temps_lecture": "6 min de lecture",
       "date_publication": "2026-04-08",
-      "newsletter_envoyee": false
+      "newsletter_envoyee": true
     },
     {
-      "id": "article-004",
+      "id": "article-013",
       "titre": "52 newsletters en 1 heure : le prompt ChatGPT qui change tout",
       "excerpt": "Démonstration en live des prompts ChatGPT #24, #76 et #78 pour générer et automatiser vos 52 newsletters de l'année en 1 heure.",
       "url": "https://digitalboostai.tech/blog/52-newsletters-1-heure-prompt-chatgpt.html",
@@ -145,6 +160,270 @@
       "categorie": "Copywriting & IA",
       "temps_lecture": "5 min de lecture",
       "date_publication": "2026-04-12",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-014",
+      "titre": "Prompt Copywriting : Créer une Page de Vente en 30 Secondes avec l'IA",
+      "excerpt": "Arrêtez de bloquer sur votre page de vente. Découvrez le prompt exact pour générer une structure haute conversion AIDA en 30 secondes.",
+      "url": "https://digitalboostai.tech/blog/prompt-copywriting-page-vente.html",
+      "image_url": "https://digitalboostai.tech/img/copywriting_page_vente_ia.png",
+      "emoji": "✍️",
+      "categorie": "Copywriting & IA",
+      "temps_lecture": "6 min de lecture",
+      "date_publication": "2026-04-14",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-015",
+      "titre": "5 Outils IA Gratuits que Tout Entrepreneur Africain Devrait Connaître",
+      "excerpt": "Découvrez les 5 outils gratuits sans carte bancaire pour automatiser votre comptabilité, créer vos visuels et écrire vos mails.",
+      "url": "https://digitalboostai.tech/blog/5-outils-ia-gratuits.html",
+      "image_url": "https://digitalboostai.tech/img/outils_ia_gratuits_afrique.png",
+      "emoji": "🛠️",
+      "categorie": "Outils & Productivité",
+      "temps_lecture": "10 min de lecture",
+      "date_publication": "2026-04-19",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-016",
+      "titre": "Comment créer un Assistant Virtuel (GPT) personnalisé pour votre SAV",
+      "excerpt": "Fini les heures passées à répondre aux clients sur WhatsApp. Formez un GPT sur vos produits et laissez-le gérer 80% du SAV.",
+      "url": "https://digitalboostai.tech/blog/comment-creer-assistant-virtuel-sav.html",
+      "image_url": "https://digitalboostai.tech/img/assistant_virtuel_sav.png",
+      "emoji": "🤖",
+      "categorie": "SAV & WhatsApp",
+      "temps_lecture": "10 min de lecture",
+      "date_publication": "2026-04-22",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-017",
+      "titre": "Le guide complet pour écrire des Prompts Midjourney ultra-réalistes",
+      "excerpt": "La structure V5/V6 exacte pour générer des images hyper-réalistes cinématographiques pour vos publicités locales.",
+      "url": "https://digitalboostai.tech/blog/le-guide-pour-ecrire-prompts-midjourney.html",
+      "image_url": "https://digitalboostai.tech/img/midjourney_prompts_guide.png",
+      "emoji": "🖼️",
+      "categorie": "IA & Création",
+      "temps_lecture": "10 min de lecture",
+      "date_publication": "2026-04-26",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-018",
+      "titre": "Pourquoi Excel est mort : Analysez vos ventes avec ChatGPT Advanced Data",
+      "excerpt": "Le tutoriel nocode pour uploader vos tableaux de ventes Shopify/Mobile Money et générer des prévisions financières en 2 minutes.",
+      "url": "https://digitalboostai.tech/blog/pourquoi-excel-est-mort-chatgpt-data.html",
+      "image_url": "https://digitalboostai.tech/img/chatgpt_data_analysis.png",
+      "emoji": "📈",
+      "categorie": "Analyse de Données",
+      "temps_lecture": "10 min de lecture",
+      "date_publication": "2026-04-29",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-019",
+      "titre": "Comment écrire un Script YouTube viral grâce au Framework IA",
+      "excerpt": "La technique de rétention 'Hook-Story-Offer' écrite par l'IA pour doubler votre durée de vue et votre monétisation.",
+      "url": "https://digitalboostai.tech/blog/comment-ecrire-un-script-youtube-viral-grace-au-framework-ia.html",
+      "image_url": "https://digitalboostai.tech/img/youtube_script_ia.png",
+      "emoji": "🎥",
+      "categorie": "Création de Contenu",
+      "temps_lecture": "10 min de lecture",
+      "date_publication": "2026-05-03",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-020",
+      "titre": "Vendre sur WhatsApp : Le prompt ultime pour relancer un client sans le braquer",
+      "excerpt": "Découvrez comment utiliser l'IA comportementale pour écrire le follow-up WhatsApp parfait et conclure vos ventes.",
+      "url": "https://digitalboostai.tech/blog/vendre-sur-whatsapp-le-prompt-ultime-pour-relancer.html",
+      "image_url": "https://digitalboostai.tech/img/whatsapp_sales_prompt.png",
+      "emoji": "💬",
+      "categorie": "Copywriting & IA",
+      "temps_lecture": "10 min de lecture",
+      "date_publication": "2026-05-06",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-021",
+      "titre": "Créer 30 jours de contenu Instagram en 45 minutes : Méthode 2026",
+      "excerpt": "Le workflow complet (ChatGPT + Canva Bulk Create) pour programmer vos Réels et publications pour tout le mois.",
+      "url": "https://digitalboostai.tech/blog/creer-30-jours-de-contenu-instagram-en-45-minutes.html",
+      "image_url": "https://digitalboostai.tech/img/instagram_bulk_create.png",
+      "emoji": "📱",
+      "categorie": "Outils & Productivité",
+      "temps_lecture": "10 min de lecture",
+      "date_publication": "2026-05-10",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-022",
+      "titre": "DALL-E 3 vs Midjourney v6 : Quel outil choisir pour vos visuels ?",
+      "excerpt": "Comparatif honnête avec exemples réels : quel outil convient le mieux pour les visages africains et le design marketing ?",
+      "url": "https://digitalboostai.tech/blog/dalle-3-vs-midjourney-v6-quel-outil-choisir.html",
+      "image_url": "https://digitalboostai.tech/img/dalle3_vs_midjourney.png",
+      "emoji": "⚖️",
+      "categorie": "IA & Création",
+      "temps_lecture": "10 min de lecture",
+      "date_publication": "2026-05-13",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-023",
+      "titre": "Rédiger des fiches produits E-commerce qui convertissent vraiment",
+      "excerpt": "Arrêtez de copier Aliexpress. Voici 3 prompts Shopify pour générer des descriptions orientées bénéfices psychologiques.",
+      "url": "https://digitalboostai.tech/blog/rediger-fiches-produits-e-commerce-qui-convertissent.html",
+      "image_url": "https://digitalboostai.tech/img/ecommerce_product_description_ia.png",
+      "emoji": "🛒",
+      "categorie": "E-commerce & IA",
+      "temps_lecture": "10 min de lecture",
+      "date_publication": "2026-05-17",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-024",
+      "titre": "L'intelligence artificielle pour les Coachs : Automatiser votre onboarding",
+      "excerpt": "Comment créer un parcours client VIP automatique avec Make.com : questionnaire IA de bienvenue, création de dossier et facturation.",
+      "url": "https://digitalboostai.tech/blog/intelligence-artificielle-pour-les-coachs-automatiser-onboarding.html",
+      "image_url": "https://digitalboostai.tech/img/coach_onboarding_automation.png",
+      "emoji": "🏆",
+      "categorie": "Automatisation",
+      "temps_lecture": "10 min de lecture",
+      "date_publication": "2026-05-20",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-025",
+      "titre": "Ne lancez pas de formation avant d'avoir testé cette stratégie IA",
+      "excerpt": "Comment valider rapidement l'intérêt d'une audience africaine avant d'enregistrer 10 heures de vidéo inutiles.",
+      "url": "https://digitalboostai.tech/blog/ne-lancez-pas-de-formation-avant-davoir-teste-cette-strategie-ia.html",
+      "image_url": "https://digitalboostai.tech/img/validate_course_idea_ia.png",
+      "emoji": "🎓",
+      "categorie": "Stratégie",
+      "temps_lecture": "10 min de lecture",
+      "date_publication": "2026-05-24",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-026",
+      "titre": "Comment cloner la voix de vos vidéos avec l'IA (Tutoriel complet)",
+      "excerpt": "ElevenLabs et HeyGen : le tutoriel complet pour traduire vos vidéos francophones en anglais parfait avec votre propre voix.",
+      "url": "https://digitalboostai.tech/blog/comment-cloner-la-voix-de-vos-videos-avec-ia.html",
+      "image_url": "https://digitalboostai.tech/img/voice_cloning_tutorial.png",
+      "emoji": "🎙️",
+      "categorie": "IA & Création",
+      "temps_lecture": "10 min de lecture",
+      "date_publication": "2026-05-27",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-027",
+      "titre": "Audit SEO avec l'IA : Le prompt pour analyser les mots-clés de vos concurrents",
+      "excerpt": "Utilisez Perplexity et ChatGPT pour voler légalement le trafic Google de vos concurrents directs en 2026.",
+      "url": "https://digitalboostai.tech/blog/audit-seo-avec-ia-le-prompt-pour-analyser-les-mots-cles.html",
+      "image_url": "https://digitalboostai.tech/img/seo_audit_ia.png",
+      "emoji": "🔍",
+      "categorie": "SEO & Marketing",
+      "temps_lecture": "10 min de lecture",
+      "date_publication": "2026-05-31",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-028",
+      "titre": "Relier ChatGPT à Google Sheets : Le tutoriel nocode ultime",
+      "excerpt": "La méthode étape par étape pour appeler une IA directement depuis une cellule de votre feuille Excel/Sheets.",
+      "url": "https://digitalboostai.tech/blog/relier-chatgpt-a-google-sheets-le-tutoriel-nocode-ultime.html",
+      "image_url": "https://digitalboostai.tech/img/chatgpt_google_sheets.png",
+      "emoji": "📊",
+      "categorie": "Automatisation",
+      "temps_lecture": "10 min de lecture",
+      "date_publication": "2026-06-03",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-029",
+      "titre": "Rédiger une Séquence Email de Bienvenue de A à Z avec Claude 3.5",
+      "excerpt": "Les 5 emails psychologiques (Le Soap Opera Sequence) pour transformer un simple curieux en acheteur compulsif.",
+      "url": "https://digitalboostai.tech/blog/rediger-une-sequence-email-bienvenue.html",
+      "image_url": "https://digitalboostai.tech/img/soap_opera_sequence_ia.png",
+      "emoji": "✉️",
+      "categorie": "Email Marketing",
+      "temps_lecture": "10 min de lecture",
+      "date_publication": "2026-06-07",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-030",
+      "titre": "Comment utiliser l'IA générative pour trouver une idée de Business rentable",
+      "excerpt": "Arrêtez les brainstormings inutiles. Utilisez ce prompt pour croiser vos compétences avec les problèmes réels du marché africain.",
+      "url": "https://digitalboostai.tech/blog/utiliser-ia-pour-trouver-idee-de-business.html",
+      "image_url": "https://digitalboostai.tech/img/ai_business_idea.png",
+      "emoji": "💡",
+      "categorie": "Stratégie Business",
+      "temps_lecture": "10 min de lecture",
+      "date_publication": "2026-06-10",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-031",
+      "titre": "Les 5 erreurs fatales que tout le monde fait en Prompt Engineering",
+      "excerpt": "Arrêtez de dire 'S'il te plaît' à l'IA. Découvrez pourquoi vos résultats sont moyens et comment adopter une logique algorithmique.",
+      "url": "https://digitalboostai.tech/blog/5-erreurs-fatales-en-prompt-engineering.html",
+      "image_url": "https://digitalboostai.tech/img/fatal_prompt_errors.png",
+      "emoji": "🚨",
+      "categorie": "Prompt Engineering",
+      "temps_lecture": "10 min de lecture",
+      "date_publication": "2026-06-14",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-032",
+      "titre": "Créer des vidéos TikTok sans visage : Logiciels et Stratégie",
+      "excerpt": "Faceless YouTube Channel : les meilleurs outils d'avatar IA, de synthèse vocale et de montage B-Roll.",
+      "url": "https://digitalboostai.tech/blog/creer-des-videos-tiktok-sans-visage.html",
+      "image_url": "https://digitalboostai.tech/img/faceless_tiktok_ia.png",
+      "emoji": "🎭",
+      "categorie": "Création de Contenu",
+      "temps_lecture": "10 min de lecture",
+      "date_publication": "2026-06-17",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-033",
+      "titre": "Organiser sa journée d'entrepreneur avec l'IA (Workflow Notion + ChatGPT)",
+      "excerpt": "Le système de productivité complet pour doubler vos résultats sans travailler 14h par jour.",
+      "url": "https://digitalboostai.tech/blog/organiser-journee-entrepreneur-ia-notion.html",
+      "image_url": "https://digitalboostai.tech/img/entrepreneur_productivity_notion.png",
+      "emoji": "📅",
+      "categorie": "Outils & Productivité",
+      "temps_lecture": "10 min de lecture",
+      "date_publication": "2026-06-21",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-034",
+      "titre": "Gérer les clients difficiles : Prompts pour écrire des emails professionnels parfaits",
+      "excerpt": "Comment répondre à une demande de remboursement ou un client agressif en restant ultra-diplomate grâce à l'IA.",
+      "url": "https://digitalboostai.tech/blog/gerer-les-clients-difficiles-prompts-ia.html",
+      "image_url": "https://digitalboostai.tech/img/difficult_clients_email.png",
+      "emoji": "🛡️",
+      "categorie": "SAV & WhatsApp",
+      "temps_lecture": "10 min de lecture",
+      "date_publication": "2026-06-24",
+      "newsletter_envoyee": false
+    },
+    {
+      "id": "article-035",
+      "titre": "Bilan Trimestriel : Comment l'automatisation a transformé DigitalBoost AI",
+      "excerpt": "Les chiffres réels (trafic, ventes, temps gagné) après 3 mois passés à l'automatisation intégrale du processus éditorial.",
+      "url": "https://digitalboostai.tech/blog/bilan-trimestriel-comment-l-automatisation-a-transforme-digitalboost-ai.html",
+      "image_url": "https://digitalboostai.tech/img/q2_automation_report.png",
+      "emoji": "📊",
+      "categorie": "Bilan & Transparence",
+      "temps_lecture": "10 min de lecture",
+      "date_publication": "2026-06-28",
       "newsletter_envoyee": false
     }
   ]
