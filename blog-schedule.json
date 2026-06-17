@@ -1,0 +1,686 @@
+{
+  "planning": {
+    "description": "Calendrier éditorial blog DigitalBoost AI — 2 articles/semaine (Mercredi + Dimanche)",
+    "debut": "2026-04-15",
+    "fin": "2026-12-30",
+    "total_articles": 75,
+    "rythme": "Mercredi + Dimanche"
+  },
+  "articles_planifies": [
+    {
+      "numero": 14,
+      "id": "article-014",
+      "date": "2026-04-15",
+      "jour": "Mercredi",
+      "titre_suggere": "Prompt Copywriting : Créer une Page de Vente en 30 Secondes avec l'IA",
+      "categorie": "IA & Automatisation Business",
+      "statut": "planifié"
+    },
+    {
+      "numero": 15,
+      "id": "article-015",
+      "date": "2026-04-19",
+      "jour": "Dimanche",
+      "titre_suggere": "5 Outils IA Gratuits que Tout Entrepreneur Africain Devrait Connaître en 2026",
+      "categorie": "Outils IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 16,
+      "id": "article-016",
+      "date": "2026-04-22",
+      "jour": "Mercredi",
+      "titre_suggere": "Comment l'IA Peut Doubler le Chiffre d'Affaires de Votre Commerce en Côte d'Ivoire",
+      "categorie": "IA & Création de Contenu",
+      "statut": "planifié"
+    },
+    {
+      "numero": 17,
+      "id": "article-017",
+      "date": "2026-04-26",
+      "jour": "Dimanche",
+      "titre_suggere": "ChatGPT vs Claude vs Gemini : Quel IA Choisir en 2026 ? (Comparatif Honnête)",
+      "categorie": "Produits Digitaux & Monétisation",
+      "statut": "planifié"
+    },
+    {
+      "numero": 18,
+      "id": "article-018",
+      "date": "2026-04-29",
+      "jour": "Mercredi",
+      "titre_suggere": "5 Scripts TikTok Viraux Générés par l'IA (Prêts à Copier)",
+      "categorie": "IA & Éducation / Afrique",
+      "statut": "planifié"
+    },
+    {
+      "numero": 19,
+      "id": "article-019",
+      "date": "2026-05-03",
+      "jour": "Dimanche",
+      "titre_suggere": "Comment Vendre son Premier Produit Digital à 10 000 FCFA avec l'IA",
+      "categorie": "Copywriting & Email Marketing IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 20,
+      "id": "article-020",
+      "date": "2026-05-06",
+      "jour": "Mercredi",
+      "titre_suggere": "Le Prompt IA qui Écrit vos Emails Professionnels en 10 Secondes",
+      "categorie": "SEO & Marketing Digital IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 21,
+      "id": "article-021",
+      "date": "2026-05-10",
+      "jour": "Dimanche",
+      "titre_suggere": "L'IA dans les Universités Africaines : État des Lieux 2026",
+      "categorie": "Productivité & Routines IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 22,
+      "id": "article-022",
+      "date": "2026-05-13",
+      "jour": "Mercredi",
+      "titre_suggere": "Comment Choisir le Bon Produit Digital à Créer (Framework IA en 5 Étapes)",
+      "categorie": "Entrepreneuriat & Mindset",
+      "statut": "planifié"
+    },
+    {
+      "numero": 23,
+      "id": "article-023",
+      "date": "2026-05-17",
+      "jour": "Dimanche",
+      "titre_suggere": "Automatiser son Service Client avec un Chatbot IA (Guide Pratique)",
+      "categorie": "IA & Automatisation Business",
+      "statut": "planifié"
+    },
+    {
+      "numero": 24,
+      "id": "article-024",
+      "date": "2026-05-20",
+      "jour": "Mercredi",
+      "titre_suggere": "Créer une Page de Vente Irrésistible avec l'IA en 2026",
+      "categorie": "Outils IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 25,
+      "id": "article-025",
+      "date": "2026-05-24",
+      "jour": "Dimanche",
+      "titre_suggere": "Mon Workflow Matinal avec l'IA : 5 Routines qui m'ont Changé la Vie",
+      "categorie": "IA & Création de Contenu",
+      "statut": "planifié"
+    },
+    {
+      "numero": 26,
+      "id": "article-026",
+      "date": "2026-05-27",
+      "jour": "Mercredi",
+      "titre_suggere": "SEO pour Débutants : Comment l'IA Peut vous Positionner en Page 1 de Google",
+      "categorie": "Produits Digitaux & Monétisation",
+      "statut": "planifié"
+    },
+    {
+      "numero": 27,
+      "id": "article-027",
+      "date": "2026-05-31",
+      "jour": "Dimanche",
+      "titre_suggere": "Bilan Transparent : 3 Mois de DigitalBoost AI (Chiffres Réels)",
+      "categorie": "IA & Éducation / Afrique",
+      "statut": "planifié"
+    },
+    {
+      "numero": 28,
+      "id": "article-028",
+      "date": "2026-06-03",
+      "jour": "Mercredi",
+      "titre_suggere": "Comment Créer une Formation en Ligne avec l'IA en 1 Semaine",
+      "categorie": "Copywriting & Email Marketing IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 29,
+      "id": "article-029",
+      "date": "2026-06-07",
+      "jour": "Dimanche",
+      "titre_suggere": "10 Prompts ChatGPT Indispensables pour les Entrepreneurs en 2026",
+      "categorie": "SEO & Marketing Digital IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 30,
+      "id": "article-030",
+      "date": "2026-06-10",
+      "jour": "Mercredi",
+      "titre_suggere": "L'IA et l'Agriculture en Afrique : Opportunités Business Cachées",
+      "categorie": "Productivité & Routines IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 31,
+      "id": "article-031",
+      "date": "2026-06-14",
+      "jour": "Dimanche",
+      "titre_suggere": "Comment Automatiser ses Réseaux Sociaux avec l'IA (Instagram, TikTok, LinkedIn)",
+      "categorie": "Entrepreneuriat & Mindset",
+      "statut": "planifié"
+    },
+    {
+      "numero": 32,
+      "id": "article-032",
+      "date": "2026-06-17",
+      "jour": "Mercredi",
+      "titre_suggere": "Séquence Email qui Convertit : 5 Templates IA Prêts à l'Emploi",
+      "categorie": "IA & Automatisation Business",
+      "statut": "planifié"
+    },
+    {
+      "numero": 33,
+      "id": "article-033",
+      "date": "2026-06-21",
+      "jour": "Dimanche",
+      "titre_suggere": "Guide Complet : Utiliser Claude AI pour Rédiger du Contenu Pro",
+      "categorie": "Outils IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 34,
+      "id": "article-034",
+      "date": "2026-06-24",
+      "jour": "Mercredi",
+      "titre_suggere": "Automatiser ses Factures et sa Comptabilité avec l'IA",
+      "categorie": "IA & Création de Contenu",
+      "statut": "planifié"
+    },
+    {
+      "numero": 35,
+      "id": "article-035",
+      "date": "2026-06-28",
+      "jour": "Dimanche",
+      "titre_suggere": "De 0 à 1000 Abonnés Email : La Stratégie IA Pas à Pas",
+      "categorie": "Produits Digitaux & Monétisation",
+      "statut": "planifié"
+    },
+    {
+      "numero": 36,
+      "id": "article-036",
+      "date": "2026-07-01",
+      "jour": "Mercredi",
+      "titre_suggere": "Comment Créer des Visuels Instagram Pro en 5 Minutes avec l'IA",
+      "categorie": "IA & Éducation / Afrique",
+      "statut": "planifié"
+    },
+    {
+      "numero": 37,
+      "id": "article-037",
+      "date": "2026-07-05",
+      "jour": "Dimanche",
+      "titre_suggere": "L'Entrepreneuriat Digital en Côte d'Ivoire : Opportunités 2026",
+      "categorie": "Copywriting & Email Marketing IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 38,
+      "id": "article-038",
+      "date": "2026-07-08",
+      "jour": "Mercredi",
+      "titre_suggere": "Midjourney vs DALL-E vs Ideogram : Quel Générateur d'Images IA Choisir ?",
+      "categorie": "SEO & Marketing Digital IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 39,
+      "id": "article-039",
+      "date": "2026-07-12",
+      "jour": "Dimanche",
+      "titre_suggere": "Comment Gagner ses Premiers 100 000 FCFA en Ligne avec l'IA",
+      "categorie": "Productivité & Routines IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 40,
+      "id": "article-040",
+      "date": "2026-07-15",
+      "jour": "Mercredi",
+      "titre_suggere": "Prompt Engineering Avancé : Les Techniques que 99% Ignorent",
+      "categorie": "Entrepreneuriat & Mindset",
+      "statut": "planifié"
+    },
+    {
+      "numero": 41,
+      "id": "article-041",
+      "date": "2026-07-19",
+      "jour": "Dimanche",
+      "titre_suggere": "Comment l'IA Révolutionne le E-commerce en Afrique Francophone",
+      "categorie": "IA & Automatisation Business",
+      "statut": "planifié"
+    },
+    {
+      "numero": 42,
+      "id": "article-042",
+      "date": "2026-07-22",
+      "jour": "Mercredi",
+      "titre_suggere": "Créer un Podcast avec l'IA : Du Script à la Publication en 1 Heure",
+      "categorie": "Outils IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 43,
+      "id": "article-043",
+      "date": "2026-07-26",
+      "jour": "Dimanche",
+      "titre_suggere": "Les 7 Erreurs Fatales quand on Lance un Business Digital (et Comment les Éviter)",
+      "categorie": "IA & Création de Contenu",
+      "statut": "planifié"
+    },
+    {
+      "numero": 44,
+      "id": "article-044",
+      "date": "2026-07-29",
+      "jour": "Mercredi",
+      "titre_suggere": "Google Gemini : Le Guide Complet pour Entrepreneurs (2026)",
+      "categorie": "Produits Digitaux & Monétisation",
+      "statut": "planifié"
+    },
+    {
+      "numero": 45,
+      "id": "article-045",
+      "date": "2026-08-02",
+      "jour": "Dimanche",
+      "titre_suggere": "Comment l'IA Peut Aider les Artisans Africains à Vendre en Ligne",
+      "categorie": "IA & Éducation / Afrique",
+      "statut": "planifié"
+    },
+    {
+      "numero": 46,
+      "id": "article-046",
+      "date": "2026-08-05",
+      "jour": "Mercredi",
+      "titre_suggere": "Comment Écrire un Article de Blog SEO avec l'IA en 30 Minutes",
+      "categorie": "Copywriting & Email Marketing IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 47,
+      "id": "article-047",
+      "date": "2026-08-09",
+      "jour": "Dimanche",
+      "titre_suggere": "Monétiser sa Communauté WhatsApp avec l'IA en Afrique",
+      "categorie": "SEO & Marketing Digital IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 48,
+      "id": "article-048",
+      "date": "2026-08-12",
+      "jour": "Mercredi",
+      "titre_suggere": "Bilan 5 Mois : Les Leçons que je N'oublierai Jamais",
+      "categorie": "Productivité & Routines IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 49,
+      "id": "article-049",
+      "date": "2026-08-16",
+      "jour": "Dimanche",
+      "titre_suggere": "Le Workflow IA pour Créer 30 Jours de Stories Instagram",
+      "categorie": "Entrepreneuriat & Mindset",
+      "statut": "planifié"
+    },
+    {
+      "numero": 50,
+      "id": "article-050",
+      "date": "2026-08-19",
+      "jour": "Mercredi",
+      "titre_suggere": "Comment Créer un Lead Magnet Irrésistible avec l'IA",
+      "categorie": "IA & Automatisation Business",
+      "statut": "planifié"
+    },
+    {
+      "numero": 51,
+      "id": "article-051",
+      "date": "2026-08-23",
+      "jour": "Dimanche",
+      "titre_suggere": "Automatiser son CRM et ses Relances Clients avec l'IA",
+      "categorie": "Outils IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 52,
+      "id": "article-052",
+      "date": "2026-08-26",
+      "jour": "Mercredi",
+      "titre_suggere": "L'IA Générative et le Futur de l'Emploi en Afrique de l'Ouest",
+      "categorie": "IA & Création de Contenu",
+      "statut": "planifié"
+    },
+    {
+      "numero": 53,
+      "id": "article-053",
+      "date": "2026-08-30",
+      "jour": "Dimanche",
+      "titre_suggere": "Comment Obtenir ses 100 Premiers Backlinks avec l'IA",
+      "categorie": "Produits Digitaux & Monétisation",
+      "statut": "planifié"
+    },
+    {
+      "numero": 54,
+      "id": "article-054",
+      "date": "2026-09-02",
+      "jour": "Mercredi",
+      "titre_suggere": "Créer et Vendre des Templates Notion avec l'IA",
+      "categorie": "IA & Éducation / Afrique",
+      "statut": "planifié"
+    },
+    {
+      "numero": 55,
+      "id": "article-055",
+      "date": "2026-09-06",
+      "jour": "Dimanche",
+      "titre_suggere": "La Méthode PARA + IA : Organiser sa Vie et son Business",
+      "categorie": "Copywriting & Email Marketing IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 56,
+      "id": "article-056",
+      "date": "2026-09-09",
+      "jour": "Mercredi",
+      "titre_suggere": "Comment l'IA Transforme le Journalisme et les Médias Africains",
+      "categorie": "SEO & Marketing Digital IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 57,
+      "id": "article-057",
+      "date": "2026-09-13",
+      "jour": "Dimanche",
+      "titre_suggere": "Créer une Chaîne YouTube Faceless avec l'IA (Guide Complet)",
+      "categorie": "Productivité & Routines IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 58,
+      "id": "article-058",
+      "date": "2026-09-16",
+      "jour": "Mercredi",
+      "titre_suggere": "Les Meilleures Extensions Chrome IA pour Entrepreneurs en 2026",
+      "categorie": "Entrepreneuriat & Mindset",
+      "statut": "planifié"
+    },
+    {
+      "numero": 59,
+      "id": "article-059",
+      "date": "2026-09-20",
+      "jour": "Dimanche",
+      "titre_suggere": "Automatiser la Veille Concurrentielle avec l'IA en 15 Min/Semaine",
+      "categorie": "IA & Automatisation Business",
+      "statut": "planifié"
+    },
+    {
+      "numero": 60,
+      "id": "article-060",
+      "date": "2026-09-23",
+      "jour": "Mercredi",
+      "titre_suggere": "Comment Écrire un Book de Prompts et le Vendre en Ligne",
+      "categorie": "Outils IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 61,
+      "id": "article-061",
+      "date": "2026-09-27",
+      "jour": "Dimanche",
+      "titre_suggere": "Google Ads + IA : Créer des Campagnes Publicitaires Rentables",
+      "categorie": "IA & Création de Contenu",
+      "statut": "planifié"
+    },
+    {
+      "numero": 62,
+      "id": "article-062",
+      "date": "2026-09-30",
+      "jour": "Mercredi",
+      "titre_suggere": "Bilan 6 Mois : De 0 à [X] FCFA — Le Parcours Complet",
+      "categorie": "Produits Digitaux & Monétisation",
+      "statut": "planifié"
+    },
+    {
+      "numero": 63,
+      "id": "article-063",
+      "date": "2026-10-04",
+      "jour": "Dimanche",
+      "titre_suggere": "Écrire des Scripts Vidéo Viraux avec l'IA : La Méthode AIDA",
+      "categorie": "IA & Éducation / Afrique",
+      "statut": "planifié"
+    },
+    {
+      "numero": 64,
+      "id": "article-064",
+      "date": "2026-10-07",
+      "jour": "Mercredi",
+      "titre_suggere": "Comment Utiliser l'IA pour Préparer ses Examens (Étudiants Africains)",
+      "categorie": "Copywriting & Email Marketing IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 65,
+      "id": "article-065",
+      "date": "2026-10-11",
+      "jour": "Dimanche",
+      "titre_suggere": "Landing Page Parfaite : Le Template IA qui Convertit à 15%",
+      "categorie": "SEO & Marketing Digital IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 66,
+      "id": "article-066",
+      "date": "2026-10-14",
+      "jour": "Mercredi",
+      "titre_suggere": "Automatiser ses DMs Instagram et WhatsApp Business avec l'IA",
+      "categorie": "Productivité & Routines IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 67,
+      "id": "article-067",
+      "date": "2026-10-18",
+      "jour": "Dimanche",
+      "titre_suggere": "Comment Créer un Mini-Cours Email en 5 Jours avec l'IA",
+      "categorie": "Entrepreneuriat & Mindset",
+      "statut": "planifié"
+    },
+    {
+      "numero": 68,
+      "id": "article-068",
+      "date": "2026-10-21",
+      "jour": "Mercredi",
+      "titre_suggere": "La Routine du Dimanche Soir : Planifier sa Semaine avec l'IA",
+      "categorie": "IA & Automatisation Business",
+      "statut": "planifié"
+    },
+    {
+      "numero": 69,
+      "id": "article-069",
+      "date": "2026-10-25",
+      "jour": "Dimanche",
+      "titre_suggere": "LinkedIn + IA : Devenir Visible et Générer des Leads en 2026",
+      "categorie": "Outils IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 70,
+      "id": "article-070",
+      "date": "2026-10-28",
+      "jour": "Mercredi",
+      "titre_suggere": "L'IA au Service des PME Ivoiriennes : 5 Cas Concrets",
+      "categorie": "IA & Création de Contenu",
+      "statut": "planifié"
+    },
+    {
+      "numero": 71,
+      "id": "article-071",
+      "date": "2026-11-01",
+      "jour": "Dimanche",
+      "titre_suggere": "Comment Créer un Webinaire Automatisé avec l'IA",
+      "categorie": "Produits Digitaux & Monétisation",
+      "statut": "planifié"
+    },
+    {
+      "numero": 72,
+      "id": "article-072",
+      "date": "2026-11-04",
+      "jour": "Mercredi",
+      "titre_suggere": "Les Nouvelles Fonctionnalités IA de Novembre 2026 à Connaître",
+      "categorie": "IA & Éducation / Afrique",
+      "statut": "planifié"
+    },
+    {
+      "numero": 73,
+      "id": "article-073",
+      "date": "2026-11-08",
+      "jour": "Dimanche",
+      "titre_suggere": "Automatiser sa Prospection Freelance avec l'IA",
+      "categorie": "Copywriting & Email Marketing IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 74,
+      "id": "article-074",
+      "date": "2026-11-11",
+      "jour": "Mercredi",
+      "titre_suggere": "Comment Repurposer 1 Article en 10 Contenus avec l'IA",
+      "categorie": "SEO & Marketing Digital IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 75,
+      "id": "article-075",
+      "date": "2026-11-15",
+      "jour": "Dimanche",
+      "titre_suggere": "Créer et Vendre des Packs de Prompts IA : Le Guide Business",
+      "categorie": "Productivité & Routines IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 76,
+      "id": "article-076",
+      "date": "2026-11-18",
+      "jour": "Mercredi",
+      "titre_suggere": "La Checklist IA du Solopreneur : 10 Automatisations Essentielles",
+      "categorie": "Entrepreneuriat & Mindset",
+      "statut": "planifié"
+    },
+    {
+      "numero": 77,
+      "id": "article-077",
+      "date": "2026-11-22",
+      "jour": "Dimanche",
+      "titre_suggere": "Comment Préparer un Black Friday Digital avec l'IA",
+      "categorie": "IA & Automatisation Business",
+      "statut": "planifié"
+    },
+    {
+      "numero": 78,
+      "id": "article-078",
+      "date": "2026-11-25",
+      "jour": "Mercredi",
+      "titre_suggere": "Pourquoi 90% des Créateurs de Contenu Abandonnent (et Comment Tenir)",
+      "categorie": "Outils IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 79,
+      "id": "article-079",
+      "date": "2026-11-29",
+      "jour": "Dimanche",
+      "titre_suggere": "Construire un Tunnel de Vente Automatisé avec l'IA (De A à Z)",
+      "categorie": "IA & Création de Contenu",
+      "statut": "planifié"
+    },
+    {
+      "numero": 80,
+      "id": "article-080",
+      "date": "2026-12-02",
+      "jour": "Mercredi",
+      "titre_suggere": "Bilan Black Friday : Résultats et Stratégies IA qui ont Marché",
+      "categorie": "Produits Digitaux & Monétisation",
+      "statut": "planifié"
+    },
+    {
+      "numero": 81,
+      "id": "article-081",
+      "date": "2026-12-06",
+      "jour": "Dimanche",
+      "titre_suggere": "Les Tendances IA 2027 : Ce qui va Changer pour les Entrepreneurs",
+      "categorie": "IA & Éducation / Afrique",
+      "statut": "planifié"
+    },
+    {
+      "numero": 82,
+      "id": "article-082",
+      "date": "2026-12-09",
+      "jour": "Mercredi",
+      "titre_suggere": "Comment Créer son Calendrier Éditorial 2027 avec l'IA en 1 Heure",
+      "categorie": "Copywriting & Email Marketing IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 83,
+      "id": "article-083",
+      "date": "2026-12-13",
+      "jour": "Dimanche",
+      "titre_suggere": "Les 20 Meilleurs Prompts IA de 2026 (Rétrospective)",
+      "categorie": "SEO & Marketing Digital IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 84,
+      "id": "article-084",
+      "date": "2026-12-16",
+      "jour": "Mercredi",
+      "titre_suggere": "L'IA et la Santé en Afrique : Innovations et Opportunités Business",
+      "categorie": "Productivité & Routines IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 85,
+      "id": "article-085",
+      "date": "2026-12-20",
+      "jour": "Dimanche",
+      "titre_suggere": "Préparer son Business Digital pour 2027 avec l'IA : Le Plan d'Action",
+      "categorie": "Entrepreneuriat & Mindset",
+      "statut": "planifié"
+    },
+    {
+      "numero": 86,
+      "id": "article-086",
+      "date": "2026-12-23",
+      "jour": "Mercredi",
+      "titre_suggere": "Créer une Offre de Noël Digitale en 24h avec l'IA",
+      "categorie": "IA & Automatisation Business",
+      "statut": "planifié"
+    },
+    {
+      "numero": 87,
+      "id": "article-087",
+      "date": "2026-12-27",
+      "jour": "Dimanche",
+      "titre_suggere": "Bilan Annuel 2026 : 10 Mois de DigitalBoost AI en Chiffres",
+      "categorie": "Outils IA",
+      "statut": "planifié"
+    },
+    {
+      "numero": 88,
+      "id": "article-088",
+      "date": "2026-12-30",
+      "jour": "Mercredi",
+      "titre_suggere": "Mes Résolutions Business 2027 : Ce que l'IA m'a Appris cette Année",
+      "categorie": "IA & Création de Contenu",
+      "statut": "planifié"
+    }
+  ]
+}

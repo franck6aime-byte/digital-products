@@ -14,54 +14,114 @@ BASE_URL = "https://digitalboostai.tech"
 # URL de l'Application Web Google Script (à mettre à jour après déploiement)
 NEWSLETTER_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyPWPlHaXJrNYAMFubWVVHoioouR87t2XKPsuFePGwJB6CLl3hQO9REzSDnZ5VLY613ew/exec"
 
-def add_to_blog_html(title, excerpt, file_name, img_name, emoji, read_time, date_str, total_articles, category, date_iso):
+def format_date_fr(date_iso):
+    try:
+        d = datetime.strptime(date_iso, "%Y-%m-%d")
+        mois = ["", "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
+        return f"{d.day} {mois[d.month]} {d.year}"
+    except:
+        return date_iso
+
+def rebuild_blog_grid(config):
+    articles = config.get('articles', [])
+    # Filtrer les articles qui n'ont pas de date ou date invalide
+    valid_articles = [a for a in articles if 'date_publication' in a]
+    # Trier par date décroissante
+    valid_articles.sort(key=lambda x: x['date_publication'], reverse=True)
+    
+    if not valid_articles:
+        return "", ""
+
+    featured = valid_articles[0]
+    others = valid_articles[1:]
+
+    # Featured HTML
+    feat_img_name = featured['image_url'].split('/')[-1]
+    feat_html = f"""
+    <p class="featured-label">⭐ Article à la une <span style="font-size:.72rem;background:#FEF3C7;color:#92400E;padding:3px 10px;border-radius:100px;margin-left:8px;">Nouveau</span></p>
+    <div id="featured-article-container">
+        <a href="{featured['url']}" class="featured-card" data-publish-date="{featured['date_publication']}">
+            <div>
+                <span class="card-tag">{featured.get('categorie', '')}</span>
+                <h2 class="card-title">{featured['titre']}</h2>
+                <p class="card-excerpt">{featured['excerpt']}</p>
+                <div class="card-meta">
+                    <span>📅 {format_date_fr(featured['date_publication'])} &nbsp;·&nbsp; ⏱️ {featured['temps_lecture']}</span>
+                    <span class="card-read">Lire l'article →</span>
+                </div>
+            </div>
+            <div class="featured-img-wrapper">
+                <img src="img/{feat_img_name}" alt="{featured['titre']} - DigitalBoost AI">
+            </div>
+        </a>
+    </div>
+"""
+
+    # Grid HTML
+    grid_html = """
+    <p class="featured-label">📖 Tous les articles</p>
+    <div class="articles-grid">
+"""
+    for a in others:
+        img_name = a['image_url'].split('/')[-1]
+        grid_html += f"""
+        <a href="{a['url']}" class="article-card" data-publish-date="{a['date_publication']}">
+            <div class="card-img">
+                <img src="img/{img_name}" alt="{a['titre']} - DigitalBoost AI" loading="lazy">
+            </div>
+            <div class="card-body">
+                <span class="card-tag">{a.get('categorie', '')}</span>
+                <h3 class="card-title">{a['titre']}</h3>
+                <p class="card-excerpt">{a['excerpt']}</p>
+                <div class="card-meta">
+                    <span>📅 {format_date_fr(a['date_publication'])} &nbsp;·&nbsp; ⏱️ {a['temps_lecture']}</span>
+                    <span class="card-read">Lire →</span>
+                </div>
+            </div>
+        </a>
+"""
+    grid_html += "    </div>\n"
+    return feat_html, grid_html
+
+
+def add_to_blog_html(config):
     with open(BLOG_INDEX, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Mise à jour du compteur d'articles
+    # Mise à jour du compteur d'articles (statistiques en haut de la page)
+    total_articles = len(config['articles'])
+    # Trouver et remplacer le compteur d'articles
     content = re.sub(
         r'<span class="num">\d+</span><span class="label">Articles publiés</span>',
         f'<span class="num">{total_articles}</span><span class="label">Articles publiés</span>',
         content
     )
-    
-    # Éviter les doublons de carte
-    if file_name in content:
-        print(f"⚠️ La carte pour {file_name} semble déjà exister dans blog.html.")
-        return
 
-    # Création du bloc HTML de la nouvelle carte d'article
-    gradient = "linear-gradient(135deg, #0D1117 0%, #1A4B9E 50%, #C9A84C 100%)"
-    
-    # Format HTML de la nouvelle carte d'article
-    new_card = f"""
-        <a href="https://digitalboostai.tech/blog/{file_name}" class="article-card" data-publish-date="{date_iso}">
-            <div class="card-img">
-                <img src="img/{img_name}" alt="{title} - DigitalBoost AI" loading="lazy">
-            </div>
-            <div class="card-body">
-                <span class="card-tag">{category}</span>
-                <h3 class="card-title">{title}</h3>
-                <p class="card-excerpt">{excerpt}</p>
-                <div class="card-meta">
-                    <span>📅 {date_str} &nbsp;·&nbsp; ⏱️ {read_time}</span>
-                    <span class="card-read">Lire →</span>
-                </div>
-            </div>
-        </a>"""
+    # Obtenir les catégories uniques
+    categories = set(a.get('categorie') for a in config['articles'] if a.get('categorie'))
+    total_categories = len(categories)
+    # Trouver et remplacer le compteur de catégories
+    content = re.sub(
+        r'<span class="num">\d+</span><span class="label">Catégories</span>',
+        f'<span class="num">{total_categories}</span><span class="label">Catégories</span>',
+        content
+    )
 
-    # Injection au sommet de la grille d'articles
-    target = '<div class="articles-grid">\n'
-    if target in content:
-        content = content.replace(target, target + new_card + "\n")
+    # Regénérer toute la grille HTML
+    feat_html, grid_html = rebuild_blog_grid(config)
+
+    # Injecter dans le HTML
+    pattern = re.compile(r'<!-- ARTICLE EN VEDETTE \(le plus récent\) -->.*?(?=<!-- NEWSLETTER -->)', re.DOTALL)
+    replacement = f"<!-- ARTICLE EN VEDETTE (le plus récent) -->\n{feat_html}\n{grid_html}\n\n    "
+    
+    if pattern.search(content):
+        content = pattern.sub(replacement, content)
+        print("✅ Grille et article à la une mis à jour dynamiquement dans blog.html.")
     else:
-        print("⚠️ 'articles-grid' non trouvé dans blog.html, injection de base.")
-        # Fallback au pire si la grille bouge
-        content = content.replace("</main>", new_card + "\n    </main>")
+        print("⚠️ Impossible de trouver les marqueurs dans blog.html pour la mise à jour.")
 
     with open(BLOG_INDEX, "w", encoding="utf-8") as f:
         f.write(content)
-    print("✅ blog.html mis à jour visuellement (nouvelle carte ajoutée).")
 
 def trigger_newsletter_distribution():
     """
@@ -92,6 +152,12 @@ def publish_article(article_id, title, excerpt, file_name, img_name, emoji, cate
     with open(CONFIG_FILE, 'r', encoding='utf-8') as f:
         config = json.load(f)
 
+    # Auto-génération de l'ID si non fourni
+    if not article_id:
+        total_articles = len(config['articles'])
+        article_id = f"article-{total_articles + 1:03d}"
+        print(f"🤖 ID généré automatiquement : {article_id}")
+
     # 1. Mise à jour config (JSON)
     for article in config['articles']:
         if article['id'] == article_id:
@@ -100,9 +166,7 @@ def publish_article(article_id, title, excerpt, file_name, img_name, emoji, cate
             break
 
     # Date formatée
-    mois = ["", "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
     now = datetime.now()
-    date_str = f"{now.day} {mois[now.month]} {now.year}"
     date_iso = now.strftime("%Y-%m-%d")
 
     new_article = {
@@ -122,11 +186,10 @@ def publish_article(article_id, title, excerpt, file_name, img_name, emoji, cate
     with open(CONFIG_FILE, 'w', encoding='utf-8') as f:
         json.dump(config, f, indent=2, ensure_ascii=False)
     
-    print(f"✅ {CONFIG_FILE} mis à jour (pour la Newsletter).")
+    print(f"✅ {CONFIG_FILE} mis à jour (ID: {article_id}).")
 
     # 2. Ajout de la carte (HTML) et mise à jour du compteur
-    total_articles = len(config['articles'])
-    add_to_blog_html(title, excerpt, file_name, img_name, emoji, read_time, date_str, total_articles, category, date_iso)
+    add_to_blog_html(config)
 
     # 3. Génération du Flux RSS
     print("📡 Mise à jour du flux RSS (rss.xml)...")
@@ -135,14 +198,14 @@ def publish_article(article_id, title, excerpt, file_name, img_name, emoji, cate
     except Exception as e:
         print(f"⚠️ Erreur lors de la génération RSS : {e}")
 
-    # 3. Déploiement Vercel automatique
+    # 4. Déploiement Vercel automatique
     print("☁️ Déploiement sur serveur Vercel...")
     try:
         subprocess.run(["npx", "vercel", "--prod", "--yes"], capture_output=True, text=True, check=True)
         print("🎉 Déploiement 100% réussi !")
         print(f"🔗 URL LIVE : {BASE_URL}/blog/{file_name}")
 
-        # 4. Déclencheur Newsletter (immédiat)
+        # 5. Déclencheur Newsletter (immédiat)
         trigger_newsletter_distribution()
 
     except subprocess.CalledProcessError as e:
@@ -150,7 +213,7 @@ def publish_article(article_id, title, excerpt, file_name, img_name, emoji, cate
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Automatisation TOTALE Publication Blog")
-    parser.add_argument("--id", required=True, help="Identifiant unique (ex: article-004)")
+    parser.add_argument("--id", required=False, help="Identifiant unique (ex: article-036). Optionnel, généré auto si omis.")
     parser.add_argument("--title", required=True, help="Titre principal de l'article")
     parser.add_argument("--excerpt", required=True, help="Résumé court (2-3 phrases)")
     parser.add_argument("--file", required=True, help="Nom du fichier (ex: le-nom.html)")

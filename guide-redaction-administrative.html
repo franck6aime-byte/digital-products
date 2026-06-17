@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guide Gratuit : 10 Règles d'Or de la Rédaction Administrative avec l'IA</title>
+    <meta name="description" content="Téléchargez notre mini-guide PDF pour apprendre à générer des notes de service impeccables en moins de 2 minutes avec ChatGPT." />
+    <link rel="canonical" href="https://digitalboostai.tech/guide-redaction-administrative.html" />
+    <meta name="theme-color" content="#0D1117" />
+    
+    <link rel="preload" href="./fonts/dm-sans-v17-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/fraunces-v38-latin-900.woff2" as="font" type="font/woff2" crossorigin>
+
+    <style>
+/* ============================================================
+   @font-face AUTO-HÉBERGÉ
+============================================================ */
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./fonts/dm-sans-v17-latin-400.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('./fonts/dm-sans-v17-latin-700.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('./fonts/fraunces-v38-latin-700.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('./fonts/fraunces-v38-latin-900.woff2') format('woff2');
+}
+
+        :root {
+            --ink: #0D1117;
+            --paper: #FAFAF7;
+            --gold: #C9A84C;
+            --gold-light: #F0E0A8;
+            --accent: #0F5132;
+            --muted: #555B66;
+            --border: #E5E2D9;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'DM Sans', sans-serif; background: var(--paper); color: var(--ink); font-size: 17px; line-height: 1.8; }
+        
+        .site-header { position: sticky; top: 0; background: rgba(250,250,247,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; z-index: 100; }
+        .site-header .logo { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 900; color: var(--ink); text-decoration: none; letter-spacing: -0.5px; }
+        .site-header .logo span { color: var(--gold); }
+        .header-cta { background: var(--ink); color: var(--paper); padding: 10px 20px; border-radius: 100px; font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: background 0.2s; min-height: 44px; display: inline-flex; align-items: center; }
+        .header-cta:hover { background: var(--accent); }
+
+        .landing-container { max-width: 800px; margin: 60px auto; padding: 0 24px; text-align: center; }
+        .eyebrow { font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+        
+        h1 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; color: var(--ink); line-height: 1.15; letter-spacing: -1px; margin-bottom: 24px; }
+        .subtitle { font-size: 1.2rem; color: var(--muted); margin-bottom: 48px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+
+        .capture-box {
+            background: linear-gradient(135deg, var(--ink) 0%, #1A2A3A 100%);
+            border-radius: 24px;
+            padding: 48px 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            margin-bottom: 40px;
+        }
+
+        .capture-box h2 { font-family: 'Fraunces', serif; color: white; font-size: 1.8rem; margin-bottom: 12px; }
+        .capture-box p { color: rgba(255,255,255,0.88); margin-bottom: 32px; font-size: 1.05rem; }
+
+        .newsletter-form { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+        .newsletter-form input { padding: 16px 20px; border-radius: 100px; border: none; font-size: 1rem; width: 320px; outline: none; font-family: 'DM Sans', sans-serif; }
+        .newsletter-form button { background: var(--gold); color: var(--ink); padding: 16px 32px; border-radius: 100px; border: none; font-weight: 700; font-size: 1rem; cursor: pointer; transition: transform 0.2s; font-family: 'DM Sans', sans-serif; box-shadow: 0 4px 15px rgba(201, 168, 76, 0.4); }
+        .newsletter-form button:hover { transform: translateY(-3px); }
+
+        .benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; text-align: left; margin-top: 60px; }
+        .benefit-item { background: white; padding: 24px; border-radius: 16px; border: 1px solid var(--border); }
+        .benefit-item h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; color: var(--ink); margin-bottom: 8px; }
+        .benefit-item p { font-size: 0.9rem; color: var(--muted); line-height: 1.5; margin: 0; }
+
+        .site-footer { border-top: 1px solid var(--border); padding: 40px 24px; text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 80px; }
+        .site-footer a { color: var(--gold); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <a href="/" class="logo">⚡DigitalBoost <span>AI</span></a>
+    <a href="/blog.html" class="header-cta">Lire le Blog →</a>
+</header>
+
+<main class="landing-container">
+    <div class="eyebrow">🎁 Guide Gratuit</div>
+    <h1>Les 10 Règles d'Or de la Rédaction Administrative avec l'IA</h1>
+    <p class="subtitle">Découvrez comment rédiger des notes de service, emails professionnels et rapports impeccables en moins de 2 minutes grâce à ChatGPT.</p>
+
+    <div class="capture-box">
+        <h2>Où voulez-vous recevoir le guide ?</h2>
+        <p>Entrez votre email ci-dessous pour le recevoir instantanément.</p>
+        
+        <form class="newsletter-form" id="newsletterForm" action="https://docs.google.com/forms/d/e/1FAIpQLScNC3J4zzzRxaqwLIEUHfozQMHmlPnTK-ZIXWgNI2u7l9JVOQ/formResponse" method="POST" target="hidden_iframe" onsubmit="return handleNewsletterSubmit(event)">
+            <input type="hidden" name="entry.456873559" id="nl-prenom" value="Lecteur Guide" />
+            <input type="email" name="entry.1636962496" id="nl-email" placeholder="votre@email.com" required aria-label="Votre adresse email" />
+            <button type="submit" id="nl-submit">Télécharger le guide 📥</button>
+        </form>
+        <div id="nl-success" style="display:none;margin-top:20px;color:#FAFAF7;font-weight:bold;font-size:1.1rem;">
+            🎉 Super ! Le téléchargement va démarrer dans quelques secondes...
+        </div>
+        <iframe name="hidden_iframe" title="Formulaire caché" style="display:none;"></iframe>
+    </div>
+
+    <div class="benefits">
+        <div class="benefit-item">
+            <h3>⏱️ Gain de temps massif</h3>
+            <p>Passez de 2 heures à 2 minutes pour rédiger une note de service conforme aux standards.</p>
+        </div>
+        <div class="benefit-item">
+            <h3>🎯 Ton parfait</h3>
+            <p>Apprenez à paramétrer l'IA pour qu'elle adopte un ton professionnel, diplomate et respectueux de la hiérarchie.</p>
+        </div>
+        <div class="benefit-item">
+            <h3>🛡️ Sans erreurs</h3>
+            <p>Zéro faute d'orthographe, syntaxe impeccable et structure logique garantie à 100%.</p>
+        </div>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <p>© 2026 <a href="/">DigitalBoost AI</a> — Tous droits réservés &nbsp;·&nbsp;
+    <a href="/mentions-legales">Mentions légales</a> &nbsp;·&nbsp;
+    <a href="/politique-confidentialite">Confidentialité</a></p>
+</footer>
+
+<script>
+    let disposableDomains = new Set(['mailna.co', 'mailna.me', 'mailna.in', 'mohmal.com', 'mohmal.in', 'cleantempmail.com', 'temp-mail.org', '10minutemail.com', 'guerrillamail.com', 'simplelogin.io', 'emailondeck.com', 'mailinator.com', 'tempmail.plus', 'throwawaymail.com', 'yopmail.com', 'guerrillamail.info', 'grr.la', 'sharklasers.com', 'dispostable.com']);
+    let _spamListLoaded = false;
+    function _loadSpamList() {
+        if (_spamListLoaded) return;
+        _spamListLoaded = true;
+        fetch('/data/disposable_domains.txt')
+            .then(r => r.text())
+            .then(t => { t.split('\n').forEach(d => { if (d.trim()) disposableDomains.add(d.trim()); }); })
+            .catch(() => {});
+    }
+    var _nlEmail = document.getElementById('nl-email');
+    if (_nlEmail) _nlEmail.addEventListener('focus', _loadSpamList, { once: true });
+
+    function handleNewsletterSubmit(event) {
+        var emailInput = document.getElementById('nl-email');
+        var btn = document.getElementById('nl-submit');
+        var success = document.getElementById('nl-success');
+        var email = emailInput.value.toLowerCase().trim();
+        var domaine = email.split('@')[1];
+
+        if (disposableDomains.has(domaine)) {
+            if (event) event.preventDefault();
+            btn.innerHTML = '⚠️ Adresse invalide';
+            btn.style.background = '#dc2626';
+            setTimeout(function () {
+                btn.innerHTML = 'Télécharger le guide 📥';
+                btn.style.background = 'var(--gold)';
+            }, 3000);
+            return false;
+        }
+
+        // Simuler le délai d'envoi du form
+        setTimeout(function () {
+            if (btn) btn.style.display = 'none';
+            if (success) success.style.display = 'block';
+            if (emailInput) emailInput.value = '';
+            
+            // Ouvrir le PDF dans un nouvel onglet
+            setTimeout(function() {
+                window.open('https://digitalboostai.tech/downloads/DigitalBoost_AI_10_Regles_Redaction_Administrative.pdf', '_blank');
+            }, 1000);
+            
+        }, 1200);
+        
+        return true;
+    }
+</script>
+
+</body>
+</html>
