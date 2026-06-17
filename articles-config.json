@@ -415,18 +415,6 @@
       "newsletter_envoyee": false
     },
     {
-      "id": "article-035",
-      "titre": "Bilan Trimestriel : Comment l'automatisation a transformé DigitalBoost AI",
-      "excerpt": "Les chiffres réels (trafic, ventes, temps gagné) après 3 mois passés à l'automatisation intégrale du processus éditorial.",
-      "url": "https://digitalboostai.tech/blog/bilan-trimestriel-comment-l-automatisation-a-transforme-digitalboost-ai.html",
-      "image_url": "https://digitalboostai.tech/img/q2_automation_report.png",
-      "emoji": "📊",
-      "categorie": "Bilan & Transparence",
-      "temps_lecture": "10 min de lecture",
-      "date_publication": "2026-06-28",
-      "newsletter_envoyee": false
-    },
-    {
       "id": "article-036",
       "titre": "Comment rédiger vos écrits administratifs avec l'IA en respectant la loi",
       "excerpt": "Notes de service, rapports, courriers officiels : apprenez à déléguer à ChatGPT ou Claude sans commettre de faute professionnelle.",
