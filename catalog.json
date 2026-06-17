@@ -25,5 +25,14 @@
     "chariowLink": "https://ppawzaph.mychariow.shop/prd_woqpd3/checkout",
     "lien_page": "https://digitalboostai.tech/#pricing",
     "lien_short": "https://ppawzaph.mychariow.shop/prd_woqpd3"
+  },
+  "redaction_admin": {
+    "name": "Pack IA — Rédaction Administrative",
+    "displayName": "Pack IA — Rédaction Administrative",
+    "price": 5000,
+    "prix_texte": "5 000 FCFA",
+    "chariowLink": "https://ppawzaph.mychariow.shop/prd_5otgoxu1/checkout",
+    "lien_page": "https://digitalboostai.tech/products/redaction-administrative.html",
+    "lien_short": "https://ppawzaph.mychariow.shop/prd_5otgoxu1"
   }
 }

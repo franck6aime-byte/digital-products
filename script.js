@@ -145,6 +145,12 @@ async function initModal() {
             displayName: 'Bundle Ultime',
             price: 14900,
             chariowLink: 'https://ppawzaph.mychariow.shop/prd_woqpd3/checkout'
+        },
+        redaction_admin: {
+            name: 'Pack IA — Rédaction Administrative',
+            displayName: 'Pack IA — Rédaction Administrative',
+            price: 5000,
+            chariowLink: 'https://ppawzaph.mychariow.shop/prd_5otgoxu1/checkout'
         }
     };
 
@@ -182,6 +188,7 @@ async function initModal() {
             if(product.price === 14900) conversionText = " (~23€ / 25$)";
             if(product.price === 2500) conversionText = " (~3.80€ / 4$)";
             if(product.price === 4900) conversionText = " (~7.50€ / 8$)";
+            if(product.price === 5000) conversionText = " (~7.60€ / 8.20$)";
             
             document.getElementById('modalItemPrice').textContent = product.price.toLocaleString('fr-FR') + ' FCFA' + conversionText;
             document.getElementById('modalTotal').textContent = product.price.toLocaleString('fr-FR') + ' FCFA' + conversionText;
