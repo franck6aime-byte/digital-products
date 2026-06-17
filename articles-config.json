@@ -425,6 +425,18 @@
       "temps_lecture": "10 min de lecture",
       "date_publication": "2026-06-28",
       "newsletter_envoyee": false
+    },
+    {
+      "id": "article-036",
+      "titre": "Comment rédiger vos écrits administratifs avec l'IA en respectant la loi",
+      "excerpt": "Notes de service, rapports, courriers officiels : apprenez à déléguer à ChatGPT ou Claude sans commettre de faute professionnelle.",
+      "url": "https://digitalboostai.tech/blog/rediger-ecrits-administratifs-ia",
+      "image_url": "https://digitalboostai.tech/img/banniere_redaction_administrative.png",
+      "emoji": "💼",
+      "categorie": "💼 Rédaction Administrative",
+      "temps_lecture": "8 min de lecture",
+      "date_publication": "2026-06-17",
+      "newsletter_envoyee": false
     }
   ]
 }

@@ -7,28 +7,12 @@
   <language>fr</language>
   <atom:link href="https://digitalboostai.tech/rss.xml" rel="self" type="application/rss+xml" />
   <item>
-    <title>Bilan Trimestriel : Comment l'automatisation a transformé DigitalBoost AI</title>
-    <link>https://digitalboostai.tech/blog/bilan-trimestriel-comment-l-automatisation-a-transforme-digitalboost-ai</link>
-    <description>Les chiffres réels (trafic, ventes, temps gagné) après 3 mois passés à l'automatisation intégrale du processus éditorial.</description>
-    <pubDate>Sun, 28 Jun 2026 08:00:00 +0000</pubDate>
-    <guid isPermaLink="true">https://digitalboostai.tech/blog/bilan-trimestriel-comment-l-automatisation-a-transforme-digitalboost-ai</guid>
-    <category>Bilan &amp; Transparence</category>
-  </item>
-  <item>
-    <title>Gérer les clients difficiles : Prompts pour écrire des emails professionnels parfaits</title>
-    <link>https://digitalboostai.tech/blog/gerer-les-clients-difficiles-prompts-ia</link>
-    <description>Comment répondre à une demande de remboursement ou un client agressif en restant ultra-diplomate grâce à l'IA.</description>
-    <pubDate>Wed, 24 Jun 2026 08:00:00 +0000</pubDate>
-    <guid isPermaLink="true">https://digitalboostai.tech/blog/gerer-les-clients-difficiles-prompts-ia</guid>
-    <category>SAV &amp; WhatsApp</category>
-  </item>
-  <item>
-    <title>Organiser sa journée d'entrepreneur avec l'IA (Workflow Notion + ChatGPT)</title>
-    <link>https://digitalboostai.tech/blog/organiser-journee-entrepreneur-ia-notion</link>
-    <description>Le système de productivité complet pour doubler vos résultats sans travailler 14h par jour.</description>
-    <pubDate>Sun, 21 Jun 2026 08:00:00 +0000</pubDate>
-    <guid isPermaLink="true">https://digitalboostai.tech/blog/organiser-journee-entrepreneur-ia-notion</guid>
-    <category>Outils &amp; Productivité</category>
+    <title>Comment rédiger vos écrits administratifs avec l'IA en respectant la loi</title>
+    <link>https://digitalboostai.tech/blog/rediger-ecrits-administratifs-ia</link>
+    <description>Notes de service, rapports, courriers officiels : apprenez à déléguer à ChatGPT ou Claude sans commettre de faute professionnelle.</description>
+    <pubDate>Wed, 17 Jun 2026 08:00:00 +0000</pubDate>
+    <guid isPermaLink="true">https://digitalboostai.tech/blog/rediger-ecrits-administratifs-ia</guid>
+    <category>💼 Rédaction Administrative</category>
   </item>
   <item>
     <title>Créer des vidéos TikTok sans visage : Logiciels et Stratégie</title>
