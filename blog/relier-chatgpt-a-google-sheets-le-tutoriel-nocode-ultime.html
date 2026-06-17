@@ -235,6 +235,13 @@ function CHATGPT(prompt, instruction) {
 // Retournez dans Sheets et utilisez =CHATGPT(A1, "votre instruction")</p>
         </div>
 
+        <div class="output-box">
+            <div class="output-label">Exemple de résultat généré</div>
+            <p>Après avoir collé le script et cliqué sur "Déployer", retournez dans votre feuille Google Sheets. Dans la cellule B1, tapez : <strong>=CHATGPT(A1, "Rédige une description de vente de 100 mots pour ce produit")</strong></p>
+            <p>Si A1 contient "Huile de karité artisanale du Burkina Faso", la cellule B1 affiche en 3 secondes : "Découvrez notre huile de karité 100% pure, récoltée à la main dans les savanes du Burkina Faso. Riche en vitamines A et E, elle nourrit en profondeur peaux sèches et cheveux abîmés. Sans conservateur, sans parfum artificiel. Idéale pour les peaux africaines exposées à la chaleur et au soleil. Un soin ancestral d'exception, livré chez vous."</p>
+            <p>Résultat : une description produit professionnelle générée automatiquement, prête à copier sur votre boutique en ligne ou votre catalogue WhatsApp.</p>
+        </div>
+
         <div class="warning-block">
             <div class="warn-label">⚠️ Sécurité de la clé API</div>
             <p>Ne partagez jamais votre Google Sheets contenant votre clé API avec d'autres personnes. Pour une utilisation en équipe, utilisez les "Propriétés de script" (menu Projet → Propriétés) pour stocker la clé de manière sécurisée plutôt que de la mettre directement dans le code.</p>
