@@ -1,4 +1,4 @@
-"""
+﻿"""
 rebuild_batch1.py — Articles 15 à 21
 Reconstruit les articles dégradés avec du contenu complet et premium.
 Aucune API externe nécessaire. Lancer : python rebuild_batch1.py
@@ -184,7 +184,7 @@ function googleTranslateElementInit(){{new google.translate.TranslateElement({{p
     <div class="meta-row">
         <span>📅 {date_str}</span><span>·</span>
         <span>⏱️ {temps_lecture}</span><span>·</span>
-        <span>👋 Par Franck-Aimé, DigitalBoost AI</span>
+        <span>👋 DigitalBoost AI</span>
     </div>
 </div>
 <div class="hero-image">
@@ -1392,3 +1392,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

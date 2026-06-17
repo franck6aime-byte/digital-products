@@ -1,4 +1,4 @@
-"""
+﻿"""
 rebuild_batch2.py — Articles 22 à 28
 Contenu premium complet, sans API externe.
 Lancer : python -X utf8 rebuild_batch2.py
@@ -154,7 +154,7 @@ function googleTranslateElementInit(){{new google.translate.TranslateElement({{p
     <div class="meta-row">
         <span>📅 {date_str}</span><span>·</span>
         <span>⏱️ {temps_lecture}</span><span>·</span>
-        <span>👋 Par Franck-Aimé, DigitalBoost AI</span>
+        <span>👋 DigitalBoost AI</span>
     </div>
 </div>
 <div class="hero-image">
@@ -1362,3 +1362,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

@@ -1,4 +1,4 @@
-"""
+﻿"""
 rebuild_batch3.py — Articles 29 à 35 (dernier batch)
 Lancer : python -X utf8 rebuild_batch3.py
 """
@@ -124,7 +124,7 @@ details.faq-item[open] summary::after{transform:rotate(45deg)}details.faq-item p
 <div class="hero">
     <span class="category-tag">{emoji} {category}</span>
     <h1>{titre}</h1><p class="hero-subtitle">{excerpt}</p>
-    <div class="meta-row"><span>📅 {date_str}</span><span>·</span><span>⏱️ {temps_lecture}</span><span>·</span><span>👋 Par Franck-Aimé, DigitalBoost AI</span></div>
+    <div class="meta-row"><span>📅 {date_str}</span><span>·</span><span>⏱️ {temps_lecture}</span><span>·</span><span>👋 DigitalBoost AI</span></div>
 </div>
 <div class="hero-image">
     <div class="hero-image-inner">
@@ -1136,3 +1136,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

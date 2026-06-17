@@ -1,4 +1,4 @@
-"""
+﻿"""
 rebuild_articles_claude.py
 ==========================
 Reconstruit les 21 articles dégradés (articles 15–35) en utilisant l'API Claude.
@@ -715,7 +715,7 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
         <span>·</span>
         <span>⏱️ {temps_lecture}</span>
         <span>·</span>
-        <span>👋 Par Franck-Aimé, DigitalBoost AI</span>
+        <span>👋 DigitalBoost AI</span>
     </div>
 </div>
 
@@ -1041,3 +1041,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

@@ -1,4 +1,4 @@
-import os
+﻿import os
 import re
 
 dir_path = r"c:\Users\FRANCK-AIME YAO\OneDrive\Documents\AGENT AI\digital-products"
@@ -84,3 +84,4 @@ for root, _, files in os.walk(dir_path):
                 modified_count += 1
                 
 print(f"Modified {modified_count} HTML files with new IP script.")
+
