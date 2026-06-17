@@ -1,12 +1,13 @@
 const fs = require('fs');
-const path = require('path');
 const { execSync } = require('child_process');
 const http = require('https');
 
 const CONFIG_FILE = "articles-config.json";
 const BLOG_INDEX = "blog.html";
 const BASE_URL = "https://digitalboostai.tech";
-const NEWSLETTER_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyPWPlHaXJrNYAMFubWVVHoioouR87t2XKPsuFePGwJB6CLl3hQO9REzSDnZ5VLY613ew/exec";
+// Bug corrigé : la clé de sécurité doit être passée en paramètre ?key=
+// Sans elle, doGet() rejette la requête avec "Clé de sécurité invalide"
+const NEWSLETTER_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyPWPlHaXJrNYAMFubWVVHoioouR87t2XKPsuFePGwJB6CLl3hQO9REzSDnZ5VLY613ew/exec?key=dbai_security_2026_q2";
 
 // Parse command line arguments
 // Example: node publish_article.js --title "..." --excerpt "..." --file "..." --image "..." --emoji "..." --category "..." --time "..."
