@@ -1,5 +1,17 @@
-# Local Netlify folder
 .netlify
 
 .vercel
 .env*.local
+.env
+.env.gemini
+
+# Node modules
+node_modules/
+package-lock.json
+
+# Scratch files
+scratch_*
+*.log
+
+# Audit PDF
+Rapport_Audit_DigitalBoost_AI.pdf

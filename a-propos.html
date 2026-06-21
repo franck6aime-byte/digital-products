@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos — DigitalBoost AI</title>
+    <meta name="description" content="Découvrez l'histoire, la mission et les valeurs de DigitalBoost AI, votre partenaire pour intégrer l'intelligence artificielle dans votre business.">
+    <link rel="canonical" href="https://digitalboostai.tech/a-propos" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .about-hero {
+            padding: 160px 0 80px;
+            text-align: center;
+            background: linear-gradient(150deg, #060d10 0%, #0D1117 45%, #050d08 100%);
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .about-hero p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .about-container {
+            max-width: 900px;
+            margin: 60px auto 100px;
+            padding: 0 24px;
+        }
+
+        .about-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 50px;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: var(--text-primary);
+            font-family: var(--font-display);
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        @media(max-width: 768px) {
+            .story-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-card {
+                padding: 30px 20px;
+            }
+        }
+
+        .story-text p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .story-visual {
+            background: var(--bg-tertiary);
+            border: 1.5px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .story-visual .quote {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--accent-primary);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .story-visual .author {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text-primary);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        @media(max-width: 768px) {
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .value-card {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px 24px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .value-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .value-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--text-primary) 0%, #1a2a1a 100%);
+            border-radius: 24px;
+            padding: 50px;
+            text-align: center;
+            color: #ffffff;
+            margin-top: 60px;
+            border: 1px solid var(--accent-primary);
+        }
+
+        .cta-section h2 {
+            color: #ffffff;
+            font-family: var(--font-display);
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .btn-gold {
+            display: inline-block;
+            background: var(--accent-primary);
+            color: var(--text-primary);
+            padding: 14px 28px;
+            border-radius: 100px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(201, 168, 76, 0.4);
+        }
+        
+        .navbar .logo-text {
+            color: white !important;
+        }
+        .navbar.scrolled .logo-text {
+            color: var(--text-primary) !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-grid"></div>
+
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Digital<span class="logo-accent">Boost</span> AI</span>
+            </a>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Accueil</a>
+                <a href="/blog" class="nav-link">Blog</a>
+                <a href="/#pricing" class="nav-link">Obtenir l'Accès</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="about-hero">
+        <div class="container">
+            <h1>Notre Mission & Histoire</h1>
+            <p>Rendre l'intelligence artificielle accessible et concrète pour chaque entrepreneur en Afrique.</p>
+        </div>
+    </header>
+
+    <main class="about-container">
+        <div class="about-card">
+            <h2>Pourquoi DigitalBoost AI ?</h2>
+            <div class="story-grid">
+                <div class="story-text">
+                    <p>
+                        L'intelligence artificielle est la plus grande opportunité technologique de notre décennie. Pourtant, de nombreux entrepreneurs, créateurs et professionnels africains se sentent dépassés ou n'utilisent l'IA que de façon très superficielle.
+                    </p>
+                    <p>
+                        <strong>DigitalBoost AI</strong> a été créé pour combler ce fossé. Nous concevons des ressources pratiques, de haute valeur et directement applicables (eBooks, prompts premium, templates Notion/Canva) spécifiquement adaptées au contexte et aux besoins du marché local.
+                    </p>
+                </div>
+                <div class="story-visual">
+                    <span class="quote">"Notre but est de transformer l'IA d'une curiosité technique en un moteur de croissance concret pour votre business."</span>
+                    <span class="author">Franck Kouadio</span>
+                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 5px;">Fondateur de DigitalBoost AI</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-card">
+            <h2 style="text-align: center;">Nos 3 Valeurs Fondamentales</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <span class="value-icon">💡</span>
+                    <h3>Pragmatisme</h3>
+                    <p>Pas de théorie inutile. Chaque ressource est conçue pour être copiée, collée et implémentée en moins de 5 minutes.</p>
+                </div>
+                <div class="value-card">
+                    <span class="value-icon">🤝</span>
+                    <h3>Confiance</h3>
+                    <p>Nous partageons uniquement des méthodes et des prompts que nous testons et utilisons nous-mêmes au quotidien.</p>
+                </div>
+                <div class="value-card">
+                    <span class="value-icon">🌍</span>
+                    <h3>Impact Local</h3>
+                    <p>Nous adaptons nos ressources aux défis uniques et à l'écosystème entrepreneurial d'Afrique francophone.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Prêt à passer au niveau supérieur ?</h2>
+            <p>Rejoignez les entrepreneurs qui utilisent nos outils pour automatiser leur marketing, créer du contenu 10× plus vite et scaler leurs ventes.</p>
+            <a href="/#pricing" class="btn-gold">🚀 Découvrir nos Produits</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container" style="text-align: center; padding: 30px 0; border-top: 1px solid var(--border-color);">
+            <p>&copy; 2026 DigitalBoost AI. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>

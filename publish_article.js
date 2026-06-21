@@ -175,17 +175,17 @@ try {
 
 // Trigger newsletter
 console.log("🔔 Déclenchement de la distribution de la newsletter...");
-http.get(NEWSLETTER_WEBHOOK_URL, (res) => {
-    let data = '';
-    res.on('data', (chunk) => { data += chunk; });
-    res.on('end', () => {
-        if (res.statusCode === 200) {
-            console.log("🚀 Newsletter : Signal envoyé avec succès !");
-            console.log(`📡 Réponse : ${data}`);
-        } else {
-            console.log(`❌ Newsletter : Erreur signal (Code: ${res.statusCode})`);
+fetch(NEWSLETTER_WEBHOOK_URL)
+    .then(res => {
+        if (res.ok) {
+            return res.text();
         }
+        throw new Error(`Code status ${res.status}`);
+    })
+    .then(data => {
+        console.log("🚀 Newsletter : Signal envoyé avec succès !");
+        console.log(`📡 Réponse : ${data}`);
+    })
+    .catch(err => {
+        console.warn("⚠️ Newsletter : Échec de connexion au webhook :", err.message);
     });
-}).on('error', (err) => {
-    console.warn("⚠️ Newsletter : Échec de connexion au webhook :", err.message);
-});

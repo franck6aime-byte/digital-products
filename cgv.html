@@ -10,44 +10,92 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            background: #0f0f17;
-            color: white;
-            padding: 100px 20px;
-            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-primary);
             line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .legal-header {
+            padding: 140px 0 40px;
+            text-align: center;
+            background: var(--bg-tertiary);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .legal-header h1 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--text-primary);
+            margin-bottom: 10px;
         }
 
         .legal-container {
             max-width: 800px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 40px auto 80px;
+            padding: 0 24px;
         }
 
-        h1 {
-            color: #d8b4fe; /* Lighter purple for WCAG contrast */
-            margin-bottom: 30px;
+        .legal-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: var(--shadow-md);
         }
 
         h2 {
-            color: #fbcfe8; /* Lighter pink for WCAG contrast */
-            margin-top: 30px;
+            color: var(--accent-primary);
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            margin-top: 35px;
             margin-bottom: 15px;
-            font-size: 1.2rem;
+            border-bottom: 2px solid var(--bg-tertiary);
+            padding-bottom: 8px;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
         }
 
         p {
-            margin-bottom: 15px;
-            color: rgba(255, 255, 255, 0.8);
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        ul {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
         }
 
         .back-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #d8b4fe; /* Fixed for contrast */
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+            color: var(--accent-primary);
+            font-weight: 600;
             text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .back-link:hover {
+            opacity: 0.8;
+        }
+        
+        .navbar .logo-text {
+            color: var(--text-primary) !important;
+        }
+        
+        .navbar .nav-link {
+            color: var(--text-secondary) !important;
         }
     </style>
 
@@ -127,31 +175,82 @@
 </head>
 
 <body>
-    <main id="main-content" class="legal-container">
-        <a href="/" class="back-link">← Retour au site</a>
-        <h1>Conditions Générales de Vente (CGV)</h1>
+    <div class="bg-grid"></div>
 
-        <h2>1. Objet</h2>
-        <p>Les présentes CGV régissent la vente des produits digitaux (eBooks, Prompts, Templates) sur le site
-            DigitalBoost AI.</p>
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Digital<span class="logo-accent">Boost</span> AI</span>
+            </a>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Accueil</a>
+                <a href="/#pricing" class="nav-link">Obtenir l'Accès</a>
+            </div>
+        </div>
+    </nav>
 
-        <h2>2. Prix</h2>
-        <p>Les prix sont indiqués en Euros (€) et sont payables en totalité lors de la commande.</p>
+    <header class="legal-header">
+        <div class="container">
+            <h1>Conditions Générales de Vente</h1>
+        </div>
+    </header>
 
-        <h2>3. Livraison des produits</h2>
-        <p>S'agissant de produits numériques, la livraison s'effectue par téléchargement immédiat après validation du
-            paiement ou par envoi de lien via WhatsApp/Email pour les paiements manuels.</p>
+    <main class="legal-container">
+        <div class="legal-card">
+            <a href="/" class="back-link">← Retour au site</a>
 
-        <h2>4. Droit de rétractation</h2>
-        <p>Conformément à la loi, le droit de rétractation ne peut être exercé pour les contenus numériques non fournis
-            sur un support matériel dont l'exécution a commencé après accord préalable exprès du consommateur.
-            Toutefois, DigitalBoost AI propose une garantie commerciale de satisfaction de 30 jours.</p>
+            <h2>1. Objet</h2>
+            <p>Les présentes Conditions Générales de Vente (CGV) régissent de manière exclusive les relations contractuelles entre le site <strong>DigitalBoost AI</strong> et tout client effectuant un achat sur le site.</p>
+            <p>L'acquisition d'un produit ou service via le site implique une acceptation sans réserve par le client des présentes conditions de vente.</p>
 
-        <h2>5. Responsabilité</h2>
-        <p>DigitalBoost AI ne peut être tenu responsable d'une mauvaise utilisation des prompts ou des stratégies
-            contenues dans les produits, ni des résultats obtenus qui dépendent de la mise en application par le client.
-        </p>
+            <h2>2. Produits et Services</h2>
+            <p>DigitalBoost AI propose à la vente des produits numériques (produits digitaux), notamment :
+                <ul>
+                    <li>Des eBooks de formation et guides stratégiques sur l'intelligence artificielle.</li>
+                    <li>Des packs de prompts optimisés pour ChatGPT, Claude, Gemini et d'autres outils d'IA.</li>
+                    <li>Des templates (Notion, Canva, etc.) et guides thématiques de rédaction.</li>
+                </ul>
+            </p>
+            <p>Les caractéristiques principales des produits sont présentées sur chaque page produit. Le client est tenu d'en prendre connaissance avant toute commande.</p>
+
+            <h2>3. Prix et Devises</h2>
+            <p>Les prix de nos produits sont indiqués en <strong>Francs CFA (FCFA)</strong>. Les équivalents indicatifs en Euros (€) ou Dollars ($) peuvent être affichés à des fins d'information mais le paiement de référence s'effectue dans la devise locale.</p>
+            <p>DigitalBoost AI se réserve le droit de modifier ses prix à tout moment, étant toutefois entendu que le prix figurant sur le site le jour de la commande sera le seul applicable au client.</p>
+
+            <h2>4. Commande et Modalités de Paiement</h2>
+            <p>Le client peut passer commande directement sur le site internet. Le paiement est exigible immédiatement à la commande.</p>
+            <p>Le règlement des achats s'effectue via les moyens sécurisés suivants :
+                <ul>
+                    <li><strong>Mobile Money</strong> (Wave, Orange Money, MTN Mobile Money) via notre partenaire de paiement sécurisé <strong>Chariow</strong>.</li>
+                    <li><strong>Cartes Bancaires</strong> (Visa, Mastercard) via le système sécurisé Chariow.</li>
+                </ul>
+            </p>
+
+            <h2>5. Livraison des Produits</h2>
+            <p>Les produits vendus étant exclusivement des contenus numériques, aucun produit physique n'est expédié.</p>
+            <p>La livraison s'effectue automatiquement et instantanément après validation du paiement. Le client reçoit un lien de téléchargement direct par email. En cas de paiement manuel ou de dysfonctionnement technique, la livraison peut être effectuée manuellement via email ou WhatsApp (contact : <a href="mailto:franck6aime@gmail.com" style="color: var(--accent-primary); text-decoration: underline;">franck6aime@gmail.com</a>).</p>
+
+            <h2>6. Droit de rétractation et Garantie commerciale</h2>
+            <p>Conformément à la réglementation sur les contenus numériques et services en ligne, le droit de rétractation de 14 jours ne s'applique pas aux produits numériques téléchargés ou consultés immédiatement après l'achat.</p>
+            <p>Toutefois, DigitalBoost AI propose une <strong>garantie commerciale "satisfait ou remboursé" de 30 jours</strong>. Si un produit ne répond pas à vos attentes, vous pouvez demander son remboursement intégral en écrivant à <a href="mailto:franck6aime@gmail.com" style="color: var(--accent-primary); text-decoration: underline;">franck6aime@gmail.com</a> en expliquant les motifs de votre insatisfaction.</p>
+
+            <h2>7. Propriété Intellectuelle et Utilisation</h2>
+            <p>Tous les eBooks, prompts, guides et templates sont protégés par le droit d'auteur. Ils sont vendus exclusivement pour un usage <strong>personnel et professionnel privé</strong> du client. Toute revente, partage, distribution gratuite ou exploitation commerciale des fichiers ou des prompts sans accord écrit préalable de DigitalBoost AI est strictement interdite et fera l'objet de poursuites.</p>
+
+            <h2>8. Responsabilité et Non-Garantie de Résultats</h2>
+            <p>DigitalBoost AI s'efforce de fournir des prompts et des guides de la plus haute qualité. Néanmoins, les résultats obtenus dépendent entièrement de la mise en œuvre personnelle par le client, de l'évolution des technologies d'intelligence artificielle et du contexte spécifique de son entreprise. DigitalBoost AI ne saurait être tenu responsable d'une absence de résultats commerciaux ou de toute mauvaise utilisation des prompts fournis.</p>
+
+            <h2>9. Droit Applicable</h2>
+            <p>Les présentes CGV sont soumises à la législation en vigueur en Côte d'Ivoire. En cas de litige, et à défaut de résolution amiable, les tribunaux compétents d'Abidjan seront seuls qualifiés.</p>
+        </div>
     </main>
+
+    <footer class="footer">
+        <div class="container" style="text-align: center; padding: 20px 0;">
+            <p>&copy; 2026 DigitalBoost AI. Tous droits réservés.</p>
+        </div>
+    </footer>
 </body>
 
 </html>

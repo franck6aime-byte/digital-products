@@ -437,6 +437,18 @@
       "temps_lecture": "6 min de lecture",
       "date_publication": "2026-06-17",
       "newsletter_envoyee": false
+    },
+    {
+      "id": "article-035",
+      "titre": "De 0 à 1000 Abonnés Email : La Stratégie IA Pas à Pas",
+      "excerpt": "De 0 à 1000 Abonnés Email : La Stratégie IA Pas à Pas",
+      "url": "https://digitalboostai.tech/blog/de-0-a-1000-abonnes-email-la-strategie-ia-pas-a-pas",
+      "image_url": "https://digitalboostai.tech/img/de_0_a_1000_abonnes_email_la_strategie_ia_pas_a_pas.png",
+      "emoji": "🚀",
+      "categorie": "Produits Digitaux & Monétisation",
+      "temps_lecture": "10 min de lecture",
+      "date_publication": "2026-06-18",
+      "newsletter_envoyee": false
     }
   ]
 }

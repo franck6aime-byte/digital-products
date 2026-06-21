@@ -10,44 +10,82 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            background: #0f0f17;
-            color: white;
-            padding: 100px 20px;
-            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-primary);
             line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .legal-header {
+            padding: 140px 0 40px;
+            text-align: center;
+            background: var(--bg-tertiary);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .legal-header h1 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--text-primary);
+            margin-bottom: 10px;
         }
 
         .legal-container {
             max-width: 800px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 40px auto 80px;
+            padding: 0 24px;
         }
 
-        h1 {
-            color: #d8b4fe; /* Lighter purple for WCAG contrast */
-            margin-bottom: 30px;
+        .legal-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: var(--shadow-md);
         }
 
         h2 {
-            color: #fbcfe8; /* Lighter pink for WCAG contrast */
-            margin-top: 30px;
+            color: var(--accent-primary);
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            margin-top: 35px;
             margin-bottom: 15px;
-            font-size: 1.2rem;
+            border-bottom: 2px solid var(--bg-tertiary);
+            padding-bottom: 8px;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
         }
 
         p {
-            margin-bottom: 15px;
-            color: rgba(255, 255, 255, 0.8);
+            color: var(--text-secondary);
+            margin-bottom: 20px;
         }
 
         .back-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #d8b4fe; /* Fixed for contrast */
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+            color: var(--accent-primary);
+            font-weight: 600;
             text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .back-link:hover {
+            opacity: 0.8;
+        }
+        
+        .navbar .logo-text {
+            color: var(--text-primary) !important;
+        }
+        
+        .navbar .nav-link {
+            color: var(--text-secondary) !important;
         }
     </style>
 
@@ -127,26 +165,54 @@
 </head>
 
 <body>
-    <main id="main-content" class="legal-container">
-        <a href="/" class="back-link">← Retour au site</a>
-        <h1>Mentions Légales</h1>
+    <div class="bg-grid"></div>
 
-        <h2>1. Éditeur du site</h2>
-        <p>Le site DigitalBoost AI est édité par : [Votre Nom / Votre Entreprise]<br>
-            Siège social : Côte d'Ivoire<br>
-            Email : [Votre Email]</p>
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Digital<span class="logo-accent">Boost</span> AI</span>
+            </a>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Accueil</a>
+                <a href="/#pricing" class="nav-link">Obtenir l'Accès</a>
+            </div>
+        </div>
+    </nav>
 
-        <h2>2. Hébergement</h2>
-        <p>Le site est hébergé par Netlify, Inc.<br>
-            Adresse : 2325 3rd Street, Suite 215, San Francisco, California 94107.</p>
+    <header class="legal-header">
+        <div class="container">
+            <h1>Mentions Légales</h1>
+        </div>
+    </header>
 
-        <h2>3. Propriété intellectuelle</h2>
-        <p>L'ensemble des contenus (textes, images, produits digitaux) sont la propriété exclusive de DigitalBoost AI.
-            Toute reproduction est interdite sans autorisation préalable.</p>
+    <main class="legal-container">
+        <div class="legal-card">
+            <a href="/" class="back-link">← Retour au site</a>
 
-        <h2>4. Contact</h2>
-        <p>Pour toute question, vous pouvez nous contacter à l'adresse email mentionnée ci-dessus.</p>
+            <h2>1. Éditeur du site</h2>
+            <p>Le site DigitalBoost AI est édité par : DigitalBoost AI<br>
+                Siège social : Côte d'Ivoire<br>
+                Email : <a href="mailto:franck6aime@gmail.com" style="color: var(--accent-primary); text-decoration: underline;">franck6aime@gmail.com</a></p>
+
+            <h2>2. Hébergement</h2>
+            <p>Le site est hébergé par Netlify, Inc.<br>
+                Adresse : 2325 3rd Street, Suite 215, San Francisco, California 94107.</p>
+
+            <h2>3. Propriété intellectuelle</h2>
+            <p>L'ensemble des contenus (textes, images, produits digitaux) sont la propriété exclusive de DigitalBoost AI.
+                Toute reproduction ou représentation, intégrale ou partielle, du site ou de l'un de ses éléments est strictement interdite sans autorisation préalable.</p>
+
+            <h2>4. Contact</h2>
+            <p>Pour toute question ou demande d'information concernant le site, vous pouvez nous contacter directement à l'adresse email : <a href="mailto:franck6aime@gmail.com" style="color: var(--accent-primary); text-decoration: underline;">franck6aime@gmail.com</a>.</p>
+        </div>
     </main>
+
+    <footer class="footer">
+        <div class="container" style="text-align: center; padding: 20px 0;">
+            <p>&copy; 2026 DigitalBoost AI. Tous droits réservés.</p>
+        </div>
+    </footer>
 </body>
 
 </html>

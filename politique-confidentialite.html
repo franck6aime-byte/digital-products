@@ -10,44 +10,82 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            background: #0f0f17;
-            color: white;
-            padding: 100px 20px;
-            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-primary);
             line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .legal-header {
+            padding: 140px 0 40px;
+            text-align: center;
+            background: var(--bg-tertiary);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .legal-header h1 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--text-primary);
+            margin-bottom: 10px;
         }
 
         .legal-container {
             max-width: 800px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 40px auto 80px;
+            padding: 0 24px;
         }
 
-        h1 {
-            color: #d8b4fe; /* Lighter purple for WCAG contrast */
-            margin-bottom: 30px;
+        .legal-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: var(--shadow-md);
         }
 
         h2 {
-            color: #fbcfe8; /* Lighter pink for WCAG contrast */
-            margin-top: 30px;
+            color: var(--accent-primary);
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            margin-top: 35px;
             margin-bottom: 15px;
-            font-size: 1.2rem;
+            border-bottom: 2px solid var(--bg-tertiary);
+            padding-bottom: 8px;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
         }
 
         p {
-            margin-bottom: 15px;
-            color: rgba(255, 255, 255, 0.8);
+            color: var(--text-secondary);
+            margin-bottom: 20px;
         }
 
         .back-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #d8b4fe; /* Fixed for contrast */
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+            color: var(--accent-primary);
+            font-weight: 600;
             text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .back-link:hover {
+            opacity: 0.8;
+        }
+        
+        .navbar .logo-text {
+            color: var(--text-primary) !important;
+        }
+        
+        .navbar .nav-link {
+            color: var(--text-secondary) !important;
         }
     </style>
 
@@ -127,25 +165,57 @@
 </head>
 
 <body>
-    <main id="main-content" class="legal-container">
-        <a href="/" class="back-link">← Retour au site</a>
-        <h1>Politique de Confidentialité</h1>
+    <div class="bg-grid"></div>
 
-        <h2>1. Données collectées</h2>
-        <p>Nous collectons uniquement les données nécessaires à la livraison de vos produits : adresse email et, dans le
-            cas d'un paiement manuel, votre numéro de téléphone ou capture d'écran via WhatsApp.</p>
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Digital<span class="logo-accent">Boost</span> AI</span>
+            </a>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Accueil</a>
+                <a href="/#pricing" class="nav-link">Obtenir l'Accès</a>
+            </div>
+        </div>
+    </nav>
 
-        <h2>2. Utilisation des données</h2>
-        <p>Vos données sont utilisées exclusivement pour vous envoyer vos produits et vous informer des mises à jour
-            majeures de DigitalBoost AI.</p>
+    <header class="legal-header">
+        <div class="container">
+            <h1>Politique de Confidentialité</h1>
+        </div>
+    </header>
 
-        <h2>3. Partage des données</h2>
-        <p>Nous ne vendons ni ne partageons vos données personnelles avec des tiers à des fins commerciales.</p>
+    <main class="legal-container">
+        <div class="legal-card">
+            <a href="/" class="back-link">← Retour au site</a>
 
-        <h2>4. Vos droits</h2>
-        <p>Vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles sur simple
-            demande par email.</p>
+            <h2>1. Données collectées</h2>
+            <p>Nous collectons uniquement les données strictement nécessaires à la fourniture et à la livraison de vos produits numériques : votre adresse email (lors de l'achat en ligne ou de l'inscription à la newsletter) et, dans le cas d'un règlement manuel, votre numéro de téléphone ou votre capture d'écran de transaction via WhatsApp.</p>
+
+            <h2>2. Utilisation des données</h2>
+            <p>Vos données personnelles sont utilisées exclusivement pour :
+                <ul style="color: var(--text-secondary); margin-bottom: 20px; padding-left: 20px;">
+                    <li style="margin-bottom: 8px;">Valider et vous livrer les produits digitaux commandés (eBooks, prompts, templates).</li>
+                    <li style="margin-bottom: 8px;">Vous informer des mises à jour majeures ou des nouveautés produits (uniquement avec votre consentement préalable via la newsletter).</li>
+                    <li style="margin-bottom: 8px;">Assurer le support client et la gestion des demandes de remboursement.</li>
+                </ul>
+            </p>
+
+            <h2>3. Sécurité et Partage des données</h2>
+            <p>Nous mettons en œuvre des mesures de sécurité rigoureuses pour protéger vos informations. Vos données personnelles ne sont **jamais vendues, échangées, partagées ou louées** à des tiers à des fins commerciales. Elles sont stockées de façon sécurisée et ne sont accessibles qu'aux administrateurs du site DigitalBoost AI pour les besoins de livraison.</p>
+
+            <h2>4. Vos droits (RGPD & Droits Informatiques)</h2>
+            <p>Conformément à la réglementation sur la protection des données personnelles, vous disposez d'un droit d'accès, de rectification, de portabilité et de suppression définitive de l'ensemble de vos données.</p>
+            <p>Pour exercer vos droits ou pour toute question concernant notre politique de confidentialité, vous pouvez nous envoyer une simple demande par email à l'adresse suivante : <a href="mailto:franck6aime@gmail.com" style="color: var(--accent-primary); text-decoration: underline;">franck6aime@gmail.com</a>.</p>
+        </div>
     </main>
+
+    <footer class="footer">
+        <div class="container" style="text-align: center; padding: 20px 0;">
+            <p>&copy; 2026 DigitalBoost AI. Tous droits réservés.</p>
+        </div>
+    </footer>
 </body>
 
 </html>
