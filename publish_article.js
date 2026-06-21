@@ -86,9 +86,9 @@ console.log(`✅ ${CONFIG_FILE} mis à jour (ID: ${article_id}).`);
 // Rebuild blog.html
 const format_date_fr = (date_iso) => {
     try {
-        const d = new Date(date_iso);
+        const [y, m, d] = date_iso.split('-').map(Number);
         const mois = ["", "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
-        return `${d.getDate()} ${mois[d.getMonth() + 1]} ${d.getFullYear()}`;
+        return `${d} ${mois[m]} ${y}`;
     } catch {
         return date_iso;
     }

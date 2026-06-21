@@ -26,12 +26,12 @@ function generateRss() {
         `  <atom:link href="${baseUrl}/rss.xml" rel="self" type="application/rss+xml" />`
     ];
 
-    const articles = config.articles || [];
     const today = new Date();
+    const articles = (config.articles || [])
+        .filter(a => a.date_publication)
+        .sort((a, b) => new Date(b.date_publication) - new Date(a.date_publication));
 
-    // Iterate in reverse order (most recent first)
-    for (let i = articles.length - 1; i >= 0; i--) {
-        const article = articles[i];
+    for (const article of articles) {
         const title = (article.titre || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
         const url = (article.url || '').replace(/vercel\.app/g, 'tech').replace(/\.html$/g, '');
         const excerpt = (article.excerpt || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
