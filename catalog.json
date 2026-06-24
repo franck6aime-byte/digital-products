@@ -34,5 +34,14 @@
     "chariowLink": "https://ppawzaph.mychariow.shop/prd_5otgoxu1/checkout",
     "lien_page": "https://digitalboostai.tech/products/redaction-administrative.html",
     "lien_short": "https://ppawzaph.mychariow.shop/prd_5otgoxu1"
+  },
+  "saas_bp": {
+    "name": "Micro-SaaS : Générateur de Business Plan IA",
+    "displayName": "SaaS — Business Plan Express",
+    "price": 15000,
+    "prix_texte": "15 000 FCFA",
+    "chariowLink": "#",
+    "lien_page": "https://digitalboostai.tech/generateur-pro.html",
+    "lien_short": "#"
   }
 }
