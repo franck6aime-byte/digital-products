@@ -1,0 +1,52 @@
+name: 🚀 Blog Automation H24
+
+on:
+  schedule:
+    # S'exécute tous les jours à 08h00 UTC (08h00 GMT)
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+    # Permet aussi de déclencher le script manuellement depuis GitHub
+
+permissions:
+  contents: write # Nécessaire pour que le bot puisse commit et push
+
+jobs:
+  automate:
+    name: 🤖 Run Blog Generation & Push
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # On a besoin de l'historique complet pour push correctement
+          fetch-depth: 0
+      
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: 🛠️ Install Dependencies
+        working-directory: ./digital-products
+        run: |
+          # Si un package.json existe, l'installer. Sinon, installer les dépendances de base requises.
+          if [ -f "package.json" ]; then
+            npm install
+          else
+            npm install @google/generative-ai
+          fi
+
+      - name: 🪪 Configure Git User
+        run: |
+          git config --global user.name "DigitalBoost AI Bot"
+          git config --global user.email "bot@digitalboostai.tech"
+
+      - name: 🚀 Run Automate Blog Script
+        working-directory: ./digital-products
+        env:
+          # Tu devras ajouter ce secret dans les paramètres GitHub
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          # Le script fait son propre "git commit" et "git push" à la fin
+          node automate_blog.js
